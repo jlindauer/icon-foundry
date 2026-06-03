@@ -15,6 +15,10 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       removeAbility:   IconCharacterSheet.#onRemoveAbility,
       removeTalent:    IconCharacterSheet.#onRemoveTalent,
     },
+    dragDrop: [
+      { dropSelector: ".ability-drop-zone" },
+      { dropSelector: ".talent-drop-zone" },
+    ],
   };
 
   static PARTS = {
@@ -115,19 +119,12 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
   async _prepareAbilities(actor) {
     const ids = actor.system.combat.activeAbilities ?? [];
-    return ids.map((id) => {
-      const item = actor.items.get(id) ?? game.packs
-        .map((p) => p.index.get(id))
-        .find(Boolean);
-      return item ?? { id, name: id, system: {} };
-    });
+    return ids.map((id) => actor.items.get(id) ?? { id, name: id, system: {} });
   }
 
   async _prepareTalents(actor) {
     const ids = actor.system.combat.selectedTalents ?? [];
-    return ids.map((id) => {
-      return actor.items.get(id) ?? { id, name: id, system: {} };
-    });
+    return ids.map((id) => actor.items.get(id) ?? { id, name: id, system: {} });
   }
 
   _prepareConditions(system) {
@@ -149,22 +146,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     }));
   }
 
-  // ── Drag & Drop ──────────────────────────────────────────────────────────
+  // ── Render hook ───────────────────────────────────────────────────────────
 
   _onRender(context, options) {
-    const html = this.element;
-
-    // Drag-and-drop for abilities / talents
-    html.querySelectorAll(".ability-drop-zone, .talent-drop-zone").forEach((zone) => {
-      zone.addEventListener("dragover", (ev) => {
-        ev.preventDefault();
-        ev.dataTransfer.dropEffect = "copy";
-      });
-      zone.addEventListener("drop", (ev) => this._onDropItem(ev));
-    });
-
     // Inline HP/Vigor editing on click
-    html.querySelectorAll(".resource-value[data-field]").forEach((el) => {
+    this.element.querySelectorAll(".resource-value[data-field]").forEach((el) => {
       el.addEventListener("click", (ev) => {
         const field = ev.currentTarget.dataset.field;
         const input = document.createElement("input");
@@ -185,45 +171,53 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     });
   }
 
-  async _onDropItem(event) {
-    event.preventDefault();
+  // ── Drag & Drop ───────────────────────────────────────────────────────────
+
+  _canDragDrop(_selector) {
+    return this.isEditable;
+  }
+
+  async _onDrop(event) {
     let data;
     try {
       data = JSON.parse(event.dataTransfer.getData("text/plain"));
     } catch { return; }
 
     if (data.type !== "Item") return;
-    const item = await fromUuid(data.uuid);
-    if (!item) return;
 
-    const zone = event.currentTarget;
-    const isAbilityZone = zone.classList.contains("ability-drop-zone");
-    const isTalentZone  = zone.classList.contains("talent-drop-zone");
+    // Resolve the source item (may be from a compendium or the world)
+    const sourceItem = await fromUuid(data.uuid);
+    if (!sourceItem) return;
 
-    if (isAbilityZone && item.type === "ability") {
-      const abilities = [...(this.document.system.combat.activeAbilities ?? [])];
-      const maxSlots  = this.document.system.abilitySlots;
-      if (abilities.length >= maxSlots) {
+    const target       = event.currentTarget;
+    const isAbilityZone = target.classList.contains("ability-drop-zone");
+    const isTalentZone  = target.classList.contains("talent-drop-zone");
+
+    if (isAbilityZone && sourceItem.type === "ability") {
+      const current  = this.document.system.combat.activeAbilities ?? [];
+      const maxSlots = this.document.system.abilitySlots;
+      if (current.length >= maxSlots) {
         ui.notifications.warn(game.i18n.localize("ICON.Warning.AbilitySlotsMax"));
         return;
       }
-      if (!abilities.includes(item.id)) {
-        abilities.push(item.id);
-        await this.document.update({ "system.combat.activeAbilities": abilities });
-      }
+      // Copy item into the actor's embedded items, then track its local id
+      const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
+      await this.document.update({
+        "system.combat.activeAbilities": [...current, created.id],
+      });
     }
 
-    if (isTalentZone && item.type === "talent") {
-      const talents  = [...(this.document.system.combat.selectedTalents ?? [])];
+    if (isTalentZone && sourceItem.type === "talent") {
+      const current  = this.document.system.combat.selectedTalents ?? [];
       const maxSlots = this.document.system.talentSlots;
-      if (talents.length >= maxSlots) {
+      if (current.length >= maxSlots) {
         ui.notifications.warn(game.i18n.localize("ICON.Warning.TalentSlotsMax"));
         return;
       }
-      if (!talents.includes(item.id)) {
-        talents.push(item.id);
-        await this.document.update({ "system.combat.selectedTalents": talents });
-      }
+      const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
+      await this.document.update({
+        "system.combat.selectedTalents": [...current, created.id],
+      });
     }
   }
 
@@ -259,14 +253,16 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   }
 
   static async #onRemoveAbility(event, target) {
-    const id       = target.dataset.itemId;
+    const id = target.dataset.itemId;
     const abilities = (this.document.system.combat.activeAbilities ?? []).filter((a) => a !== id);
     await this.document.update({ "system.combat.activeAbilities": abilities });
+    await this.document.deleteEmbeddedDocuments("Item", [id]);
   }
 
   static async #onRemoveTalent(event, target) {
-    const id      = target.dataset.itemId;
+    const id = target.dataset.itemId;
     const talents = (this.document.system.combat.selectedTalents ?? []).filter((t) => t !== id);
     await this.document.update({ "system.combat.selectedTalents": talents });
+    await this.document.deleteEmbeddedDocuments("Item", [id]);
   }
 }

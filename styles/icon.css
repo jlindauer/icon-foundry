@@ -159,6 +159,8 @@
   gap: 12px;
 }
 
+.tab-content:not(.active) { display: none; }
+
 .section {
   background: var(--icon-surface);
   border: 1px solid var(--icon-border);
