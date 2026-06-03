@@ -1,0 +1,16 @@
+{
+  "_id": "498ac9b0a5746c82",
+  "name": "Polaris",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "End Turn",
+      "Range 3-5"
+    ],
+    "flavor": "A distant glint in the heavens, portents of the devastation to come.",
+    "effect": "Zone your turn and call a meteor onto the battlefield that begins its descent. You may have any number of these zones active. The first time in a round a character enters one of these zones, roll the effect die. If you roll equal to or under the round number, a meteor lands in the space, branding that character and creating a cross 1 explosion centered on them for 1d6+4 damage (save for half). Then remove the zone.\nIsolate becomes piercing.",
+    "jobId": "celestian"
+  }
+}

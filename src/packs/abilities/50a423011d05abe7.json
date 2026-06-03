@@ -1,0 +1,17 @@
+{
+  "_id": "50a423011d05abe7",
+  "name": "Implacable Shield",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "End turn",
+      "Aura",
+      "Self"
+    ],
+    "flavor": "You stand tall and proud, sheltering your allies from fierce blows.",
+    "effect": "Effect shield, aura 1, and the following interrupt until the start of your next turn:\n  [Shield Block — Interrupt 1. Trigger ally in the aura is targeted by a foe's ability that deals damage. Effect [X]: You take the damage and effects your ally would have took in your ally's place. You take only those effects and don't otherwise re-target or affect other parts of the ability. Then, you regain this interrupt on a (5+).]\nOverdrive chance becomes 3+.",
+    "jobId": "bastion"
+  }
+}

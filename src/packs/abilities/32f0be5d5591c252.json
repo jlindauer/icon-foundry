@@ -1,0 +1,9 @@
+{
+  "_id": "32f0be5d5591c252",
+  "name": "Alloy",
+  "type": "talent",
+  "system": {
+    "effect": "You improve the effect of shield to +3 defense for you and adjacent allies. You gain shield when you are first bloodied in a combat.",
+    "jobId": "workshop-knight"
+  }
+}

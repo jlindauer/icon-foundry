@@ -1,0 +1,15 @@
+{
+  "_id": "e5e38a9c5ceb03bd",
+  "name": "Diaga",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4"
+    ],
+    "flavor": "Purge toxins, curses, and brands from your ally.",
+    "effect": "Effect character in range can immediately save. They get rid of one negative status token of their choice, and may get rid of one more on a successful save.\nEffect they are bloodied, they gain [+] on the save. If they are in crisis, they may remove one more token on a successful save.",
+    "jobId": "mendicant"
+  }
+}

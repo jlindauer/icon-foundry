@@ -1,0 +1,56 @@
+{
+  "_id": "4f9ca100a79a5b1d",
+  "name": "Stormbender",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Water Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Dash on the Rocks",
+      "effect": "Once a round, when you cause a character to impact, you can cause them to release a burst 1 (target) explosion of icy water centered on them, dealing 1d3 piercing damage to all characters within except the original character."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Tsunami",
+      "cost": "2 actions, 3 resolve",
+      "tags": [
+        "Summon",
+        "Range 1-2"
+      ],
+      "effect": "On account of the magic that is in my body,\nTurn aside, detested of Sea and Storm,\nThou wretch, go with thy face diverted!.\nBe scattered like dust, and feed the wind!\nSummon a huge swell of elemental water in free space in range.\n\nTsunami\nSummon (1), size 2\nSummon Effect as difficult terrain and can enter character's spaces and end sharing space with them.\nSummon Action your tsunami 4 spaces towards an edge of the map. It must move the maximum spaces possible, and ignores terrain and obstruction. If this would move the tsunami off the map, dismiss it.\nSummon Effect first time in a round the tsunami would enter the space of any character with its summon action they are pushed spaces equal to the round number +2, choosing the order if characters are pushed simultaneously. If they impact during this movement, they take 1d6+2 damage, but no more than once a round."
+    },
+    "abilityIds": [
+      "27f8a6beae67fcbb",
+      "e2bc2a60664327fa",
+      "9b58b6a85e8a63aa",
+      "de79680666f31a2f"
+    ],
+    "talentIds": [
+      "28c127cdf76274d3",
+      "0bddd212566c1fcd",
+      "32b251e59c7691c0"
+    ],
+    "keywords": [
+      {
+        "name": "Impact",
+        "description": "Triggers on any character involuntarily moved into an obstruction as part of this ability."
+      }
+    ],
+    "description": ""
+  }
+}

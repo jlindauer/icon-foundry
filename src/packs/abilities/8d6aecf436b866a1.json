@@ -1,0 +1,9 @@
+{
+  "_id": "8d6aecf436b866a1",
+  "name": "Foresight",
+  "type": "talent",
+  "system": {
+    "effect": "You gain effect [+] at round 3 or later, doubled at round 5 or later.",
+    "jobId": "seer"
+  }
+}

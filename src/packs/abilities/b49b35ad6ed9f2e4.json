@@ -1,0 +1,16 @@
+{
+  "_id": "b49b35ad6ed9f2e4",
+  "name": "Gouge",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "You unleash multiple slashes, shots, or stabs against your foe, hitting weak spots.",
+    "effect": "Effect 1\nAttack: 3 damage. Hit: +3d3\nOn hit your foe is bloodied, strike your target again, dealing 3 damage. If your foe is in crisis, deal 3 damage twice instead.",
+    "jobId": "vagabond"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "cd9b6c6ff493b6dd",
+  "name": "Chanter",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bard Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Book of Ages",
+      "effect": "You automatically enter the Book of Ages stance at the start of combat. If you aren't in the stance, you enter it again automatically if you end your turn without attacking.\n• This stance stacks with other stances.\n• While in this stance, once a round, you may choose one of the following effects:\n  - when you grant a positive token, grant an identical token to the same character\n  - when you grant vigor, grant 3 more vigor to the same character\n• You exit the stance after attacking."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Monogatari",
+      "cost": "1 action, 2 Resolve",
+      "tags": [],
+      "effect": "You sing a choice passage from the Great Chant, letting its words resonate in the air and bring hope to your companions.\nEffect sing a short passage from the book of ages. Roll 1d6 and consult the following table to see which tale you sing. The song resonates in the air until the start of your next turn. You then sing a new passage, rolling again. At the end of their turn, any friendly character (including yourself) that fulfilled the condition of the passage gains strength and 2 vigor.\n\n1. A Tale of Fury a character to 0 hp or reduced them below 50% hp if above.\n2. A Tale of Travels more than 4 spaces from your starting point on your turn\n3. A Tale of Green and Pleasant Times not attack\n4. A Tale of Cunning a mark, stance, aura, or combo ability.\n5. A Tale of Boon Companions your turn adjacent to an ally\n6. A Tale of Triumph an ability on an ally"
+    },
+    "abilityIds": [
+      "4c8ce512f2d36b88",
+      "f0629959effe20b7",
+      "09b9fa99cc21ce5a",
+      "c05d90af937255ff"
+    ],
+    "talentIds": [
+      "39e06adaba106e3a",
+      "c0f1b4a9cd5a14aa",
+      "a53bfc2db0f135d6"
+    ],
+    "keywords": [
+      {
+        "name": "Conserve",
+        "description": "Can only trigger if you have not attacked this turn, and cannot attack on any turn you trigger this effect."
+      }
+    ],
+    "description": ""
+  }
+}

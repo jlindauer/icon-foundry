@@ -1,0 +1,9 @@
+{
+  "_id": "9fe29598fe97164e",
+  "name": "Perfection",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, when an ability grants you a move, dash, teleport, or flight, you may increase all those amounts for the entire ability by +3, and they ignore all movement penalties.",
+    "jobId": "dancer"
+  }
+}

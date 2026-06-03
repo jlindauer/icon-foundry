@@ -1,0 +1,9 @@
+{
+  "_id": "f4a86d04645bd10f",
+  "name": "Prophet",
+  "type": "talent",
+  "system": {
+    "effect": "At the start of combat, you may pre-roll up to two effect dice. These dice are automatically the result of your next two effect rolls.",
+    "jobId": "seer"
+  }
+}

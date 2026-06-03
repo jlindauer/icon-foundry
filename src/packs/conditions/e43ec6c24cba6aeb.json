@@ -1,0 +1,10 @@
+{
+  "_id": "e43ec6c24cba6aeb",
+  "name": "Unstoppable",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Unstoppable",
+    "effect": "Can't be forcibly moved. Immune to the effects of all negative statuses. Movement cannot be reduced or stopped for any reason."
+  }
+}

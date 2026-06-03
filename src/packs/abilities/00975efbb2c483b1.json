@@ -1,0 +1,15 @@
+{
+  "_id": "00975efbb2c483b1",
+  "name": "The Ewer",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Close Line 6"
+    ],
+    "flavor": "You flick a card that bursts into powerful jets of ethereal water.",
+    "effect": "Area Effect shoot a card out along the line, releasing a cross explosion centered on either the end space or the first character in the line. The size of the cross is equal to the spaces the card traveled before impacting its target. Foes in the area take 2 piercing damage, or 1d3+1 piercing if the card traveled 5 or more spaces. Allies gain the same amount as vigor, doubled on any allies in crisis.\nGambit: (1-3) the card only flies 3 (4-5) the card may hit any character on the line, (6) the card may hit any character on the line, travels line +3, and phases through objects.",
+    "jobId": "seer"
+  }
+}

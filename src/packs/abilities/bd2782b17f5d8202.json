@@ -1,0 +1,16 @@
+{
+  "_id": "bd2782b17f5d8202",
+  "name": "Demise",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-2"
+    ],
+    "flavor": "Pain within becomes pain without.",
+    "effect": "Effect you are suffering from 3 negative status tokens of any kind, this attack gains pierce.\nAttack: 2 damage. On hit: +2d3 damage.\nEffect [X]: Inflict 1d3 Daze on yourself.",
+    "jobId": "bleak-knight"
+  }
+}

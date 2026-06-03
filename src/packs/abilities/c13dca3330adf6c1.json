@@ -1,0 +1,17 @@
+{
+  "_id": "c13dca3330adf6c1",
+  "name": "Iron Flesh",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Self",
+      "Power die"
+    ],
+    "flavor": "Your skin develops a swirling iron shell. When struck, it hardens and intensifies.",
+    "effect": "Stance you enter this stance, gain a d6 power die, starting at 1. Once a turn, but any number of times a round, tick it up by 1 after a foe uses an ability that damages you. At 4+, you take half damage from all sources. At the end of any turn the die is at 6, discard it. At the start of your turn, if you don't have a die, gain a new die at 1.\nHeavy the die at 3.",
+    "jobId": "auran"
+  }
+}

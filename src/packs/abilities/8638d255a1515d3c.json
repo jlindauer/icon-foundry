@@ -1,0 +1,17 @@
+{
+  "_id": "8638d255a1515d3c",
+  "name": "Blazing Bond",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4",
+      "Mark",
+      "Ally"
+    ],
+    "flavor": "You link the soul Aether of you and a companion with a chain of pure fire aether, drawing from the strength of one to bolster the other.",
+    "effect": "Mark the following interrupt at the start of your turns. while your target is marked.\n\nHeartfire\nInterrupt 1\nTrigger or your marked ally takes damage or sacrifices hp, and are in range and line of sight of each other.\nEffect can choose to grant 3 vigor to the target before they take the damage, or reduce the sacrifice cost by 3. If you do, the other partner sacrifices 3, then gains keen.",
+    "jobId": "theurgist"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "8134caff1aba9787",
+  "name": "Valiant",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "Stride forth, battering aside foes.",
+    "effect": "Effect [X]: Dash 1, then dash 1, (4+) then dash 1, (6+) then dash 1.\nEffect each dash, push all adjacent characters 1.\nImpact the action cost of this ability.",
+    "jobId": "breaker"
+  }
+}

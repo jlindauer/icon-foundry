@@ -1,0 +1,15 @@
+{
+  "_id": "476c15f68bb9be2e",
+  "name": "Atherwand",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "End turn"
+    ],
+    "flavor": "You summon the highwinds, swirling around your weapon to banish your foes.",
+    "effect": "Effect [X]: End your turn. Your next attack gains:\n• +2 damage on hit\n• You may teleport 3 spaces before the attack.\n• On hit: teleport your foe 1d3+1. Miss: 1 space\nIsolate your foe +2 on hit.",
+    "jobId": "spellblade"
+  }
+}

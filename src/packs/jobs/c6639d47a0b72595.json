@@ -1,0 +1,55 @@
+{
+  "_id": "c6639d47a0b72595",
+  "name": "Freelancer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Gunner Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Gun Soul Sutra",
+      "effect": "If you attack a target at the very end space of a line or the maximum range of an ability, your attack gains attack [+] and deals +2 damage on hit."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Paradiso",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "End turn",
+        "Aura"
+      ],
+      "effect": "You summon the spirit of your weapon, drawing out the residual soul aether of every single one of its previous users. Ghostly doubles of dozens of your predecessors match your movements, and create an aura of untold power.\nAura your turn and gain Aura 2 until the end of your next turn. While standing in Paradiso, abilities used by you or allies against foes outside of Paradiso gain infinite max range, attack [+], and ignore cover."
+    },
+    "abilityIds": [
+      "a5ab08b704697d2e",
+      "d9b418d1696e8ea0",
+      "c372836a68b06143",
+      "d14f8ad5266b3683"
+    ],
+    "talentIds": [
+      "157c4e682d1d0b33",
+      "e87f1b7eb8bffcdf",
+      "00999d1c40dc3f5b"
+    ],
+    "keywords": [
+      {
+        "name": "Excel",
+        "description": "Triggers on any attack where the total attack roll was 8 or higher. Reduced by any effect that reduces critical hit threshold."
+      }
+    ],
+    "description": ""
+  }
+}

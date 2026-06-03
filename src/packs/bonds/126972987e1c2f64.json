@@ -1,0 +1,121 @@
+{
+  "_id": "126972987e1c2f64",
+  "name": "The Harlequin",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Sneak",
+      "Charm"
+    ],
+    "ideals": [
+      "I addressed challenges with cunning, subterfuge, or deceit",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I talked or slipped my way out of a charged situation"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when your actions get you in trouble with someone or something powerful.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When you're exhausted, get +1d and increased effect on sneak."
+    },
+    "powers": [
+      {
+        "id": "32f9e6f77c1c7e86",
+        "name": "Mirrormask",
+        "description": "You can always tell if someone is lying if you can see their face. At chapter III, you only need to hear someone's voice or read something they have written.",
+        "isGambit": false
+      },
+      {
+        "id": "c82fe21606f088cd",
+        "name": "Mercurio",
+        "description": "You can change your appearance completely by spending 1 effort. You must appear as Kin. Effect lasts until you camp or eat/drink. While active, get a knack for impersonating your new form. At chapter III, no effort cost if used once a scene.",
+        "isGambit": false
+      },
+      {
+        "id": "d00747bdd62909cf",
+        "name": "Mockingbird",
+        "description": "You get a knack for mimicking sounds or voices.",
+        "isGambit": false
+      },
+      {
+        "id": "8e52ecc5bda6ba49",
+        "name": "Fast Friends",
+        "description": "2/session - Automatically treat your next charm action roll as a 6. Effects last: I: 1 minute. II hour. III whole day. After duration, target(s) realize they were manipulated.",
+        "isGambit": false
+      },
+      {
+        "id": "d6ede91dce427b8f",
+        "name": "The Big Show",
+        "description": "Critical hits on excel, charm, or sneak actions regain 2 effort for all party members who witness your feats.",
+        "isGambit": false
+      },
+      {
+        "id": "45d2d07d3870546c",
+        "name": "Habitual Line Stepper",
+        "description": "2/session - Instantly disappear and reappear: I: Nearby. II two or three hundred paces. III a mile. Shunted back if destination is occupied.",
+        "isGambit": false
+      },
+      {
+        "id": "ba4a0e7260a18b78",
+        "name": "Quickfingers",
+        "description": "1/session - Name a number of objects nearby equal to chapter number. By start of next scene, you have them. If stolen, the person finds out within the hour.",
+        "isGambit": false
+      },
+      {
+        "id": "6a4ac17f074964fd",
+        "name": "Ridi Pagliacci",
+        "description": "You can invoke each of your burdens instead of spending 1 effort, once a session for each burden.",
+        "isGambit": false
+      },
+      {
+        "id": "b4726110eab10664",
+        "name": "Exeunt",
+        "description": "When you lead an action to flee or escape trouble, don't spend effort.",
+        "isGambit": false
+      },
+      {
+        "id": "75e193a5c28ccf09",
+        "name": "Step of the Smiling Few",
+        "description": "1/session - Increase the power of your next Sneak action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "6341f9dc5c44473a",
+        "name": "Gambit of the Laughing God",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "f86ab5df8c8ed610",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "00ebe2fb1f07a018",
+        "name": "Entertainer's Kit",
+        "items": [
+          "Instrument, fancy outfit, three free meals, tome of song lore, tickets to a show, knowledge of local haunts, free entry and lodging"
+        ]
+      },
+      {
+        "id": "c9295de03c8c2649",
+        "name": "Rake's Kit",
+        "items": [
+          "Hooded lantern, lock picks, paramour's portrait, concealed weapon, loaded dice, gaming set, three extra outfits, disguise kit"
+        ]
+      },
+      {
+        "id": "2f2559bcb7dbdab3",
+        "name": "Trickster's Kit",
+        "items": [
+          "Someone else's pocket contents, ball bearings, official looking uniform, fire starter, very convenient key, large pouch of mysterious powder"
+        ]
+      }
+    ]
+  }
+}

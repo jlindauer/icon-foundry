@@ -1,0 +1,16 @@
+{
+  "_id": "c65a5092561ccb05",
+  "name": "Pincer Attack",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Your weapon finds every weakness, driving your foe straight into your waiting ally.",
+    "effect": "Attack: 1 damage. Hit: +1d3 damage.\nOn hit 1. If your foe would be pushed into an ally's space, that ally deals 2 piercing damage to that foe and gains shield. Double these effects if your ally or your target is in crisis.",
+    "jobId": "tactician"
+  }
+}

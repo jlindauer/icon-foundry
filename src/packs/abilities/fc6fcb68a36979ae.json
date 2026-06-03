@@ -1,0 +1,17 @@
+{
+  "_id": "fc6fcb68a36979ae",
+  "name": "Wild Card",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Summon",
+      "End Turn",
+      "Range 2-5"
+    ],
+    "flavor": "You flick a beautifully illustrated ethereal card onto the battlefield, laden with the threads of potential.",
+    "effect": "Summon [X]: End your turn, and summon one or (5+) two painted cards in free space in range.\n\nPainted Card\nSummon (4)\nSummon Effect the card is included in your own or an allied area effect, you may cause it to explode for a burst 1 area effect centered on it, extending the total area of the triggering ability. Then dismiss it. Wild cards can trigger other wild cards.\nGambit only when triggered. (1-2): The card fizzles instead, dismissing it and dealing 2 damage to an adjacent foe, (3-5): Increase the burst size +1 (6): Increase the burst size by +2.",
+    "jobId": "seer"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "5c7a077a259cb08a",
+  "name": "Frag Shot",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-4",
+      "cross 1"
+    ],
+    "flavor": "Why shoot one bullet when you can shoot as many as you can cram into the hopper?",
+    "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nReckless range +3, and +1 area damage. You may repeat this effect, gaining reckless each time.",
+    "jobId": "dragoon"
+  }
+}

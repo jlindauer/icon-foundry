@@ -1,0 +1,10 @@
+{
+  "_id": "fccb24aaed56c1fe",
+  "name": "Brand (-)",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Brand (-)",
+    "effect": "When attacked, gain -2 DF."
+  }
+}

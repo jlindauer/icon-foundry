@@ -1,0 +1,54 @@
+{
+  "_id": "5596a4e7c6ae9911",
+  "name": "Dragoon",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Gunner Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Sparking Munition",
+      "effect": "Once a round, when you damage a character with an ability and that target is 4 or more spaces away, you may cause your target to explode for a burst (1) target area effect for 2 damage. If your target was 7 or more spaces away, increase burst to 2, damage to 2d3, and push 1."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Mageza Cannon",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Line 9"
+      ],
+      "effect": "Aether-focused direct energy weapon. Takes a long time to charge, and a short time to show your enemies why getting in a fight with you was a bad idea.\nArea Effect a line 9 area. If the line ends, or meets an obstruction, stop drawing the line, then place a blast 3 area effect with at least one space placed on the last space of the line. Characters in the area must save.\nEffect different effects based on the distance of the line.\n• 0-3: 2d3 damage\n• 4-6: 2d3 damage, twice, and blast +1\n• 6-9: 3d3 damage, three times\n• 9+: 4d3 damage, four times, and blast +1\nFoes take half damage on a successful save."
+    },
+    "abilityIds": [
+      "5c7a077a259cb08a",
+      "e18803625c539223",
+      "d5df67e4daac1f54",
+      "420660a4ebe7b77b"
+    ],
+    "talentIds": [
+      "99954fb2df65d889",
+      "b7ead931e7f6dd0e",
+      "84642d3aae2a3459"
+    ],
+    "keywords": [
+      {
+        "name": "Reckless",
+        "description": "Push yourself to the limit, gaining extra effects but inflicting yourself with the Reckless (-) unique status. You take +1 damage from all sources per stack of reckless. You may only discard reckless with effects that clear a negative status."
+      }
+    ],
+    "description": ""
+  }
+}

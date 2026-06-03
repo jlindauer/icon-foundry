@@ -1,0 +1,9 @@
+{
+  "_id": "e50875bfa8fd760c",
+  "name": "Thresh",
+  "type": "talent",
+  "system": {
+    "effect": "Adjacent allies can spend your evasion. If the evasion roll is a 6+, regain evasion after it is spent this way.",
+    "jobId": "stormscale"
+  }
+}

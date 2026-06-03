@@ -1,0 +1,9 @@
+{
+  "_id": "6b9d36ca1f2096cf",
+  "name": "Mortality",
+  "type": "talent",
+  "system": {
+    "effect": "Foes in crisis treat you and all allies adjacent to you as having +1 armor.",
+    "jobId": "corvidian"
+  }
+}

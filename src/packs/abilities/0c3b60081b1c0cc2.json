@@ -1,0 +1,16 @@
+{
+  "_id": "0c3b60081b1c0cc2",
+  "name": "Track",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4",
+      "Mark"
+    ],
+    "flavor": "Pick your quarry carefully.",
+    "effect": "Mark your foe.\n• While marked, your attacks gain attack [+] against them and they cannot gain cover from you.\n• If they are bloodied, these bonuses apply to all your allies as well.",
+    "jobId": "vagabond"
+  }
+}

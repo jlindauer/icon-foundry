@@ -1,0 +1,9 @@
+{
+  "_id": "5df7d96078f37918",
+  "name": "Victory",
+  "type": "talent",
+  "system": {
+    "effect": "Round 4 and round 5 count as round 6 for you.",
+    "jobId": "yaman"
+  }
+}

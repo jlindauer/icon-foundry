@@ -1,0 +1,71 @@
+{
+  "_id": "eb48f5c8e812de12",
+  "name": "Vagabond",
+  "type": "job",
+  "system": {
+    "jobType": "apprentice",
+    "soul": "",
+    "parentJobId": "",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Skirmisher",
+      "effect": "You are an agile fighter, able to dodge and weave around the battlefield with skill and precision. You gain the following benefits:\n• You can move diagonally\n• Once a round, when you make a single move, dash, fly, or teleport, you may extend it by +3\n• You reduce all damage from missed attacks and successful saves to 1"
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "",
+      "cost": "",
+      "tags": [],
+      "effect": ""
+    },
+    "abilityIds": [
+      "42b43b8a68e897ca",
+      "0c3b60081b1c0cc2",
+      "47d28101c9cc4d64",
+      "e02eb37d40d0fda7",
+      "b49b35ad6ed9f2e4",
+      "7d6e597e108bdbf5",
+      "7bc9fdcdf99fc500"
+    ],
+    "talentIds": [],
+    "keywords": [
+      {
+        "name": "Blind (-)",
+        "description": "When attacking, gain attack [-]"
+      },
+      {
+        "name": "Evasion (+)",
+        "description": "When attacked, roll 1d6. On a 5+, the attack automatically misses."
+      },
+      {
+        "name": "Haste (+)",
+        "description": "When free moving, move +2 spaces"
+      },
+      {
+        "name": "Mark",
+        "description": "A persistent effect attached to a character. Each ability can only mark one character at once."
+      },
+      {
+        "name": "Stealth (+)",
+        "description": "As long as you have one stealth token, cannot be directly targeted by foes except from adjacent spaces. After using any ability, or when ending any turn adjacent to a foe, discard one."
+      },
+      {
+        "name": "Summon",
+        "description": "Summons are tokens with an effect or ability attached to them. They don't occupy space or obstruct and can share space with characters. They are not characters and don't take damage or trigger effects unless abilities specifically mentioned. Summons have a maximum number active in (parentheses) and may have a summon action, which can be activated as a quick ability, or a passive summon effect. When they are dismissed, remove them from the battlefield."
+      }
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "de79680666f31a2f",
+  "name": "Waterspout",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Range 2-5"
+    ],
+    "flavor": "You grab the reigns of the storm and pull it to earth, causing a rippling tornado of water.",
+    "effect": "Summon a waterspout in a free space in range.\n\nWaterspout\nSummon (1), Size 1\nSummon effect summon is also an obscured space.\nSummon effect first time in a round any character or summon enters the waterspout's space for any reason, they are sucked in and removed from the battlefield until the end of the current turn. At the end of that turn, spit them out. Foes are pushed 3, and allies may fly 3.\nImpact take 1d6+2 damage and gain slow.\n\nSummon Action to suck in a character in range 1-2, with the same effect as above. Foes can pass a save to avoid this effect, but can be pushed or pulled 1 on a successful save.\nConserve action cost to 1\n\n(Conserve only trigger if you have not attacked this turn, and cannot attack on any turn you trigger this effect.)",
+    "jobId": "stormbender"
+  }
+}

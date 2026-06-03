@@ -1,0 +1,17 @@
+{
+  "_id": "b89b09cad0f25a25",
+  "name": "Zipline",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "zone",
+      "Line 4",
+      "end turn"
+    ],
+    "flavor": "Why go through when you can go over?",
+    "effect": "Zone your turn and create a line 4 zipline in range, which could overlap characters. You or any ally adjacent to either unoccupied end space of the zipline, may use a quick ability to enter that space, then fly to the other end of the zipline or as far as possible, then gain haste.\nEffect of replacing this zone when it is used again, you may choose to extend the existing zone by +4 spaces, added from any end space. It could change directions, and this creates a new end space.\nOverdrive not end turn",
+    "jobId": "blightrunner"
+  }
+}

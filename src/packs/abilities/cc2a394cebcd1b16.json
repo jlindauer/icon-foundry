@@ -1,0 +1,9 @@
+{
+  "_id": "cc2a394cebcd1b16",
+  "name": "Signature",
+  "type": "talent",
+  "system": {
+    "effect": "Choose a summon ability. It gains +2 max range and you may rename the ability and the summon it creates in any way you choose.",
+    "jobId": "herbalist"
+  }
+}

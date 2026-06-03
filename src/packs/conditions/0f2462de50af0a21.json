@@ -1,0 +1,10 @@
+{
+  "_id": "0f2462de50af0a21",
+  "name": "Shield (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Shield (+)",
+    "effect": "When attacked, gain +2 DF."
+  }
+}

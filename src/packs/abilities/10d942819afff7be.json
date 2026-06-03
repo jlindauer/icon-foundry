@@ -1,0 +1,9 @@
+{
+  "_id": "10d942819afff7be",
+  "name": "Vantage",
+  "type": "talent",
+  "system": {
+    "effect": "You can choose to push or pull up elevation. Your abilities gain dominant all push and pull by +1.",
+    "jobId": "partizan"
+  }
+}

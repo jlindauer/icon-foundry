@@ -1,0 +1,9 @@
+{
+  "_id": "729b8f4f9664b264",
+  "name": "Stomp",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you can push any adjacent object 1d3+1 spaces. If it would enter the space of a character, they gain 1 slow.",
+    "jobId": "auran"
+  }
+}

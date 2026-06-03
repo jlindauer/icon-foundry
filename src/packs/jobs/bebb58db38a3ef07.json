@@ -1,0 +1,55 @@
+{
+  "_id": "bebb58db38a3ef07",
+  "name": "Celestian",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Oracle Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Heavenly Orrery",
+      "effect": "At the start of the round, roll the effect die to see which position the heavens are in. Your abilities become altered this round based on what you roll.\n• (1-2) Solar syzygy all area damage by +2 and all blasts by +1. Reduce all vigor granted to 1.\n• (3-4) Lunar confluence half damage. Increase all vigor granted by +2 and increase the size of all lines by +3.\n• (5-6) Astral alignment all crosses by +2. Once a round, increase a positive or negative status granted by +1."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Cosmic Doom",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "Range 1-5"
+      ],
+      "effect": "You twist a foe's fate in the life current, knocking their fate out of the normal flow of cosmic providence into something much more unfortunate.\nMark read a foe's ill fortune, then mark your foe. This mark cannot be cleared. At the end of each of their turns for the rest of combat, roll 1d6 to see what fate befalls them this round:\n• (1-2) Solar Blast 3, including your foe. Your foe and all other foes inside take 2 piercing damage. Your foe is branded.\n• (3-4) Lunar Beam 4, including your foe. All allies inside gain 2 vigor and may remove 1 negative status. Increase by +1d3 vigor and grant 1 strength for allies in crisis.\n• (5-6) Astral Crush 1, including your foe, 2 damage. Your foe must save or be stunned, then has a height 1 meteor object created adjacent to them."
+    },
+    "abilityIds": [
+      "27f019d3ff1ba754",
+      "d5acaf6627a612bf",
+      "498ac9b0a5746c82",
+      "c6b63aa4f06ad8d7"
+    ],
+    "talentIds": [
+      "9de9b30facbd1a47",
+      "5def820fcc71f0e8",
+      "e3e34a6d2400813c"
+    ],
+    "keywords": [
+      {
+        "name": "Isolate",
+        "description": "Gains increased effects if there are no characters other than you adjacent to your target."
+      }
+    ],
+    "description": ""
+  }
+}

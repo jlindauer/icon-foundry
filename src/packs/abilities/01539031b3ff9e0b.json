@@ -1,0 +1,9 @@
+{
+  "_id": "01539031b3ff9e0b",
+  "name": "Swiftness",
+  "type": "talent",
+  "system": {
+    "effect": "Your free move is increased by +1 and gains phasing.",
+    "jobId": "stormscale"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "f366ba575cf5866b",
+  "name": "Slide",
+  "type": "talent",
+  "system": {
+    "effect": "If you don't attack during your turn, at the end of that turn, you may push yourself 3. You can choose the direction of this push.",
+    "jobId": "snowbinder"
+  }
+}

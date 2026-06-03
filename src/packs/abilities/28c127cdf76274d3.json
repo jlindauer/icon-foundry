@@ -1,0 +1,9 @@
+{
+  "_id": "28c127cdf76274d3",
+  "name": "Trip",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, you can activate any impact effect if a character enters an adverse terrain space during a push or pull.",
+    "jobId": "stormbender"
+  }
+}

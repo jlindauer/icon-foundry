@@ -1,0 +1,16 @@
+{
+  "_id": "6a8774dd75bd7a74",
+  "name": "Catapult",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "Interrupt 1",
+    "tags": [
+      "Push",
+      "Ally"
+    ],
+    "flavor": "Use your body as a springboard to set up ally maneuvers.",
+    "effect": "Trigger ally ends a movement in an adjacent space.\nEffect [X]: Push that ally 2 or (5+) 3 spaces. If they would end this push adjacent to a foe, that foe is dazed.\nOverdrive interrupt +2.",
+    "jobId": "bastion"
+  }
+}

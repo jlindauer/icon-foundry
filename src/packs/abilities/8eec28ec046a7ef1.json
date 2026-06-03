@@ -1,0 +1,17 @@
+{
+  "_id": "8eec28ec046a7ef1",
+  "name": "Entrench",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Aura",
+      "Self"
+    ],
+    "flavor": "You become an immovable object, stern and powerful, like a towering citadel.",
+    "effect": "Stance in this stance:\n• during your turn, you are immobile\n• you are immune to involuntary movement\n• you can be used as a cover object by adjacent allies\n• gain aura 1. Any foe that voluntarily enters the aura from the outside takes 1d6 damage and is pushed 1, interrupting but not ending their movement. A foe can't trigger this effect more than once a turn.\nEffect you are in crisis, also gain +1 armor in this stance and increase aura size by +1.\n(Aura X persistent effect that moves with a character, affecting all other characters in range X and line of sight.)",
+    "jobId": "bastion"
+  }
+}

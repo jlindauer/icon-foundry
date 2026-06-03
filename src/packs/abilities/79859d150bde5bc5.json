@@ -1,0 +1,9 @@
+{
+  "_id": "79859d150bde5bc5",
+  "name": "Sinew",
+  "type": "talent",
+  "system": {
+    "effect": "If you don't attack during your turn, you may increase all lines and crosses you create by +2 on your next turn.",
+    "jobId": "hawk-knight"
+  }
+}

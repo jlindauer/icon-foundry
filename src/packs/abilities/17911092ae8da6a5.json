@@ -1,0 +1,16 @@
+{
+  "_id": "17911092ae8da6a5",
+  "name": "Heaven's Ward",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4",
+      "Mark"
+    ],
+    "flavor": "You place a holy seal over your ally, enveloping them in divine protection.",
+    "effect": "Mark an ally in range. While marked, any foe that attempts to use an ability that includes that ally as a target must first save. On a successful save, the foe is branded and the mark fades. On a failed save, the chosen ally takes 1/2 damage from the ability, and gains [+] on any saves against its effects. Then the mark fades.\nOverdrive may mark a second ally without replacing this mark.\n\n(Overdrive automatically at round 3 or later.)",
+    "jobId": "shrine-guardian"
+  }
+}

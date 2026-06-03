@@ -1,0 +1,18 @@
+{
+  "_id": "8f7de213f9a0eddc",
+  "name": "Ignite",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Foe",
+      "Range 1-6",
+      "Power die"
+    ],
+    "flavor": "You spark a hungry flame in the soul aether of your foe, burning them from the inside.",
+    "effect": "Mark marked, set out a power die, starting at 6. Your target takes 2 piercing damage at the end of their turn, then tick the die down by 2. If the die ticks to 0, or your marked character is defeated, your target explodes in burst 1 area effect centered on them, stunning them, dealing 1d6+4 piercing damage to all characters in the area (save for half), and pushing those characters 1. Then end this mark.\nReckless [X]: Immediately tick the die down by 1d3.",
+    "jobId": "enochian"
+  }
+}

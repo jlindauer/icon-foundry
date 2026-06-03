@@ -1,0 +1,55 @@
+{
+  "_id": "7183b614f8265524",
+  "name": "Shrine Guardian",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Monk Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Shrine of Blessing",
+      "effect": "At the start of combat, you can place your portable shrine down in any space in range 1-3.\n\nShrine\nHeight 1 object\nEffect a quick ability, you can push the shrine 1d3+1 spaces if it is adjacent.\nEffect shrine has aura 1. Attacks against foes in the aura gain attack [+]. At round 3+, foes gain attack [-] against allies in the aura. At round 5+, double both these effects."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Great Spirit Festival",
+      "cost": "1 action",
+      "tags": [
+        "End Turn"
+      ],
+      "effect": "You clap and initiate a powerful ritual, briefly merging the world of spirits and gods with the material world in a riotous dance.\nZone place a zone with a blast area down with a size equal to the round number +2. This zone may overlap characters and other zones. While inside, any that misses an attack may re-roll it, taking the second result as final. Any foe that hits an attack while inside the zone must re-roll it, taking the second result as final. A character can only be affected by this zone once a round. The zone disperses at the end of your next turn, granting strength to yourself and all allies inside."
+    },
+    "abilityIds": [
+      "edf08d5df030f9e5",
+      "bfc60b6ca6e98755",
+      "7d378a7a75c302bc",
+      "17911092ae8da6a5"
+    ],
+    "talentIds": [
+      "463322ced992aff8",
+      "39283a08e0d32879",
+      "24a5c02de584cf7b"
+    ],
+    "keywords": [
+      {
+        "name": "Zone",
+        "description": "Changes or affects an area of the battlefield, causing persistent effects. Unless specified, placing a new zone replaces the last one placed. Zones from self or allies cannot overlap each other. You can dismiss a zone as a quick ability."
+      }
+    ],
+    "description": ""
+  }
+}

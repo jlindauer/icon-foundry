@@ -1,0 +1,57 @@
+{
+  "_id": "534af8f10dd8c395",
+  "name": "Harvester",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Witch Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Blooming Death",
+      "effect": "At the end of your turn, summon a thrall in free space in range 1-3. Summon two if you are bloodied, or three if you are in crisis.\n\nThrall\nSummon (6)\nSummon Action thralls dash 3 spaces, then explode, dealing 2 damage to an adjacent foe or granting 2 vigor to an adjacent ally. Increase by +1d3 against characters in crisis. Then dismiss the thrall."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Death Sentence",
+      "cost": "4 Resolve",
+      "tags": [
+        "Quick",
+        "Melee",
+        "End Turn"
+      ],
+      "effect": "A flash of the scythe, and the line between life and death is blurred.\nSummon slash an adjacent foe with your weapon, knocking their soul out of their body. Summon their soul in range 1-2.\n\nSevered Soul\nSummon (1)\nSummon effect they have their soul knocked out, foes can act normally. However, the soul can be targeted as if it was the body, transferring all damage, marks, or statuses it would take to the body, no matter the distance or line or sight. Other effects (such as pushes or pulls) apply to the soul.\n• Damage transferred gains pierce.\n• The soul always counts as being in crisis.\n• Abilities that are able to target both the body and soul of the foe (such as AoEs) can hit both.\nDismiss the soul at the end of your next turn."
+    },
+    "abilityIds": [
+      "44e4de46a4a811a9",
+      "767b8253a6e9bec8",
+      "246d382f2b0c1f62",
+      "c6b49ea973af169e"
+    ],
+    "talentIds": [
+      "b18d4b4ecbd0c046",
+      "b413169077267a9b",
+      "d0a8eccf80924b7e"
+    ],
+    "keywords": [
+      {
+        "name": "Finishing Blow",
+        "description": "Gains increased effects against bloodied characters."
+      }
+    ],
+    "description": ""
+  }
+}

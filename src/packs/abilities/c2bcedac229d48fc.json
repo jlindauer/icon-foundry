@@ -1,0 +1,17 @@
+{
+  "_id": "c2bcedac229d48fc",
+  "name": "Mighty Standard",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Zone",
+      "Range 1-3",
+      "End turn"
+    ],
+    "flavor": "You place your banner, striking fear into the hearts of your foes.",
+    "effect": "Zone your turn and designate a blast 3 zone with at least one space in range, which could overlap characters. Allies that end their turn inside the zone gain shield. If they are in crisis, they also gain +1 armor while inside the zone.\nEffect [X]: While inside the zone, you can pick up the banner as a quick ability and swing it, pushing all other character inside 1d3, but removing the zone. Foes pushed are dazed.\n(Zone or affects an area of the battlefield, causing persistent effects. Unless specified, placing a new zone replaces the last one placed. Zones from self or allies cannot overlap each other. You can dismiss a zone as a quick ability.)",
+    "jobId": "tactician"
+  }
+}

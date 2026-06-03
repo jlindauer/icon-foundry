@@ -1,0 +1,9 @@
+{
+  "_id": "5fa30f51065ec2cd",
+  "name": "Footholds",
+  "type": "talent",
+  "system": {
+    "effect": "You ignore up to 3 levels of movement penalties for moving up elevation.",
+    "jobId": "pathfinder"
+  }
+}

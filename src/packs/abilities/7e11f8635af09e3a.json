@@ -1,0 +1,15 @@
+{
+  "_id": "7e11f8635af09e3a",
+  "name": "Viga",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4"
+    ],
+    "flavor": "Spur your allies to action.",
+    "effect": "Effect [X]: An ally in range gains one or (6+) two strength and may immediately make a free move.",
+    "jobId": "mendicant"
+  }
+}

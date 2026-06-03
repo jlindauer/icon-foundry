@@ -1,0 +1,10 @@
+{
+  "_id": "a71eb9dc9e0c7f81",
+  "name": "Strength (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Strength (+)",
+    "effect": "When attacking, gain +2 base damage."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "42497e4767489f66",
+  "name": "Stutter",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you teleport or teleport an ally, you can teleport yourself or them again 1d3 spaces. Overdrive: +2 more spaces.",
+    "jobId": "chronomancer"
+  }
+}

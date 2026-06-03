@@ -1,0 +1,16 @@
+{
+  "_id": "4c8ce512f2d36b88",
+  "name": "Holy",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 3-5",
+      "Cross 3"
+    ],
+    "flavor": "You chant a word of making, and the world explodes with holy light.",
+    "effect": "Area Effect take 2 piercing damage, or 2d3 piercing if there was a defeated ally in the area.\nAll allies in the area gain vigor depending on their hp amount:\n• Above 50%: 1 vigor\n• Bloodied: 1d3+1\n• Crisis: 3d3+3. May heal over vigor maximum. At the end of an ally's turn, reduce down to their maximum if higher.\n• Defeated rescued.\nConserve foe in the center space is branded and must save or be stunned.",
+    "jobId": "chanter"
+  }
+}

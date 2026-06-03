@@ -1,0 +1,55 @@
+{
+  "_id": "b6edab810676070f",
+  "name": "Zephyr",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bard Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Fair Winds",
+      "effect": "You automatically enter the Fair Winds stance at the start of combat, and enter it again automatically if you end your turn at elevation 1 or higher.\n• This stance stacks with other stances.\n• While in this stance, your free move becomes flying and moves +2 spaces\n• As a quick ability, you can forgo your free move to allow an ally in range 1-5 to fly that many spaces instead.\n• You exit the stance if you end your turn at elevation 0 or lower."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Grandmother Gale",
+      "cost": "2 actions, 3 resolve",
+      "tags": [
+        "Range 1-4"
+      ],
+      "effect": "You call in the mother of all storms. Her momentary visitation is enough to toss around even the sturdiest warrior like driftwood.\nEffect summon a massive swirling sheet of wind that blankets the battlefield. Choose a blast 3 area in range, which could include characters. Other than that blast area, all other spaces on the battlefield become obscured. Attacks from characters in these spaces gain [-][-], and all characters in these spaces count as being elevation +1 and fly when they move. This effect ends at the end of your next turn.\nEffect can invert this effect if you want, changing it to all spaces inside the blast area instead."
+    },
+    "abilityIds": [
+      "76201bb7edc6cfe0",
+      "ce3962f248effd3f",
+      "4fa6da214c519845",
+      "57d5c778f3d8db72"
+    ],
+    "talentIds": [
+      "4aaaeb46e38e6799",
+      "0c326eafe9aed2a8",
+      "a7136a0267585544"
+    ],
+    "keywords": [
+      {
+        "name": "Dominant",
+        "description": "Gains extra effects depending on the elevation difference between you and your target."
+      }
+    ],
+    "description": ""
+  }
+}

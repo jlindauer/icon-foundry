@@ -1,0 +1,15 @@
+{
+  "_id": "3b72e745f463a01d",
+  "name": "Masochism",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-2"
+    ],
+    "flavor": "Your aether reaches out to your allies, spreading their suffering to you and lifting their plight.",
+    "effect": "Effect all negative statuses from all ally in range to you, then gain 1 vigor per status token transferred. If you're bloodied, you may repeat this effect on a second ally. If you're in crisis, you may repeat it on all allies in range.",
+    "jobId": "bleak-knight"
+  }
+}

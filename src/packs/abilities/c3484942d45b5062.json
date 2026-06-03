@@ -1,0 +1,16 @@
+{
+  "_id": "c3484942d45b5062",
+  "name": "Megi",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 1-4"
+    ],
+    "flavor": "Sear a mark of your divinity into your foe.",
+    "effect": "Mark a foe in range. While marked, abilities that target the foe gain effect [+] and that foe's abilities gain effect [-]. If the foe is defeated, you may transfer this ability to a new foe in range as a quick ability during your turn.",
+    "jobId": "mendicant"
+  }
+}

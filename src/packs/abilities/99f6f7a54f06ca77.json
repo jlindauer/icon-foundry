@@ -1,0 +1,17 @@
+{
+  "_id": "99f6f7a54f06ca77",
+  "name": "Magi",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-8",
+      "Cross 1"
+    ],
+    "flavor": "Elementary magic, drawing on fundamental chaos, but no less potent.",
+    "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied.",
+    "jobId": "wright"
+  }
+}

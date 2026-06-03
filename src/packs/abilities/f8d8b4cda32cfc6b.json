@@ -1,0 +1,9 @@
+{
+  "_id": "f8d8b4cda32cfc6b",
+  "name": "Topple",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you cause a character or object to impact with another character, you can push the second character 2 spaces and deal 2 damage to them.",
+    "jobId": "breaker"
+  }
+}

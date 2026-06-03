@@ -1,0 +1,16 @@
+{
+  "_id": "7d378a7a75c302bc",
+  "name": "Horse and Ox Seal",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 2-4"
+    ],
+    "flavor": "With a word and a quickly drawn talisman, you stomp your foot and forbid your foe from stepping on holy earth.",
+    "effect": "Mark a foe in range. While marked, your chosen foe treats all spaces inside your auras or zones as dangerous terrain. While inside those zones, you and allies gain attack [+] against your target. A foe can save at the end of their turn to end this mark, but only if they are not in one of your zones or auras.",
+    "jobId": "shrine-guardian"
+  }
+}

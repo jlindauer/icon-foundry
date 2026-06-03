@@ -1,0 +1,9 @@
+{
+  "_id": "1928c6364d237779",
+  "name": "Flash",
+  "type": "talent",
+  "system": {
+    "effect": "After you hit an attack, you may teleport 1. If you excelled or better, you may teleport 1d3+1 spaces instead.",
+    "jobId": "sealer"
+  }
+}

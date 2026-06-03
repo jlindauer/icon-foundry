@@ -1,0 +1,18 @@
+{
+  "_id": "e037e8b7b7ffe886",
+  "name": "Realignment",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-2",
+      "Self",
+      "Ally",
+      "Foe"
+    ],
+    "flavor": "Using your exhaustive knowledge of anatomies, you quickly rearrange energy channels in your target to heal them - forcefully.",
+    "effect": "Effect hit a precise pressure point, purging toxins from your target's body. Remove all negative status tokens on the character, then choose: your target takes 1 piercing damage or gains 1 vigor per status removed.\nWeave a close blast 2 area effect from your target after this ability resolves, regardless of range. Create dangerous terrain in every free space in the area. If your target is a foe, they are then slowed.",
+    "jobId": "alchemist"
+  }
+}

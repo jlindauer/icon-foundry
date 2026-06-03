@@ -1,0 +1,16 @@
+{
+  "_id": "23a4dc56041180d7",
+  "name": "Master's Eye",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-3",
+      "Interrupt"
+    ],
+    "flavor": "You stand ready to step in at the slightest mistake in stance.",
+    "effect": "Effect may clear a negative status on yourself. Then gain the following interrupt until the start of your next turn.\n\nCorrection\nInterrupt 1, range 1-3\nTrigger ally in range is attacked.\nEffect [X]: The attack gains [-]. Then, after the attack resolves, swap places with your ally and you may push both them and the attacking foe 1 (4+) or 2 spaces.\nImpact takes damage equal to the spaces they moved before impact (max 6).",
+    "jobId": "yaman"
+  }
+}

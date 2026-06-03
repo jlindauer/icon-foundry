@@ -1,0 +1,55 @@
+{
+  "_id": "50818b8e037bb110",
+  "name": "Corvidian",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Mercenary Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Way of the Crow",
+      "effect": "Before you attack a foe, you may consume a negative status token on your foe to deal +2 damage on hit. You may consume 3 negative statuses to also grant the attack piercing. If an attack powered up this way defeats your foe, clear a negative status on yourself, then gain shield."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Bloodbath",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Aura",
+        "Stance"
+      ],
+      "effect": "Your skill at looting corpses has given you more than quick fingers - it has given you an intimate knowledge of both killing implements and where best to poke them.\nStance in this stance, gain aura 1.\n• All foes in the aura count as bloodied, and bloodied foes count as being in crisis.\n• The first time in a round a foe is defeated in the aura, yourself and all allies in the aura gain 1d3 vigor and can clear a negative status."
+    },
+    "abilityIds": [
+      "0c4e43266cea2189",
+      "dc75b3c7e82563f1",
+      "17a4e498cb52df9b",
+      "6fc60f629d140870"
+    ],
+    "talentIds": [
+      "d5cbb33e2f0f5606",
+      "6b9d36ca1f2096cf",
+      "05ec821389a5fec9"
+    ],
+    "keywords": [
+      {
+        "name": "Finishing Blow",
+        "description": "Gains additional effects if targeting a bloodied foe or a foe in crisis."
+      }
+    ],
+    "description": ""
+  }
+}

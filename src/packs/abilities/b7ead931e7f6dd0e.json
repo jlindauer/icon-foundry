@@ -1,0 +1,9 @@
+{
+  "_id": "b7ead931e7f6dd0e",
+  "name": "Breather",
+  "type": "talent",
+  "system": {
+    "effect": "You can expend haste or evasion on yourself as a quick ability to immediately clear a negative status and dash 1 space.",
+    "jobId": "dragoon"
+  }
+}

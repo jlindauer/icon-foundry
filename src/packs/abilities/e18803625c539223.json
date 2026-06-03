@@ -1,0 +1,15 @@
+{
+  "_id": "e18803625c539223",
+  "name": "Blast Jump",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "burst 1 (self)"
+    ],
+    "flavor": "You soar into the air with explosive pizzaz, leaving your enemies scorched.",
+    "effect": "Area Effect [X]: Explode for a burst 1 (self) area effect. Characters and summons caught inside other than you are pushed 1 space, and characters take 2 damage. Then you may fly 1d6 spaces.\nReckless flight and damage by +2, and gain haste.",
+    "jobId": "dragoon"
+  }
+}

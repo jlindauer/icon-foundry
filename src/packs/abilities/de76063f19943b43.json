@@ -1,0 +1,16 @@
+{
+  "_id": "de76063f19943b43",
+  "name": "Disintegrate",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Line 8"
+    ],
+    "flavor": "You reverse matter's bond, ripping your targets apart at the fundamental level.",
+    "effect": "Effect through and destroys all objects on the line.\nAttack: 2 piercing damage. On hit: +1d6 piercing\nArea effect: 2 piercing damage\nOn hit afflicted characters in the area take +2 damage, +1d6 if they have a 3 or more negative status tokens.\nPrecision attack [+] at range 4+, or [+][+] at range 7+.",
+    "jobId": "entropist"
+  }
+}

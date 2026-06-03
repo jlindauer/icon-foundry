@@ -1,0 +1,9 @@
+{
+  "_id": "60a7233c1fc392bf",
+  "name": "Shimmer",
+  "type": "talent",
+  "system": {
+    "effect": "If an ability ends your turn, it grants you stealth.",
+    "jobId": "weeping-assassin"
+  }
+}

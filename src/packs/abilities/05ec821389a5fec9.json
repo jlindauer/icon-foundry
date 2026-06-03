@@ -1,0 +1,9 @@
+{
+  "_id": "05ec821389a5fec9",
+  "name": "Camraderie",
+  "type": "talent",
+  "system": {
+    "effect": "When you rescue an ally, you and that ally gain shield and 1d3+1 vigor.",
+    "jobId": "corvidian"
+  }
+}

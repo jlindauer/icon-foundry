@@ -1,0 +1,15 @@
+{
+  "_id": "074c263233de95cc",
+  "name": "War God's Step",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Burst X (self)"
+    ],
+    "flavor": "You crack the earth with your step, sending out rippling shockwaves.",
+    "effect": "Area Effect [X]: Smash every character in burst 1 (self) or (4+) burst 2 (self).\nArea effect difficult terrain under every character in range, then those characters are dazed.\nSacrifice 3 or gain Reckless +1, and deals 2 damage, once, to all characters in the area. You may repeat this effect up to 3 times.",
+    "jobId": "colossus"
+  }
+}

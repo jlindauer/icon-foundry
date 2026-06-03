@@ -1,0 +1,9 @@
+{
+  "_id": "4a1e1ff025454ea6",
+  "name": "Bloodwell",
+  "type": "talent",
+  "system": {
+    "effect": "If you're in crisis, reduce all sacrifice costs to 2 if higher.",
+    "jobId": "theurgist"
+  }
+}

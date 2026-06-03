@@ -1,0 +1,17 @@
+{
+  "_id": "b704a69b6be339b4",
+  "name": "Umbral Echo",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Summon",
+      "Range 1-3",
+      "Swap"
+    ],
+    "flavor": "You create shadow twins of yourself and allies, confounding foes.",
+    "effect": "Summon [X]: Summon two or (4+) three or (6+) five umbral echoes in free space in range.\n\n[Umbral Echo — Summon (4)]\nSummon Action [X]: Swap yourself or an ally with an echo in range 1-3. Characters swapped gain stealth. After swapping with an echo, dismiss the echo and create an obscured space where you dismissed it.\nSummon Effect can take the above summon action on their turn as long as you have at least one echo.",
+    "jobId": "puppeteer"
+  }
+}

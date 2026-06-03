@@ -1,0 +1,16 @@
+{
+  "_id": "4441b724fbb65102",
+  "name": "Odinforce",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Power die"
+    ],
+    "flavor": "You slash, and phantom images of your blade linger over your shoulder.",
+    "effect": "Stance keen and six lingering lightning infused copies of your weapon, represented by a power die, starting at 6.\n• At the end of your turn you may tick down the die to fire a weapon at one or two foes in range 1-4, dealing 1 piercing damage and ticking the die down by 1 each time.\n• The last sword deals an extra 1d6 piercing.\n• If the die ticks to 0, exit this stance.\nIsolate you end your turn with no other characters adjacent, regain two swords.\nIsolate may fire 1d3 swords at a foe instead if they are isolated.",
+    "jobId": "spellblade"
+  }
+}

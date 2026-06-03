@@ -1,0 +1,55 @@
+{
+  "_id": "d1882d2751653c3f",
+  "name": "Cleaver",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Berserker Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Berserkergang",
+      "effect": "At the start of your turn, if you are bloodied, you may gain 2 vigor and clear one negative status. Increase this by +1d6 and additionally become unstoppable until the start of your next turn if you're in crisis."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Last Stand",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "Self",
+        "Aura"
+      ],
+      "effect": "Nothing can take you down.\nEffect the start of your next turn, gain aura 1. Yourself and allies in the aura take 1/2 damage while the aura is active. However, at the start of your next turn, end this aura and reduce yourself to 1 hp.\nEffect aura size by +1 if you're bloodied, or a further +1 if you're in crisis."
+    },
+    "abilityIds": [
+      "95ffded297858868",
+      "585215cfc48dadf7",
+      "d913c0bf9540b264",
+      "2257596ae0e96d26"
+    ],
+    "talentIds": [
+      "27febd3eead93faf",
+      "397c7d2f64b02dc0",
+      "656e7e9e99a541ed"
+    ],
+    "keywords": [
+      {
+        "name": "Reckless",
+        "description": "Push yourself to the limit gaining extra effects but inflicting yourself with the Reckless (-) unique status, stacking up to 3. You take +1 damage from all sources per stack of reckless. You can only clear reckless by effects that clear a negative status."
+      }
+    ],
+    "description": ""
+  }
+}

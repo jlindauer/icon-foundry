@@ -1,0 +1,16 @@
+{
+  "_id": "23aa7a5b416a93c6",
+  "name": "Peak Performance",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "End Turn",
+      "Stance"
+    ],
+    "flavor": "You lead best by example.",
+    "effect": "End your turn and gain Stance in this stance, your attack gains [+] and you gain the following interrupt.\n\nAgain, Student!\nInterrupt 1, range 1-2\nTrigger ally in range attacks a foe, and you see the result of the attack roll.\nEffect your own attack roll, using any bonuses you have. You may substitute your attack roll for your ally's. Then after the attack resolves, you may push your ally 1d3.\nExcel this push.\nImpact deals damage to any foe they impact with equal to the spaces they were pushed before impact (max 6).\n\n(Excel on any attack where the total attack roll was 8 or higher. Reduced by any effect that reduces critical hit threshold.)",
+    "jobId": "yaman"
+  }
+}

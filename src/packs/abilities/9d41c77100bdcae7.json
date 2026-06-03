@@ -1,0 +1,17 @@
+{
+  "_id": "9d41c77100bdcae7",
+  "name": "Bones of the Earth",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-6",
+      "Object",
+      "Character"
+    ],
+    "flavor": "Send a pulse of earth aether downwards, causing tectonic upheaval.",
+    "effect": "Object yourself or a character in range. At the end of that target's next turn, the ground beneath them erupts. Create a height 1 (4+) 2, or (6+) 3 spire object under them, then push other adjacent characters 1.\nDominant may reverse this effect, lowering terrain under your target by one, (4+) two, or (6+) three spaces instead of creating an object.",
+    "jobId": "geomancer"
+  }
+}

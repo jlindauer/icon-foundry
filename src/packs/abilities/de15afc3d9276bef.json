@@ -1,0 +1,9 @@
+{
+  "_id": "de15afc3d9276bef",
+  "name": "Surge",
+  "type": "talent",
+  "system": {
+    "effect": "If you start your turn in crisis, you may clear up to two negative status tokens. If you are at 1 hp, you may clear all statuses instead.",
+    "jobId": "colossus"
+  }
+}

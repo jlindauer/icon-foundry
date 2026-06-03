@@ -1,0 +1,9 @@
+{
+  "_id": "c0f1b4a9cd5a14aa",
+  "name": "Elegance",
+  "type": "talent",
+  "system": {
+    "effect": "When you enter a stance for the first time in a round, you may fly 3.",
+    "jobId": "chanter"
+  }
+}

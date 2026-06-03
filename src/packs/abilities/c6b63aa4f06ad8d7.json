@@ -1,0 +1,16 @@
+{
+  "_id": "c6b63aa4f06ad8d7",
+  "name": "Meteor",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Object",
+      "Range 3-10"
+    ],
+    "flavor": "You pull a burning iron rock out of orbit and send it on collision course with your unlucky foe.",
+    "effect": "Effect a foe in range, and choose a number from 1-3. At the end of that many of your foe's turns, they are struck by a massive meteor. You may re-target the meteor to a new foe in range as a quick ability if your targeted foe is defeated, keeping the countdown timer. This ability also re-targets if you use it again while a meteor is active. Characters caught in the area (including the targeted character) may save to halve damage.\n\n1. 1d6 damage, cross 1\n2. 1d6+4 damage, blast 3 with at least one space on your foe, and push all characters 1 from the target. Create difficult terrain under your target.\n3. 6d6 damage, blast 5 with at least one space on your foe, and push all characters 2 from the target. Lower terrain under the target by 1 and create difficult terrain under them.\n\nEffect this ability resolves, create a height 1 meteor object adjacent to your target.\nIsolate target if no other character is caught in the area.",
+    "jobId": "celestian"
+  }
+}

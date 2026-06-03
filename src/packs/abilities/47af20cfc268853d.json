@@ -1,0 +1,15 @@
+{
+  "_id": "47af20cfc268853d",
+  "name": "Shatter",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Close Blast 3"
+    ],
+    "flavor": "Slam your weapon into the ground, sending up shockwaves.",
+    "effect": "Area effect: 1d6+2 damage, push 1.\nEffect you catch three or more characters in the area, increase area damage by +2.\nEffect character in the area is dazed.",
+    "jobId": "stalwart"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "f7542b9b2721acdd",
+  "name": "Steel Thorn",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Burst 2 (self)"
+    ],
+    "flavor": "Spikes of iron whip from the earth, piercing the limbs of your foes.",
+    "effect": "Attack: 2 piercing damage. On hit: +1d6 piercing.\nArea effect: 2 piercing damage\nOn hit one (4+) two or (6+) three spaces of dangerous terrain in free space in the area.\nHeavy character touching the edge of the burst, both inside and outside the area, takes 1d3+1 piercing damage again.",
+    "jobId": "auran"
+  }
+}

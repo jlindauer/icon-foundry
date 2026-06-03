@@ -1,0 +1,9 @@
+{
+  "_id": "87479a3446ae2be7",
+  "name": "Crystalline",
+  "type": "talent",
+  "system": {
+    "effect": "Your first attack of any combat deals +base damage equal to the round number.",
+    "jobId": "snowbinder"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "76201bb7edc6cfe0",
+  "name": "Gust",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-4",
+      "Line 3"
+    ],
+    "flavor": "With no weapon at all, you batter your foes like loose leaves.",
+    "effect": "Attack: 2 damage. On hit: +1d3 damage\nArea Effect: 2 damage.\nOn hit an updraft in free space adjacent to your target. You may place any number of these zones.\n\nUpdraft\nZone\nEffect is an obscured space. Yourself or allies inside count as +1 space of elevation higher than their base space.\n\nDominant a second updraft.",
+    "jobId": "zephyr"
+  }
+}

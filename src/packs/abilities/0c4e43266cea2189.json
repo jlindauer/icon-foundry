@@ -1,0 +1,16 @@
+{
+  "_id": "0c4e43266cea2189",
+  "name": "Demoralize",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "You strike down their strongest and best, driving them to their inevitable end.",
+    "effect": "Attack: 2 damage. Hit: +1d6.\nFinishing Blow [X]: Release a burst (1) self area effect, pushing all foes inside 1. If your foe is in crisis, push +1d3.\nEffect your attack defeats your foe, all foes in the area become dazed.",
+    "jobId": "corvidian"
+  }
+}

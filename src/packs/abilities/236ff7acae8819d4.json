@@ -1,0 +1,16 @@
+{
+  "_id": "236ff7acae8819d4",
+  "name": "Dimio",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Line 6"
+    ],
+    "flavor": "You cut the air in such a way that space itself is split.",
+    "effect": "Attack: 2 piercing damage. On hit: +1d3 piercing\nEffect [X]: You may teleport one character in the line 1d3+1 spaces, but they must stay on the line.\nPrecision your attack target is 4+ spaces away from you, increase damage on hit by +2. If they are 7+, you may teleport them to any space on the line.",
+    "jobId": "wayfarer"
+  }
+}

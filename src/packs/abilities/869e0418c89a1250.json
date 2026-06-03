@@ -1,0 +1,16 @@
+{
+  "_id": "869e0418c89a1250",
+  "name": "Writhing Wall",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-2",
+      "Line 4"
+    ],
+    "flavor": "Writhing mists wrap into a barrier that repels even the most ferocious warrior, sending them reeling.",
+    "effect": "Zone create a line 4 zone of writhing mists. Each space is an obscured space.\nEffect [X]: In addition, characters that voluntarily enter the space for the first time in a turn or start their turn there are pushed 1d3+1 spaces away from the wall (to a side of your choice if they are in the wall already), interrupting but not ending any movement. Characters with phasing ignore this effect, and characters may choose to pass a save to ignore this effect.",
+    "jobId": "mistwalker"
+  }
+}

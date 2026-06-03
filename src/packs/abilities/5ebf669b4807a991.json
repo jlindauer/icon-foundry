@@ -1,0 +1,15 @@
+{
+  "_id": "5ebf669b4807a991",
+  "name": "Taunt",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4"
+    ],
+    "flavor": "With well placed words, you rile up your foe into moving out of position.",
+    "effect": "Effect [X]: Gain shield. A foe in range is pulled 1, then must save or be pulled +1d3 spaces, become immobile, and become unable to take interrupts. These effect last until the start of their next turn.\nAfflicted takes 2 piercing damage, or 2d3 if they are afflicted by 3 or more statuses.",
+    "jobId": "knave"
+  }
+}

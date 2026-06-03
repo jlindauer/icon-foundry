@@ -1,0 +1,16 @@
+{
+  "_id": "1498b6c42f8680b8",
+  "name": "Choking Cloud",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-3",
+      "summon"
+    ],
+    "flavor": "You throw a gleaming stone of condensed pure poison. On impact, it blossoms into a beautiful, shimmering, and very deadly cloud.",
+    "effect": "Summon one or (5+) two choking clouds in range.\n\n[Choking Cloud — Summon (4)]\nSummon Effect cloud is an obscured space. In addition, characters other than you standing in or adjacent to a cloud do not clear statuses at the end of their turn.\nSummon Effect foes treat the area as difficult and dangerous terrain.\nSummon Action cloud flies 2 spaces. It can enter or end this movement in a character's spaces.",
+    "jobId": "venomist"
+  }
+}

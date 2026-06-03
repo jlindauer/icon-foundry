@@ -1,0 +1,15 @@
+{
+  "_id": "b215ab61d3b9cded",
+  "name": "Spirited Ballad",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "You start up a bawdy ballad, inspiring your allies to acts of greater heroism.",
+    "effect": "Stance in this stance, gain the following interrupt.\n\nInspire\nInterrupt 1\nTrigger ally in range 1-3 uses an ability.\nEffect ally can re-roll a single die rolled as part of this ability, taking the second roll as final.\nEffect your ally is in crisis, they can re-roll two dice.\n\nWeave this ability resolves, clear a negative status from yourself or an ally in range 1-3",
+    "jobId": "raconteur"
+  }
+}

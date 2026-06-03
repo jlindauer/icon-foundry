@@ -1,0 +1,56 @@
+{
+  "_id": "1be546a8863f18bc",
+  "name": "Raconteur",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bard Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Ballad Master",
+      "effect": "You can maintain two stances at the same time. At the start of combat, or the first time in a round you enter a stance you haven't entered before this combat, you can trigger one of the following effects:\n• Make a free move, or allow an ally in range 1-3 to do the same.\n• Swap yourself or two allies in range 1-3 of you and each other."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Amp Up",
+      "cost": "Quick, 2 resolve",
+      "tags": [
+        "End Turn",
+        "Aura"
+      ],
+      "effect": "You redouble your efforts, your words or music burning with a fiery passion that instills an unbreakable spirit in your allies.\nAura the end of your next turn, for all allies in aura 3:\n• Rolling a 1 or a 10 on a d10 counts as an 11\n• Rolling a 1 or a 6 on a d6 counts as a 7.\nAllies in the aura also score critical hits on 11s. When an ally scores a critical hit, it deals +damage equal to the round number and they can fly 3 after their attack resolves."
+    },
+    "abilityIds": [
+      "a41e2a56f16f2fb8",
+      "ab3b662f896074cb",
+      "b215ab61d3b9cded",
+      "3874bcd0caafa5a0"
+    ],
+    "talentIds": [
+      "82595860518b43b1",
+      "e58c758165266a40",
+      "821a62e2e862ccf4"
+    ],
+    "keywords": [
+      {
+        "name": "Weave",
+        "description": "When you use a weave effect, you gain the effect immediately, and then may repeat a copy of it as part of the very next ability you use. If multiple weave effects trigger, you can choose the order. Copies of a weave effect cannot weave further."
+      }
+    ],
+    "description": ""
+  }
+}

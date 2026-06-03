@@ -1,0 +1,9 @@
+{
+  "_id": "3f223c7a192dfb21",
+  "name": "Bolster",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you swap places with an ally, they may clear a negative status. If they have no negative statuses, they gain shield.",
+    "jobId": "workshop-knight"
+  }
+}

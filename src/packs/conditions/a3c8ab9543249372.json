@@ -1,0 +1,10 @@
+{
+  "_id": "a3c8ab9543249372",
+  "name": "Stun (-)",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Stun (-)",
+    "effect": "When taking a turn, deal half damage this turn."
+  }
+}

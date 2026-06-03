@@ -1,0 +1,9 @@
+{
+  "_id": "68a36221a831e21a",
+  "name": "Zeal",
+  "type": "talent",
+  "system": {
+    "effect": "Once per combat, you can count yourself as bloodied from the start of your turn until the start of your next turn, even if you're above 50% hp.",
+    "jobId": "theurgist"
+  }
+}

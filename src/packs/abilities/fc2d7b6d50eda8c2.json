@@ -1,0 +1,9 @@
+{
+  "_id": "fc2d7b6d50eda8c2",
+  "name": "Weight",
+  "type": "talent",
+  "system": {
+    "effect": "When you use a heavy ability you can push one of its targets 3 after it resolves.",
+    "jobId": "auran"
+  }
+}

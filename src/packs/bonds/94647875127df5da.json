@@ -1,0 +1,121 @@
+{
+  "_id": "94647875127df5da",
+  "name": "The Wolf",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Excel",
+      "Sneak"
+    ],
+    "ideals": [
+      "I addressed challenges with precision, coldness, or intimidation",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I let people see a glimpse of who I am beneath my mask"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when you fix someone else's mistakes, or someone else fixes yours.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "You are hardened. Your 4 clock burden gives you no penalties."
+    },
+    "powers": [
+      {
+        "id": "3e3728443581c118",
+        "name": "Clarity",
+        "description": "If you break, regain all effort, and you can push your next action for free.",
+        "isGambit": false
+      },
+      {
+        "id": "443a26c21cf53f54",
+        "name": "Scarcoat",
+        "description": "+1 max strain per Burden you have.",
+        "isGambit": false
+      },
+      {
+        "id": "93396c04d86f288e",
+        "name": "Blood Scent",
+        "description": "You get a knack for tracking or intimidating anyone or anything that's wounded.",
+        "isGambit": false
+      },
+      {
+        "id": "48219155c0b180ca",
+        "name": "Go for a Walk",
+        "description": "1/session - When you separate from the group to do something alone, get +1d and increased effect on your action. 'Cut to black' and roll the action 'off-screen'.",
+        "isGambit": false
+      },
+      {
+        "id": "5a1dcc49608ba26b",
+        "name": "Cornered",
+        "description": "When you are outnumbered in a tense or violent situation, leading team actions does not cost effort for you.",
+        "isGambit": false
+      },
+      {
+        "id": "3338ccc47a6a5606",
+        "name": "Lurk",
+        "description": "1/session - When the GM describes a scene, you can choose to be there, hidden, appropriate to chapter.",
+        "isGambit": false
+      },
+      {
+        "id": "2233176a4d31e9cd",
+        "name": "It's Nothing",
+        "description": "During Heal Burdens, heal 2 extra ticks on a burden of your choice if nobody helps you. Heal 1 tick on two burdens if someone does help you.",
+        "isGambit": false
+      },
+      {
+        "id": "414cb6c7bf75e250",
+        "name": "Crack Shell",
+        "description": "When you're exhausted, you can take aid actions without spending effort.",
+        "isGambit": false
+      },
+      {
+        "id": "913b80d5e36f4df8",
+        "name": "Bishop",
+        "description": "When you set someone up, that person gets both +1d and increased effect on the set up roll.",
+        "isGambit": false
+      },
+      {
+        "id": "5da9ef17a1f9156e",
+        "name": "Wick",
+        "description": "1/session - Increase the power of your next Excel action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "23267b6a5f736187",
+        "name": "Gambit of Arenheir",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "b6e1a9d429a27e08",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "273086e9268b1b1c",
+        "name": "Solo's Kit",
+        "items": [
+          "Shadow cloak, collapsible weapon, spiked gloves and boots, single use flash bomb, toxin vial (sleep, slow poison, or paralysis)"
+        ]
+      },
+      {
+        "id": "83ab0eee3fb8f33b",
+        "name": "Survivor's Kit",
+        "items": [
+          "Pick-me-up, old bandages, lock picks, change of clothes, concealed weapon(s), faded memento, knowledge of local streets and back doors"
+        ]
+      },
+      {
+        "id": "419ec735ea61f8c8",
+        "name": "Wanderer's Kit",
+        "items": [
+          "Weatherproof cloak, hardy traveling outfit, extra rope, survival rations, hunting weapon, knowledge of local fauna and flora"
+        ]
+      }
+    ]
+  }
+}

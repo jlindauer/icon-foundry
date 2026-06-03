@@ -1,0 +1,15 @@
+{
+  "_id": "ccaf15f80cc0f8bc",
+  "name": "Steady Aim",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "end turn"
+    ],
+    "flavor": "Your breath doesn't leave your body until the bullet leaves the barrel or the arrow escapes the string.",
+    "effect": "Effect your turn. You next attack with a listed range or line gains attack [+], +3 max range, and +3 max line.\nPrecision attack also gains: on hit: +2 damage and push 1, increased to +2d3 and push 2 at range 7+.",
+    "jobId": "pathfinder"
+  }
+}

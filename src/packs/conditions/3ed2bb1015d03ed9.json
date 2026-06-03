@@ -1,0 +1,10 @@
+{
+  "_id": "3ed2bb1015d03ed9",
+  "name": "Stealth (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Stealth (+)",
+    "effect": "As long as you have one stealth token, cannot be directly targeted by foes except from adjacent spaces. After using any ability, or when ending any turn adjacent to a foe, discard one."
+  }
+}

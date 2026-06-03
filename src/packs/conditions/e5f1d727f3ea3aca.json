@@ -1,0 +1,10 @@
+{
+  "_id": "e5f1d727f3ea3aca",
+  "name": "Daze (-)",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Daze (-)",
+    "effect": "When attacking, gain -2 base damage."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "17a4e498cb52df9b",
+  "name": "Intimidate",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 3-5",
+      "End turn"
+    ],
+    "flavor": "You lock eyes with a foe, letting them know the fate that will befall them if they come in your reach.",
+    "effect": "Mark your turn and mark a foe in range. While marked, that foe gains attack [-] against you and adjacent allies. If you start your turn adjacent to your marked foe, that foe must save. They take 1d6+4 damage, and half as much on a successful save. Then end the mark. The mark otherwise remains active.\nFinishing Blow is also stunned on a failed save.",
+    "jobId": "corvidian"
+  }
+}

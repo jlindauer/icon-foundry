@@ -1,0 +1,16 @@
+{
+  "_id": "d970b3420a75b61d",
+  "name": "Harien",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Arc 3"
+    ],
+    "flavor": "You strike from the darkness. When your opponent turns, you have faded into the night.",
+    "effect": "Effect 2\nAttack: 2 damage. Hit: +1d3\nArea effect: 2 damage\nIsolate 2, then gain stealth. If there are no characters other than you in range 1-2, increase dash to 4.",
+    "jobId": "weeping-assassin"
+  }
+}

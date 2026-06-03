@@ -1,0 +1,9 @@
+{
+  "_id": "d5cbb33e2f0f5606",
+  "name": "Cruelty",
+  "type": "talent",
+  "system": {
+    "effect": "Your attacks gain attack [+] and damage [+] against characters in crisis.",
+    "jobId": "corvidian"
+  }
+}

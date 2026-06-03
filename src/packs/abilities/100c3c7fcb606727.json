@@ -1,0 +1,17 @@
+{
+  "_id": "100c3c7fcb606727",
+  "name": "Revenge",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Power die",
+      "Aura"
+    ],
+    "flavor": "You take stock of any slight, letting it fuel a terrible fire in your gut.",
+    "effect": "Stance in this stance, gain aura 1. Set out a power die, or tick that die up by 1 when:\n• an ally in the aura gains a status\n• an ally in the aura takes damage\n• increase ticks from each effect by +1 if the ally was bloodied\nEach condition can trigger only once a round. When the die is 4 or higher, you become enraged and powered up. You and allies in the aura take 1/2 damage and become unstoppable. Then exit this stance at the start of your next turn.",
+    "jobId": "bleak-knight"
+  }
+}

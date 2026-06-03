@@ -1,0 +1,121 @@
+{
+  "_id": "3db25387b0b90057",
+  "name": "The Mighty",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Smash",
+      "Endure"
+    ],
+    "ideals": [
+      "I addressed challenges with strength, leadership, or force",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I didn't back down when faced with a challenge"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when you take injury or harm while protecting someone else.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When an ally close to you suffers strain, you can take the strain for them. You can spend 1 Effort when you take any strain to reduce it by 1, to a minimum of 1."
+    },
+    "powers": [
+      {
+        "id": "eeb84c10d1c6bbde",
+        "name": "True Grit",
+        "description": "When you break, you remain in control of your character for the rest of the scene.",
+        "isGambit": false
+      },
+      {
+        "id": "c56faf0ef1f8f977",
+        "name": "Iron Jaw",
+        "description": "You can't suffer critical strain (take 4 strain instead).",
+        "isGambit": false
+      },
+      {
+        "id": "ee7ea96d5dc7515e",
+        "name": "Volcanic",
+        "description": "2/session - When someone or something harms an ally in your presence, get +1d or increased effect (choose) on all actions against them for the rest of the scene.",
+        "isGambit": false
+      },
+      {
+        "id": "a2073eb6df32e90a",
+        "name": "Hammersoul",
+        "description": "Your Smash actions have increased effect when you're exhausted.",
+        "isGambit": false
+      },
+      {
+        "id": "1efd3f3d5afb43dc",
+        "name": "Overpower",
+        "description": "You can push by taking 2 strain instead of spending effort for Endure and Smash actions.",
+        "isGambit": false
+      },
+      {
+        "id": "56627e1ba54aaf24",
+        "name": "The Tower",
+        "description": "While you're at maximum strain, characters can aid you without spending effort. If you break, all characters that witness it recover 1 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "dd9dfbe5e65d2d31",
+        "name": "Force of Will",
+        "description": "1/session - Choose to automatically treat your next Command action roll as a 6. The GM can decide a character is too strong willed, forcing you to roll normally, but regain 2 effort after. Always works on foes from a lower chapter.",
+        "isGambit": false
+      },
+      {
+        "id": "98b94909f4d4c51b",
+        "name": "Half Light",
+        "description": "When you gather information about violence or possible threats, you can use Endure, Smash, or Command.",
+        "isGambit": false
+      },
+      {
+        "id": "43e128f5bf089692",
+        "name": "The Wall",
+        "description": "1/session - This scene only, reduce all strain suffered by you or an ally of your choice by 1, to a minimum of 1.",
+        "isGambit": false
+      },
+      {
+        "id": "41d5c45155ac0797",
+        "name": "Make Total Destroy",
+        "description": "1/session - Increase the effect of your next Smash action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "64bd40936c000458",
+        "name": "Gambit of The Storm Lord",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "a5cc845fb4cb2c90",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "d80be25d3e018b9f",
+        "name": "Soldier's Kit",
+        "items": [
+          "Extra rations, whetstone, oil, two pairs of good boots, extra large pack, badge of rank, protection ward"
+        ]
+      },
+      {
+        "id": "d52c907fa327de37",
+        "name": "Mercenary's Kit",
+        "items": [
+          "Fortifying snack, iron flask, bounty ledger, backup weapon, foldable hand cart, heavy object for hitting someone with"
+        ]
+      },
+      {
+        "id": "da3e759b0334c118",
+        "name": "Brawler's Kit",
+        "items": [
+          "Healing ointment, copious bandages, splint, thick gauntlets or gloves, foldable stretcher, good luck charm"
+        ]
+      }
+    ]
+  }
+}

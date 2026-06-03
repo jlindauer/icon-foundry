@@ -1,0 +1,16 @@
+{
+  "_id": "d5df67e4daac1f54",
+  "name": "Friend Maker",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "summon",
+      "range 1-3"
+    ],
+    "flavor": "Modified from fireworks. Some have kept the color and elaborate noisemakers and patterns.",
+    "effect": "Effect [X]: Summon one or (5+) two rockets in free space in range.\n\n[Rocket — Summon (4)]\nSummon Effect rocket can be targeted like a character. If it would take any damage, it ignites, traveling in a line 4 path in direction of your choice until it meets an obstruction or the last space of the line.\n• When it hits an obstruction or runs out of line, it explodes for a burst 1 area effect centered on its space, dismissing it.\n• Characters caught inside must save or take damage equal to the spaces it traveled before impact, or half as much on a successful save.\nReckless ignite the rocket. Yourself and adjacent characters to the rocket when it ignites gain stealth from the back blast.",
+    "jobId": "dragoon"
+  }
+}

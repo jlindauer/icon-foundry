@@ -1,0 +1,16 @@
+{
+  "_id": "6016f27dfe69cef0",
+  "name": "Rot",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4",
+      "Mark"
+    ],
+    "flavor": "Leaves shrivel. Hair Curls. Wounds fail to heal.",
+    "effect": "Mark a foe in range. While marked, that character takes 2 piercing damage at the end of their turn and creates difficult terrain under themselves. Increase damage to 2d6 piercing, and increase difficult terrain to 3 adjacent spaces of your choice if any part of it is absorbed by vigor. That character may then save to end the mark.",
+    "jobId": "herbalist"
+  }
+}

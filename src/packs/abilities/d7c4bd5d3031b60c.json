@@ -1,0 +1,16 @@
+{
+  "_id": "d7c4bd5d3031b60c",
+  "name": "Heracule",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-3"
+    ],
+    "flavor": "Hurl your shield or weapon as a discus with irrepressible force.",
+    "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit [X]: Your attack target and one other (4+) two other, (6+) all foes in range are pushed 1.\nOverdrive max range and push by +2 and gains damage [+].",
+    "jobId": "bastion"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_id": "dd8e30c504ac7bf0",
+  "name": "Slayer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Warrior Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Hot Blooded",
+      "effect": "If you don't attack during your turn, gain 3 vigor, or 3d3 if you're in crisis. While at maximum vigor, you are unstoppable, and effects cannot prevent you from attacking."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "God Waster",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Attack",
+        "Close Line 6"
+      ],
+      "effect": "Sever Divinity and cut through the threads of possibility. Pour all your rage into one blow and topple the Gods.\nAttack: [Vigor] damage. Hit: +2d6.\nArea effect: [Vigor] damage.\nHeavy 4d3 vigor before the attack and pushes 4 on hit.\nEffect burn out and lose all your vigor. You cannot gain vigor for the rest of combat.\nIf you miss this attack, ignore its last effect and refund 2 resolve. You can limit break again this combat."
+    },
+    "abilityIds": [
+      "0a2ce2824e826845",
+      "f3dcf16ff6d227d4",
+      "ab605058fecd69da",
+      "af480c24d54d8751"
+    ],
+    "talentIds": [
+      "3cbc47ca0c5def6b",
+      "f8328486df6539e2",
+      "cda5fc5f5d82d424"
+    ],
+    "keywords": [
+      {
+        "name": "Heavy",
+        "description": "Use a heavier version of an ability. If you do, you are then unable to attack or use a heavy ability until the end of your next turn."
+      }
+    ],
+    "description": ""
+  }
+}

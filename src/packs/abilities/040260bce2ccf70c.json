@@ -1,0 +1,16 @@
+{
+  "_id": "040260bce2ccf70c",
+  "name": "White Strings",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-5",
+      "Attack"
+    ],
+    "flavor": "Whip-thin white strings retract from your gauntlet, snapping around limbs.",
+    "effect": "Attack: 2 damage. On hit: +1d3 damage\nOn hit [X]: Pull your foe 3 spaces towards yourself, an ally, or an allied summon in range. The first time during this pull they would enter your space or the space of an ally or allied summon, they take damage equal to the space they were pulled before entering that character's space (max 6).\nEffect your target is in crisis, they take this damage twice.",
+    "jobId": "puppeteer"
+  }
+}

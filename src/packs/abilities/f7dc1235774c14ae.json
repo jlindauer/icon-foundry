@@ -1,0 +1,15 @@
+{
+  "_id": "f7dc1235774c14ae",
+  "name": "Midas",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Self"
+    ],
+    "flavor": "You use a flash of metal aether to briefly petrify yourself or an ally, removing them from further harm.",
+    "effect": "Effect gain one use of the following interrupt until the start of your next turn.\n\nFlesh to Metal\nInterrupt 1, range 1-4, self, ally\nTrigger target is damaged by a foe's ability.\nEffect transmute your target into solid stone, metal, or gemstone. After the triggering ability resolves, remove that character from the battlefield and replace them with a height 1 statue object. At the start of their next turn, or if the object is removed sooner, replace the object with the original character. Any characters or objects on top of the statue when it is replaced are placed in a free adjacent space or as close as possible.\nHeavy two uses of the interrupt.",
+    "jobId": "auran"
+  }
+}

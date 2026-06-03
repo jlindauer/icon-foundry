@@ -1,0 +1,9 @@
+{
+  "_id": "587a600b116908a1",
+  "name": "Vantage",
+  "type": "talent",
+  "system": {
+    "effect": "You gain attack [+][+] instead of attack [+] when attacking a target on lower elevation.",
+    "jobId": "pathfinder"
+  }
+}

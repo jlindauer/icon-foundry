@@ -1,0 +1,15 @@
+{
+  "_id": "426bc1783f36e6a5",
+  "name": "Ripper Claw",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 3-4"
+    ],
+    "flavor": "Using a grappling system, reel in a target with explosive force.",
+    "effect": "Effect a character in range 3 spaces. Foes are dazed. Allies gain shield.\nConserve max range and pull by +2.",
+    "jobId": "workshop-knight"
+  }
+}

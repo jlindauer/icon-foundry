@@ -1,0 +1,16 @@
+{
+  "_id": "d9b418d1696e8ea0",
+  "name": "Astral Chain",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "range 3-3"
+    ],
+    "flavor": "You whip out with the astral chain gauntlet, creating a charged connection to your foe.",
+    "effect": "Mark [X]: Mark your target. At the end of your target's turn:\n• If they're in range 3 of you, they take 2 damage once (4+) twice, (6+) 3 times. If they are at exactly 3 spaces away, they take triple damage.\n• If your target is further away, you may instead pull yourself 3 spaces towards your target, then gain haste.\n• Then your target may save to end this mark.\nEffect you excelled or scored a critical hit this turn, this ability becomes quick.",
+    "jobId": "freelancer"
+  }
+}

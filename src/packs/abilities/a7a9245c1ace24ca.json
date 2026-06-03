@@ -1,0 +1,9 @@
+{
+  "_id": "a7a9245c1ace24ca",
+  "name": "Implacable",
+  "type": "talent",
+  "system": {
+    "effect": "Each time you dash 1 space, you are immune to all damage and unstoppable during that movement. This also applies to any dash you grant to an ally.",
+    "jobId": "breaker"
+  }
+}

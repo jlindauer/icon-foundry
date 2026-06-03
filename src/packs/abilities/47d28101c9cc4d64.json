@@ -1,0 +1,13 @@
+{
+  "_id": "47d28101c9cc4d64",
+  "name": "Quick Step",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "Quick",
+    "tags": [],
+    "flavor": "You move with surprising agility and speed.",
+    "effect": "Effect [X]: Dash 1d3 spaces. You can phase through foes during this movement.",
+    "jobId": "vagabond"
+  }
+}

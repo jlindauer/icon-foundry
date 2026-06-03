@@ -1,0 +1,17 @@
+{
+  "_id": "a45fdf7dd3736d85",
+  "name": "Stop",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 1-5",
+      "Blast 3"
+    ],
+    "flavor": "You intensify gravity's effect in an area, pulling foes to their knees.",
+    "effect": "Zone create a crackling zone of strong gravitational collapse in free space in range, with the following effects:\n• The space is difficult terrain\n• Foes that willingly enter the zone for the first time in a turn or start their turn there gain slow.\n• Afflicted foes cannot voluntarily dash, fly, swap, or teleport when entering or exiting any space of the zone.",
+    "jobId": "entropist"
+  }
+}

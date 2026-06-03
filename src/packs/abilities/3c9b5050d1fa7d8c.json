@@ -1,0 +1,16 @@
+{
+  "_id": "3c9b5050d1fa7d8c",
+  "name": "Implode",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-6",
+      "Blast 2"
+    ],
+    "flavor": "You burn away the air itself, creating a sucking void that rips your foes into its howling embrace.",
+    "effect": "Area Effect all characters, objects, and summons at the outside edge of the targeted area 1 space into the area. Once character in the area then gains slow.\nReckless Quick.",
+    "jobId": "enochian"
+  }
+}

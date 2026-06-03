@@ -1,0 +1,9 @@
+{
+  "_id": "c2b46a82e34757be",
+  "name": "Sway",
+  "type": "talent",
+  "system": {
+    "effect": "While you are at 75% hp or higher, you gain attack [+]. When you're in crisis, you gain attack [+].",
+    "jobId": "yaman"
+  }
+}

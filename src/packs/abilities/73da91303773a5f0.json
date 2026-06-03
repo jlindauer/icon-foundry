@@ -1,0 +1,9 @@
+{
+  "_id": "73da91303773a5f0",
+  "name": "Slither",
+  "type": "talent",
+  "system": {
+    "effect": "You can phase through afflicted foes when you move. Once a round, when you do this, you can deal 2 damage to that foe, or 2d3 if they are in crisis.",
+    "jobId": "venomist"
+  }
+}

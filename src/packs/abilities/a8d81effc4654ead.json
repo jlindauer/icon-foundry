@@ -1,0 +1,17 @@
+{
+  "_id": "a8d81effc4654ead",
+  "name": "Fierce Crucible",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-5",
+      "Self",
+      "Ally"
+    ],
+    "flavor": "You ignite a fierce blaze in the soul of your target, purging them of deadly maladies, but scorching their very essence in the process.",
+    "effect": "Area effect 1 (target): 2d3 piercing damage to all other characters and push 1.\nEffect may clear all negative statuses, then gains 2 keen.\nEffect the start of your target's next turn, if they are bloodied, they sacrifice hp until they are bloodied. If they are below bloodied, they sacrifice until they are at 1 hp.",
+    "jobId": "theurgist"
+  }
+}

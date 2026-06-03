@@ -1,0 +1,13 @@
+{
+  "_id": "bd65d5d0a762a18e",
+  "name": "Withering Tendrils",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "You pull tendrils of mist around you, ready to lash out and steal the moisture from your foe's body.",
+    "effect": "Effect one use of the following interrupt until the start of your next turn.\n\nWithering Tendrils\nInterrupt 1, burst 2 (self)\nTrigger character enters or exits a space in the area.\nEffect[X]: Push all characters in the area 1d3, interrupting but not stopping any movement. Affected characters with vigor are pushed +2 more spaces, then lose vigor equal to the spaces they were pushed.\nImpact gain slow.\n\n(Impact on any character forcibly moved into an obstruction as part of this ability.)",
+    "jobId": "mistwalker"
+  }
+}

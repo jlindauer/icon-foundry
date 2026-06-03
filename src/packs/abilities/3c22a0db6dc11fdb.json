@@ -1,0 +1,9 @@
+{
+  "_id": "3c22a0db6dc11fdb",
+  "name": "Untouchable",
+  "type": "talent",
+  "system": {
+    "effect": "Add +1 to your evasion rolls. If you're in crisis, add +2.",
+    "jobId": "dancer"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "64ff70e18b327810",
+  "name": "Arsenal",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-3"
+    ],
+    "flavor": "Your bandoliers contain more than just weaponry.",
+    "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit or pull target 1 space.\nConserve may use the following version of this ability instead:\n  [Arsenal Flash Bomb — 1 action, range 1-2, zone. Zone a cross 1 space zone in range. Foes caught inside take 2 piercing damage. The center space of the zone is an obscured space.]\nExcel may also trigger the flash bomb effect.\n(Excel on a total final attack roll of 8+. This threshold is reduced by anything that reduces critical hit threshold.)",
+    "jobId": "workshop-knight"
+  }
+}

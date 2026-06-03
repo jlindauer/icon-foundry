@@ -1,0 +1,9 @@
+{
+  "_id": "7aaa60cdaf4d7ab6",
+  "name": "Megiddo",
+  "type": "talent",
+  "system": {
+    "effect": "At round 4+, all area abilities you create deal +2 area damage.",
+    "jobId": "enochian"
+  }
+}

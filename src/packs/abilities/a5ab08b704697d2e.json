@@ -1,0 +1,16 @@
+{
+  "_id": "a5ab08b704697d2e",
+  "name": "Fan the Hammer",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-3"
+    ],
+    "flavor": "Your shots ring out with supernatural accuracy.",
+    "effect": "Effect 1\nAttack: 2 damage. Hit: +1d3\nExcel [X]: Deal 2 damage to your target again (4+) and again (6+) and again.\nCritical hit and re-roll the excel effect.",
+    "jobId": "freelancer"
+  }
+}

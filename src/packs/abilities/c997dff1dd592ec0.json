@@ -1,0 +1,16 @@
+{
+  "_id": "c997dff1dd592ec0",
+  "name": "Brazen Blow",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Leave your enemies reeling.",
+    "effect": "Attack: 1 damage. Hit: +1d6.\nOn hit [X]: Push your target one, (4+) two, or (6+) four spaces.\nImpact damage to your foe equal to the number of spaces they were pushed before impact (max +6).",
+    "jobId": "breaker"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "186247cc13f3e017",
+  "name": "Twitch",
+  "type": "talent",
+  "system": {
+    "effect": "When you move outside your turn, increase that movement by +2.",
+    "jobId": "blightrunner"
+  }
+}

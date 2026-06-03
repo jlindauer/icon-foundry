@@ -1,0 +1,9 @@
+{
+  "_id": "07ad9093788e6620",
+  "name": "Suffer",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when a foe in range 1-3 is defeated, you may transfer all stacks of one of its negative statuses to any other foe in range 1-3.",
+    "jobId": "knave"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "3974d626b5df930d",
+  "name": "Slow (-)",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Slow (-)",
+    "effect": "When free moving, move -2 spaces."
+  }
+}

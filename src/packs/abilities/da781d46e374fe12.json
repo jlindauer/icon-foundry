@@ -1,0 +1,9 @@
+{
+  "_id": "da781d46e374fe12",
+  "name": "Flow",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, you may allow a copy of a weave effect to weave further one more time.",
+    "jobId": "dancer"
+  }
+}

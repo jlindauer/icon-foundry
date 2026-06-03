@@ -1,0 +1,9 @@
+{
+  "_id": "ae0b886bb862514d",
+  "name": "Fence",
+  "type": "talent",
+  "system": {
+    "effect": "If a foe is at the very end space of one of your damaging line or arc effects, they take 2 damage again after the ability resolves.",
+    "jobId": "spellblade"
+  }
+}

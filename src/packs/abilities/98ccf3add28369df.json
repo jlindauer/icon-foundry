@@ -1,0 +1,16 @@
+{
+  "_id": "98ccf3add28369df",
+  "name": "Low Blow",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "True Strike"
+    ],
+    "flavor": "Hit them right in the gronch.",
+    "effect": "Effect 1.\nAttack: 2 damage. On hit: +1d3 damage.\nAfflicted 2 damage again. If your target has 3 or more negative status tokens of any kind, deal 4 damage again instead.",
+    "jobId": "knave"
+  }
+}

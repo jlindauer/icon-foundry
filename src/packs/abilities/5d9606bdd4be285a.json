@@ -1,0 +1,13 @@
+{
+  "_id": "5d9606bdd4be285a",
+  "name": "Deathwheel",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "A blur of cape, a flash of color, the gleaming of blades.",
+    "effect": "Effect [X]: Dash X+2. You must dash in a straight line as far as possible. You gain phasing for this dash. The first foe you pass though takes 2 damage. The second takes 1d3+1. The third or more take 2d3+2.\nFinishing Blow haste if you passed through a bloodied foe. Also gain evasion if you passed through a foe in crisis.",
+    "jobId": "fool"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "f2e64d9b2fd10db6",
+  "name": "Haste (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Haste (+)",
+    "effect": "When free moving, move +2 spaces."
+  }
+}

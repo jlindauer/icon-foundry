@@ -1,0 +1,55 @@
+{
+  "_id": "c8ed2104f7f97655",
+  "name": "Mistwalker",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Water Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Lurker in the Fog",
+      "effect": "You ignore cover from obscured spaces.\nYou can swap places with any unoccupied obscured space or adverse space in range 1-3 as a quick ability during your turn."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Vapor Form",
+      "cost": "Quick, 4 resolve",
+      "tags": [
+        "Self"
+      ],
+      "effect": "You meld into a wraith of mist, quick, terrifying, and no less deadly.\nEffect the rest of combat:\n• you gain phasing and flying when you move\n• you can share space with other characters\n• you have cover from all directions\n• you are both a character and an obscured space. Effects cannot remove you, but can move you around if they move or affect terrain."
+    },
+    "abilityIds": [
+      "0b5027f715639e7a",
+      "41499a1e48172703",
+      "869e0418c89a1250",
+      "bd65d5d0a762a18e"
+    ],
+    "talentIds": [
+      "a47a7f0ffd7485e4",
+      "11c15d99489f318c",
+      "74513677645dec11"
+    ],
+    "keywords": [
+      {
+        "name": "Phasing",
+        "description": "May pass through obstructions while moving but may not end any movement inside an obstruction."
+      }
+    ],
+    "description": ""
+  }
+}

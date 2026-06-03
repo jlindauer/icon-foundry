@@ -1,0 +1,9 @@
+{
+  "_id": "565ac40b71704a8e",
+  "name": "Phoenix",
+  "type": "talent",
+  "system": {
+    "effect": "When you are defeated, you deal 1d6+2 piercing damage to all adjacent foes and push them 1. You may then automatically rescue yourself at the start of your next turn.",
+    "jobId": "enochian"
+  }
+}

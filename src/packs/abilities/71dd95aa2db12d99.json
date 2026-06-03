@@ -1,0 +1,16 @@
+{
+  "_id": "71dd95aa2db12d99",
+  "name": "Geotic",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Close Arc 6"
+    ],
+    "flavor": "The stomp of a foot or the slap of a palm is magnified a hundred fold into rumbling death.",
+    "effect": "Attack: 2 damage. On hit: +2d6\nArea Effect: 2 damage\nOn hit one, (4+) two, or (6+) three height 1 boulder objects in free space anywhere in the area effect after the attack resolves.\nDominant may create a burst 2 (target) area effect centered on your attack target, extending the total area effect.",
+    "jobId": "geomancer"
+  }
+}

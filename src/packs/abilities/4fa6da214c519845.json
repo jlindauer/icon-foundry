@@ -1,0 +1,16 @@
+{
+  "_id": "4fa6da214c519845",
+  "name": "Tempest Shot",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 3-5"
+    ],
+    "flavor": "You imbue swirling wind into arrows, bullets, or stones, creating miniature tornadoes when they strike.",
+    "effect": "Zone [X]: You create 1d3+1 spaces in range. Any foe that voluntary enters a space or starts their turn there is struck by a projectile, taking 2 piercing damage and becoming branded. Then create an updraft in their space:\n\nUpdraft\nZone\nEffect is an obscured space. Yourself or allies inside count as +1 space of elevation higher than their base space.\n\nAllies can activate a space by entering it and take no other damage or effects.\nDominant [X]: After creating a space, may push an adjacent foe 1d3",
+    "jobId": "zephyr"
+  }
+}

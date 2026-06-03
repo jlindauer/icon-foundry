@@ -1,0 +1,15 @@
+{
+  "_id": "1c7e52924068d367",
+  "name": "Land Waster",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Close Blast 3"
+    ],
+    "flavor": "Crash your weapon into the earth, sending up devastating shockwaves.",
+    "effect": "Area effect [X]: 1d6+2 damage, then push 1 or (4+) 2 spaces.\nEffect characters take +2 damage and are pushed +2 more spaces.\nImpact are dazed.",
+    "jobId": "breaker"
+  }
+}

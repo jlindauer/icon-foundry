@@ -1,0 +1,9 @@
+{
+  "_id": "a53bfc2db0f135d6",
+  "name": "Peace",
+  "type": "talent",
+  "system": {
+    "effect": "You take half damage in the first round of combat. This effect breaks if you attack.",
+    "jobId": "chanter"
+  }
+}

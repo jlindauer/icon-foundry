@@ -1,0 +1,9 @@
+{
+  "_id": "3cbc47ca0c5def6b",
+  "name": "Bulk",
+  "type": "talent",
+  "system": {
+    "effect": "While at maximum vigor, you are immune to involuntary movement.",
+    "jobId": "slayer"
+  }
+}

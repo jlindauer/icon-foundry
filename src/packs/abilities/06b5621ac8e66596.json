@@ -1,0 +1,15 @@
+{
+  "_id": "06b5621ac8e66596",
+  "name": "Viper Sting",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "end turn"
+    ],
+    "flavor": "You turn your enemies' strike to your own favor, spinning their own momentum into deadly force.",
+    "effect": "Effect evasion and the following interrupt:\n\n[Viper Sting — Interrupt 1, range 1-3]\nTrigger foe misses an attack\nEffect [X]: Dash 3. If that puts you adjacent to your foe, they take 2 damage. If their attack roll was 5 or less, they take 2d3 damage instead. Double this damage if they are in crisis.\nOverdrive +3 and dash +3\nSacrifice 4 the interrupt\n\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)",
+    "jobId": "blightrunner"
+  }
+}

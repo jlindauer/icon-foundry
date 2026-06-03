@@ -1,0 +1,9 @@
+{
+  "_id": "ab792ebc16f25c3f",
+  "name": "Boost",
+  "type": "talent",
+  "system": {
+    "effect": "Spaces occupied by allies or allied summons cost a maximum of 1 movement for you to enter or exit.",
+    "jobId": "warden"
+  }
+}

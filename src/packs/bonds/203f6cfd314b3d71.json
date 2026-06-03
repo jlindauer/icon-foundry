@@ -1,0 +1,121 @@
+{
+  "_id": "203f6cfd314b3d71",
+  "name": "The Dreamer",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Sneak",
+      "Smash"
+    ],
+    "ideals": [
+      "I addressed challenges with creativity, cheer, or trust in my allies",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I failed miserably"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "You can regain all effort when someone helps you out of a bad situation. Your rescuer can also recover 1 effort.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "Characters that successfully aid you or set you up can recover 1 effort, but no more than once a session."
+    },
+    "powers": [
+      {
+        "id": "0767d011a0f6a3d6",
+        "name": "Improvise",
+        "description": "2/session - Push a smash roll for free if using something that's not a weapon. I: Small. II: Large. III: Massive.",
+        "isGambit": false
+      },
+      {
+        "id": "36bc114c46539f7d",
+        "name": "Punching Bag",
+        "description": "If you take strain from anything, everyone else gets increased effect against that thing for the rest of the scene.",
+        "isGambit": false
+      },
+      {
+        "id": "c947260aca756b26",
+        "name": "Best Efforts",
+        "description": "If you fail a set-up roll, take 1 strain to re-roll it. Can do this any number of times.",
+        "isGambit": false
+      },
+      {
+        "id": "ffa4eb38a950b97e",
+        "name": "Bright Eyed",
+        "description": "At start of each session, choose a character to look up to. Aid them without spending effort, but aiding others costs 2 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "38b27ae71b244fdc",
+        "name": "Follow the Leader",
+        "description": "1/session - Make an action roll using any character's action rating. Describe how they taught or inspired you.",
+        "isGambit": false
+      },
+      {
+        "id": "02819cc7e1645cb7",
+        "name": "Lost Cat",
+        "description": "If you invoked burdens to get in trouble, choose a character that came to your aid. They mark 1 xp at end of session.",
+        "isGambit": false
+      },
+      {
+        "id": "66138fc307097c0a",
+        "name": "Rash",
+        "description": "1/session - Boast about success before rolling. Roll at max 0d, regain 1 effort after. On success (4+), everyone regains 1 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "569f122565ff4a29",
+        "name": "Underdog",
+        "description": "When you become exhausted, your next action gains +1d and increased effect.",
+        "isGambit": false
+      },
+      {
+        "id": "e9910eb6fd4e39fb",
+        "name": "Heart Held Dream",
+        "description": "Gain +1d on ambition clocks of 10+ segments. When complete, lift a burden or allow an ally to lift a burden.",
+        "isGambit": false
+      },
+      {
+        "id": "a231107008fa2079",
+        "name": "The Lobster",
+        "description": "If you break, your next action can be made normally and gains superpowered effect.",
+        "isGambit": false
+      },
+      {
+        "id": "9dc0db1d6448631f",
+        "name": "Gambit of The Wanderers",
+        "description": "Take a power from another bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "51c71ba1d7d3a18e",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "69745b7f6bcb9534",
+        "name": "Improvised Kit",
+        "items": [
+          "Fistful of sand, convenient rock, makeshift key, homemade tool, pocket snacks, slingshot"
+        ]
+      },
+      {
+        "id": "86b205af7c5ab84c",
+        "name": "Unlucky Kit",
+        "items": [
+          "A sudden fall, an untied knot, a slip, a broken pot or cup, a flying object"
+        ]
+      },
+      {
+        "id": "3cde512f4d1fc02d",
+        "name": "Lucky Kit",
+        "items": [
+          "A single useful clue, a sudden change in lighting, a shift in the weather, a convenient noise, a useful crack in a wall or door"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "739d948cd7e2f203",
+  "name": "Sturdy (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Sturdy (+)",
+    "effect": "When you would be forcibly moved, ignore it."
+  }
+}

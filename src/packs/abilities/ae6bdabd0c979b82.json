@@ -1,0 +1,16 @@
+{
+  "_id": "ae6bdabd0c979b82",
+  "name": "Aegi",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Mark",
+      "Range 1-4"
+    ],
+    "flavor": "You coalesce a divine shield over your ally.",
+    "effect": "Mark [X]: Marked character gains 2d3+4 vigor upon being marked, then takes half damage while marked. The first time in a turn an ability that damages them resolves, roll the effect die. On a 5+, keep this mark. Otherwise, they lose the mark and all vigor.",
+    "jobId": "mendicant"
+  }
+}

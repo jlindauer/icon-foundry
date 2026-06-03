@@ -1,0 +1,9 @@
+{
+  "_id": "32b251e59c7691c0",
+  "name": "Whirlpool",
+  "type": "talent",
+  "system": {
+    "effect": "When a summon would push or pull a character, increase that push or pull by +1. When you would push or pull a summon, increase that push or pull by +1.",
+    "jobId": "stormbender"
+  }
+}

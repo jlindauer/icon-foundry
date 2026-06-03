@@ -1,0 +1,9 @@
+{
+  "_id": "db247fe80547161d",
+  "name": "Kismet",
+  "type": "talent",
+  "system": {
+    "effect": "Your abilities may gain effect [+] if they target at least one foe in crisis.",
+    "jobId": "fool"
+  }
+}

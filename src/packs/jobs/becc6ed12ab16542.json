@@ -1,0 +1,55 @@
+{
+  "_id": "becc6ed12ab16542",
+  "name": "Colossus",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Berserker Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Blood of the Wolf Soul",
+      "effect": "The first time in a combat you would be reduced to 0 hp, stay at 1 hp instead and become immune to all damage until the end of the current turn, then lose this effect. At the start of your turn when you lack this effect, roll the effect die. On a 4+, regain this effect."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Gigantas Crusher",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Melee",
+        "Foe"
+      ],
+      "effect": "Wrestle with the gods themselves.\nEffect grab an adjacent foe. That character must save. Even if that character saves successfully, you grab them, and you both soar into the air. Remove both of you from the battlefield. At the start of that character's next turn, you come spinning back to earth, slamming your foe into the battlefield in unoccupied space in range 3 of your original location. You sacrifice 25% of your max hp. Your foe sacrifices 50% of their max hp, or 25% on a successful save. Then:\n• place yourself adjacent to your foe\n• lower the terrain under your foe by 1\n• push all adjacent characters to both of you 1\nThis ability can be used against Legends, but it costs +2 resolve and they may always save, sacrificing 4 hp and refunding this ability's resolve cost on a successful save, and only sacrificing 25% of their max hp on a failed save."
+    },
+    "abilityIds": [
+      "9381c0400c772b94",
+      "791e1c5c7f8cbf7d",
+      "c363d4561aded4af",
+      "074c263233de95cc"
+    ],
+    "talentIds": [
+      "51f725d60792d01c",
+      "52b1a302fc76588c",
+      "de15afc3d9276bef"
+    ],
+    "keywords": [
+      {
+        "name": "Sacrifice",
+        "description": "Push your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp."
+      }
+    ],
+    "description": ""
+  }
+}

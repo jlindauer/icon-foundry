@@ -1,0 +1,17 @@
+{
+  "_id": "44e4de46a4a811a9",
+  "name": "Reap",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Arc 3",
+      "Summon"
+    ],
+    "flavor": "Swing the great scythe, and pull forth the fruit of death.",
+    "effect": "Attack: 2 damage. On hit: +1d3 damage\nArea effect: 2 damage.\nOn hit a thrall adjacent to your foe at the end of your turn.\nFinishing blow two, or three if your foe is in crisis.\n\nThrall\nSummon (6)\nSummon Action thralls dash 3 spaces, then explode, dealing 2 damage to an adjacent foe or granting 2 vigor to an adjacent ally. Increase to 1d3+1 against characters in crisis. Then dismiss the thrall.",
+    "jobId": "harvester"
+  }
+}

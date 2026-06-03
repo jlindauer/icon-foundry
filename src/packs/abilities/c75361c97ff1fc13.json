@@ -1,0 +1,16 @@
+{
+  "_id": "c75361c97ff1fc13",
+  "name": "Second Wind",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "End turn",
+      "Self"
+    ],
+    "flavor": "You brace and ready yourself for the fray.",
+    "effect": "Effect [X]: Gain 2 vigor and end a negative status token. If you're in crisis, increase vigor by +1d6.\nEffect sturdy or grant it to an adjacent ally. Then end your turn.",
+    "jobId": "stalwart"
+  }
+}

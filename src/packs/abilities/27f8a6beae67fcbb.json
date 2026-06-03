@@ -1,0 +1,16 @@
+{
+  "_id": "27f8a6beae67fcbb",
+  "name": "Aqua",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Arc 6"
+    ],
+    "flavor": "A tendril of icy water batters your foes, sweeping landlubbers off their legs.",
+    "effect": "Attack: 3 damage. On hit: +1d3\nArea effect: 3 damage.\nOn hit [X]: Push or (4+) pull all characters inside the area 1.\nImpact difficult terrain under a character.",
+    "jobId": "stormbender"
+  }
+}

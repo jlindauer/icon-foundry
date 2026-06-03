@@ -1,0 +1,17 @@
+{
+  "_id": "1f9fc4c1f098de22",
+  "name": "Rune of the Forge",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Zone",
+      "Burst 1 (self)",
+      "End turn"
+    ],
+    "flavor": "Superheat the air around you, protecting from attackers.",
+    "effect": "Zone your turn and create a fiery ring centered on you. The zone does not move with you once created.\n• The zone is dangerous terrain to all other characters than you.\n• Characters other than you inside the zone when it is created must save or take 1d6 piercing damage.\n• Characters inside the zone have cover from characters outside the zone.\n• While inside the zone, you sacrifice 4 at the end of your turn.\n• You can safely exit the zone, but it ends if you exit it for any reason.\nReckless becomes burst 2 (self) instead.\n\n(Reckless yourself to the limit, gaining extra effects but inflicting yourself with the Reckless (-) unique status. You take +1 damage from all sources per stack of reckless. You may only discard reckless with effects that clear a negative status.)",
+    "jobId": "runesmith"
+  }
+}

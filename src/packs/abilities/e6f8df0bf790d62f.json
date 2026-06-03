@@ -1,0 +1,9 @@
+{
+  "_id": "e6f8df0bf790d62f",
+  "name": "Shift",
+  "type": "talent",
+  "system": {
+    "effect": "You push or pull targets with any amount of vigor +1 spaces, or +2 spaces if they have maximum vigor.",
+    "jobId": "yaman"
+  }
+}

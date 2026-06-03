@@ -1,0 +1,16 @@
+{
+  "_id": "17f55b94ef46c553",
+  "name": "Gungnir",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Line 6"
+    ],
+    "flavor": "A thousand spears of light, each striking a perfect blow.",
+    "effect": "Attack: 3 damage. Hit: +1d3\nArea effect: 3 damage\nIsolate foes in the area are struck by a lightning bolt, taking 2 damage again. You may then teleport adjacent to one of those characters.",
+    "jobId": "spellblade"
+  }
+}

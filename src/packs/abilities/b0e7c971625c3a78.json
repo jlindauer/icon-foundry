@@ -1,0 +1,9 @@
+{
+  "_id": "b0e7c971625c3a78",
+  "name": "Boulder",
+  "type": "talent",
+  "system": {
+    "effect": "Start combat with a height 1 boulder object underneath you.",
+    "jobId": "geomancer"
+  }
+}

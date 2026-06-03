@@ -1,0 +1,16 @@
+{
+  "_id": "ae6f1de819dcb2c2",
+  "name": "Rime",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Line 5"
+    ],
+    "flavor": "You strike and the attack rebounds, forming into an icy weapon that hovers in the air.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nArea effect: 2 damage.\nEffect a rime weapon in the closest free end of the line. The weapon becomes active at the end of your turn.\n\nRime Weapon\nSummon (6)\nSummon Action active rime weapons repeat the exact area of the line that created them, dealing piercing damage in that area equal to the round number and pushing characters in the area 1. If the weapon moves, the area they affected moves with them, mirroring the movement.\nConserve may use this ability without the attack tag. If you do, it just creates the rime weapon.",
+    "jobId": "snowbinder"
+  }
+}

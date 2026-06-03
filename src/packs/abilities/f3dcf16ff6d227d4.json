@@ -1,0 +1,15 @@
+{
+  "_id": "f3dcf16ff6d227d4",
+  "name": "Barge",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Self"
+    ],
+    "flavor": "Even when winding up a massive attack, you are a menacing force.",
+    "effect": "Effect sturdy and the following interrupt until the start of your next turn:\n  [Shoulder Check — Interrupt 1. Trigger foe in range 1-2 damages you or an ally. Effect foe must save. They are dazed and pushed 1 after the triggering ability resolves. On a failed save the triggering damage is also reduced by 1/2. Heavy may dash up to 3 spaces with unstoppable before triggering this ability. On a failed save, your foe also doubles daze and push.]",
+    "jobId": "slayer"
+  }
+}

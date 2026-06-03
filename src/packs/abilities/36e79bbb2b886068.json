@@ -1,0 +1,15 @@
+{
+  "_id": "36e79bbb2b886068",
+  "name": "Siege Rune",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Zone"
+    ],
+    "flavor": "You carve a burning rune of power into the very ground beneath you.",
+    "effect": "Zone a siege rune on the space underneath you. While you or an ally stands on this space, the max range, line, and arc of all their abilities is increased by 2.\nEffect a character is bloodied, they also gain keen at the end of their turn. If they are in crisis, increase range, line, and arc by +4 instead.",
+    "jobId": "runesmith"
+  }
+}

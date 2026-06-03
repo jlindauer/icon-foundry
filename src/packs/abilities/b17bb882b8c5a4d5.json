@@ -1,0 +1,16 @@
+{
+  "_id": "b17bb882b8c5a4d5",
+  "name": "Spiral Shot",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close line 6"
+    ],
+    "flavor": "Your shot picks up momentum the longer it flies.",
+    "effect": "Effect 1\nEffect attack the first foe in the line.\nAttack: 3 damage. On hit: +1d3 damage.\nPrecision +1d3 damage on hit. Increase to +2d3 at 7+ spaces.\nCritical hit remaining characters in the line take 3 damage.",
+    "jobId": "pathfinder"
+  }
+}

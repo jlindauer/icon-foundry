@@ -1,0 +1,15 @@
+{
+  "_id": "d913c0bf9540b264",
+  "name": "Seismic Smasher",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Close Line 3"
+    ],
+    "flavor": "You pound the earth, creating a traveling shockwave that knocks foes off their feet and tears up the earth.",
+    "effect": "Area Effect: 1d6 damage.\nEffect [X]: Every 3rd space in the line, create a height 1 boulder object (odd) or lower terrain by 1 (even). This effect could be created under characters.\nReckless +3, +2 damage. You may repeat this effect up to three times, gaining reckless each time.",
+    "jobId": "cleaver"
+  }
+}

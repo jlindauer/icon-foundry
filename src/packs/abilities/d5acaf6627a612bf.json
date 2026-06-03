@@ -1,0 +1,16 @@
+{
+  "_id": "d5acaf6627a612bf",
+  "name": "Lunar Cleansing",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-3",
+      "Line 3"
+    ],
+    "flavor": "The pale light of the moon washes across the battlefield.",
+    "effect": "Area Effect first ally in the line gains 2 vigor and may clear a negative status token. Foes in the line after the ally take 2 damage.\nIsolate your ally is not adjacent to any other characters, increase vigor and damage by +2 and clear 2 negative tokens instead.",
+    "jobId": "celestian"
+  }
+}

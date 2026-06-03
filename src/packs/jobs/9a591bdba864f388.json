@@ -1,0 +1,55 @@
+{
+  "_id": "9a591bdba864f388",
+  "name": "Auran",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Earth Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Metal Shell",
+      "effect": "If you don't attack during your turn, you gain a shell of metal surrounding you. The next time you would take 5 or more damage from an ability, reduce it to 1, then create a height 1 metal shell object in a free adjacent space."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Wrecking Ball",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "End turn"
+      ],
+      "effect": "You surround yourself in screeching layers of metal, forming an invincible, bladed shell and becoming a blunt instrument.\nEffect yourself from the battlefield, then replace yourself with a height 1 wrecking ball object.\nEffect, push the object 3 in a straight line in any direction. The object can also be pushed by allies as though it were a character, or an ally can push it using the interact (1 action) ability to push it 3 spaces.\n• If the wrecking ball enters the space of a character, they take 2d3 piercing damage, are pushed 2d3, and gain slow. A character can suffer these effects once a turn but any number of time a round.\n• If the wrecking ball enters the space of another object, remove it.\nEffect the start of your next turn, remove the object and replace it with you."
+    },
+    "abilityIds": [
+      "f7542b9b2721acdd",
+      "9851e51adc90f07d",
+      "c13dca3330adf6c1",
+      "f7dc1235774c14ae"
+    ],
+    "talentIds": [
+      "74db5c9def19552c",
+      "fc2d7b6d50eda8c2",
+      "729b8f4f9664b264"
+    ],
+    "keywords": [
+      {
+        "name": "Heavy",
+        "description": "Use a heavier version of an ability. If you do, you are unable to attack or use a heavy ability until the end of your next turn."
+      }
+    ],
+    "description": ""
+  }
+}

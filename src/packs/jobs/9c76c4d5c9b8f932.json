@@ -1,0 +1,54 @@
+{
+  "_id": "9c76c4d5c9b8f932",
+  "name": "Puppeteer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Shadow Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Master Puppet",
+      "effect": "You start combat with a master puppet summon placed in range 1-2 of you, a custom built companion. If the summon is removed or dismissed for any reason, you can place it again in range with a quick ability on your turn.\n\n[Master Puppet — Summon (1)]\nSummon action 1 or push the puppet 1d3+2 spaces.\nSummon action 2 puppet swaps places with a character in range 1-2.\nSummon effect the puppet would enter the space of a foe or it would be swapped with a foe, you may deal 2 damage to that foe, or 2d3 if the foe is in crisis."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Gran Guignol",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "range 2-4"
+      ],
+      "effect": "The strings are flexible, yet tough as steel, reinforced with soul aether. They are nearly invisible until you will them into motion. Then your foes will discover who is truly free to choose their own fate.\nEffect one of the following: foes, allies, summons, or all, then choose a space in range. Remove all that qualify in range of this ability from the battlefield. Place them in free adjacent space to the chosen space, in any order you like. If there is no free space, place them back in their original location. They become immobilized and unable to take interrupts until the start of their next turn."
+    },
+    "abilityIds": [
+      "040260bce2ccf70c",
+      "b2c807d2ea0f7753",
+      "b704a69b6be339b4",
+      "b14f09865760dc65"
+    ],
+    "talentIds": [
+      "dbe229b63826786b",
+      "7a7ddaf9acc85154",
+      "0ec1cd4e10d0c30a"
+    ],
+    "keywords": [
+      {
+        "name": "Summon",
+        "description": "Summons are tokens with an effect or ability attached to them. They don't occupy space or obstruct and can share space with characters. They are not characters and don't take damage or trigger effects unless abilities specifically mentioned. Summons have a maximum number active in (parentheses) and may have a summon action, which can be activated as a quick ability, or a passive summon effect. When they are dismissed, remove them from the battlefield."
+      }
+    ],
+    "description": ""
+  }
+}

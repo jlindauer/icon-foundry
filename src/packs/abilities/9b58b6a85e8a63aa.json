@@ -1,0 +1,16 @@
+{
+  "_id": "9b58b6a85e8a63aa",
+  "name": "Deepwrath",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 2-6"
+    ],
+    "flavor": "You mark your foe with the symbol of the Deep Water Titan. No matter where they step, the deeps come up to claim them.",
+    "effect": "Mark [X]: Mark a character in range. While marked, at the end of their turn, push or pull them 1d3 spaces, then create difficult terrain under them. Then they may save, ending this mark on success.\nImpact target under, removing them from the battlefield, then placing them in any other space in range 3 before creating difficult terrain under them.",
+    "jobId": "stormbender"
+  }
+}

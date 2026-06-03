@@ -1,0 +1,17 @@
+{
+  "_id": "b725d2bae81c122f",
+  "name": "Apex",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "attack",
+      "range 2-4",
+      "summon"
+    ],
+    "flavor": "Your strike is a clarion call to the forest, the plains, and the deep places of the Green, bringing forth their denizens to fight for you.",
+    "effect": "Attack: 2 damage. Hit: +1d3\nOn hit [X]: At the end of your turn, summon one or (5+) two beasts in free adjacent space to your target.\n\n[Beast — Summon (4)]\nSummon action 3, then deal 2 damage to an adjacent foe. Increase to 2d3 against foes in crisis. Then, dismiss the beast.\nHeavy twice as many beasts.",
+    "jobId": "warden"
+  }
+}

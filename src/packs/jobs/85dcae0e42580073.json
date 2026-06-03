@@ -1,0 +1,55 @@
+{
+  "_id": "85dcae0e42580073",
+  "name": "Bastion",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Knight Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Endless Battlement",
+      "effect": "Once a round, you may dash 3 at the start or end of any allied turn. You are unstoppable and immune to all damage while moving this way. Overdrive a round."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Perfect Parry",
+      "cost": "Interrupt, 3 resolve",
+      "tags": [
+        "Self",
+        "Ally"
+      ],
+      "effect": "Even the strongest of blows glances off a bastion in their full glory.\nTrigger or an adjacent ally takes damage from a foe's ability.\nEffect [X]: Roll 1d6. Reduce the damage by half. If you roll equal to or under the round number, the damage additionally cannot reduce its target below 1 hp. The triggering foe then gains 1d3 dazed and is pushed 1d3 spaces. If you roll exactly the round number, deal half the amount of damage as the triggering ability to your foe.\nOverdrive you roll exactly the round number, deal the full damage."
+    },
+    "abilityIds": [
+      "d7c4bd5d3031b60c",
+      "6a8774dd75bd7a74",
+      "50a423011d05abe7",
+      "8eec28ec046a7ef1"
+    ],
+    "talentIds": [
+      "0b90cb524d3672d3",
+      "a5bd0c44a122b9d9",
+      "f08a274a2661abb2"
+    ],
+    "keywords": [
+      {
+        "name": "Overdrive",
+        "description": "Triggers automatically at round 3 or later."
+      }
+    ],
+    "description": ""
+  }
+}

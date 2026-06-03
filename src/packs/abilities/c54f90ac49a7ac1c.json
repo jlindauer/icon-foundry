@@ -1,0 +1,15 @@
+{
+  "_id": "c54f90ac49a7ac1c",
+  "name": "Knife Juggler",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Line X"
+    ],
+    "flavor": "It is not enough to rudely and plainly strike your foe down. One must make it entertaining.",
+    "effect": "Effect [X]: Draw a line X spaces long, stopping at an obstruction. The first character in the line takes 2 damage, increase by +2 for every 3 spaces the knife traveled before impacting its target, including the target's space.\nFinishing Blow may dash 1, then throw a knife again.",
+    "jobId": "fool"
+  }
+}

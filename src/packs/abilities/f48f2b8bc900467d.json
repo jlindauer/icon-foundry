@@ -1,0 +1,15 @@
+{
+  "_id": "f48f2b8bc900467d",
+  "name": "Tumble",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "stance"
+    ],
+    "flavor": "Others seem clumsy in your presence.",
+    "effect": "Stance in this stance, you have phasing for characters. The first time in a round you would enter a character's space, you may swap places with that character, then push them 1 or (4+) 2 or (6+) 4 spaces.\nWeave 3 after using this ability, then swap places with an adjacent character.",
+    "jobId": "dancer"
+  }
+}

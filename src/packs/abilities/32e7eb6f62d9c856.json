@@ -1,0 +1,9 @@
+{
+  "_id": "32e7eb6f62d9c856",
+  "name": "Ferocity",
+  "type": "talent",
+  "system": {
+    "effect": "If you're bloodied, lower your threshold to critical hit by 1. If you're in crisis, lower it by 2.",
+    "jobId": "hawk-knight"
+  }
+}

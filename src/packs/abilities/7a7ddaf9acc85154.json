@@ -1,0 +1,9 @@
+{
+  "_id": "7a7ddaf9acc85154",
+  "name": "Malinger",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you dismiss a summon, you may create an obscured space in the space it vacated.",
+    "jobId": "puppeteer"
+  }
+}

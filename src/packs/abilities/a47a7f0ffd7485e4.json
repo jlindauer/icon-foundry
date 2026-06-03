@@ -1,0 +1,9 @@
+{
+  "_id": "a47a7f0ffd7485e4",
+  "name": "Foundations",
+  "type": "talent",
+  "system": {
+    "effect": "When you start a push or pull against characters standing in adverse terrain, move them +1 more space.",
+    "jobId": "mistwalker"
+  }
+}

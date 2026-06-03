@@ -1,0 +1,9 @@
+{
+  "_id": "bdd08da8536e113b",
+  "name": "Sanguine",
+  "type": "talent",
+  "system": {
+    "effect": "You gain [+] on saves if you are afflicted. If you have 3 or more negative statuses, you automatically pass saves.",
+    "jobId": "bleak-knight"
+  }
+}

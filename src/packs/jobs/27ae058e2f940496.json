@@ -1,0 +1,53 @@
+{
+  "_id": "27ae058e2f940496",
+  "name": "Wayfarer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bolt Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Master Key",
+      "effect": "Once a round, at the start of any turn, you may swap places with any ally, regardless of distance or line of sight. If that ally was 4+ spaces away, both you and your ally gain keen.."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Infinite Horizon",
+      "cost": "Quick, 3 resolve",
+      "tags": [],
+      "effect": "Light of the foreign suns,\nScorch my path with thy fiery rays\nO air! Become parted!\nRip open the gates of heaven!\nEffect the rest of combat, gain the following interrupt at the start of your turn.\n\nKeys to the House\nInterrupt 3, self, ally, range 0-999\nTrigger start of any turn.\nEffect target spaces equal to 1+ the round number."
+    },
+    "abilityIds": [
+      "236ff7acae8819d4",
+      "46e29f40294cd252",
+      "0b4f97fa003245ef",
+      "b4988480962a4be2"
+    ],
+    "talentIds": [
+      "11bd945f0244689c",
+      "12f13081b5d3093a",
+      "0ba0e48be35290b1"
+    ],
+    "keywords": [
+      {
+        "name": "Precision",
+        "description": "Triggers on a target that is 4+ spaces away, with increased effects at 7+ spaces away."
+      }
+    ],
+    "description": ""
+  }
+}

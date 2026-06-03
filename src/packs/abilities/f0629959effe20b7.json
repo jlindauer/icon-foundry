@@ -1,0 +1,16 @@
+{
+  "_id": "f0629959effe20b7",
+  "name": "Magnasancti",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 2-5"
+    ],
+    "flavor": "You sanctify an area with passages of peace, the inscriptions over the doors of the Highest House.",
+    "effect": "Zone a shimmering cross 1 zone of light, which can be created over characters. While inside the zone, you and allies have flying when moving and gain strength if you end their turn there.\nConserve action cost to 1",
+    "jobId": "chanter"
+  }
+}

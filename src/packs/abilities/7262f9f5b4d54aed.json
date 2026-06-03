@@ -1,0 +1,9 @@
+{
+  "_id": "7262f9f5b4d54aed",
+  "name": "Whirl",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, after you swap places with a character, you can dash 3 spaces. If you swapped with an ally, you can allow them to dash 3 instead.",
+    "jobId": "rake"
+  }
+}

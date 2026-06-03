@@ -1,0 +1,9 @@
+{
+  "_id": "8cb2c6b157598f6f",
+  "name": "Harbor",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, you may grant an ally immunity to any part of any area effect you create.",
+    "jobId": "seer"
+  }
+}

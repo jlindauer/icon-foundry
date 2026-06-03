@@ -1,0 +1,9 @@
+{
+  "_id": "74513677645dec11",
+  "name": "Thirst",
+  "type": "talent",
+  "system": {
+    "effect": "Your attacks deal +1 damage on hit to characters with vigor.",
+    "jobId": "mistwalker"
+  }
+}

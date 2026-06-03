@@ -1,0 +1,9 @@
+{
+  "_id": "55ba2ad64f779d97",
+  "name": "Recycle",
+  "type": "talent",
+  "system": {
+    "effect": "You may dismiss one summon you control as part of using any ability to gain effect [+] on the ability.",
+    "jobId": "fair-wright"
+  }
+}

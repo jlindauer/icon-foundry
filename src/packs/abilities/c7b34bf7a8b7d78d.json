@@ -1,0 +1,16 @@
+{
+  "_id": "c7b34bf7a8b7d78d",
+  "name": "Swift Shots",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "range 3-6"
+    ],
+    "flavor": "Your deft hands make quick work of multiple foes.",
+    "effect": "Mark [X]: Mark your foe. While your foe is marked, they take 2 damage once or (5+) twice after you attack any other foe, ignoring cover. If your marked foe is defeated, you may transfer this mark to a new foe in range as a quick ability on your turn. This mark is only removed when a foe is defeated or when it is moved.\nPrecision damage to 1d3+1. If at range 7+, increase damage to 1d3+3",
+    "jobId": "pathfinder"
+  }
+}

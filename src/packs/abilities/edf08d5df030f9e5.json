@@ -1,0 +1,17 @@
+{
+  "_id": "edf08d5df030f9e5",
+  "name": "Sanctify",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-4",
+      "Zone"
+    ],
+    "flavor": "You throw out a handful of glittering salt, scorching the spiritually impure.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nOn hit [X]: Place 1d3 holy ground zones in free space in range. You can have any number of these zones. Allies save with [+] inside holy ground, and foes save with [-]. At round 3+, they become dangerous and difficult terrain for foes.",
+    "jobId": "shrine-guardian"
+  }
+}

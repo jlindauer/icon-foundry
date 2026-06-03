@@ -1,0 +1,16 @@
+{
+  "_id": "8a04574e5f733d72",
+  "name": "Venom Lash",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-5"
+    ],
+    "flavor": "You lash out with a chain, whip, or grapple filled with tiny channels and barbs for containing poisons.",
+    "effect": "Attack: 2 damage. Hit: +1d6\nEffect yourself 1 or 2 spaces towards your target.\nAfflicted you may choose to have your foe save or be pulled 1, or up to 3 spaces on a failed save, choosing the pull distance. If your foe has 3 negative status tokens or more, they fail the save.",
+    "jobId": "venomist"
+  }
+}

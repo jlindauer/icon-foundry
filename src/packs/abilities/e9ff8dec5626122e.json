@@ -1,0 +1,16 @@
+{
+  "_id": "e9ff8dec5626122e",
+  "name": "Strike the Anvil",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Arc 4"
+    ],
+    "flavor": "At your strike, a serpentine arc of crimson flame whips along the ground, then erupts beneath its targets.",
+    "effect": "Attack: 1 damage. Hit: +1d3 damage\nArea effect: 1 damage\nOn hit dangerous terrain under all characters in the effect area. Deals damage [+] to characters already in dangerous terrain.\nEffect you are bloodied, increase arc by +2, or +4 if you are in crisis.",
+    "jobId": "runesmith"
+  }
+}

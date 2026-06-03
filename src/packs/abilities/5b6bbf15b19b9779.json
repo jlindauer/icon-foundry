@@ -1,0 +1,9 @@
+{
+  "_id": "5b6bbf15b19b9779",
+  "name": "Surf",
+  "type": "talent",
+  "system": {
+    "effect": "When you are standing on any object, you may push yourself and that object 3 in any direction as a quick ability during your turn.",
+    "jobId": "geomancer"
+  }
+}

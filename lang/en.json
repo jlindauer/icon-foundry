@@ -82,6 +82,7 @@
       "Strength": "Strength (+)",
       "Sturdy": "Sturdy (+)",
       "Unstoppable": "Unstoppable",
+      "Keen": "Keen (+)",
       "Afflicted": "Afflicted",
       "Blind": "Blind (-)",
       "Bloodied": "Bloodied",
@@ -89,6 +90,7 @@
       "Crisis": "Crisis",
       "Daze": "Daze (-)",
       "Immobile": "Immobile",
+      "Slow": "Slow (-)",
       "Stun": "Stun (-)"
     },
     "Resource": {

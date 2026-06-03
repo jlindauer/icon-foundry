@@ -1,0 +1,9 @@
+{
+  "_id": "5def820fcc71f0e8",
+  "name": "Hearken",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, you may spend a free move to teleport adjacent to any isolated ally, or teleport any isolated ally adjacent to you.",
+    "jobId": "celestian"
+  }
+}

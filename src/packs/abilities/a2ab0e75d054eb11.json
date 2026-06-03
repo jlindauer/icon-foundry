@@ -1,0 +1,9 @@
+{
+  "_id": "a2ab0e75d054eb11",
+  "name": "Dissect",
+  "type": "talent",
+  "system": {
+    "effect": "You may add damage to critical hits equal to half the round number, rounded up.",
+    "jobId": "hawk-knight"
+  }
+}

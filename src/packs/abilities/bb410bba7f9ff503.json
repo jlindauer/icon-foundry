@@ -1,0 +1,16 @@
+{
+  "_id": "bb410bba7f9ff503",
+  "name": "Geo",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-4",
+      "Object"
+    ],
+    "flavor": "Digging into wells of geothermic power, you will the battlefield to reshape itself.",
+    "effect": "Object [X]: Create one or (5+) two height 1 boulder objects in free space in range. When you create an object, you may push an adjacent character 1 space away from it.",
+    "jobId": "wright"
+  }
+}

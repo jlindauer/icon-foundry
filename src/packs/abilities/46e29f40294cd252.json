@@ -1,0 +1,16 @@
+{
+  "_id": "46e29f40294cd252",
+  "name": "Dimensional Anchor",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Summon",
+      "Range 1-2"
+    ],
+    "flavor": "You drop a small totem or key in place, where it stands bolt upright, wreathed in lightning and keeping you tethered.",
+    "effect": "Summon a dimensional anchor into free space in range.\n\nAnchor\nSummon (3)\nSummon Effect as dangerous terrain. You or any ally may teleport adjacent to this anchor from within range 1-5 as a quick ability, then dismiss it.\nPrecision you teleported from 4+ spaces away, release a burst 1 (self) explosion area effect, dealing 2 piercing damage. If you teleported from 7+ spaces away, increase this damage to 2d3 piercing.",
+    "jobId": "wayfarer"
+  }
+}

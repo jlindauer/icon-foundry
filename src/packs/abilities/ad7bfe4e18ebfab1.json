@@ -1,0 +1,16 @@
+{
+  "_id": "ad7bfe4e18ebfab1",
+  "name": "Lucky 6",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-3"
+    ],
+    "flavor": "Some would say 'lucky shot'. To you, luck is a skill.",
+    "effect": "Effect 1\nAttack: 1 damage. Hit: +1d3 damage\nEffect [X]: Your foe takes 1 damage again after the attack (6+) 2d3 damage again.\nGambit [X]: (1-3) stun yourself and end your turn (4-5): Your foe takes 2 damage again (6+): Your foe takes 6 damage again.",
+    "jobId": "rake"
+  }
+}

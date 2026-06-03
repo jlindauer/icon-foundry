@@ -1,0 +1,13 @@
+{
+  "_id": "6e334c5c8eb592ef",
+  "name": "Bump and Lift",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "Lighten their pockets.",
+    "effect": "Effect 2, then swap places with an adjacent foe. You may steal up to one (4+) two or (6+) three positive status tokens from them. If they have no positive tokens when you would steal a token, gain haste instead.\nGambit: (1-3) stun yourself and end your turn (4-5): Your foe is additionally blinded and takes 2 damage (6+): Gain the (4-5) effect, and you may repeat the base effect of this ability again, targeting a different foe.",
+    "jobId": "rake"
+  }
+}

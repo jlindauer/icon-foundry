@@ -1,0 +1,16 @@
+{
+  "_id": "3e74c9810fc7da66",
+  "name": "Sparking Storm",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "mark",
+      "range 3-4"
+    ],
+    "flavor": "You call on the power of the old gods of the storm, bringing forth deep sea spirits in the shape of lightning.",
+    "effect": "Summon summon one or (5+) two spirit sparks in range. The sparks prime after your turn passes.\n\n[Spirit Spark — Summon (4)]\nSummon Effect you or an ally enter a primed spark's space, it is struck by a massive lightning bolt, dealing 2 damage to all adjacent foes, then pushing them 1. If you or your ally moved 3 or more spaces in a straight line without stopping before entering the spark, increase this damage by +2 and push by +1, or by +2d3 and push by +2 if they moved 6 or more spaces. Then dismiss the spark. Foes can only take this damage once a turn.\nSummon effect this damage against foes in crisis.\nHeavy +2 more sparks.\n\n(Heavy a heavier version of an ability. If you do, you are unable to attack or use a heavy ability until the end of your next turn.)",
+    "jobId": "stormscale"
+  }
+}

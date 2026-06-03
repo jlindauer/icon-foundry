@@ -1,0 +1,16 @@
+{
+  "_id": "9bcbde8e5c46e0a9",
+  "name": "Lightning Claw",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "attack",
+      "melee"
+    ],
+    "flavor": "You strike with the power of thunder, a fierce flash that can splinter the masts of ships.",
+    "effect": "Effect 4 with phasing. Then attack one character you passed through, regardless of range. Damage from this ability ignores cover and line of sight.\nAttack: 2 damage. On hit: +1d3\nOn hit deal 2 damage again if your target is 3 or more spaces away, or 2d3 again if they are 6 or more. Double this damage if they're in crisis.",
+    "jobId": "stormscale"
+  }
+}

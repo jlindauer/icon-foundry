@@ -1,0 +1,9 @@
+{
+  "_id": "4b689263995111a8",
+  "name": "Infiltrate",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you can spend stealth on yourself to teleport 3. Isolate: if you end this teleport with no other characters in range 1-2, regain stealth.",
+    "jobId": "weeping-assassin"
+  }
+}

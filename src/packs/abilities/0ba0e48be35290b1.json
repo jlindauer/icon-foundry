@@ -1,0 +1,9 @@
+{
+  "_id": "0ba0e48be35290b1",
+  "name": "Hyper",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, you can teleport yourself or an ally 4d3 spaces as a quick ability.",
+    "jobId": "wayfarer"
+  }
+}

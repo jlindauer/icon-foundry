@@ -1,0 +1,54 @@
+{
+  "_id": "025479c8ba8ae486",
+  "name": "Stormscale",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Ranger Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Soul of the Sea",
+      "effect": "Once a round, after you move 3 or more spaces with an ability, after that ability resolves, you may summon a surge of supernatural water. You gain phasing during the remainder of the movement, and shape shift briefly after it resolves. Increase these effects (in parentheses) if you moved 6 or more spaces.\n• Storm Eel 2, (then blind an adjacent foe)\n• Thresher Shark haste (and gain stealth)\n• Titan Seal an adjacent foe 2 spaces (then deal 2 damage to that foe)"
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Fury of the Deeps",
+      "cost": "Quick action, 3 resolve",
+      "tags": [
+        "self"
+      ],
+      "effect": "Your form transforms, becoming rippling and sinuous, as you mantle the form of the most powerful apex predators of the deep ocean.\nEffect the rest of combat, you mantle the old gods of the deeps, transforming into a titanic ocean creature surrounding by surging water aether. You gain a greatly enhanced dash, with the following benefits:\n• All your movement gains phasing.\n• The basic dash ability becomes a quick ability.\n• All dashes you gain or grant are increased by +2\n• Once a round, after you pass through a foe's space or swap places with them, you can shred them. They take 2d3 damage and are pushed half as many spaces."
+    },
+    "abilityIds": [
+      "9bcbde8e5c46e0a9",
+      "6321c27e570612fc",
+      "0829dd9601d409fb",
+      "3e74c9810fc7da66"
+    ],
+    "talentIds": [
+      "0ea6ebb8d4e41dce",
+      "01539031b3ff9e0b",
+      "e50875bfa8fd760c"
+    ],
+    "keywords": [
+      {
+        "name": "Phasing",
+        "description": "May pass through obstructions, but may not end any movement sharing space with them."
+      }
+    ],
+    "description": ""
+  }
+}

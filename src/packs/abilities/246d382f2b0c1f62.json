@@ -1,0 +1,17 @@
+{
+  "_id": "246d382f2b0c1f62",
+  "name": "Hulk",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-3",
+      "Summon",
+      "End Turn"
+    ],
+    "flavor": "Drag forth a rotten warrior of twisting vines, flesh, and earth.",
+    "effect": "Effect your turn and summon a hulk in free space in range, a size 2 summon. Push all foes adjacent to the hulk 1 spaces. The hulk has 15 maximum vigor. It starts with 6 vigor, then gains 3 additional vigor per foe pushed this way.\nFinishing blow foes also takes 2d3 damage when pushed. Foes in crisis are branded.\n\nHulk\nSummon (1)\nSummon Effect allies may use the hulk for cover, and may also spend its vigor as their own. After the hulk ends a turn at 0 vigor, it collapses, dismissing it.\nSummon Action hulk dashes 3, may push an adjacent character 1, then gains 1d3 vigor.",
+    "jobId": "harvester"
+  }
+}

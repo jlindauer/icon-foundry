@@ -1,0 +1,15 @@
+{
+  "_id": "c363d4561aded4af",
+  "name": "Grendel",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "With bulging muscles, you hold your foe in a vice grip.",
+    "effect": "Stance you enter this stance, or at the end of your turn, you may grab an adjacent foe. A grabbed foe has attack [-] except against you, and you and they are immobile. A foe ends the grab after using an ability that damages you, or by passing a save at the end of their turn. You can only grab one foe at once and it also ends if either of you are involuntarily moved. You end a grab voluntarily any time during your turn.\nSacrifice 3d3 the grab if it would end. Prevent any forced movement that would end the grab.",
+    "jobId": "colossus"
+  }
+}

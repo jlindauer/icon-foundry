@@ -1,0 +1,15 @@
+{
+  "_id": "4ae903ed3d23c00b",
+  "name": "Battering Ram",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "You let your momentum carry you onwards from foe to foe in an unstoppable charge.",
+    "effect": "Stance a round, after you push a character, you may dash the same number of spaces as you pushed them as long as each space of the dash ends closer to them than you started. You are unstoppable, immune to all damage, and gain phasing while dashing this way. When you phase through a character, you can push them 1. When you phase through an object, you can destroy that object, removing it.\nOverdrive trigger twice a round.\n(Phasing pass through obstructions, but may not end any movement sharing space with them.)",
+    "jobId": "breaker"
+  }
+}

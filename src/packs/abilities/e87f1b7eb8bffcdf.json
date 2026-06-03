@@ -1,0 +1,9 @@
+{
+  "_id": "e87f1b7eb8bffcdf",
+  "name": "Flourish",
+  "type": "talent",
+  "system": {
+    "effect": "If you critical hit, you may gain haste and evasion.",
+    "jobId": "freelancer"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "84d6a29372346249",
+  "name": "Magmotic",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 2-6",
+      "Zone"
+    ],
+    "flavor": "You condense fire aether into boiling, molten rock, then fling it like a potent grenade.",
+    "effect": "Zone [X]: Create 1d3 single space zones of boiling magma in range. These could be created under characters. New zones created by this ability add to the total instead of replacing them.\n• Magma zones are dangerous terrain\n• Characters that start or end their turn in a magma zone gain slow.\n• All damage against characters with at least one space inside a magma zone gains pierce.",
+    "jobId": "runesmith"
+  }
+}

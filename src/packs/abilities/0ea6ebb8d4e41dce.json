@@ -1,0 +1,9 @@
+{
+  "_id": "0ea6ebb8d4e41dce",
+  "name": "Wave",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you pass through an ally's space, you may push them 2 or allow them to dash 2.",
+    "jobId": "stormscale"
+  }
+}

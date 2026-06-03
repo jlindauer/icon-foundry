@@ -1,0 +1,9 @@
+{
+  "_id": "b0ef7f116297596e",
+  "name": "Torment",
+  "type": "talent",
+  "system": {
+    "effect": "Adjacent foes do not clear negative statuses. Foes in crisis additionally cannot gain vigor.",
+    "jobId": "bleak-knight"
+  }
+}

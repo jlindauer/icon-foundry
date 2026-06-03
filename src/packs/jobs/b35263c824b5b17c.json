@@ -1,0 +1,54 @@
+{
+  "_id": "b35263c824b5b17c",
+  "name": "Fool",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Thief Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Stacked Die",
+      "effect": "You start combat with a stacked die, a d6. Randomly roll it at the start of combat and keep the number.\n• You can substitute the die roll for any effect roll you would otherwise make. You must choose before activating the ability. Then discard the die.\n• Once a round, when you damage a bloodied foe, you can re-roll the die if you have it, keeping the new result, or gain a new die if you don't have one."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Curtain Call",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Line X"
+      ],
+      "effect": "Bring out the fireworks. Fire up the elden magic. Time for a showstopper.\nEffect [X]: Roll the effect die, then draw a line area effect of that many spaces +2, stopping the line when it hits an obstruction such as a character or object. Soar into the air, removing yourself from the battlefield, then place yourself adjacent to the first foe in that line, delivering a massive blow. This ability has different effects depending on their position on the line. Foes can save for half damage.\n  0-3 spaces: 2d6+2 damage\n  4-6 spaces: 2d6 damage, then 2d6 damage again.\n  6+: Also destroy all vigor on your foe before dealing damage, and the damage becomes piercing.\nIf there are no valid targets after rolling, the resolve and action cost of this ability is refunded.\nFinishing blow action cost to 1. If your target is in crisis, reduce action cost to quick."
+    },
+    "abilityIds": [
+      "8fb8a84b5a57fb85",
+      "c54f90ac49a7ac1c",
+      "5d9606bdd4be285a",
+      "5da96b505d0d6890"
+    ],
+    "talentIds": [
+      "c0fcd8ef9b36171b",
+      "8fba1a6b6162bddf",
+      "db247fe80547161d"
+    ],
+    "keywords": [
+      {
+        "name": "Finishing Blow",
+        "description": "Gains additional effects if targeting a bloodied foe or a foe in crisis."
+      }
+    ],
+    "description": ""
+  }
+}

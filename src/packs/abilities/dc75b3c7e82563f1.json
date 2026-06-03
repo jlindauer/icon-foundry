@@ -1,0 +1,15 @@
+{
+  "_id": "dc75b3c7e82563f1",
+  "name": "Kidney Shot",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Fighting fair never got anyone anywhere.",
+    "effect": "Effect adjacent foe must save. They are dazed and pushed 1. On a failed save they then increase a negative status of your choice by +1.",
+    "jobId": "corvidian"
+  }
+}

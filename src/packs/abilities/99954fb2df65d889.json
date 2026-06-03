@@ -1,0 +1,9 @@
+{
+  "_id": "99954fb2df65d889",
+  "name": "Reach",
+  "type": "talent",
+  "system": {
+    "effect": "Increase the max range of all your abilities with a listed range by +1, and the maximum line of all line effects by +1.",
+    "jobId": "dragoon"
+  }
+}

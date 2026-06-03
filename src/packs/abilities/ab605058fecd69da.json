@@ -1,0 +1,15 @@
+{
+  "_id": "ab605058fecd69da",
+  "name": "Bravado",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Self"
+    ],
+    "flavor": "You throw your arms wide and let your enemies know how little you care.",
+    "effect": "Effect shield.\nEffect the start of your next turn, you gain 4d3 vigor. The first time each turn an enemy damages you with an ability before then, you must save or lose this effect and immediately gain 2 vigor instead.\nHeavy are unstoppable until this effect expires.",
+    "jobId": "slayer"
+  }
+}

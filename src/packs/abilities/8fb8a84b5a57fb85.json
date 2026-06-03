@@ -1,0 +1,16 @@
+{
+  "_id": "8fb8a84b5a57fb85",
+  "name": "Death XIII",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-6"
+    ],
+    "flavor": "A shard of Divine Death, summoned with a snap of the finger.",
+    "effect": "Area effect the effect die. If your target is at the exact range of the effect die, this ability deals 3d3 damage on hit instead.\nAttack: 2 damage, Hit: +1d3\nFinishing Blow 1(target) area effect explosion, 2 damage and push 1. If your target is in crisis, increase damage and burst by +1.",
+    "jobId": "fool"
+  }
+}

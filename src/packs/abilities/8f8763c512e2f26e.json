@@ -1,0 +1,16 @@
+{
+  "_id": "8f8763c512e2f26e",
+  "name": "Hook",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "Quick",
+    "tags": [
+      "Range 2-3",
+      "Ally"
+    ],
+    "flavor": "You grab an ally and pull them from the teeth of the enemy.",
+    "effect": "Effect target 1. They are unstoppable and immune to all damage while moving this way.",
+    "jobId": "stalwart"
+  }
+}

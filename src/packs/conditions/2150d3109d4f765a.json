@@ -1,0 +1,10 @@
+{
+  "_id": "2150d3109d4f765a",
+  "name": "Blind (-)",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Blind (-)",
+    "effect": "When attacking, gain attack [-]."
+  }
+}

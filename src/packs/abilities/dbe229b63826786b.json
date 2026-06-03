@@ -1,0 +1,9 @@
+{
+  "_id": "dbe229b63826786b",
+  "name": "Marionette",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you may push or pull a summon or object in range 2-4 of you 2 spaces.",
+    "jobId": "puppeteer"
+  }
+}

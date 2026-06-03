@@ -37,7 +37,10 @@ export class JobDataModel extends foundry.abstract.TypeDataModel {
       // IDs of Talent items belonging to this job
       talentIds: new ArrayField(new StringField()),
 
-      keywords: new ArrayField(new StringField()),
+      keywords: new ArrayField(new SchemaField({
+        name:        new StringField({ initial: "" }),
+        description: new StringField({ initial: "" }),
+      })),
       description: new StringField({ initial: "" }),
     };
   }

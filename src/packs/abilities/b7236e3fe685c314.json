@@ -1,0 +1,9 @@
+{
+  "_id": "b7236e3fe685c314",
+  "name": "Streak",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you roll a '6' on an effect die, you can gain a lucky coin (per Wild Gamble). This stacks with Wild Gamble itself, ignoring the 1/round limit.",
+    "jobId": "rake"
+  }
+}

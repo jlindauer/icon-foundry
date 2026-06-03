@@ -1,0 +1,15 @@
+{
+  "_id": "a89c25ea2f19541c",
+  "name": "Poison Thorn",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-4"
+    ],
+    "flavor": "Your foe feels a sharp string in their feet, and finds themself tethered to a bulbous poison vine.",
+    "effect": "Mark [X]: Summon one or (5+) two poison bulbs in range 1-3 of your marked foe. A foe can only remove this mark when there are no poison bulbs left. If you transfer this mark or use it again, bulbs remain.\n\nPoison Bulb\nSummon (6), immobile\nEffect bulb deals 2 piercing damage to the marked foe at the end of their turn. An ally of the marked character, or that character may dismiss a bulb by moving into its space. The bulb leaves difficult terrain when dismissed.\n\nFinishing Blow +1 more bulb, or two more if your foe is in crisis.\n\n(Finishing Blow additional effects if targeting a bloodied foe or a foe in crisis.)",
+    "jobId": "herbalist"
+  }
+}

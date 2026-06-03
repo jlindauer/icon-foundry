@@ -1,0 +1,61 @@
+{
+  "_id": "02cc5d1acb945bd7",
+  "name": "Wright",
+  "type": "job",
+  "system": {
+    "jobType": "apprentice",
+    "soul": "",
+    "parentJobId": "",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Master of Aether",
+      "effect": "You are the master of manipulating ethereal currents, granting the following benefits.\n• Aether Surge round 3+, you increase all area damage you deal by +2.\n• Aether Wall have automatic cover against abilities used by any character 3 or more spaces away."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "",
+      "cost": "",
+      "tags": [],
+      "effect": ""
+    },
+    "abilityIds": [
+      "99f6f7a54f06ca77",
+      "9ae328c9e308f659",
+      "31a9592f7c5fde19",
+      "bb410bba7f9ff503",
+      "5bb29308931a7cb2",
+      "9a831f4dc6acb6f7",
+      "8e5b6b5143347d82",
+      "c8cb44e2053c2b18"
+    ],
+    "talentIds": [],
+    "keywords": [
+      {
+        "name": "Keen (+)",
+        "description": "When attacking, gain attack [+]"
+      },
+      {
+        "name": "Slow (-)",
+        "description": "When free moving, move -2 spaces"
+      },
+      {
+        "name": "Stance",
+        "description": "A powerful ongoing effect. You can only maintain one stance at a time. You may exit any stance voluntarily at the start of your turn."
+      }
+    ],
+    "description": ""
+  }
+}

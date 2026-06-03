@@ -1,0 +1,9 @@
+{
+  "_id": "f872607a2a7ee0cb",
+  "name": "Purity",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, from the start of your turn until the start of your following turn, your free moves you gain or grant go +2 spaces and grant immunity to advise terrain.",
+    "jobId": "alchemist"
+  }
+}

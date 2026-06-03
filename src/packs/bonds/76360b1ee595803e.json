@@ -1,0 +1,114 @@
+{
+  "_id": "76360b1ee595803e",
+  "name": "The Highborn",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Charm",
+      "Study"
+    ],
+    "ideals": [
+      "I addressed challenges with poise, passion, or social status",
+      "I challenged or acted against my heritage, background, or standing beliefs with my actions",
+      "I learned something new about my companions"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "You may regain all effort when someone else relieves all effort.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When you're exhausted, characters that aid you spend no effort."
+    },
+    "powers": [
+      {
+        "id": "d0459b72021a3e01",
+        "name": "Rarefied",
+        "description": "You have a knack for actions involving highborn or high class people. However, using this knack makes all actions involving low class people 0d at best until end of session.",
+        "isGambit": false
+      },
+      {
+        "id": "cbf1247774b16e7f",
+        "name": "Private Tutor",
+        "description": "Choose any action to re-roll any 1s on. Choose one other action where you must re-roll any 6s.",
+        "isGambit": false
+      },
+      {
+        "id": "a8f2a8058991e2a4",
+        "name": "Silver Spoon",
+        "description": "You can never be accused of trespassing except by high rank people. Get +1d to cover for companions.",
+        "isGambit": false
+      },
+      {
+        "id": "36337513df315bd2",
+        "name": "Trust the Fund",
+        "description": "You always have enough money to sway someone for access, assets, or information. Gain +1d or increased effect, but it's incredibly obvious you're bribing them.",
+        "isGambit": false
+      },
+      {
+        "id": "051e7003e52f9a03",
+        "name": "Special Reserve",
+        "description": "Get +1d or increased effect when gathering information about something rare, expensive, or hard to find.",
+        "isGambit": false
+      },
+      {
+        "id": "0b2bee267bb47504",
+        "name": "Ivory Tower",
+        "description": "2/session - When the GM describes a location, monster, person, or event, ask for an additional detail only an expert would know. Get +1d the next time you act on the answer.",
+        "isGambit": false
+      },
+      {
+        "id": "eee851c09a29234a",
+        "name": "Honor Student",
+        "description": "If you forgo healing burdens, tick an extra segment on an ambition. If you bring another character to observe, they can also tick a segment.",
+        "isGambit": false
+      },
+      {
+        "id": "03cc1f5d06289feb",
+        "name": "Passionate",
+        "description": "You always have a secret passion ambition - a 12 segment clock that gives 3 xp. Can be worked on for free each interlude.",
+        "isGambit": false
+      },
+      {
+        "id": "60e236cadcdb9a97",
+        "name": "Unflappable",
+        "description": "Leading actions to Command or Charm a large group costs no effort for you.",
+        "isGambit": false
+      },
+      {
+        "id": "a3cd11bf030235d6",
+        "name": "Perfect Grace",
+        "description": "1/session - Increase the effect of your next Charm action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "06c08003f806b68c",
+        "name": "Gambit of the Bronze Queen",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "8d902140fdb4124c",
+        "name": "Noble's Kit",
+        "items": [
+          "Two changes of fancy clothes, dueling weapon, personal reference, traveling trunk, expensive jewelry, knowledge of city politics, noble pedigree"
+        ]
+      },
+      {
+        "id": "d6662846e946a662",
+        "name": "Academic Kit",
+        "items": [
+          "Thick-bound almanac, late night snacks, extensive notes, hobby journal, sample kit, extra large pack, expensive arkentech contraption"
+        ]
+      },
+      {
+        "id": "1180c23033859c87",
+        "name": "Cloister Kit",
+        "items": [
+          "Simple ritual gear, protective ward, traveling staff, good hat, badge of a scholarly or religious order, old arkentech relic of unknown use"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "6d86ef912aa5cf5e",
+  "name": "Danse Macabre",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "Danger or refuge - where your dance carries you is up to the will of the dead.",
+    "effect": "Effect [X]: Roll and move spaces equal to the effect die. You must move in a straight line as far a possible, but you may interrupt this movement with abilities. If you move as many spaces as you rolled or further, refund the action cost of this ability and it becomes quick.\nWeave this ability resolves, gain evasion, then swap places with an adjacent character.",
+    "jobId": "dancer"
+  }
+}

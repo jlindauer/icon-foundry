@@ -1,0 +1,9 @@
+{
+  "_id": "7d1257d02400e310",
+  "name": "Ascension",
+  "type": "talent",
+  "system": {
+    "effect": "When you check for range to teleport an ally, you can increase that range by +1 and you may teleport them +1 spaces further.",
+    "jobId": "sealer"
+  }
+}

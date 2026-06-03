@@ -1,0 +1,9 @@
+{
+  "_id": "d4a4cf7d6a8076d2",
+  "name": "Effuse",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, as a quick ability, you may target a close blast 2 area. You may change any difficult terrain, dangerous terrain, or obscured spaces in the area to any other one of these three types, or you may remove them entirely.",
+    "jobId": "alchemist"
+  }
+}

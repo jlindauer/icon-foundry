@@ -1,0 +1,54 @@
+{
+  "_id": "ab234c931136c999",
+  "name": "Rake",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Thief Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Wild Gamble",
+      "effect": "Once a round, instead of rolling the effect die, you can flip a lucky coin instead. Tails count as a 1, and heads count as a six. Flipping a coin doesn't count as rolling a die."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Hot Streak",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "range 2-4"
+      ],
+      "effect": "You flip aether-infused coins, drawing on the power of chance to explosive results.\nEffect immediately gain and may flip up to 3 lucky coins, one at a time in sequence. Each time, you must choose a foe in range to be the target. You can target the same foe more than once. Flipping a coin is optional.\n• First coin: Heads: 2d6+4 damage and you may flip the second coin. Tails, and end this ability.\n• Second coin: Heads: 2d6+4 damage and you may flip the third coin. Tails effect, and end this ability.\n• Third coin: 4d6+4 damage, burst 2 area effect centered on your target (save for half) Tails explode with the same effect, for 2d6+4 damage (save for half).\nThen, gain any coins you didn't flip. You can use them any time, ignoring the 1/round limit on lucky coins."
+    },
+    "abilityIds": [
+      "ad7bfe4e18ebfab1",
+      "6e334c5c8eb592ef",
+      "d76df82668d453f8",
+      "9cc2f68b3beec5aa"
+    ],
+    "talentIds": [
+      "b7236e3fe685c314",
+      "5a7a73bb02f0843f",
+      "7262f9f5b4d54aed"
+    ],
+    "keywords": [
+      {
+        "name": "Gambit",
+        "description": "Roll the effect die and immediately gain the listed effect, usually with a negative effect on a lower die. Unlike other effects, gambits are optional, and effects are not cumulative."
+      }
+    ],
+    "description": ""
+  }
+}

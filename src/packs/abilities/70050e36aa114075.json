@@ -1,0 +1,16 @@
+{
+  "_id": "70050e36aa114075",
+  "name": "The Emperor",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 3-5",
+      "Mark"
+    ],
+    "flavor": "You attach the Emperor card to your ally, granting them temporary but potent martial prowess.",
+    "effect": "Mark flick a beautifully illustrated card into the air that attaches to an ally. That ally gains strength. At the end of your ally's next run turn, that ally releases a burst 1 (self) explosion, pushing all adjacent characters 1. Foes inside take 2 damage. If there were 4 or more characters in the area, foes take +1d3 damage, and damage becomes piercing.\nGambit may gambit to change the shape of the area: (1-2) close line 3 (3-5) cross 3 (6) blast 5, with at least one space on your ally.",
+    "jobId": "seer"
+  }
+}

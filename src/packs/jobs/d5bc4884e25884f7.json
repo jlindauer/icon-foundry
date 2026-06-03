@@ -1,0 +1,55 @@
+{
+  "_id": "d5bc4884e25884f7",
+  "name": "Workshop Knight",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Warrior Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Ingenuity",
+      "effect": "If you don't attack during your turn, at the end of your turn, you can perform one of the following effects:\n• Fly 3 spaces\n• Pull a character in range 1-3 two spaces. Then you may daze them or grant them shield.\n• Deal 2 damage to all adjacent foes and push them 1."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Masterstroke",
+      "cost": "1 action, 4 resolve",
+      "tags": [
+        "Ally",
+        "Power die"
+      ],
+      "effect": "Your mind constantly works like a well oiled gear assembly, finding the perfect spot to tip the fight in your favor.\nEffect the end of any of your turns you don't attack while you have this limit break, gain a d6 power die, or tick the die up by 1 (max 6).\nEffect 1, then swap places with an adjacent ally. That ally gains 2 vigor, and an adjacent foe must save or take 1d6 damage and become stunned, or half damage and dazed on a successful save.\nEffect fly by +1, vigor gain by +2, and damage deal by +1d6 for tick on the die. If the die is at 3 or higher, all damage deal becomes piercing.\n(Power die d6 die that is used to track benefits from an ability and can be spent, discarding it. Each die is tied to a specific ability and ticks up or down when called for.)"
+    },
+    "abilityIds": [
+      "a1ad247a016e5b23",
+      "426bc1783f36e6a5",
+      "6fe6c8d4db5ca3e8",
+      "64ff70e18b327810"
+    ],
+    "talentIds": [
+      "32f0be5d5591c252",
+      "982010ef1ea0435a",
+      "3f223c7a192dfb21"
+    ],
+    "keywords": [
+      {
+        "name": "Conserve",
+        "description": "Can only trigger if you have not attacked this turn, and cannot attack on any turn you trigger this effect."
+      }
+    ],
+    "description": ""
+  }
+}

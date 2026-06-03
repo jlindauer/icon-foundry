@@ -1,0 +1,16 @@
+{
+  "_id": "5da96b505d0d6890",
+  "name": "Gallows Humor",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "stance",
+      "aura"
+    ],
+    "flavor": "The power of Divine Death flows through you, empowering your strikes.",
+    "effect": "Stance this stance, you gain aura 2 and the following interrupt:\n\n[Snuff Candle — Interrupt 1]\nTrigger foe in crisis in the aura takes damage from an ally's ability.\nEffect [X]: Snap your fingers and roll the effect die. If your foe is at 1d6 or less HP, they are instantly defeated, ignoring all effects, unless they are immune to damage. Otherwise they take 2 piercing damage.\nEffect this interrupt defeats your foe, regain the interrupt.",
+    "jobId": "fool"
+  }
+}

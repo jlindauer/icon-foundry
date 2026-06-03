@@ -1,0 +1,9 @@
+{
+  "_id": "656e7e9e99a541ed",
+  "name": "Rage",
+  "type": "talent",
+  "system": {
+    "effect": "Your attacks deal damage [+] if you have a stack of reckless. They additionally gain +2 base damage if you have 3 or more reckless.",
+    "jobId": "cleaver"
+  }
+}

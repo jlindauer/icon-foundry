@@ -1,0 +1,17 @@
+{
+  "_id": "98c10a9b67e551c9",
+  "name": "Pyro",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-8",
+      "Blast 2"
+    ],
+    "flavor": "Power curls into a writhing ball in your hand, before it's unleashed on your enemies.",
+    "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nReckless damage [+]. After the ability resolves, the area explodes, igniting dangerous terrain under all characters inside (5+) then dealing 2 piercing damage to those characters.",
+    "jobId": "enochian"
+  }
+}

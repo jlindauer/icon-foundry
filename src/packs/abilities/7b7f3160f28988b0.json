@@ -1,0 +1,16 @@
+{
+  "_id": "7b7f3160f28988b0",
+  "name": "Autumn's Rain",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Mark",
+      "Aura"
+    ],
+    "flavor": "With prayer, a gentle healing rain begins falling on your allies.",
+    "effect": "Effect an ally in range. That ally gains aura 1. At the end of that ally's turn, grant 2 vigor to yourself and all allies in the aura, including your marked ally (3+) and create difficult terrain under all foes in the aura (5+) and yourself and allies in the aura can remove one negative status token.\nEffect the marked ally is bloodied, this gains effect [+]. If that ally is in crisis, increase aura size by +1.",
+    "jobId": "fair-wright"
+  }
+}

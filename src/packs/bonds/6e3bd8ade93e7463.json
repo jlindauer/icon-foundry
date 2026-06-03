@@ -1,0 +1,121 @@
+{
+  "_id": "6e3bd8ade93e7463",
+  "name": "The Elder",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Endure",
+      "Excel"
+    ],
+    "ideals": [
+      "I addressed challenges with patience, wisdom, or experience",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I defused a potentially violent situation"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "You can regain all effort when you manage to avoid confrontation or violence through your actions.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "At the start of a session, choose another character to watch over. The first time they would take a burden, you can take it instead if you have one free. If you do, regain all effort and clear all strain, and mark +1 xp."
+    },
+    "powers": [
+      {
+        "id": "2c7114e53965d738",
+        "name": "Parable",
+        "description": "Twice a session, ask the GM about any path of action. The GM answers with 'This is the path of ____' using an animal, plant, or natural element. Gain +1d when next acting on the answer.",
+        "isGambit": false
+      },
+      {
+        "id": "0e4e92cf7741e946",
+        "name": "Pacifist",
+        "description": "If you leave a scene of violence without harming anyone, heal 1 strain and regain 1 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "cab3fda968aacf30",
+        "name": "Long Memory",
+        "description": "Gain +1d on rolls about events more than ten years ago. At chapter III, if in your lifetime, can't fail the roll (treat 1-3 as 4+).",
+        "isGambit": false
+      },
+      {
+        "id": "e3c81722e15f9c2d",
+        "name": "Been Around",
+        "description": "Nobody younger than you can harm, restrain, or touch you unless you let them or they draw a weapon. Ignores chapter.",
+        "isGambit": false
+      },
+      {
+        "id": "04d5319782e3b990",
+        "name": "Spinner of Tales",
+        "description": "You get a 12 segment ambition clock to tell a story from your past. When complete, a character of your choice can improve an action by 1. Each character can only benefit once.",
+        "isGambit": false
+      },
+      {
+        "id": "889a7173bce666b9",
+        "name": "Pillar of Rock",
+        "description": "Until you use violence or coerce someone in a session, reduce all strain from other people by 1, minimum 1.",
+        "isGambit": false
+      },
+      {
+        "id": "417c9d5c2953fbf2",
+        "name": "Saltbelly",
+        "description": "Gain +1d for the rest of the session against anyone that shares a meal, drink, or game of skill with you.",
+        "isGambit": false
+      },
+      {
+        "id": "f93e2ce421084477",
+        "name": "Mentor",
+        "description": "Forgo your own ambitions to help someone else with theirs. They tick 1 more segment and gain +1d.",
+        "isGambit": false
+      },
+      {
+        "id": "9037b84c9305d758",
+        "name": "Reputation",
+        "description": "When entering a new populated area, decide people have heard of you. Get +1d social interactions, but you're easy to find. Works on: I town. II city or village. III: Anywhere.",
+        "isGambit": false
+      },
+      {
+        "id": "10e3532d66b68e43",
+        "name": "The Mountain",
+        "description": "1/session - Increase the effect of your next Endure action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "1c3c4509f40832c6",
+        "name": "Gambit of Tsumi",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "467f5b3d452e48b6",
+        "name": "Weathered Adventurer's Kit",
+        "items": [
+          "Rusted lantern, well-worn pack, flat bedroll, sturdy rope, flint and arkentech firestarter, thick journal, extra rations, sturdy cooking pot, utility knife, sleeping bag"
+        ]
+      },
+      {
+        "id": "c7027e35697361fd",
+        "name": "Veteran's Kit",
+        "items": [
+          "Broken famous weapon, old badge of rank, weapon care kit, painful memento, the most solid boots in the world, thick cloak, wound care knowledge"
+        ]
+      },
+      {
+        "id": "862b86ebbf5723fd",
+        "name": "Hermit's Kit",
+        "items": [
+          "Herbal medicine, icon of a magic or religious order, heavy walking stave, light pack, excellent hat, foraging knowledge"
+        ]
+      },
+      {
+        "id": "db1741c83995c3ba",
+        "name": "Nostalgic Kit",
+        "items": [
+          "Memories of the local area from long ago, a useful story, a safe place nearby, an excellent sense of direction"
+        ]
+      }
+    ]
+  }
+}

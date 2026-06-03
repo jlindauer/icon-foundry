@@ -1,0 +1,15 @@
+{
+  "_id": "2257596ae0e96d26",
+  "name": "Wild Swing",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Your strike is instinctual and without thought.",
+    "effect": "Reckless effect [+].\nSacrifice 4 effect [+].\nEffect [X]: Deal 1 damage or (6+) 2d6 damage to an adjacent foe, (6+) stun them, (6+) and push them 3.\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)",
+    "jobId": "cleaver"
+  }
+}

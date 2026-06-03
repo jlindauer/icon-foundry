@@ -1,0 +1,16 @@
+{
+  "_id": "f18c967ebce7e5ab",
+  "name": "Bio",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-5"
+    ],
+    "flavor": "You command the elements to dissolve - earth and flesh alike bursts into a toxic vapor.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nOn hit dangerous terrain under your attack target.\nEffect attack and area damage becomes piercing against targets already in dangerous terrain.\nWeave dangerous terrain under a character in range 2-5 after this ability resolves.",
+    "jobId": "alchemist"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "57d5c778f3d8db72",
+  "name": "Pandaemonium",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "You call upon the ancient and ferocious winds that swirled at the start of time, when the land was roiling and unformed.",
+    "effect": "Stance the following interrupt each round while in this stance.\n\nChaos Wind\nInterrupt 2\nTrigger character enters or exits a space in range 1-2.\nEffect them with any other character in range, interrupting but not stopping their movement. Foes can save to avoid this effect, but are branded on a successful save.\n\nDominant [X]: If you swap a character onto lower ground than they started, then may fly 1d3 (allies) or you may push or pull them the same amount (enemy)",
+    "jobId": "zephyr"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "18a259e8d328b530",
+  "name": "Mulch",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you dismiss a summon, you can create a difficult or dangerous terrain space under them.",
+    "jobId": "fair-wright"
+  }
+}

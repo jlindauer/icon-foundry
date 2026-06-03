@@ -1,0 +1,9 @@
+{
+  "_id": "0c326eafe9aed2a8",
+  "name": "Alacrity",
+  "type": "talent",
+  "system": {
+    "effect": "Increase your free move and any free move you grant by half the round number, rounded up.",
+    "jobId": "zephyr"
+  }
+}

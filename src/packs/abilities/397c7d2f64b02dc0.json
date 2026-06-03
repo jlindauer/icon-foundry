@@ -1,0 +1,9 @@
+{
+  "_id": "397c7d2f64b02dc0",
+  "name": "Shred",
+  "type": "talent",
+  "system": {
+    "effect": "If you're in crisis, all damage from your abilities with the attack tag gains pierce.",
+    "jobId": "cleaver"
+  }
+}

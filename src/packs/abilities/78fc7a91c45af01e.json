@@ -1,0 +1,16 @@
+{
+  "_id": "78fc7a91c45af01e",
+  "name": "Furor",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Strike with your heart.",
+    "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain.",
+    "jobId": "stalwart"
+  }
+}

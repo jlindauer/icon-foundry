@@ -1,0 +1,13 @@
+{
+  "_id": "305d827670ab74d1",
+  "name": "Perfect Strike",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "Interrupt 1",
+    "tags": [],
+    "flavor": "Nothing less than perfect will do for those that soar above. Tear your foes with your talons and shriek victory.",
+    "effect": "Trigger excel or score a critical hit.\nEffect may re-roll the same attack roll, including all modifiers, then check the below. This counts as an effect and not an attack, and only applies the below effects - no damage or effects of the original attack. Hit, excel, and critical hit effects are cumulative.\n• Miss are dazed and end your turn.\n• Hit 2 damage to your target again and gain 2 vigor.\n• Excel damage and vigor by +1d3.\n• Critical hit damage and vigor by a further +1d6 instead.\nEffect vigor and damage if you're in crisis.",
+    "jobId": "hawk-knight"
+  }
+}

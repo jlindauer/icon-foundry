@@ -1,0 +1,52 @@
+{
+  "_id": "835358820ae3951e",
+  "name": "Pathfinder",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Clear Skies",
+      "effect": "Your abilities gain +2 max range and increase all line effects by +2 for every positive level of elevation above 0 (max bonus +6).\nIf you attack a target at 4 or more spaces away from you, you ignore cover."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Heavenly Rain",
+      "cost": "2 actions, 4 resolve",
+      "tags": [],
+      "effect": "In the cold mountain air, many a villain has met their end from a flurry of bolts from the blue.\nEffect [X]: You draw and release a massive blast of projectiles. Choose a range from 2-8. All characters at exactly that range and in line of sight from you are struck by an intense barrage and take 4 damage (4+) and again (6+) and again. This damage ignores cover.\nPrecision each instance of damage by +2 if the chosen range was at 4+. Increase each by +4 instead if the chosen range was at range 7+."
+    },
+    "abilityIds": [
+      "b17bb882b8c5a4d5",
+      "c7b34bf7a8b7d78d",
+      "dda8e6ba902d8deb",
+      "ccaf15f80cc0f8bc"
+    ],
+    "talentIds": [
+      "5fa30f51065ec2cd",
+      "976c31c54f1f05f7",
+      "587a600b116908a1"
+    ],
+    "keywords": [
+      {
+        "name": "Precision",
+        "description": "Gains increased effects if its target is 4 or more spaces away, with effects increasing further if they are at 7+ spaces away."
+      }
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "ce034b09e32e1010",
+  "name": "Crisis",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Crisis",
+    "effect": "At 25% HP or lower."
+  }
+}

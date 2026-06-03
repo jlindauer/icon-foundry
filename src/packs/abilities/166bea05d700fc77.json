@@ -1,0 +1,9 @@
+{
+  "_id": "166bea05d700fc77",
+  "name": "Oppress",
+  "type": "talent",
+  "system": {
+    "effect": "When you hit an attack against a foe, you may increase one of its negative statuses by +1 after the attack resolves, or +2 if that foe was in crisis.",
+    "jobId": "knave"
+  }
+}

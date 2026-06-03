@@ -1,0 +1,17 @@
+{
+  "_id": "4ab471985b514857",
+  "name": "Cultivate",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Close Cross 1",
+      "Summon"
+    ],
+    "flavor": "You sow a line of rapidly growing plants or mushrooms that release a sticky healing sap.",
+    "effect": "Attack: 2 damage. Hit: +1d3 damage\nArea effect: 2 damage\nOn hit a bouncing spore adjacent to your foe, then summon a bouncing spore in every adverse terrain space in the area.\n\nBouncing Spore\nSummon (3)\nEffect or an ally entering or exiting a spore's space can pop it, dismissing the spore, gaining 1 vigor and ignoring any terrain movement penalties or damage in this space. If this is the third spore or more they have popped this turn, increase vigor by +1d3.",
+    "jobId": "herbalist"
+  }
+}

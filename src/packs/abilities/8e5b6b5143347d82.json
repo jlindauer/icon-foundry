@@ -1,0 +1,15 @@
+{
+  "_id": "8e5b6b5143347d82",
+  "name": "Shift",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Self"
+    ],
+    "flavor": "Slip between spaces using soul transposition: a miracle for most, but mundane for wrights.",
+    "effect": "Effect [X]: Teleport 3 spaces, then gain one or (4+) two keen.",
+    "jobId": "wright"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "21f51af556ad1f20",
+  "name": "Spin",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, when you push a character, summon, or object, you can increase the distance of that push by the round number +1.",
+    "jobId": "snowbinder"
+  }
+}

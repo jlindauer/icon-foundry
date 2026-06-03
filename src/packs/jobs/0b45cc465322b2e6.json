@@ -1,0 +1,76 @@
+{
+  "_id": "0b45cc465322b2e6",
+  "name": "Mendicant",
+  "type": "job",
+  "system": {
+    "jobType": "apprentice",
+    "soul": "",
+    "parentJobId": "",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Bless",
+      "effect": "You are a pillar of strength and stability on the battlefield, granting the following benefits.\n• Once a round, before an ally in range 1-4 makes any effect roll or save, you can cause them to roll it with [+]. A roll can only benefit from this effect once at a time.\n• You may use Rescue to bring up allies in range 1-4 instead of adjacent.\n• The first time you use rescue in a combat, it's a quick ability."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "",
+      "cost": "",
+      "tags": [],
+      "effect": ""
+    },
+    "abilityIds": [
+      "9edea57d0f1a9140",
+      "7e0f151613e60242",
+      "32df54664b631cfe",
+      "c3484942d45b5062",
+      "7e11f8635af09e3a",
+      "ae6bdabd0c979b82",
+      "e5e38a9c5ceb03bd"
+    ],
+    "talentIds": [],
+    "keywords": [
+      {
+        "name": "Aura X",
+        "description": "A persistent effect that moves with a character, affecting all other characters in range X and line of sight."
+      },
+      {
+        "name": "Brand (-)",
+        "description": "When attacked, gain -2 DF."
+      },
+      {
+        "name": "Crisis",
+        "description": "At 25% hp or lower."
+      },
+      {
+        "name": "Pierce",
+        "description": "Damage cannot be reduced in any way."
+      },
+      {
+        "name": "Stance",
+        "description": "A powerful ongoing effect. You can only maintain one stance at a time. You may exit any stance voluntarily at the start of your turn."
+      },
+      {
+        "name": "Strength (+)",
+        "description": "When attacking, gain +2 base damage."
+      },
+      {
+        "name": "Unstoppable",
+        "description": "Can't be forcibly moved. Immune to the effects of all negative statuses. Movement cannot be reduced or stopped for any reason."
+      }
+    ],
+    "description": ""
+  }
+}

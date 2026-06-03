@@ -1,0 +1,10 @@
+{
+  "_id": "27a03ac88e736747",
+  "name": "Evasion (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Evasion (+)",
+    "effect": "When attacked, roll 1d6. On a 5+, the attack automatically misses."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "d0a8eccf80924b7e",
+  "name": "Sanguinity",
+  "type": "talent",
+  "system": {
+    "effect": "When you grant vigor to yourself or an ally in crisis, grant them 2 strength.",
+    "jobId": "harvester"
+  }
+}

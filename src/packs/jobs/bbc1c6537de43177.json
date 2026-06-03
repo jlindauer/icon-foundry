@@ -1,0 +1,79 @@
+{
+  "_id": "bbc1c6537de43177",
+  "name": "Stalwart",
+  "type": "job",
+  "system": {
+    "jobType": "apprentice",
+    "soul": "",
+    "parentJobId": "",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Rampart",
+      "effect": "You are an imposing sight on the battlefield. Whether through gear, training, or simple toughness, you gain the following benefits have 1 armor. Once a round, before you or an adjacent ally is targeted by a foe's ability, you may grant that character +1d3 armor against the entire ability. Foes must spend +1 movement to exit a space adjacent to you."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "",
+      "cost": "",
+      "tags": [],
+      "effect": ""
+    },
+    "abilityIds": [
+      "78fc7a91c45af01e",
+      "98da204dd2bb741c",
+      "2de16aede1b2c7b1",
+      "8f8763c512e2f26e",
+      "d693c0f9a731bbe5",
+      "c75361c97ff1fc13",
+      "47af20cfc268853d"
+    ],
+    "talentIds": [],
+    "keywords": [
+      {
+        "name": "Daze (-)",
+        "description": "When attacking, gain -2 base damage."
+      },
+      {
+        "name": "Immobile",
+        "description": "Can't voluntarily move."
+      },
+      {
+        "name": "Push X",
+        "description": "Move a character X spaces away from you."
+      },
+      {
+        "name": "Shield (+)",
+        "description": "When attacked, gain +2 DF."
+      },
+      {
+        "name": "Stance",
+        "description": "A powerful ongoing effect. You can only maintain one stance at a time. You may exit any stance voluntarily at the start of your turn."
+      },
+      {
+        "name": "Sturdy (+)",
+        "description": "When you would be forcibly moved, ignore it."
+      },
+      {
+        "name": "Stun (-)",
+        "description": "When taking a turn, deal half damage this turn."
+      },
+      {
+        "name": "Unstoppable",
+        "description": "Can't be forcibly moved. Immune to the effects of all negative statuses. Movement cannot be reduced or stopped for any reason."
+      }
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "dda8e6ba902d8deb",
+  "name": "Hunting Eagle",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "A soaring leap, used to fight and traverse the chasms in the high mountain passes.",
+    "effect": "Effect [X]: Fly 1, then fly 1. In between, you may use another ability. That ability counts as being one or (5+) two spaces higher than your current level of elevation.",
+    "jobId": "pathfinder"
+  }
+}

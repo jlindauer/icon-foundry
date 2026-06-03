@@ -1,0 +1,9 @@
+{
+  "_id": "e58c758165266a40",
+  "name": "Pity",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when a character rolls a '1' on the final die of an attack roll, you may use one of the following:\nFoe your foe and push them 3.\nAlly: Re-roll one die of the attack roll, taking that result as final.",
+    "jobId": "raconteur"
+  }
+}

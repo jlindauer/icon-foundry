@@ -1,0 +1,57 @@
+{
+  "_id": "b08bb89b391cfcbb",
+  "name": "Entropist",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bolt Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Unmooring",
+      "effect": "Once a round, when you damage a foe, you can inflict them with the unmooring (-) unique status. At the end of that foe's turn, teleport them 1d3+1, then remove a stack of this status."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Howling Void",
+      "cost": "2 actions",
+      "tags": [
+        "Zone",
+        "Range 2-5",
+        "Blast 2"
+      ],
+      "effect": "A black bead streaks from your fingertips, ripping a screaming hole in space.\nZone rip a massive tear in the gravitational aether of the world, creating a black hole in range, with the following effects:\n• the black hole is dangerous and difficult terrain.\n• this dangerous terrain deals additional damage equal to half the round number, rounded up\n• Any character that starts or ends their turn in the black hole's space is teleported 3 to a space of your choice\n• objects that enter the black hole's space are destroyed, and summons are dismissed\n• Any character, summon, or object in range 2 of the black hole is pulled 1d3 towards the black hole when it is created, and at the end of each of your turns."
+    },
+    "abilityIds": [
+      "f2bf781c4e2929e8",
+      "eacea597a9b3eb57",
+      "a45fdf7dd3736d85",
+      "de76063f19943b43"
+    ],
+    "talentIds": [
+      "f7dc8592eb7250b2",
+      "1a4ff117296c4a8e",
+      "ae188932ffd186ed"
+    ],
+    "keywords": [
+      {
+        "name": "Afflicted",
+        "description": "Triggers on a foe suffering from a negative status."
+      }
+    ],
+    "description": ""
+  }
+}

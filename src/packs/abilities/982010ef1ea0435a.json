@@ -1,0 +1,9 @@
+{
+  "_id": "982010ef1ea0435a",
+  "name": "Endure",
+  "type": "talent",
+  "system": {
+    "effect": "If you don't attack during your turn, gain shield. At round 3+, also gain 2 vigor.",
+    "jobId": "workshop-knight"
+  }
+}

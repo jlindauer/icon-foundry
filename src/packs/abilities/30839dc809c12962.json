@@ -1,0 +1,15 @@
+{
+  "_id": "30839dc809c12962",
+  "name": "Night's Caress",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "range 1-3"
+    ],
+    "flavor": "You relentlessly hunt your prey, following them through a shadowy rift even if they flee.",
+    "effect": "Mark your foe then gain the following interrupt at the start of each round while they are marked.\n\n[Sudden Strike — Interrupt 1]\nTrigger marked foe ends their turn.\nEffect your foe is in range 1-3, teleport to a free adjacent to them. They must save or take 3d3 damage, or just 3 damage on a successful save. Then end your mark. Otherwise, teleport 1 and keep the mark.\nIsolate +2 damage, or +4 if there are no characters other than you in range 1-2.",
+    "jobId": "weeping-assassin"
+  }
+}

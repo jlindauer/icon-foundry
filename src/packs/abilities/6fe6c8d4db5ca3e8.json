@@ -1,0 +1,15 @@
+{
+  "_id": "6fe6c8d4db5ca3e8",
+  "name": "Weapon Vault",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Use your weapon or hilt like a vaulting pole.",
+    "effect": "Effect [X]: Fly 1, then swap places with an adjacent character. Then you may push your swapped target 1d3 spaces.\nEffect you use this after attacking, it becomes quick.\nConserve fly and push by +2, and swapped foes take 2 piercing damage.",
+    "jobId": "workshop-knight"
+  }
+}

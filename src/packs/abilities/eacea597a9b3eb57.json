@@ -1,0 +1,19 @@
+{
+  "_id": "eacea597a9b3eb57",
+  "name": "Magnetism",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 1-5",
+      "Self",
+      "Ally",
+      "Foe"
+    ],
+    "flavor": "You charge your target with unstable magnetic energy.",
+    "effect": "Mark the end of target's turn, one of the following effects takes place:\n• Positive all adjacent characters 1d3 spaces.\n• Negative all characters in range 1-3 1d3 spaces.\n• Dissolution all characters 1\nAfflicted characters are pushed, pulled, or teleported +1 more spaces, or +2 more spaces if they have 3 or more negative status tokens.",
+    "jobId": "entropist"
+  }
+}

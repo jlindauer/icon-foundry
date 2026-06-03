@@ -1,0 +1,55 @@
+{
+  "_id": "6c019a94a622c90b",
+  "name": "Dancer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Thief Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Masterful Step",
+      "effect": "If you don't attack during your turn, gain haste and during your next turn, all abilities gain effect [+]."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Dance of the Scarlet Lily",
+      "cost": "Quick, 2 resolve",
+      "tags": [
+        "range 1-5",
+        "end turn"
+      ],
+      "effect": "You pick the perfect, serene moment to unleash woe upon your enemy.\nEffect your turn. Target ally can immediately use any non-limit break ability that costs 1 action or less, (4+) also gaining evasion and haste (6+) and clearing all negative statuses first.\nEffect effect [+] if your ally is in crisis."
+    },
+    "abilityIds": [
+      "28437676372b50d9",
+      "6d86ef912aa5cf5e",
+      "f48f2b8bc900467d",
+      "883029aea465c1f9"
+    ],
+    "talentIds": [
+      "da781d46e374fe12",
+      "9fe29598fe97164e",
+      "3c22a0db6dc11fdb"
+    ],
+    "keywords": [
+      {
+        "name": "Weave",
+        "description": "When you use a weave effect, you gain the effect immediately, and then may repeat a copy of it as part of the very next ability you use. If multiple weave effects trigger, you can choose the order. Copies of a weave effect cannot weave further."
+      }
+    ],
+    "description": ""
+  }
+}

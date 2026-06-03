@@ -1,0 +1,15 @@
+{
+  "_id": "84b82b00efc7b2b1",
+  "name": "God Hand",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Divine energy infuses you, allowing hammer-like blows that would fell a demon with even your bare hands.",
+    "effect": "Effect 1\nAttack: 2 damage. On hit: +1d3\nExcel target of your attack explodes with divine energy with a burst 1 (target) area effect. All foes in the area take 2 damage, and allies in the area gain 2 vigor.\nCritical Hit burst area by half the round number, rounded up.",
+    "jobId": "sealer"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "277d29e060dde7cd",
+  "name": "Shadow Cloak",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Mark",
+      "range 1-2",
+      "power die"
+    ],
+    "flavor": "Pull the shadows tighter around you.",
+    "effect": "Mark self or an ally in range and set out a d6 power die, starting at 6. The marked character has phasing and permanent evasion. After evasion triggers, successful or not, tick the power die down by 2. When the die is 0, discard it and end this mark, and the marked character may teleport 2 and gain stealth.\nIsolate the marked character ends their turn with no other characters adjacent, they may tick the die up by 2, or by +4 if there are no characters in range 2.",
+    "jobId": "weeping-assassin"
+  }
+}

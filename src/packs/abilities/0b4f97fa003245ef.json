@@ -1,0 +1,17 @@
+{
+  "_id": "0b4f97fa003245ef",
+  "name": "The Door",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Zone",
+      "Range 1-4",
+      "End turn"
+    ],
+    "flavor": "You turn a key in an invisible door, and the aether-bright outline of one suddenly opens up, joining two spaces.",
+    "effect": "Zone your turn and create two 1 space zones in range. Characters that willingly exit either space can teleport into another of these spaces, as long as it is not occupied, but no more than once a turn.\nEffect effects that enter the zone can be drawn from any other space of this zone as if it were an adjacent space, and can change direction.",
+    "jobId": "wayfarer"
+  }
+}

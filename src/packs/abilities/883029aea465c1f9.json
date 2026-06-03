@@ -1,0 +1,13 @@
+{
+  "_id": "883029aea465c1f9",
+  "name": "Crimson Blossoms",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "Each petal of the scarlet lily is razor sharp, and can draw blood - a thousand tiny paper cuts that accumulate after crossing a field of them can be death to the unprepared.",
+    "effect": "Effect [X]: Fly spaces equal to the effect die. After landing, target every foe in range and line of sight equal to half the amount you flew. Those foes take 2 damage once, or three times if they are at range 3 or greater.\nGambit: (1-3): Reduce flight to 1 (4+) Increase flight by +3\nWeave first fly or dash you take with your next ability goes +3 more spaces.\n\n(Gambit the effect die and immediately gain the listed effect, usually with a negative effect on a lower die. Unlike other effects, gambits are optional, and effects are not cumulative.)",
+    "jobId": "dancer"
+  }
+}

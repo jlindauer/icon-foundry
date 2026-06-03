@@ -1,0 +1,16 @@
+{
+  "_id": "767b8253a6e9bec8",
+  "name": "Sanguine Thicket",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Zone",
+      "Range 2-3"
+    ],
+    "flavor": "You sow rapidly growing seeds of the blood oak, the carnivorous holy plant of the harvesters.",
+    "effect": "Zone a line 3 wall in free space in range.\n• The area is dangerous terrain.\n• Bloodied characters take +2 damage from this terrain, or +3 if they're in crisis.\n• Once a round, when you score a finishing blow against any character, the plants feed on life force and you can cause the area to grow by 2 spaces, added to the total area in any way you choose. This could grow it under characters.",
+    "jobId": "harvester"
+  }
+}

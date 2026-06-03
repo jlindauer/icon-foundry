@@ -1,0 +1,16 @@
+{
+  "_id": "7bc9fdcdf99fc500",
+  "name": "Death Trap",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "range 1-2",
+      "Summon"
+    ],
+    "flavor": "You place a carefully crafted trap: flechette bomb, shard net, razor wire- the possibilities are endless.",
+    "effect": "Summon one or (5+) two death traps in free space in range. Traps arm at the end of your turn.\n\n[Death Trap — Summon (1)]\nEffect out a cross 1 area centered on the trap when it arms. When a foe starts their turn in the area, or voluntarily enters the area, it explodes for an area effect, dismissing it. Characters inside must save or take 4 damage, twice, or just once on a successful save.",
+    "jobId": "vagabond"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "a4368997568ca75b",
+  "name": "Chronotemper",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Mark",
+      "End Turn",
+      "Range 1-4",
+      "Power Die"
+    ],
+    "flavor": "Ripples of accelerated time bend around your ally's movements, overlaying afterimages as they move.",
+    "effect": "Mark your turn and mark an ally in range. While marked, they gain a power die, starting at 6. They may tick the die down by 3 to make a free move at the end of any turn, even their own. If the die reaches 0, roll 1d6. This is not an effect roll. If you roll equal to or under the round number, keep the die at its new value, otherwise discard it and end this mark.\nIsolate your foe has no other characters adjacent after they move, tick the die down by only 2 instead.\nOverdrive action cost to 1\n\n(Isolate increased effects if there are no characters other than you adjacent.)",
+    "jobId": "chronomancer"
+  }
+}

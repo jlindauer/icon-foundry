@@ -1,0 +1,9 @@
+{
+  "_id": "12f13081b5d3093a",
+  "name": "Pinpoint",
+  "type": "talent",
+  "system": {
+    "effect": "Gain attack [+] against characters 4 or more spaces away. Against characters 7 or more spaces away, also ignore cover.",
+    "jobId": "wayfarer"
+  }
+}

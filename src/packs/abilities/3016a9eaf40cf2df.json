@@ -1,0 +1,15 @@
+{
+  "_id": "3016a9eaf40cf2df",
+  "name": "Snow Siege",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Summon"
+    ],
+    "flavor": "You create a steadily growing ball of rock, ice, and sleet. As it moves, it gathers in size and bulk until it is powerful enough to blow open a castle wall.",
+    "effect": "Summon a snowball in a free adjacent space, and set out a power die, starting at 1.\n\nSnowball\nSummon (1)\nSummon effect snowball is a height 1 object as well as a summon. Characters on top of the snowball when it moves are pushed with it, remaining on top if possible.\nSummon effect a turn, but any number of times a round, when the snowball is pushed, tick the power die up by 1.\nSummon effect the snowball would be pushed into the space of a character, that character gains slow, then is pushed 1 and takes 2 piercing damage per tick on the power die. Then tick the die down by 1d3. If the die would be reduced to 0, dismiss the snowball.\nSummon Action the snowball 2.",
+    "jobId": "snowbinder"
+  }
+}

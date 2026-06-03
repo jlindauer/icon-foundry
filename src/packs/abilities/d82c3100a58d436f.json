@@ -1,0 +1,9 @@
+{
+  "_id": "d82c3100a58d436f",
+  "name": "Fieldwork",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you swap places with a character, either deal 2 damage to them or grant them 2 vigor. Double these effects if they're in crisis.",
+    "jobId": "tactician"
+  }
+}

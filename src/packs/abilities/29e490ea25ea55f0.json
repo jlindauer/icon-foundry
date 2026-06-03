@@ -1,0 +1,9 @@
+{
+  "_id": "29e490ea25ea55f0",
+  "name": "Ardor",
+  "type": "talent",
+  "system": {
+    "effect": "Increase the effect of keen for you and adjacent allies to [+][+]. When you are bloodied for the first time in a combat, gain keen.",
+    "jobId": "theurgist"
+  }
+}

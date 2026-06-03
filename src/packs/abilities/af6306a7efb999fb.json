@@ -1,0 +1,9 @@
+{
+  "_id": "af6306a7efb999fb",
+  "name": "Seeker",
+  "type": "talent",
+  "system": {
+    "effect": "If you start your turn with no foes adjacent, you may dash 3, as long as each space of the dash takes you closer to a foe.",
+    "jobId": "breaker"
+  }
+}

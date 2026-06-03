@@ -1,0 +1,10 @@
+{
+  "_id": "2559c93af0c820d0",
+  "name": "Bloodied",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Bloodied",
+    "effect": "At 50% HP or lower."
+  }
+}

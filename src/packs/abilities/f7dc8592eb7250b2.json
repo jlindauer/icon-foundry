@@ -1,0 +1,9 @@
+{
+  "_id": "f7dc8592eb7250b2",
+  "name": "Energize",
+  "type": "talent",
+  "system": {
+    "effect": "At round 3+, increase all your teleports by +1, or +2 at round 5+.",
+    "jobId": "entropist"
+  }
+}

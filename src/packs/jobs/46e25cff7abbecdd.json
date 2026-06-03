@@ -1,0 +1,55 @@
+{
+  "_id": "46e25cff7abbecdd",
+  "name": "Partizan",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Berserker Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Vault",
+      "effect": "You may sacrifice your free move as part of any ability to do a spear vault. That ability counts you as being +1 spaces of elevation higher than your current elevation. If you're bloodied, you may also fly 2 before using the ability, or 4 if you're in crisis."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Drill Dive",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Range 2-5",
+        "End turn"
+      ],
+      "effect": "The master art of the partizans, a powerful leap that uses skillful strikes from the pole to drive the attacker ever higher, coming to earth like a vengeful god.\nEffect your turn and choose a foe in range, then gain the following interrupt:\n  [Drill Descent — Trigger turn start. Effect [X]: You soar into the air. Remove yourself from the battlefield. At the end of that foe's turn, you perform a spiraling dive. Place yourself in a free adjacent space. You deal 4 damage once (2+) twice (3+) three times, (6+) six times, and daze your foe. Then lower elevation under your target by 1 space.]\nEffect you're bloodied, lower elevation by 1d3 spaces instead. If you're in crisis, lower elevation by -3."
+    },
+    "abilityIds": [
+      "9e5c162d2e2db6c2",
+      "e85c972589005a26",
+      "143c85782594e9e4",
+      "56b9e35eec974966"
+    ],
+    "talentIds": [
+      "ea3ab0c63fdd26ba",
+      "f0dfd2cdcf4e407c",
+      "10d942819afff7be"
+    ],
+    "keywords": [
+      {
+        "name": "Dominant",
+        "description": "Gains extra effects depending on the elevation difference between you and your target."
+      }
+    ],
+    "description": ""
+  }
+}

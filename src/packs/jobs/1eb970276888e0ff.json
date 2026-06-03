@@ -1,0 +1,55 @@
+{
+  "_id": "1eb970276888e0ff",
+  "name": "Warden",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Ranger Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Beast Companion",
+      "effect": "You start combat with a great beast summon placed in range 1-2 of you. If the summon is dismissed or removed for any reason, you can place it as a quick ability on your turn.\n\n[Great Beast — Summon (1)]\nSummon action 2, then may deal 2 damage to an adjacent foe. If you didn't attack this turn, increase dash by +2, and damage to 1d3+1\nSummon effect or allies can ride the beast by entering its space, and dismount by exiting its space. While riding the beast, a character moves when it moves, counting as voluntary movement. If they are forced to stop for any reason or if they exit the beast's space, they fall off and the beast moves without them. Only one character can ride the beast at once."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Stampede",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "end turn",
+        "range 1-4"
+      ],
+      "effect": "With a bellow or a clenched fist, you summon an immense horde of beasts of the woods and hills to pound your enemies.\nEffect [X]: All foes in range are pushed 1d3 spaces in the same direction. Then summon 1d3+2 beasts in range and end your turn.\n\n[Beast — Summon (4)]\nSummon action 1 3, then deal 2 damage to an adjacent foe. Increase to 2d3 against foes in crisis. Then, dismiss the beast.\nHeavy +2 and summon +4 beasts."
+    },
+    "abilityIds": [
+      "b725d2bae81c122f",
+      "294b52c4406a1242",
+      "243a297c51e04ac6",
+      "f8d0c0b0080ef686"
+    ],
+    "talentIds": [
+      "ab792ebc16f25c3f",
+      "0258d42f4197006a",
+      "f26d70b46d4788ef"
+    ],
+    "keywords": [
+      {
+        "name": "Heavy",
+        "description": "Use a heavier version of an ability. If you do, become unable to attack or use a heavy version of an ability until the end of your next turn."
+      }
+    ],
+    "description": ""
+  }
+}

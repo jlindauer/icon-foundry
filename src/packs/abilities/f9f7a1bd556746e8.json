@@ -1,0 +1,16 @@
+{
+  "_id": "f9f7a1bd556746e8",
+  "name": "Soul Burn",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Self"
+    ],
+    "flavor": "You stoke the furnace with the very essence of your being.",
+    "effect": "Stance your own life force into a fierce blaze. In this stance:\n• You may sacrifice 2 at the end of your turn.\n• Once a turn, when you sacrifice, you may shoot a soul spark at a foe in range 2-5, igniting dangerous terrain under them. Foes already in dangerous terrain take 1 piercing damage and gain slow.\n• If you're bloodied, shoot a spark at a different foe. If you're in crisis, shoot another spark at a different foe. If you're at 1 hp, shoot a spark at all foes in range..",
+    "jobId": "theurgist"
+  }
+}

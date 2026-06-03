@@ -1,0 +1,9 @@
+{
+  "_id": "0953a06e6a785525",
+  "name": "Tenacity",
+  "type": "talent",
+  "system": {
+    "effect": "If you have 3 or more negative status tokens, you may choose to clear them at the end of your turn, and gain 2 vigor. Increase this vigor by +1d6 if you're in crisis.",
+    "jobId": "bleak-knight"
+  }
+}

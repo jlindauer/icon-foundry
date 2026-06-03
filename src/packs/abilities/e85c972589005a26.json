@@ -1,0 +1,15 @@
+{
+  "_id": "e85c972589005a26",
+  "name": "Spiral Impaler",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-3"
+    ],
+    "flavor": "You heft a long spear with tremendous force, pinning your foe to the ground.",
+    "effect": "Dominant max range by +3 against targets on lower elevation.\nEffect [X]: You deal 2 piercing damage to a foe in range. That foe must save or be immobilized until the start of their next turn. A foe can end this immobilize early by taking 1d6 piercing damage any time during their turn.",
+    "jobId": "partizan"
+  }
+}

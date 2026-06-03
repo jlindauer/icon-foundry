@@ -1,0 +1,15 @@
+{
+  "_id": "4ffb6ba5ac9eeb51",
+  "name": "Forceful Instruction",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Students must be pushed past their limits - sometimes literally.",
+    "effect": "Effect [X]: Push an ally 1d3+1 spaces. That ally gains strength.\nImpact your ally impacts a foe, they may swap places with that foe, then that foe takes 2 damage.",
+    "jobId": "yaman"
+  }
+}

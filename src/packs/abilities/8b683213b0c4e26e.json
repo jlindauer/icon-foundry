@@ -1,0 +1,16 @@
+{
+  "_id": "8b683213b0c4e26e",
+  "name": "Vine Wall",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-4",
+      "Object"
+    ],
+    "flavor": "You coax the plants in the ground to grow rapidly, and they spring forth like well trained animals.",
+    "effect": "Summon [X]: Create 1d3+1 vines in range, which can be created under characters. A vine deals 2 piercing damage to any character in its area when it is created, but a character can only take this damage once a turn.\n\nVine\nSummon (6)\nSummon Effect vine counts as difficult terrain. Bloodied characters must spend an additional +1 space of movement (3 total) to exit its space, or +2 spaces (4 total) if they are in crisis. A character can destroy a vine by using the interact action in an adjacent space, but leaves difficult terrain in its space.",
+    "jobId": "herbalist"
+  }
+}

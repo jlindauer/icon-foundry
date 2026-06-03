@@ -1,0 +1,15 @@
+{
+  "_id": "31b097bf475468ec",
+  "name": "Spring's Bounty",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-3"
+    ],
+    "flavor": "You summon a fickle and playful hob of spring, prancing with incredible leaps and bounds.",
+    "effect": "Effect a spring hob in range.\n\nSpring hob\nSummon (2)\nSummon Action spring hob teleports into space of the furthest ally from its space, then grants 3 vigor to all adjacent allies, increased by +1d6 for allies in crisis.\nSummon Effect a round, for each hob, you may attempt to repeat the summon action by rolling the effect die. On a (1-3), dismiss the hob instead and leave a difficult terrain flower patch in its space.",
+    "jobId": "fair-wright"
+  }
+}

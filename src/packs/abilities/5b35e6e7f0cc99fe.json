@@ -1,0 +1,16 @@
+{
+  "_id": "5b35e6e7f0cc99fe",
+  "name": "Sleet Slide",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-3",
+      "Line 4"
+    ],
+    "flavor": "An elementary magic trick originally for entertainment, turned to combat purpose.",
+    "effect": "Zone create a zone of slippery ice in free space in range.\n• Characters that start their turn in the area or voluntarily enter its space for the first time in a turn may choose to save. On a failed save, or if they decline to save, they are pushed to the closest end of the line, or as far as possible (you can choose if a space is equidistant). Foes then become slow.\n• You can push any summon you create in the area to either end of the line.\nConserve line by +2.",
+    "jobId": "snowbinder"
+  }
+}

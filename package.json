@@ -1,0 +1,16 @@
+{
+  "name": "icon-foundry",
+  "description": "Foundry VTT system for the ICON TTRPG",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:packs": "node scripts/build-packs.mjs && npm run pack",
+    "generate": "node scripts/build-packs.mjs",
+    "pack": "for pack in abilities jobs bonds conditions; do npx fvtt package pack --id icon --type System -n $pack --in src/packs/$pack --out packs; done",
+    "unpack": "for pack in abilities jobs bonds conditions; do npx fvtt package unpack --id icon --type System -n $pack --in packs/$pack --out src/packs/$pack; done",
+    "clean": "rm -rf src/packs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "dad70aa17a5a335f",
+  "name": "Runesmith",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Flame Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Forge Heart",
+      "effect": "Once a round, when you create a zone, difficult terrain space, or dangerous terrain space, you can sacrifice 2 to create an additional identical space in range. If part of an area (line, blast, burst, cross, etc) zone, it must be placed adjacent to one space of the original zone. It obeys all regular rules of the ability that created it."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Kindling of the Great Forge",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Zone",
+        "Object",
+        "Range 2-4"
+      ],
+      "effect": "O Earth, O Flame,\nAs I am masterful in will, bend to my command,\nBring me mine sword, and mine anvil,\nBreath thy bellows, test thy fiery mettle!\nRune forge!\nZone a massive rune forge from below, height 1 object in range. A burst 1 area centered on the forge is a zone, with the following effects:\n• Molten Armor a round, after a character sacrifices inside the forge zone, you may grant them 1d3+1 vigor.\n• Molten Weapons or any ally inside the zone may sacrifice 4 as a quick ability to grant damage on their next ability pierce.\n• Molten Fury zone of the forge is dangerous terrain to foes. This dangerous terrain deals additional damage equal to half the round number, rounded up.\n\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)"
+    },
+    "abilityIds": [
+      "e9ff8dec5626122e",
+      "84d6a29372346249",
+      "36e79bbb2b886068",
+      "1f9fc4c1f098de22"
+    ],
+    "talentIds": [
+      "ed05ee521191ebb5",
+      "730830ec29f03881",
+      "721f4d09119a2cb7"
+    ],
+    "keywords": [
+      {
+        "name": "Zone",
+        "description": "Changes or affects an area of the battlefield, causing persistent effects. Unless specified, placing a new zone replaces the last one placed. Zones from self or allies cannot overlap each other. You can dismiss a zone as a quick ability."
+      }
+    ],
+    "description": ""
+  }
+}

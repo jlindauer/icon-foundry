@@ -1,0 +1,9 @@
+{
+  "_id": "74db5c9def19552c",
+  "name": "Effigy",
+  "type": "talent",
+  "system": {
+    "effect": "The first time in combat you would take 5 or more damage from an ability, create a height 1 metal shell object in a free adjacent space.",
+    "jobId": "auran"
+  }
+}

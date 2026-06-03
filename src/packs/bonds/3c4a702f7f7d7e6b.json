@@ -1,0 +1,121 @@
+{
+  "_id": "3c4a702f7f7d7e6b",
+  "name": "The Pathfinder",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Traverse",
+      "Sense"
+    ],
+    "ideals": [
+      "I addressed challenges with curiosity, exploration, or understanding",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I saw, heard, or tasted something truly unique"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain 1 effort when you enter a new scene. This ability can activate any number of times a session.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "Leading a team action only costs 1 effort for you."
+    },
+    "powers": [
+      {
+        "id": "f1eb5e2c12bb50c8",
+        "name": "Saddleborn",
+        "description": "Get a knack for riding or piloting I or Vehicles. Chapter II: Monsters. Chapter III entire herd of animals or monsters.",
+        "isGambit": false
+      },
+      {
+        "id": "beabbaf5a4c0a282",
+        "name": "Windrider",
+        "description": "When you push yourself to take a traverse or sneak action, you also get increased effect and choose one of the following for the action per chapter: you don't touch the ground, you don't make a sound, you can't be touched while moving.",
+        "isGambit": false
+      },
+      {
+        "id": "e5c8917e4c827299",
+        "name": "Dabbler",
+        "description": "Get +1 point to put in any action rating. At the start of an interlude, you must swap this point around to a new action. It can't take any rating higher than 1+ the chapter number.",
+        "isGambit": false
+      },
+      {
+        "id": "4d33bbf15bcee8b9",
+        "name": "Freesoul",
+        "description": "You can escape from any restraint, grab, shackle, hold, or prison cell without rolling, appropriate to chapter. You can conceal this ability if you wish.",
+        "isGambit": false
+      },
+      {
+        "id": "2fa259eed17659d1",
+        "name": "Lay Burdens",
+        "description": "1/session, When you enter a populated location, untick 1 segment on all burdens, and you may push your next action for free.",
+        "isGambit": false
+      },
+      {
+        "id": "f988c4ba536d88b3",
+        "name": "Airfeel",
+        "description": "When you camp or start an expedition, you can ask any of the following questions about the next day or so of travel and get a truthful yes or no answer from the GM. Get increased effect when next acting on the answers it a long, dangerous, or arduous journey? Is the journey defended or contested? Are you currently being pursued, tracked, or hunted?",
+        "isGambit": false
+      },
+      {
+        "id": "af7fc9b3af7bf494",
+        "name": "Colortongue",
+        "description": "You can understand and speak all languages and read all scripts. When you interact with a living creature that doesn't speak language, you can understand its intents and feelings and get a knack to interact with it socially. At chapter II or higher, you can use this to interact with even non-living creatures, such as magical constructs or the undead.",
+        "isGambit": false
+      },
+      {
+        "id": "76fab4e12719370e",
+        "name": "Horizon Sweeper",
+        "description": "Your sense actions have increased effect and aren't affected by I or time of day. Chapter II or visibility. Chapter III of any kind.",
+        "isGambit": false
+      },
+      {
+        "id": "017a779fd391832c",
+        "name": "Memory of the Sole",
+        "description": "Name a location you last set up camp or spent an interlude. The GM will determine the difficulty of the journey there by answering questions. When the next scene starts, you and up to ten other willing people can choose to be safely there if you take 2 strain for each 'yes' answer.",
+        "isGambit": false
+      },
+      {
+        "id": "645fbd504e79e754",
+        "name": "Lightspeed",
+        "description": "1/session - Your next traverse action has superpowered effect.",
+        "isGambit": false
+      },
+      {
+        "id": "bf9bb5900f1bccdb",
+        "name": "Gambit of Gaia",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "fc6321db42ba7b27",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "6f3490446293ce99",
+        "name": "Highland Kit",
+        "items": [
+          "Pitons, climbing harness, hooks, zipline, cold weather outfit, preserved rations, thermos, foldable canvas glider that can carry one person"
+        ]
+      },
+      {
+        "id": "067c3b70d620b58f",
+        "name": "Lowland Kit",
+        "items": [
+          "Arkentech compass, warm weather outfit, shovel, local maps, a reliable one or two person mount - horse, dog, arkentech heliobike"
+        ]
+      },
+      {
+        "id": "62e0c232da859d2c",
+        "name": "Extreme Kit",
+        "items": [
+          "Hazard gear, blight testing strips and curatives, diving suit, foldable kayak, Arkentech rebreather - 1 hr of clean air, two refills for rebreather"
+        ]
+      }
+    ]
+  }
+}

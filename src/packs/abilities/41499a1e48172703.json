@@ -1,0 +1,19 @@
+{
+  "_id": "41499a1e48172703",
+  "name": "Evaporate",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 3-5",
+      "Blast 4",
+      "Foe",
+      "Ally",
+      "Summon"
+    ],
+    "flavor": "You vaporize a large area of the battlefield, then lash the resultant water aether towards you before it reforms.",
+    "effect": "Effect [X]: Characters in the area take 3 piercing damage. Then pull all characters and summons in the area 1d3+1 with phasing. Characters may pass a save to avoid being pulled. One (3+) two or (5+) all characters pulled this way leave an obscured space in the first space they vacate.",
+    "jobId": "mistwalker"
+  }
+}

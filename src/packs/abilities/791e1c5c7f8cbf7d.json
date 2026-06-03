@@ -1,0 +1,15 @@
+{
+  "_id": "791e1c5c7f8cbf7d",
+  "name": "Megaton Suplex",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "Wrapping your arms around your foe, you fling the two of you backwards with tremendous force.",
+    "effect": "Sacrifice 3 adjacent foe takes 3 damage and is dazed. They must then save, or be picked up and removed from the battlefield. Fly 3, then place your foe in a free adjacent space.",
+    "jobId": "colossus"
+  }
+}

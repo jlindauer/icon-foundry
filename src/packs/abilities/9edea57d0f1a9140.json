@@ -1,0 +1,17 @@
+{
+  "_id": "9edea57d0f1a9140",
+  "name": "Glia",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-5",
+      "Pierce"
+    ],
+    "flavor": "A spark of light.",
+    "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range.",
+    "jobId": "mendicant"
+  }
+}

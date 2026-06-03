@@ -1,0 +1,10 @@
+{
+  "_id": "8e2aa57c57915c87",
+  "name": "Armor (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Armor (+)",
+    "effect": "Gain +1 DF when attacked."
+  }
+}

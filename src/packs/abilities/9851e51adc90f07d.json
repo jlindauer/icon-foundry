@@ -1,0 +1,16 @@
+{
+  "_id": "9851e51adc90f07d",
+  "name": "Metal Flash",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-6",
+      "End turn"
+    ],
+    "flavor": "You turn into liquid metal, flowing along the ground until you reach your target.",
+    "effect": "Effect a character in range and end your turn. At the end of that character's turn, you may teleport yourself into free space adjacent to your target.\nEffect you may create a burst 1 (self) area effect for 2 piercing damage and push 1. If this explosion includes an object, inflict 1 slow on a target in the area. If there are two or more objects in the area, double damage and push.\nHeavy can choose two characters in range, triggering the effect at each of the end of their turns.",
+    "jobId": "auran"
+  }
+}

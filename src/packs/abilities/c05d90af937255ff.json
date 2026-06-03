@@ -1,0 +1,15 @@
+{
+  "_id": "c05d90af937255ff",
+  "name": "Esper",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "You chant from the hermetic passages, turning the healing magics of the chant into a terrifying soul-cutting force. Forbidden to all but the most experienced chanters.",
+    "effect": "Stance in this stance, gain aura 2:\n• when you grant vigor to an ally in the aura, you can deal 2 piercing damage to a foe in the aura. If your ally was in crisis, you deal damage to all foes in the aura instead.\n• when you rescue an ally in the aura, you can deal 3d3 piercing damage to a foe in the aura. They must save or be stunned.\nEach effect can only trigger once a turn, but any number of times a round.",
+    "jobId": "chanter"
+  }
+}

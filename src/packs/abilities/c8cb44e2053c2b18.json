@@ -1,0 +1,16 @@
+{
+  "_id": "c8cb44e2053c2b18",
+  "name": "Gleam",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "Quick",
+    "tags": [
+      "Range 2-4",
+      "Object"
+    ],
+    "flavor": "Bend light aether into a shape that confounds the senses.",
+    "effect": "Object a height 1 illusory object in free space in range. The object does not obstruct or block line of sight but does grant cover. It disappears and is removed if a character moves into its space or if you use this ability again.",
+    "jobId": "wright"
+  }
+}

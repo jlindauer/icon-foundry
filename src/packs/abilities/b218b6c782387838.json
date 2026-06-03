@@ -1,0 +1,9 @@
+{
+  "_id": "b218b6c782387838",
+  "name": "Nutrition",
+  "type": "talent",
+  "system": {
+    "effect": "Increase the effect of Strength on you and adjacent allies to +3 damage. The first time you become bloodied in a combat, gain strength.",
+    "jobId": "herbalist"
+  }
+}

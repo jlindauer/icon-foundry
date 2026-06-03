@@ -1,0 +1,9 @@
+{
+  "_id": "9de9b30facbd1a47",
+  "name": "Dissolution",
+  "type": "talent",
+  "system": {
+    "effect": "Increase the effects of brand to -3 defense against the attacks of you and adjacent allies. When you critical hit, you can inflict brand.",
+    "jobId": "celestian"
+  }
+}

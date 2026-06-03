@@ -1,0 +1,16 @@
+{
+  "_id": "0a2ce2824e826845",
+  "name": "Demon Splitter",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Close Line 3"
+    ],
+    "flavor": "Swing your weapon with enough force to cut even the most tenebrous of foes.",
+    "effect": "Effect 1.\nAttack: 2 damage. Hit: +2d6.\nArea effect: 2 damage.\nHeavy: [-] on attack, Line +3, +3 base and area damage.",
+    "jobId": "slayer"
+  }
+}

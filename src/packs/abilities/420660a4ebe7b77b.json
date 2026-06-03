@@ -1,0 +1,16 @@
+{
+  "_id": "420660a4ebe7b77b",
+  "name": "Maniac",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "Quick",
+    "tags": [
+      "stance",
+      "end turn"
+    ],
+    "flavor": "You're not one for half measures, tuning your weaponry up to a ridiculous degree. Will that (literally) blow up in your face? Who cares!",
+    "effect": "Stance your turn. While in this stance:\n• you immediately convert any other negative status into reckless, including any statuses you are currently suffering from, even if you couldn't gain more reckless.\n• Reckless stacks up to 6\n• Your attacks deal +damage on hit equal to half your reckless stacks, rounded up\n• Once a round, when you gain reckless, you may also gain evasion or haste.\nReckless go to Reckless 6",
+    "jobId": "dragoon"
+  }
+}

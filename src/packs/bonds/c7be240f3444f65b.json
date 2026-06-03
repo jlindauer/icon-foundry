@@ -1,0 +1,100 @@
+{
+  "_id": "c7be240f3444f65b",
+  "name": "The Outsider",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Sense",
+      "Traverse"
+    ],
+    "ideals": [
+      "I addressed challenges with my unique perspective, talents, or culture",
+      "I expressed heritage, background, or beliefs through my actions",
+      "I made a new friend, or deepened an existing friendship"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when you spend a scene trying not to use your unique talents or abilities.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "You gain +1d to set characters up."
+    },
+    "powers": [
+      {
+        "id": "8bdfa5b2e81247fb",
+        "name": "Xenoclash",
+        "description": "Choose two actions. Once a session, you can push each without spending effort.",
+        "isGambit": false
+      },
+      {
+        "id": "37f79cd42913a66e",
+        "name": "Gaia Compass",
+        "description": "You have a knack for navigation. Always know distance and direction to the nearest: I: Village. II: Town. III settlement. You can sense dungeons within a few miles.",
+        "isGambit": false
+      },
+      {
+        "id": "81241b9b60d3a85c",
+        "name": "Open Up",
+        "description": "Spend time with one character during an interlude. You can each aid each other once without spending effort during the next expedition.",
+        "isGambit": false
+      },
+      {
+        "id": "dc5f921588d3336f",
+        "name": "Bloom",
+        "description": "Any character can set out a 4 segment ambition to learn your language. If they finish, they gain 1 xp and can communicate with you privately.",
+        "isGambit": false
+      },
+      {
+        "id": "022928000d997794",
+        "name": "Earth Glide",
+        "description": "You have an unusual way of moving. Gain a knack for certain terrain. Pick one per chapter, Oceans, Mountains, Snow, Swamps, Deserts.",
+        "isGambit": false
+      },
+      {
+        "id": "6fabc1b2582b78da",
+        "name": "Tour Guide",
+        "description": "When a character works on ambitions, they can bring you along. Roll 1d6: 1: -1d. 2-5: +1d. 6: +1d and tick 1 more segment.",
+        "isGambit": false
+      },
+      {
+        "id": "2a5370776806fb96",
+        "name": "Earth Speech",
+        "description": "You can speak and understand something unusual. Pick one per chapter, Plants, Rocks, Weapons, Tools, Vehicles.",
+        "isGambit": false
+      },
+      {
+        "id": "fd8de2ffb2a60537",
+        "name": "Centered",
+        "description": "1/session - Share your unique cuisine or habit with someone. They gain +1d to set you up for the session, and you get +1d on the next roll involving them.",
+        "isGambit": false
+      },
+      {
+        "id": "ff90033a8108ed50",
+        "name": "Resourceful",
+        "description": "You can bring one more piece of loose gear on an expedition.",
+        "isGambit": false
+      },
+      {
+        "id": "1dafa6899879b27c",
+        "name": "The Wave",
+        "description": "1/session - Increase the effect of your next sense action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "ca4bd8b59ea1bf2d",
+        "name": "Gambit of the Formless",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "b7752918df61615e",
+        "name": "Outsider's Kit",
+        "items": [
+          "Strangely shaped lantern, pack, bedroll, 5 fire stones, food from home, foreign clothes, local clothes, icon from a distant land, unique weapon or tool, script in a foreign language"
+        ]
+      }
+    ]
+  }
+}

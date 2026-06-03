@@ -1,0 +1,16 @@
+{
+  "_id": "fa46ae6386a84104",
+  "name": "Baton Pass",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "attack",
+      "melee"
+    ],
+    "flavor": "Your momentum pushes your allies forward, as you skillfully direct their strikes.",
+    "effect": "Effect 3\nAttack: 1 damage, Hit: +1d3 damage\nEffect [X]: One, (4+) two, or (6+) three allies adjacent to your target may also dash 3, then may deal 2 damage to a different adjacent foe.\nOverdrive all dashes by +3",
+    "jobId": "blightrunner"
+  }
+}

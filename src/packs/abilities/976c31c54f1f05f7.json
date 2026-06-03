@@ -1,0 +1,9 @@
+{
+  "_id": "976c31c54f1f05f7",
+  "name": "Horizon",
+  "type": "talent",
+  "system": {
+    "effect": "Your attacks against characters at range 4-6 gain: attack [+]. At range 7+, they also deal damage [+].",
+    "jobId": "pathfinder"
+  }
+}

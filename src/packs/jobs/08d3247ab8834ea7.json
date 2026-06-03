@@ -1,0 +1,55 @@
+{
+  "_id": "08d3247ab8834ea7",
+  "name": "Geomancer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Earth Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Aftershock",
+      "effect": "Once a round, after you damage a foe with an ability, you can cause vibrations in that foe. At the end of their next turn, if they are adjacent to any object, you may cause them to take 2 piercing damage. Increase this by +1d6 if they are adjacent to two or more objects. Then this effect ends."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Cataclysm",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "Range 3-6"
+      ],
+      "effect": "I, protected by the holy trigram,\nSummon the ten thousand molten kings.\nRun amok with thy furies, and rend the immortal stone,\nTurn Heaven and Earth!\nEffect a character in range. At the end of that character's turn:\n• create height 1 objects in every free adjacent space to them\n• every character in an adjacent space to them gains slow and takes 3 piercing damage.\nThen push all adjacent characters 1d3 away from the targeted character."
+    },
+    "abilityIds": [
+      "71dd95aa2db12d99",
+      "97c58d261cfdfa1b",
+      "9d41c77100bdcae7",
+      "a3935ec7c7b5a649"
+    ],
+    "talentIds": [
+      "f96641da55bbdb88",
+      "b0e7c971625c3a78",
+      "5b6bbf15b19b9779"
+    ],
+    "keywords": [
+      {
+        "name": "Dominant",
+        "description": "Gains extra effects depending on the elevation difference between you and your target."
+      }
+    ],
+    "description": ""
+  }
+}

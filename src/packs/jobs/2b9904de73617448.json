@@ -1,0 +1,55 @@
+{
+  "_id": "2b9904de73617448",
+  "name": "Theurgist",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Flame Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Blazing Blade",
+      "effect": "Once a round, you may attempt one of the following, rolling a d6 and attempting to roll equal to or under the round number, and gaining the following on success:\n• Blade cleave you hit an attack, cut deeply into your target's soul, forcing them to sacrifice 4 HP.\n• Blade parry you are damaged, gain 4 vitality before being damaged.\nIf you are bloodied, roll 2d6 and pick the lowest. If you are in crisis, roll 3d6 and pick the lowest instead."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Transmigration of Fire",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Range 2-5"
+      ],
+      "effect": "O Flame, I command thee,\nMake a pyre of our souls,\nAnd a crucible of our sin,\nGreat Transmigration!\nEffect yourself and a willing ally in range, or two willing allies in range. Exchange the hp totals of each character. Any bloodied character after the swap gains 3 vigor. Any character in crisis gains 3d3 vigor instead, or 3d6 if they're at 1 hp."
+    },
+    "abilityIds": [
+      "1eaf6b7eccfb2ea7",
+      "f9f7a1bd556746e8",
+      "8638d255a1515d3c",
+      "a8d81effc4654ead"
+    ],
+    "talentIds": [
+      "68a36221a831e21a",
+      "4a1e1ff025454ea6",
+      "29e490ea25ea55f0"
+    ],
+    "keywords": [
+      {
+        "name": "Sacrifice X",
+        "description": "Spend X hp directly as part of this ability, which cannot be ignored or reduced. Sacrificing cannot reduce you past 1 hp, and you can sacrifice even if the cost is higher than your current hp."
+      }
+    ],
+    "description": ""
+  }
+}

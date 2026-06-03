@@ -1,0 +1,16 @@
+{
+  "_id": "5865d727af0449d6",
+  "name": "Centipede Dash",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Close Line 4",
+      "end turn"
+    ],
+    "flavor": "As you weave around your foes, tiny nicks with needles or blades blossom into stinging death.",
+    "effect": "Area effect a line 4 area, then dash to the end, or as far as possible, with phasing. Then end your turn.\n• The first foe you pass through during this movement is blinded.\n• All bloodied foes then have all their statuses increased by +1. Foes in crisis have their statuses increased by 2.\nAfflicted foes take 2 damage. Foes with 3 or more negative status tokens take 2 piercing damage instead.",
+    "jobId": "venomist"
+  }
+}

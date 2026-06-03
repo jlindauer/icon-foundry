@@ -1,0 +1,15 @@
+{
+  "_id": "ab3b662f896074cb",
+  "name": "Pithy Retort",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Stance"
+    ],
+    "flavor": "Your quick tongue lashes out in reply, stabbing like a dagger.",
+    "effect": "Stance in this stance, gain aura 2. When any foe misses an attack against you or an ally in the aura, you may brand that foe, deal 1d3 piercing damage to them, and push them 1.\nWeave this ability resolves, brand a foe in range 1-3.",
+    "jobId": "raconteur"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "24a5c02de584cf7b",
+  "name": "Talisman",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you mark a character inside one of your zones or auras, you can increase a negative or positive status on them by +1.",
+    "jobId": "shrine-guardian"
+  }
+}

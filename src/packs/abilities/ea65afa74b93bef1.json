@@ -1,0 +1,17 @@
+{
+  "_id": "ea65afa74b93bef1",
+  "name": "Blackstar",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Range 3-8",
+      "Blast 4"
+    ],
+    "flavor": "You burn and condense your own aether into super condensed form, creating a crackling black orb that inflicts maximum destruction. Without the time to stabilize this attack, its use can rip away your very life force.",
+    "effect": "Attack: 4 damage. Hit: +2d6\nArea effect: 1d6+2\nReckless +2 attack and area damage, creates dangerous terrain under the attack target, and lowers terrain under them by 1.\nEffect Sacrifice 999 unless the round number is 4 or higher. All allies can choose to lend their life force instead. If they are all willing, each ally sacrifices 4 instead, and you don't sacrifice anything.\n\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)",
+    "jobId": "enochian"
+  }
+}

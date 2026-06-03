@@ -1,0 +1,16 @@
+{
+  "_id": "31a9592f7c5fde19",
+  "name": "Aero",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-6",
+      "Mark"
+    ],
+    "flavor": "You mark a foe with pulsing lightning charge, reacting to other's presence.",
+    "effect": "Mark a foe in range. At the end of that foe's turn, they take 2 piercing damage, then may save to end the mark. If they are adjacent to two or more other characters, they take 2d3 piercing damage instead, gain slow, and may not save to end the mark.",
+    "jobId": "wright"
+  }
+}

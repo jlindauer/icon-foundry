@@ -1,0 +1,56 @@
+{
+  "_id": "d664760a30e74f97",
+  "name": "Alchemist",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Earth Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Master of Fundaments",
+      "effect": "As a quick ability, you may transmute a terrain space in range 1-3. This removes any current effects of the terrain space except elevation. You may then leave the space blank or roll 1d3.\n• 1. Liquid space becomes dangerous or difficult terrain (choose)\n• 2. Solid space becomes a height 1 object.\n• 3. Vapor space becomes an obscured space."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Homunculus",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Range 2-5",
+        "Summon"
+      ],
+      "effect": "Life can be spun up, as the makers once did, out of its base elements. The process lacks the finesse, but time will wear away all its impurities.\nEffect summon a homunculus in free space in range, an artificial being that can shift its form.\n\nHomunculus\nSummon (1), size 1\nSummon Effect summoned, choose one of the following effects:\n• Liquid homunculus is difficult and dangerous terrain and has phasing. The first time in a round it passes through a foe's space, it inflicts slow.\n• Solid homunculus is a height 1 object. It cannot be removed, but otherwise follows all the rules for objects. Any character sharing its space when it takes this form is moved up on top of it. When it moves, any character on top of it is pushed the same number of spacing, staying on top of it if possible.\n• Vapor homunculus gains flying and is an obscured space.\nSummon Action 1 homunculus moves 4, then you may switch the homunculus' effect."
+    },
+    "abilityIds": [
+      "f18c967ebce7e5ab",
+      "e037e8b7b7ffe886",
+      "8608202b924b5524",
+      "4d015b0315ccc344"
+    ],
+    "talentIds": [
+      "2018fe2d8fe2ac92",
+      "d4a4cf7d6a8076d2",
+      "f872607a2a7ee0cb"
+    ],
+    "keywords": [
+      {
+        "name": "Weave",
+        "description": "When you use a weave effect, you gain the effect immediately, and then may repeat a copy of it as part of the very next ability you use. If multiple weave effects trigger, you can choose the order. Copies of a weave effect cannot weave further."
+      }
+    ],
+    "description": ""
+  }
+}

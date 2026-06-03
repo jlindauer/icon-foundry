@@ -1,0 +1,9 @@
+{
+  "_id": "8fba1a6b6162bddf",
+  "name": "Barbs",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you reduce a character to 0 hp, you may deal 2 damage to all foes adjacent to that character. Increase this to 2d3 against any of these foes that are bloodied.",
+    "jobId": "fool"
+  }
+}

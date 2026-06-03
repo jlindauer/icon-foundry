@@ -1,0 +1,16 @@
+{
+  "_id": "4c4b1cf1bdd220a0",
+  "name": "Bait and Switch",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-2",
+      "Ally"
+    ],
+    "flavor": "You lay a trap for your foe, striking when they overextend themselves.",
+    "effect": "Effect places with an ally in range.\nEffect your ally was adjacent to at least one foe, you may then deal 2 damage to one of those foes after swapping and daze them.\nEffect damage to 1d3+1 if your ally was bloodied, or 1d6+1 if your ally was in crisis.",
+    "jobId": "tactician"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "6fc60f629d140870",
+  "name": "Execute",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "End turn"
+    ],
+    "flavor": "Finish them.",
+    "effect": "Effect your turn and gain sturdy. Gain the following interrupt until the end of your next turn:\n  [Cut Down — Trigger hit an attack, and the attack resolves. Effect [X]: Roll the effect die. If your foe's HP is under the effect die, they are instantly defeated, ignoring all other effects. Then gain shield, and vigor equal to the effect die if you defeated your foe this way. Otherwise this has no effect.]\nAfflicted your foe is afflicted, gain effect [+], or [+][+] if they have 3 or more negative status tokens of any kind.\n(Afflicted bonuses if your foe is suffering from a status.)",
+    "jobId": "corvidian"
+  }
+}

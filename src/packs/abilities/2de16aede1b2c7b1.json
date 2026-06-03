@@ -1,0 +1,16 @@
+{
+  "_id": "2de16aede1b2c7b1",
+  "name": "Impel",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Melee",
+      "Foe"
+    ],
+    "flavor": "Hurl headlong into battle.",
+    "effect": "Effect [X]: Dash 1, then an adjacent foe is dazed, and pushed 1 (4+) two or (6+) four spaces.",
+    "jobId": "stalwart"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "9359c44f427a5da4",
+  "name": "Chronoripple",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-4",
+      "Blast 2"
+    ],
+    "flavor": "Causality unmakes itself around you.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nArea effect: 2 damage.\nZone [X]: Create one or (5+) two spaces of an accelerated time zone in free spaces inside or adjacent to the area.\n\nAccelerated Time\nZone spaces added to this area extend the zone instead of replacing it. A character that either starts or ends their turn inside takes 1 piercing damage and increases a positive or negative status of your choice by 1.\n\nOverdrive spaces deal +1d3 damage to foes and no damage to allies.",
+    "jobId": "chronomancer"
+  }
+}

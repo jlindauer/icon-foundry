@@ -1,0 +1,9 @@
+{
+  "_id": "5d40e8bfa488ff35",
+  "name": "Incant",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you may increase the aura size of one of your ability's auras by 1 until the start of your next turn. All other auras you control or create are reduced by 1. If reduced to 0, an aura deactivates temporarily.",
+    "jobId": "fair-wright"
+  }
+}

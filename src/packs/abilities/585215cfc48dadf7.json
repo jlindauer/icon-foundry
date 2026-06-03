@@ -1,0 +1,16 @@
+{
+  "_id": "585215cfc48dadf7",
+  "name": "Pound",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Foe",
+      "Melee"
+    ],
+    "flavor": "Sometimes problems can be solved by just hitting them really, really hard.",
+    "effect": "Effect [X]: You smash an adjacent foe, dazing them and lowering terrain by 1 or (5+) two levels under them.\nReckless foe also takes 2d3 damage.",
+    "jobId": "cleaver"
+  }
+}

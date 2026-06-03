@@ -1,0 +1,9 @@
+{
+  "_id": "d49f57f3c9cfab24",
+  "name": "Turbo",
+  "type": "talent",
+  "system": {
+    "effect": "Increase the effect of haste for you and adjacent allies to +3 spaces. You gain haste when you are first bloodied in a combat.",
+    "jobId": "blightrunner"
+  }
+}

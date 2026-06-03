@@ -1,0 +1,16 @@
+{
+  "_id": "95ffded297858868",
+  "name": "Thirsting Edge",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Your swing is so fierce that your weapon strikes multiple times in one hit.",
+    "effect": "Attack: 2 damage. On hit: +1d6.\nReckless [X]: Deal 1 or (4+) 4 damage again on hit.",
+    "jobId": "cleaver"
+  }
+}

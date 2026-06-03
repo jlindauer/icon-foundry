@@ -1,0 +1,9 @@
+{
+  "_id": "1a4ff117296c4a8e",
+  "name": "Halt",
+  "type": "talent",
+  "system": {
+    "effect": "Afflicted characters that end their turn adjacent to you gain slow. If they have 3 or more negative statuses, they treat all spaces adjacent to you as difficult terrain.",
+    "jobId": "entropist"
+  }
+}

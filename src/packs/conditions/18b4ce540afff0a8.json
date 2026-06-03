@@ -1,0 +1,10 @@
+{
+  "_id": "18b4ce540afff0a8",
+  "name": "Keen (+)",
+  "type": "condition",
+  "system": {
+    "isPositive": true,
+    "keyword": "Keen (+)",
+    "effect": "When attacking, gain attack [+]."
+  }
+}

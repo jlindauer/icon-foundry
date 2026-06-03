@@ -1,0 +1,15 @@
+{
+  "_id": "8608202b924b5524",
+  "name": "Transmute",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-5"
+    ],
+    "flavor": "To the master of fundaments, the world is as smoke.",
+    "effect": "Effect [X]: Choose an unoccupied terrain space in range, then roll 1d6. The space removes any object or terrain type it has other than elevation, then gains one of the following:\n1. Difficult terrain\n2. Dangerous terrain\n3. The space becomes obscured\n4. Place a height 1 object in the area\n5. Raise or lower terrain by 1\n6. Pick two effects.\nWeave the above effect after this ability resolves.",
+    "jobId": "alchemist"
+  }
+}

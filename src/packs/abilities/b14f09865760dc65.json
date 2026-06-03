@@ -1,0 +1,16 @@
+{
+  "_id": "b14f09865760dc65",
+  "name": "Razor Top",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "summon",
+      "range 2-4"
+    ],
+    "flavor": "With a flash, you summon whirling death.",
+    "effect": "Summon a razor top in range.\n\n[Razor Top — Summon (2)]\nSummon effect top is dangerous terrain as well as a summon.\nSummon effect top can be targeted by effects that push, pull, or teleport a character. Once a round, after you push, pull, or teleport a top, it spins and deals 2 damage to all adjacent foes.\nIsolate gains piercing, or becomes 1d3+2 piercing if there are no characters other than you in range 1-2.\n\n(Isolate increased effects if there are no characters other than you adjacent.)",
+    "jobId": "puppeteer"
+  }
+}

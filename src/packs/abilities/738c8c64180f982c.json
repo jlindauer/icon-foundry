@@ -1,0 +1,9 @@
+{
+  "_id": "738c8c64180f982c",
+  "name": "Melt",
+  "type": "talent",
+  "system": {
+    "effect": "You increase the effects of slow tokens you inflict to -3 spaces. When you critical hit, you can inflict slow.",
+    "jobId": "enochian"
+  }
+}

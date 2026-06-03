@@ -1,0 +1,13 @@
+{
+  "_id": "c372836a68b06143",
+  "name": "Coolhand",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "Steady your nerves.",
+    "effect": "Effect [X]: Your next attack gains attack [+], (4+) ignores all cover, (6+) and this action becomes quick this turn, refunding its action cost.\nEffect using this ability, it gains effect [+] for the rest of combat, stacking up to 3 times.",
+    "jobId": "freelancer"
+  }
+}

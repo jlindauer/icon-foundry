@@ -1,0 +1,15 @@
+{
+  "_id": "3b532b2c3985b8eb",
+  "name": "Matsuri",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Range 2-5"
+    ],
+    "flavor": "You and allies teleport in a display that sends sprays of bright fire, lighting up the sky.",
+    "effect": "Effect a blast 3 area in range. You and all adjacent allies may teleport into free space in the area, in any order, then all foes in the area take 2 piercing damage and must save or be branded and pushed 1 away from the center.\nEffect you excelled this turn, reduce the action cost of this ability to 1 action. If you critical hit, it becomes quick.",
+    "jobId": "sealer"
+  }
+}

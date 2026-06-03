@@ -1,0 +1,10 @@
+{
+  "_id": "1f7e4f046d25e097",
+  "name": "Afflicted",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Afflicted",
+    "effect": "Suffering from at least one negative status token."
+  }
+}

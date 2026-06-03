@@ -1,0 +1,16 @@
+{
+  "_id": "f2bf781c4e2929e8",
+  "name": "Magnabolt",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Line 6"
+    ],
+    "flavor": "Dark lightning scathes your target.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nArea effect: 2 damage.\nOn hit target releases a burst 1 (self) area effect, dealing 2 damage to all characters inside. This damage becomes piercing if your target is afflicted.\nEffect your targeted character is inside a zone, extend the above area effect to all characters inside the zone.",
+    "jobId": "entropist"
+  }
+}

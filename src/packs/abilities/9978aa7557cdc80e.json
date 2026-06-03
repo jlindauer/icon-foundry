@@ -1,0 +1,16 @@
+{
+  "_id": "9978aa7557cdc80e",
+  "name": "King of Swords",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-5"
+    ],
+    "flavor": "A flash of bright color, and a card is stuck to your foe, bursting into arcane fire in a flash.",
+    "effect": "Attack: 2 damage. On hit: +1d3\nOn hit attach a card to your target. The next time your target is hit by an attack, the card explodes for a blast 3 area effect with at least one space on your foe, dealing 2 damage to all foes and granting 2 vigor to all allies.\nGambit: (1-2) Defuse the card, dealing 1 damage to your target, (3-4) increase the blast size by +1, (5+) increase the blast by +1 and you may immediately detonate the card.",
+    "jobId": "seer"
+  }
+}

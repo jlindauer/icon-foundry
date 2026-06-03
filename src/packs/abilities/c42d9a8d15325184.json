@@ -1,0 +1,16 @@
+{
+  "_id": "c42d9a8d15325184",
+  "name": "Quietus",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Dark aether coats your blade, cutting the soul.",
+    "effect": "Attack: 2 damage. On hit [X]: Foe must also sacrifice 2d3+2 hp. Grant half as much as the sacrifice amount as vigor to self and adjacent allies to your foe.\nEffect Stun on yourself. Do not clear this status this turn.\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)",
+    "jobId": "bleak-knight"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "_id": "5481a472c39797ef",
+  "name": "Weeping Assassin",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Shadow Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Tears of the Weeper",
+      "effect": "Your common abilities (dash, interact, rescue, etc) do not remove stealth.\nIf you end your turn with no other characters adjacent, gain stealth."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Hollow",
+      "cost": "Quick, 3 resolve",
+      "tags": [
+        "Self"
+      ],
+      "effect": "You draw the night around you, becoming a shadowy being of pure, writhing darkness.\nEffect gain 3 haste, then take on a shadowy form. While in this form, you are immune to all damage, gain phasing, and may fly when you take your free move. You exit this form when you enter any space in range 1-2 of a foe, or when a foe enters any space in range 1-2 of you, but re-enter as soon as either of these cease to be true. It ends completely at the end of your next turn.\nEffect can transfer this effect to an ally instead. If you do, sacrifice 25% of your maximum hp, and it lasts until the end of their next turn.\n\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)"
+    },
+    "abilityIds": [
+      "d970b3420a75b61d",
+      "277d29e060dde7cd",
+      "30839dc809c12962",
+      "3dcbc70647eb9209"
+    ],
+    "talentIds": [
+      "6a3fba667e97e59b",
+      "4b689263995111a8",
+      "60a7233c1fc392bf"
+    ],
+    "keywords": [
+      {
+        "name": "Isolate",
+        "description": "Gains increased effects if a character has no other characters than you adjacent."
+      }
+    ],
+    "description": ""
+  }
+}

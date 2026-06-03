@@ -1,0 +1,121 @@
+{
+  "_id": "a4e9931a02959dba",
+  "name": "The Seeker",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Study",
+      "Sense"
+    ],
+    "ideals": [
+      "I addressed challenges with investigation, intuition, or recklessness",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I questioned my own understanding of the world"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when you discover something hidden, forbidden, or secret.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When exhausted, you get +1d on study and sense actions and can aid in those actions without spending effort."
+    },
+    "powers": [
+      {
+        "id": "780ffa12d1fe47d5",
+        "name": "Heartsight",
+        "description": "1/session - Close your eyes. You can view a location for 1 minute, anywhere: I by, within shouting distance. II a few miles. III in Arden Eld. You view the location as if an invisible observer. Your body is immobile and vulnerable while taking this action.",
+        "isGambit": false
+      },
+      {
+        "id": "b3e93d33c0668778",
+        "name": "Library Organ",
+        "description": "1/session - Get +1d on study and sense for the rest of the scene, but all other actions are at 0d. At chapter III, also increase all effect from study and sense.",
+        "isGambit": false
+      },
+      {
+        "id": "7828fdfc42c368c6",
+        "name": "Argus",
+        "description": "You get a knack for sensing: I objects, paths, tracks, or traps. II people, monsters, or ambushes. III or metaphysical objects or forces, such as the flow of magic.",
+        "isGambit": false
+      },
+      {
+        "id": "876c6150adb031f7",
+        "name": "Midnight Eyes",
+        "description": "You can see in the dark. Your study and sense actions get increased effect in darkness. At Chapter III or higher, you can see anything close by in good detail without the use of your eyes.",
+        "isGambit": false
+      },
+      {
+        "id": "430c3eb1ef91857b",
+        "name": "Unhinge",
+        "description": "When you push a desperate action, it also gains increased effect.",
+        "isGambit": false
+      },
+      {
+        "id": "32d4282c9652f47a",
+        "name": "Dark Clarity",
+        "description": "2/session - You may study the ambient emotional state of: I person close by. II person or monster close by. III people or monsters close by. You get an impression of their strongest emotion. Your next action including your target(s) gets +1 boon or increased effect.",
+        "isGambit": false
+      },
+      {
+        "id": "305201477afa0aae",
+        "name": "Possession",
+        "description": "2/session - Ask a presence inside you for advice. The GM will answer as the presence. Get +1d on the next action that follows that advice.",
+        "isGambit": false
+      },
+      {
+        "id": "02a0da5d7c7e52aa",
+        "name": "Instinctive",
+        "description": "2/session - Describe a course of action to the GM. You will receive a truthful if unclear answer as a feeling. The GM chooses (good/positive), Stone (bad/negative), Chaos (a mix).",
+        "isGambit": false
+      },
+      {
+        "id": "8308f9e5fed13ad3",
+        "name": "Geist",
+        "description": "When you touch someone skin to skin, you can see through their eyes and experience their sensations. I end of scene. II end of expedition. III: Indefinitely. Effect canceled when used again.",
+        "isGambit": false
+      },
+      {
+        "id": "1fbfb327cec8bdc7",
+        "name": "Terrible Truth",
+        "description": "1/session - Increase the effect of your next Study action to Superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "f1739e4cfc8504e5",
+        "name": "Gambit of the Outsider",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "02fec0e8f546b82c",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "a50a3027281eb5ea",
+        "name": "Ritual Kit",
+        "items": [
+          "Tome of rituals, occult scroll, candles, chalk, salt, paper for talismans, reagents, holy icon, silver bowl, dead light lantern"
+        ]
+      },
+      {
+        "id": "0d3135f2318952db",
+        "name": "Archaeologist's Kit",
+        "items": [
+          "Thick tome of dungeon lore, pick, shovel, head lantern, extra rope, climbing harness, arkentech ruin sensor (2 mile range)"
+        ]
+      },
+      {
+        "id": "ee18c3c2ec82ea33",
+        "name": "Scholar's Kit",
+        "items": [
+          "Academic almanac, telescope, star chart, personal notes, magnifying arkentech lenses (10x zoom), Aether compass"
+        ]
+      }
+    ]
+  }
+}

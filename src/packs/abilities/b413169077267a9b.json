@@ -1,0 +1,9 @@
+{
+  "_id": "b413169077267a9b",
+  "name": "Necromancer",
+  "type": "talent",
+  "system": {
+    "effect": "If you don't attack during your turn, summon a thrall in range 1-3.\n\nThrall\nSummon (6)\nSummon Action thralls dash 3 spaces, then explode, dealing 2 damage to an adjacent foe or granting 2 vigor to an adjacent ally. Increase by +1d3 against characters in crisis. Then dismiss the thrall.",
+    "jobId": "harvester"
+  }
+}

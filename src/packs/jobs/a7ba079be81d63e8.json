@@ -1,0 +1,55 @@
+{
+  "_id": "a7ba079be81d63e8",
+  "name": "Snowbinder",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Water Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Icy Gust",
+      "effect": "If you don't attack during your turn, you may push or pull a character, summon, or object in range 1-3 spaces equal to the round number + 1. Unlike other pushes or pulls, you can choose the distance pulled."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Great Blizzion",
+      "cost": "1 action",
+      "tags": [
+        "End turn"
+      ],
+      "effect": "To your foes, the ice storm you call is a relentless, hungry gale. To you, it is a warm refuge that shields you and your charges from harm.\nEffect your turn. Until the start of your next turn, all characters become unable to attack due the strength of snow and wind. All spaces for that duration become obscured and difficult terrain."
+    },
+    "abilityIds": [
+      "ae6f1de819dcb2c2",
+      "005f785423c263ba",
+      "5b35e6e7f0cc99fe",
+      "3016a9eaf40cf2df"
+    ],
+    "talentIds": [
+      "87479a3446ae2be7",
+      "21f51af556ad1f20",
+      "f366ba575cf5866b"
+    ],
+    "keywords": [
+      {
+        "name": "Conserve",
+        "description": "Can only trigger if you have not attacked this turn, and cannot attack on any turn you trigger this effect."
+      }
+    ],
+    "description": ""
+  }
+}

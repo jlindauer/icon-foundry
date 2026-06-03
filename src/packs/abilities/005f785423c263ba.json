@@ -1,0 +1,16 @@
+{
+  "_id": "005f785423c263ba",
+  "name": "Freeze Solid",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Object",
+      "End turn"
+    ],
+    "flavor": "You freeze the water in the air, creating a fragile icicle - usually a trick for traversing up glacier chasms.",
+    "effect": "Object create a height 1 icicle object in free space in range. If any character would be pushed or pulled into the object, it shatters, creating a burst 2 effect centered on it. All characters inside take 2 piercing damage, then are pushed 1. Then remove it and replace it with difficult terrain.\nConserve a height 2 object instead.",
+    "jobId": "snowbinder"
+  }
+}

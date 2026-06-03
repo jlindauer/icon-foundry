@@ -1,0 +1,13 @@
+{
+  "_id": "9cc2f68b3beec5aa",
+  "name": "Chaos Roulette",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "You send a prayer to the multicolored titan, spinning the wheel of chance.",
+    "effect": "Effect the effect die, then gain one of the following effects:\n• 1 yourself and end your turn.\n• 2 a burst (2) self area effect. Foes in the area take 1d6+4 damage (save for half) and are pushed 1.\n• 3 characters in range 1-2 are teleported 1d3 spaces to a space of their choice.\n• 4 characters in range 1-2 are blinded.\n• 5 the positions of all characters in range 1-2, in any order.\n• 6 a prior effect, then this action becomes quick, refunding its action cost.\nWeave this ability resolves, roll the above effect again.\n\n(Weave you use a weave effect, you gain the effect immediately, and then may repeat a copy of it as part of the very next ability you use. If multiple weave effects trigger, you can choose the order. Copies of a weave effect cannot weave further.)",
+    "jobId": "rake"
+  }
+}

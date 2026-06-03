@@ -1,0 +1,55 @@
+{
+  "_id": "b4188117e09aa5d1",
+  "name": "Spellblade",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Bolt Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Klingekunst",
+      "effect": "Once a round, you may teleport 2 as a quick ability. If you are isolated, you may teleport 4 instead. If there are no other characters in range 1-2, you may teleport 6."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Gran Levincross",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Zone"
+      ],
+      "effect": "I summon thee, bloody gods of the cutting art,\nLet the might of the divine realm crash upon the piteous earth,\nStrike eighty thousand blows at once,\nAnd split the air asunder!\nZone blade extends and you make two massive cuts across the map, splitting the walls between worlds. Draw a cross section across the map, splitting it into four sections of any size. Deal 4 piercing damage to all characters caught in the cross, then remove all characters out of the affected area and place them in the nearest free space of your choice. Characters may pass a save to choose the space themselves.\n\nThe affected area becomes a crackling wall of lightning. Each space is an obscured space. Characters that voluntarily enter its space or start their turn there must save or take 6d3 damage and become slow, or half and no slow on a successful save."
+    },
+    "abilityIds": [
+      "17f55b94ef46c553",
+      "476c15f68bb9be2e",
+      "4441b724fbb65102",
+      "c133c81c28d3ef2c"
+    ],
+    "talentIds": [
+      "564e7189d70951fd",
+      "ae0b886bb862514d",
+      "e1509d15601024fa"
+    ],
+    "keywords": [
+      {
+        "name": "Isolate",
+        "description": "Triggers when a character has no characters other than you adjacent."
+      }
+    ],
+    "description": ""
+  }
+}

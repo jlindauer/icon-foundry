@@ -1,0 +1,17 @@
+{
+  "_id": "9a831f4dc6acb6f7",
+  "name": "Ruin",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Range 2-6",
+      "Blast 2"
+    ],
+    "flavor": "Potent chaos magic that draws upon the chaos fundament, becoming more powerful as the battle continues.",
+    "effect": "Attack: 1 damage. Hit: +2d6\nArea effect: 1 damage\nEffect all base damage, area damage, and blast effect size by half the round number, rounded up.",
+    "jobId": "wright"
+  }
+}

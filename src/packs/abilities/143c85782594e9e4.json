@@ -1,0 +1,16 @@
+{
+  "_id": "143c85782594e9e4",
+  "name": "Meteon",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "You deliver a spiraling strike that becomes especially effective from high elevation.",
+    "effect": "Effect 2.\nDominant every level of elevation you descend during this flight, your foe takes +2 damage on hit (max +6). If you descend 3 or more levels, first destroy all shield status effects and all vigor on your target.\nAttack: 4 damage. On hit: +1d6.\nOn hit elevation under your target by 1.",
+    "jobId": "partizan"
+  }
+}

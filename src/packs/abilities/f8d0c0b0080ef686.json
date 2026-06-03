@@ -1,0 +1,16 @@
+{
+  "_id": "f8d0c0b0080ef686",
+  "name": "Strength of the Pack",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "stance",
+      "aura"
+    ],
+    "flavor": "Your senses sync with those of the herd, and you strike as one.",
+    "effect": "Stance this stance, you gain aura 1:\n• If there are 3 or more allies or allied summons in the area, attacks against you and allies in the aura gain [-]. Increase this to [-][-] against you or any ally in crisis.\n• Foes in the aura take +1 damage from summons\nHeavy the action cost of this ability to 1. If there are 3 or more adjacent allies or allied summons to you, reduce it further to quick.",
+    "jobId": "warden"
+  }
+}

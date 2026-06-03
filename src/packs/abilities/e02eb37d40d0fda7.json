@@ -1,0 +1,16 @@
+{
+  "_id": "e02eb37d40d0fda7",
+  "name": "Flash Powder",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Melee",
+      "burst 1 (self)"
+    ],
+    "flavor": "Throw sparking powder that confounds the eyes.",
+    "effect": "Area effect [X]: One, (4+) two or (6+) all foes in the area are blinded.\nEffect teleport 3",
+    "jobId": "vagabond"
+  }
+}

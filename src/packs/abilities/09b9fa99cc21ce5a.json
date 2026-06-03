@@ -1,0 +1,16 @@
+{
+  "_id": "09b9fa99cc21ce5a",
+  "name": "Gentle Prayer",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "Aura"
+    ],
+    "flavor": "You radiate an aura of such powerful peace that all close to you, monster or man, find it impossible to raise a hand in violence.",
+    "effect": "Stance in this stance gain aura 1.\n• Attacks from and against all characters in the area gain [-].\n• Characters that attack in the aura immediately end their turn after attacking\n• Immediately exit this stance and end your turn if you attack\nConserve the base size of the aura by +1 (max base aura 3). This effect stacks, but ends and resets if you exit the aura.",
+    "jobId": "chanter"
+  }
+}

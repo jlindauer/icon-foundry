@@ -1,0 +1,17 @@
+{
+  "_id": "27f019d3ff1ba754",
+  "name": "Astra",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Range 3-6",
+      "Blast 4"
+    ],
+    "flavor": "You call down the heavens themselves on your foes.",
+    "effect": "Effect: 3 damage. On hit: +1d3\nArea effect: 3 damage to foes only.\nEffect effect deals 3 damage again if there is at least one ally in the area.\nIsolate isolated foes in the area take 3 damage again after this ability resolves.",
+    "jobId": "celestian"
+  }
+}

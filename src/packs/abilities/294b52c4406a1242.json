@@ -1,0 +1,15 @@
+{
+  "_id": "294b52c4406a1242",
+  "name": "Gwynt",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Melee"
+    ],
+    "flavor": "With catlike reflexes, you pounce, spurring allies to action.",
+    "effect": "Effect [X]: Adjacent foes are pushed 1, then adjacent allies and allied summons may dash 2 (5+) 4 spaces. Then, any foe adjacent to one or more allies or summons that moved this way takes 2 damage, or 2d3 damage if they're in crisis. Then gain haste.\nHeavy all allies, foes, and summons in range 1-2.",
+    "jobId": "warden"
+  }
+}

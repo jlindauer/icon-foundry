@@ -1,0 +1,16 @@
+{
+  "_id": "1eaf6b7eccfb2ea7",
+  "name": "Soul Cleave",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Close Line 4"
+    ],
+    "flavor": "Your weapon bursts into flame, a lash extending far beyond its natural reach. It scorches only the soul, leaving flesh and metal untouched.",
+    "effect": "Attack sacrifices 2. On hit sacrifices +3d3.\nArea effect sacrifice 2 hp.\nSacrifice 8 action cost to 1.",
+    "jobId": "theurgist"
+  }
+}

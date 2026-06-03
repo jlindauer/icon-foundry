@@ -1,0 +1,9 @@
+{
+  "_id": "39e06adaba106e3a",
+  "name": "Poise",
+  "type": "talent",
+  "system": {
+    "effect": "At the start of combat, you may enter a stance that costs 1 action or less as a quick action, or reduce the cost of a stance that costs 2 actions this turn to 1 action. If you do so, you cannot attack that turn.",
+    "jobId": "chanter"
+  }
+}

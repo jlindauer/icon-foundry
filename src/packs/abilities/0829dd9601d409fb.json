@@ -1,0 +1,16 @@
+{
+  "_id": "0829dd9601d409fb",
+  "name": "Spirit Sea",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "range 1-2",
+      "cross 1"
+    ],
+    "flavor": "You let a portion of the deep ocean manifest, a roiling black sea.",
+    "effect": "Zone a cross 1 roiling bubble of black water in free space in range, with the following effects:\n• Yourself and allies have phasing in the area.\n• The center space is an obscured space\n• Once a round, when a character of your choice starts a voluntary movement is pushed or pulled in the area, they are buffeted by a wave and increase it by +2.",
+    "jobId": "stormscale"
+  }
+}

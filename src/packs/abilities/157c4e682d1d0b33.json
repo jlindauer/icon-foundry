@@ -1,0 +1,9 @@
+{
+  "_id": "157c4e682d1d0b33",
+  "name": "Steady",
+  "type": "talent",
+  "system": {
+    "effect": "If you don't attack during your turn, you may grant all abilities +3 max range during your next turn.",
+    "jobId": "freelancer"
+  }
+}

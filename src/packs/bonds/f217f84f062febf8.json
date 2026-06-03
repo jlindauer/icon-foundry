@@ -1,0 +1,121 @@
+{
+  "_id": "f217f84f062febf8",
+  "name": "The Brave",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Endure",
+      "Command"
+    ],
+    "ideals": [
+      "I addressed challenges with perseverance, friendship, and courage",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I used my heart rather than my head to solve a problem"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "Regain all effort when you charge forth without a plan.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When you lead a team action, get +1d on the action or increased effect."
+    },
+    "powers": [
+      {
+        "id": "f323055ae6d10ded",
+        "name": "Strike the Road",
+        "description": "The first team action you lead in a session costs you 0 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "0200a6d8bee36b5b",
+        "name": "Crush Limiter",
+        "description": "1/session - Give your next action superpowered effect, but take a burden at the end of the scene.",
+        "isGambit": false
+      },
+      {
+        "id": "a4e0af6f1fe82247",
+        "name": "Luck as a Constant",
+        "description": "When you critical hit, regain all effort, heal all strain, and mark 1 xp.",
+        "isGambit": false
+      },
+      {
+        "id": "3f550fc4c1454d3a",
+        "name": "All In",
+        "description": "Using Aid to help a character taking a desperate action costs 0 effort for you.",
+        "isGambit": false
+      },
+      {
+        "id": "b4645ed79f2af096",
+        "name": "Joyluck Wind Thrower",
+        "description": "When you take a desperate action, you can take +1d. If you do, treat any die less than a 6 as a 1.",
+        "isGambit": false
+      },
+      {
+        "id": "882afa0a74ca6d7d",
+        "name": "The Sun",
+        "description": "1/session - Gain increased effect on all actions for the rest of the scene.",
+        "isGambit": false
+      },
+      {
+        "id": "107422f0ce2bc43d",
+        "name": "Coordinate",
+        "description": "Aiding you on team actions costs 0 effort.",
+        "isGambit": false
+      },
+      {
+        "id": "f56acbdfdd2b49ad",
+        "name": "Heart of Hearts",
+        "description": "1/session - Flash back to a scene from your past. Treat your next roll as a critical hit (6,6). Can only use three times ever.",
+        "isGambit": false
+      },
+      {
+        "id": "42445f0faa423886",
+        "name": "Team Player",
+        "description": "When any ally sets you up, you have increased effect on the roll.",
+        "isGambit": false
+      },
+      {
+        "id": "ab15c00bfac1eaf2",
+        "name": "Brave Destiny",
+        "description": "1/session - Increase the effect of the next team action you take to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "bf0b8a58f3549089",
+        "name": "Gambit of the Hundred Sword God",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "a4d9d22b517b2a16",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "b99d678faba8681c",
+        "name": "Brave Kit",
+        "items": [
+          "Signature outfit, 3 arkentech light gems, map to a mysterious place, northstone, trinket from home, arkentech power gauntlet (single use)"
+        ]
+      },
+      {
+        "id": "e7ceeb96f7e50789",
+        "name": "Explorer Kit",
+        "items": [
+          "Waterproof cloak, extendable walking pole, compass, flask, three empty bottles, chalk, 6 depth stones, abyss stone (glows near monsters)"
+        ]
+      },
+      {
+        "id": "24b7e68849b68039",
+        "name": "Inherited Kit",
+        "items": [
+          "Hexagonal key, oddly fitting clothing, antique armor piece, broken arkenrelic, heirloom weapon, memories of a prophecy"
+        ]
+      }
+    ]
+  }
+}

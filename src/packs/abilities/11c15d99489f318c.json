@@ -1,0 +1,9 @@
+{
+  "_id": "11c15d99489f318c",
+  "name": "Vanish",
+  "type": "talent",
+  "system": {
+    "effect": "While inside an obscured space, attacks not from adjacent spaces take [-] against you.",
+    "jobId": "mistwalker"
+  }
+}

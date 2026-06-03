@@ -1,0 +1,15 @@
+{
+  "_id": "243a297c51e04ac6",
+  "name": "Oak Splitter",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Line 4"
+    ],
+    "flavor": "You loose a massive shot, powerful enough to split the most tenuous bark.",
+    "effect": "Effect[X]: Push all foes in the line 1 or (5+) 2 to either side of the line. Then, the first ally or allied summon in the line is pushed to the end of the line, or as far as possible before stopping. Allies moved this way then gain evasion.\nHeavy +4 and also affects the second ally or allied summon in the area.",
+    "jobId": "warden"
+  }
+}

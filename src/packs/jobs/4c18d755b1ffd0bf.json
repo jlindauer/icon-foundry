@@ -1,0 +1,55 @@
+{
+  "_id": "4c18d755b1ffd0bf",
+  "name": "Seer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Oracle Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "The Wheel",
+      "effect": "Once a round, when you create an area effect, you can infuse it with the power of your deck of cards.\n• All allies become immune to damage from the area effect,\n• Then roll 1d6 and see what happens after the triggering ability resolves.\n  1. The Moon two spaces of obscured terrain in the area.\n  2. The Papessa all characters in the area 1\n  3. The Sun foes in the area take 2 piercing damage and lose stealth or evasion.\n  4. The Judge all foes in the area.\n  5. The Fool one character in the area 4 spaces\n  6. The Axe area effect deals +2 damage.\nWhen you roll a result, it is removed from the deck. If you roll the same result again, you may choose which card you draw. Once all cards have been drawn from the deck, reset the table."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "High Prophecy",
+      "cost": "Quick, 2 resolve",
+      "tags": [
+        "Self"
+      ],
+      "effect": "A burning third eye of pure etheric energy appears on your forehead. Possibilities unfurl before you, laid out like infinite gleaming threads.\nEffect 4d6, then record each number rolled. For the next four times you roll a d6 for an effect roll, you use those exact numbers, in order. This effect only ends once all numbers have been used. When you first make this roll and see the result, you can defy this fate and re-roll any of these numbers, taking the second result as final. However, each time you do, you must sacrifice the new result in hp."
+    },
+    "abilityIds": [
+      "9978aa7557cdc80e",
+      "70050e36aa114075",
+      "fc6fcb68a36979ae",
+      "00975efbb2c483b1"
+    ],
+    "talentIds": [
+      "f4a86d04645bd10f",
+      "8d6aecf436b866a1",
+      "8cb2c6b157598f6f"
+    ],
+    "keywords": [
+      {
+        "name": "Gambit",
+        "description": "Roll the effect die and immediately gain the listed effect, usually with a negative effect on a lower die. Unlike other effects, gambits are optional, and effects are not cumulative."
+      }
+    ],
+    "description": ""
+  }
+}

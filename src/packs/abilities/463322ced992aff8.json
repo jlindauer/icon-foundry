@@ -1,0 +1,9 @@
+{
+  "_id": "463322ced992aff8",
+  "name": "Hearth",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you may teleport an ally up to 3 spaces, as long as they end this teleport inside one of your zones or auras.",
+    "jobId": "shrine-guardian"
+  }
+}

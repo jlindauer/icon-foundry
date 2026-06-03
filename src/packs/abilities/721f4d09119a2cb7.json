@@ -1,0 +1,9 @@
+{
+  "_id": "721f4d09119a2cb7",
+  "name": "Folkrune",
+  "type": "talent",
+  "system": {
+    "effect": "You gain attack [+] against characters inside your zones.",
+    "jobId": "runesmith"
+  }
+}

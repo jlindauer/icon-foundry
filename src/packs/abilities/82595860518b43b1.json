@@ -1,0 +1,9 @@
+{
+  "_id": "82595860518b43b1",
+  "name": "Finale",
+  "type": "talent",
+  "system": {
+    "effect": "At round 3+, you can enter one more stance than normal.",
+    "jobId": "raconteur"
+  }
+}

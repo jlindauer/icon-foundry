@@ -1,0 +1,16 @@
+{
+  "_id": "a3935ec7c7b5a649",
+  "name": "Terraforming",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Range 1-6",
+      "Blast 5"
+    ],
+    "flavor": "The key of creation is turned, and the land is shaped like clay, as the Titans once did.",
+    "effect": "Area Effect four of the following effects to create in the area. You can select the same effect more than once. Effects cannot be created in spaces occupied by characters.\n• Create a height 1 rock spire object\n• Lower or raise terrain in a space by 1\n• Create two spaces of difficult terrain\n• Create a space of dangerous terrain\n• Remove any difficult or dangerous terrain\n• Remove any objects you created\nHeavy six effects instead, and you may teleport into any space of the area in 1-3 after this ability resolves.\n\n(Heavy a heavier version of an ability. If you do, you are unable to attack or use a heavy ability until the end of your next turn.)",
+    "jobId": "geomancer"
+  }
+}

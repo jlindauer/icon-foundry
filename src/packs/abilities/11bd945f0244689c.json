@@ -1,0 +1,9 @@
+{
+  "_id": "11bd945f0244689c",
+  "name": "Shock",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you create a zone, you can deal 2 piercing damage to a foe adjacent to that zone.",
+    "jobId": "wayfarer"
+  }
+}

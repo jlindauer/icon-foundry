@@ -1,0 +1,16 @@
+{
+  "_id": "5bb29308931a7cb2",
+  "name": "Cryo",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Range 3-5",
+      "Line 5"
+    ],
+    "flavor": "You loose a blast of icy air and wind, freezing foes where they stand.",
+    "effect": "Area Effect: 2 piercing damage\nEffect [X]: Create 1d3+1 slippery ice spaces of difficult terrain in the area. These could be created under characters.",
+    "jobId": "wright"
+  }
+}

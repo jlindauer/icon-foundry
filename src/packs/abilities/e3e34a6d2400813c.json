@@ -1,0 +1,9 @@
+{
+  "_id": "e3e34a6d2400813c",
+  "name": "Crater",
+  "type": "talent",
+  "system": {
+    "effect": "You area effects deal +1 damage to foes 4 or more spaces away from you, increased to +2 at 7 or more spaces.",
+    "jobId": "celestian"
+  }
+}

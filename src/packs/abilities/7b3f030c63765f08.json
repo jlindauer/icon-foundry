@@ -1,0 +1,9 @@
+{
+  "_id": "7b3f030c63765f08",
+  "name": "Taste",
+  "type": "talent",
+  "system": {
+    "effect": "Improve the effect of blind to [-][-] on attacks against you and adjacent allies. When you critical hit, you may inflict blind.",
+    "jobId": "venomist"
+  }
+}

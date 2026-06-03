@@ -1,0 +1,16 @@
+{
+  "_id": "d693c0f9a731bbe5",
+  "name": "Mighty Hew",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Finish them.",
+    "effect": "Attack: 3 damage. On hit: +2d6.\nOn hit [X]: Deal a follow up blow against afflicted foes, dealing 2 damage again (5+) and stunning them.\n(Afflicted from at least one negative status.)",
+    "jobId": "stalwart"
+  }
+}

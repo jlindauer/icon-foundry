@@ -1,0 +1,9 @@
+{
+  "_id": "730830ec29f03881",
+  "name": "Hobrune",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability, you swap places with any character inside any zone you have created. Foes may save to avoid this effect.",
+    "jobId": "runesmith"
+  }
+}

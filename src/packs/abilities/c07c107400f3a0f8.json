@@ -1,0 +1,16 @@
+{
+  "_id": "c07c107400f3a0f8",
+  "name": "Evil Crushing Fist",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Stance",
+      "End Turn"
+    ],
+    "flavor": "Your blows are redoubled by those of your righteous allies.",
+    "effect": "Stance your turn and enter this stance. While in this stance, you can teleport 2 before any attack, and your attacks gain [+].\n• When you excel or critical hit with an attack, an ally in range 1-2 of your target may teleport 1. Then if they are adjacent to your target, they deal 2 damage (4+) then you may repeat this effect on a new ally (6+) and again.",
+    "jobId": "sealer"
+  }
+}

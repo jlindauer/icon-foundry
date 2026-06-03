@@ -1,0 +1,121 @@
+{
+  "_id": "d73d5a760d34494a",
+  "name": "The Broker",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Command",
+      "Tinker"
+    ],
+    "ideals": [
+      "I addressed challenges with manipulation, influence, or planning",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "Despite my best efforts, we went wildly off plan"
+    ],
+    "effort": 3,
+    "strain": 5,
+    "secondWind": "You can regain all effort when another team mate becomes exhausted or breaks.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "When you become exhausted or break, all team mates regain 1 effort."
+    },
+    "powers": [
+      {
+        "id": "912bec4b172fea85",
+        "name": "Contingency",
+        "description": "2/session - Flash back to tell the GM how you prepared. Make a fortune roll: 4+ gain expected effect, 6 choose an extra effect, 1-3 no effect (regain 1 use).",
+        "isGambit": false
+      },
+      {
+        "id": "f027def0ce0fff75",
+        "name": "Swoon",
+        "description": "1/session - When you would take consequences, have a willing nearby character take them instead. They take 1 xp.",
+        "isGambit": false
+      },
+      {
+        "id": "47a6b71b1da3bf69",
+        "name": "Immaculate",
+        "description": "Get a knack for situations where being dressed appropriately would help (disguises, uniforms, formalwear, etc).",
+        "isGambit": false
+      },
+      {
+        "id": "e74c55c9f0502172",
+        "name": "Beg, Borrow, or Steal",
+        "description": "When you need the right tool, you have it. Power depends on chapter. Gain +1d using the tool. GM chooses a downside.",
+        "isGambit": false
+      },
+      {
+        "id": "56b63ff7356ee9f4",
+        "name": "Fruitful",
+        "description": "You have a contact or family member in every populated location. Roll +1d on actions where they could help.",
+        "isGambit": false
+      },
+      {
+        "id": "1bd16336aba0572f",
+        "name": "Faust",
+        "description": "1/session - Next roll, treat all 1s as 6s. The roll after that, treat all 6s as 1s.",
+        "isGambit": false
+      },
+      {
+        "id": "afcdb7c71d175384",
+        "name": "Make It Work",
+        "description": "1/session - Use your highest rated action for any single action with normal effectiveness. Explain how. At chapter III, no explanation needed.",
+        "isGambit": false
+      },
+      {
+        "id": "f3b1a635ec7845e4",
+        "name": "Coordinator",
+        "description": "Get 2 xp for pursuing a group ambition instead of 1, and gain +1d on group ambitions.",
+        "isGambit": false
+      },
+      {
+        "id": "92b81c712e5bd467",
+        "name": "Ladder Climber",
+        "description": "You can pursue ambitions twice during an interlude, but only different ambitions.",
+        "isGambit": false
+      },
+      {
+        "id": "1968b3bb6816296e",
+        "name": "Golden Hand",
+        "description": "1/session - Increase the effect of your next Command action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "25ac6909f923fba5",
+        "name": "Gambit of the Weeper",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "77c63f81d2a7d9b4",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "3f4154e71c6dbab7",
+        "name": "Shady Kit",
+        "items": [
+          "False identity papers, tilted hat, quick disguise, coat with six hidden pockets, lock picks, forgery tools, convenient bribe, arkentech skeleton key"
+        ]
+      },
+      {
+        "id": "de8f6475b6a5f772",
+        "name": "Socialite's Kit",
+        "items": [
+          "Two fancy outfits, one very fancy outfit, one inconspicuous outfit, one servant's outfit, nice shoes, jewelry, tailoring supplies, invite to any party"
+        ]
+      },
+      {
+        "id": "ab48870669aa3670",
+        "name": "Boss's Kit",
+        "items": [
+          "Ledger, gambling kit, crowbar, flask, guild membership badge, key to a warehouse, scuffed pair of arkentech radios"
+        ]
+      }
+    ]
+  }
+}

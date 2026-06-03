@@ -1,0 +1,9 @@
+{
+  "_id": "5a7a73bb02f0843f",
+  "name": "Roller",
+  "type": "talent",
+  "system": {
+    "effect": "The first time in a combat you roll a '6' on an effect die or flip heads on a lucky coin, gain 6 vigor and you may clear all negative status tokens affecting you.",
+    "jobId": "rake"
+  }
+}

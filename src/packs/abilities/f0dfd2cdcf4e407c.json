@@ -1,0 +1,9 @@
+{
+  "_id": "f0dfd2cdcf4e407c",
+  "name": "Soar",
+  "type": "talent",
+  "system": {
+    "effect": "Your free move can fly 3 instead. If you end this move on higher elevation than you started, gain shield.",
+    "jobId": "partizan"
+  }
+}

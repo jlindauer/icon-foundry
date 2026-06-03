@@ -1,0 +1,17 @@
+{
+  "_id": "6321c27e570612fc",
+  "name": "Ride the Wave",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "range 1-2",
+      "self",
+      "ally"
+    ],
+    "flavor": "You share some of the power of your mantle, rapidly shifting yourself or an ally into an animal and back again.",
+    "effect": "Effect [X]: Self or an ally in range shape shifts into an animal and dashes 3 or (5+) 6 spaces in a straight line with phasing, then gains haste. If they dash the maximum range possible, they also gain evasion.",
+    "jobId": "stormscale"
+  }
+}

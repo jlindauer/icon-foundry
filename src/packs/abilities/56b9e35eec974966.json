@@ -1,0 +1,16 @@
+{
+  "_id": "56b9e35eec974966",
+  "name": "Vaulting Pole",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Zone",
+      "Range 1-3"
+    ],
+    "flavor": "You skillfully impale a javelin in the ground that can be used to spring into a powerful leap.",
+    "effect": "Zone [X]: Create one or (5+) two javelin zones in a free space in range. You can have any number of these zones without replacing them.\n• While sharing its space, you or an ally can balance on the javelin and count as +1 elevation higher than your current space.\n• You or allies that enter or exit its space can use it to fling yourself, flying 1d3+1 spaces but removing the javelin. You must fly the maximum spaces possible in a straight line.\n(Zone or affects an area of the battlefield, causing persistent effects. Unless specified, placing a new zone replaces the last one placed. Zones from self or allies cannot overlap each other. You can dismiss a zone as a quick ability.)",
+    "jobId": "partizan"
+  }
+}

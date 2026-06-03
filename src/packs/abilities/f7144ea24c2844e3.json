@@ -1,0 +1,17 @@
+{
+  "_id": "f7144ea24c2844e3",
+  "name": "Summer's Blaze",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-4",
+      "Blast 2"
+    ],
+    "flavor": "A splash of ceremonial liquor or the wave of a fan calls forth the spirits of the summer fire festivals.",
+    "effect": "Attack: 1 piercing damage. On hit: +1 piercing damage\nArea effect: 1 piercing damage\nOn hit a festival hob adjacent to your target.\n\nFestival Hob\nSummon (3)\nSummon effect hob has aura 1. The aura is dangerous terrain.\nSummon Action [X]: Increase the aura of each festival hob by +1. This effect stacks (max +3), and lasts until the hob is dismissed. However, on a (1-3) the hob explodes, dismissing it and dealing 2 piercing damage to all characters inside the aura.",
+    "jobId": "fair-wright"
+  }
+}

@@ -70,6 +70,7 @@ ICON.CONDITIONS_POSITIVE = [
   "strength",
   "sturdy",
   "unstoppable",
+  "keen",
 ];
 
 // Negative conditions
@@ -81,6 +82,7 @@ ICON.CONDITIONS_NEGATIVE = [
   "crisis",
   "daze",
   "immobile",
+  "slow",
   "stun",
 ];
 

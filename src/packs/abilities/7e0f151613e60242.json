@@ -1,0 +1,17 @@
+{
+  "_id": "7e0f151613e60242",
+  "name": "Gliaga",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Blast 3",
+      "Range 2-5"
+    ],
+    "flavor": "A magnificent blaze of light aether invigorates your allies and scours your enemies.",
+    "effect": "Attack: 3 damage. Hit: +1d6\nArea Effect: 3 damage\nEffect [X]: Allies in the area don't take damage but instead gain 2 vigor. Bloodied allies gain 1d3+1 vigor instead.",
+    "jobId": "mendicant"
+  }
+}

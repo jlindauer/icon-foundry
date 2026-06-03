@@ -1,0 +1,16 @@
+{
+  "_id": "af480c24d54d8751",
+  "name": "Jotunn Crusher",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Close Blast 2",
+      "End turn"
+    ],
+    "flavor": "Your blows are strong enough to topple even titanic foes. Normal opponents stand no chance.",
+    "effect": "Effect your turn, target a close blast 2 area, gain sturdy, and gain the following interrupt until the start of your next turn:\n  [Crusher Release — Interrupt 1. Trigger foe starts or ends their turn in the area. Area Effect the end of the triggering turn, you release your blow. Move the area six spaces in a line straight away from you. Foes caught in the area must save. They take 1d6+4 damage, or half as much on a failed save, and are pushed 1. The targeted foe takes triple damage and is stunned if they are caught in the area.]\nHeavy deals +4 more damage.",
+    "jobId": "slayer"
+  }
+}

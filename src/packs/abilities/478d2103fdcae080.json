@@ -1,0 +1,9 @@
+{
+  "_id": "478d2103fdcae080",
+  "name": "Fertilize",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when you create an adverse terrain space, you can create an additional identical space in adjacency.",
+    "jobId": "herbalist"
+  }
+}

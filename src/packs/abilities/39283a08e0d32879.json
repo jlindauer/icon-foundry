@@ -1,0 +1,9 @@
+{
+  "_id": "39283a08e0d32879",
+  "name": "Festivity",
+  "type": "talent",
+  "system": {
+    "effect": "Your auras may also affect allies that are adjacent to any space affected by the aura.",
+    "jobId": "shrine-guardian"
+  }
+}

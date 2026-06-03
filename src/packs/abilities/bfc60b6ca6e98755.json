@@ -1,0 +1,15 @@
+{
+  "_id": "bfc60b6ca6e98755",
+  "name": "Abjure",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Range 2-4"
+    ],
+    "flavor": "You make the sign of an astral seal, blasting away all malice.",
+    "effect": "Effect 1 piercing damage to a foe in range, brand them, and push them 1d3.\nEffect that foe then inside one of your zones or auras, they explode for a burst 1 (self) area effect, dealing 2 or (5+)1d3+1 damage to your target foe and all foes in the area, and pushing all other foes 1 or (5+) 2 spaces away from your target foe.",
+    "jobId": "shrine-guardian"
+  }
+}

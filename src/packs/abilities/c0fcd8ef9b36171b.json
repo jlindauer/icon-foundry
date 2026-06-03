@@ -1,0 +1,9 @@
+{
+  "_id": "c0fcd8ef9b36171b",
+  "name": "Carnage",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, after you score a finishing blow, you may dash 3. Also gain haste if your foe was in crisis.",
+    "jobId": "fool"
+  }
+}

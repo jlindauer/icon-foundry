@@ -1,0 +1,9 @@
+{
+  "_id": "ae188932ffd186ed",
+  "name": "Align",
+  "type": "talent",
+  "system": {
+    "effect": "The first time in a round you mark an ally, they gain keen.",
+    "jobId": "entropist"
+  }
+}

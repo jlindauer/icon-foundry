@@ -1,0 +1,17 @@
+{
+  "_id": "0b5027f715639e7a",
+  "name": "Steal Breath",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-2",
+      "Line 3"
+    ],
+    "flavor": "You whip a tendril of mist that steals the air from your target's lungs, leaving them stumbling.",
+    "effect": "Effect character in the area with vigor loses 2 vigor. If that character is inside an obscured space or adverse terrain, double this vigor loss.\nAttack: 3 damage On hit: +1d3 and pull 1\nArea effect: 3 damage",
+    "jobId": "mistwalker"
+  }
+}

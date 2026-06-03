@@ -1,0 +1,9 @@
+{
+  "_id": "84642d3aae2a3459",
+  "name": "Volatile",
+  "type": "talent",
+  "system": {
+    "effect": "While you have 3 or more negative status tokens, increase the size of all blast or burst effects you create by +1",
+    "jobId": "dragoon"
+  }
+}

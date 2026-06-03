@@ -1,0 +1,15 @@
+{
+  "_id": "97c58d261cfdfa1b",
+  "name": "Helix Heel",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Close Line 4"
+    ],
+    "flavor": "You release a fierce kick, bouncing shockwaves off the very stone.",
+    "effect": "Area Effect: 2 damage.\nEffect [X]: If an object is in the exact end space of the line, this shockwave rebounds, dealing 2 damage again to all characters in the area and slowing one character in the area. Then push that object 1d3 spaces.\nDominant may extend or reduce the line by up to 2 spaces.",
+    "jobId": "geomancer"
+  }
+}

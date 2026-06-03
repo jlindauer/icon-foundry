@@ -1,0 +1,9 @@
+{
+  "_id": "cda5fc5f5d82d424",
+  "name": "Deflect",
+  "type": "talent",
+  "system": {
+    "effect": "When you or an adjacent ally is damaged by an ability, you may spend the sturdy, unstoppable, or shield effect on yourself to grant them 1d3 armor against the damage. If you do, you can't gain or benefit from any of these effects until the start of your next turn.",
+    "jobId": "slayer"
+  }
+}

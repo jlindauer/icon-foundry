@@ -1,0 +1,16 @@
+{
+  "_id": "98da204dd2bb741c",
+  "name": "Interpose",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "Interrupt 1",
+    "tags": [
+      "Range 1-3",
+      "Ally"
+    ],
+    "flavor": "You are able to step quickly and rapidly in the midst of combat.",
+    "effect": "Trigger ally ends their turn in range.\nEffect 2. If you end this move adjacent to that ally, they gain shield.",
+    "jobId": "stalwart"
+  }
+}

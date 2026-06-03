@@ -1,0 +1,9 @@
+{
+  "_id": "0b90cb524d3672d3",
+  "name": "Perseus",
+  "type": "talent",
+  "system": {
+    "effect": "You are immune to damage from allied area effects. Allied area effects that include you as a target deal +1 area damage.",
+    "jobId": "bastion"
+  }
+}

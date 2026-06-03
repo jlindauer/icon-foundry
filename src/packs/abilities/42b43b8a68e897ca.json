@@ -1,0 +1,16 @@
+{
+  "_id": "42b43b8a68e897ca",
+  "name": "Wind's Kiss",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 1-2"
+    ],
+    "flavor": "A flash of blades.",
+    "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1.",
+    "jobId": "vagabond"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "3d40b9febe63bb3b",
+  "name": "Bleak Knight",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Mercenary Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Armored Agony",
+      "effect": "When you inflict a status on a foe, you can also inflict it on yourself. You can choose not to clear negative status tokens after triggering them. While you are afflicted by 3 or more negative status tokens of any kind, you gain +1 armor and your attacks deal +2 base damage."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Chain of Misery",
+      "cost": "1 action, 2 resolve",
+      "tags": [
+        "Mark",
+        "Range 1-3"
+      ],
+      "effect": "You link your soul aether with an ally's, intertwining your suffering, and bolstering their resolve with your own boundless tolerance for pain.\nMark bond yourself to an ally in range. As long as that ally is in range, they take 1/2 damage while the bond is active, but you sacrifice hp equal to the other half, before reductions. Any statuses inflicted on that ally are inflicted on you instead.\nIf a bonded character is bloodied, both characters deal +2 damage on hit with their attack, increased to +3 if a character is in crisis. The bond snaps and ends if either character is defeated."
+    },
+    "abilityIds": [
+      "bd2782b17f5d8202",
+      "3b72e745f463a01d",
+      "100c3c7fcb606727",
+      "c42d9a8d15325184"
+    ],
+    "talentIds": [
+      "0953a06e6a785525",
+      "b0ef7f116297596e",
+      "bdd08da8536e113b"
+    ],
+    "keywords": [],
+    "description": ""
+  }
+}

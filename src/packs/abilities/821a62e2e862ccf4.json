@@ -1,0 +1,9 @@
+{
+  "_id": "821a62e2e862ccf4",
+  "name": "Echo",
+  "type": "talent",
+  "system": {
+    "effect": "Choose a weave effect from your abilities. You can activate it with any ability you use, even the original ability, once per combat.",
+    "jobId": "raconteur"
+  }
+}

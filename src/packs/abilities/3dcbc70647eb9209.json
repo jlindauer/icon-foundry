@@ -1,0 +1,15 @@
+{
+  "_id": "3dcbc70647eb9209",
+  "name": "Swallow the Stars",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "end turn"
+    ],
+    "flavor": "Dark aether coats your blade, preparing final rest for your foe.",
+    "effect": "Effect your turn and gain stealth. Your next attack gains:\n• On hit your foe is in crisis, they must save or take piercing damage equal to 25% of their max hp, or 2 piercing damage on a successful save. If they are not in crisis, they take 2 piercing damage instead.\n• Effect characters take 2 piercing damage on hit instead of the above effect, or 6 piercing on a failed save if they are in crisis.\nAfflicted gains [-] on the save\n\n(Afflicted bonuses if your foe is suffering from a status.)",
+    "jobId": "weeping-assassin"
+  }
+}

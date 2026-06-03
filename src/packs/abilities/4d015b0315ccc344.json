@@ -1,0 +1,17 @@
+{
+  "_id": "4d015b0315ccc344",
+  "name": "Power Pill",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-2",
+      "Self",
+      "Ally"
+    ],
+    "flavor": "You create a masterwork medicine that floods the target with primal aether. This is too much for the unperfected form to handle… for now.",
+    "effect": "Effect target gains 2 keen, and becomes unstoppable until the end of their next turn.\nEffect [X]: At the end of that turn, they lose unstoppable, become stunned and release a burst 1 (self) area effect for push 2. Then create 1d3 spaces of dangerous terrain in free spaces in the area. Characters caught in the explosion already in dangerous terrain take 2d3 piercing damage.\nWeave this ability resolves, self or an ally in range 1-2 may make an extra free move.",
+    "jobId": "alchemist"
+  }
+}

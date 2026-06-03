@@ -1,0 +1,16 @@
+{
+  "_id": "e8d9b657d4e0e77a",
+  "name": "Sisyphus",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-5",
+      "Mark"
+    ],
+    "flavor": "You bend a character's timeline, reversing causality so that the very ground warps under their feet.",
+    "effect": "Mark a character in range. While marked, note their starting position at the start of their turn. At the end of their turn, if they are in range 1-3 of their position, you may teleport that character to their starting position, or as close a possible if the space is occupied. Then, remove the mark. Otherwise, keep the mark.\nOverdrive for original position in range 1-6",
+    "jobId": "chronomancer"
+  }
+}

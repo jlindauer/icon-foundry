@@ -1,0 +1,9 @@
+{
+  "_id": "2018fe2d8fe2ac92",
+  "name": "Elixir",
+  "type": "talent",
+  "system": {
+    "effect": "At round 4+, choose a weave effect from your active abilities. It is weaved automatically into every ability you use of action cost 1 or greater, except its original ability.",
+    "jobId": "alchemist"
+  }
+}

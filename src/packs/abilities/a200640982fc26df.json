@@ -1,0 +1,16 @@
+{
+  "_id": "a200640982fc26df",
+  "name": "Misericorde",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Put them out of their misery.",
+    "effect": "Attack: 2 damage. Hit: +2d6.\nOn hit +1 damage for each separate type of negative status token your foe is suffering from (max +6).\nEffect your foe is in crisis, also destroys 2d6 vigor on the target before dealing damage.",
+    "jobId": "knave"
+  }
+}

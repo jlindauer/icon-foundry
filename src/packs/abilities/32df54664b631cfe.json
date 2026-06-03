@@ -1,0 +1,17 @@
+{
+  "_id": "32df54664b631cfe",
+  "name": "Dios",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 1-4",
+      "Cross 1"
+    ],
+    "flavor": "You ignite a spark of divine energy.",
+    "effect": "Zone a zone of scintillating dark or light energy down in free space in range. It can be placed over characters.\n• Dark entire space is obscured and difficult terrain.\n• Light that start or end their turn in the area gain brand. Allies that either start or end their turn there may clear 1 negative status, then save, ending one more on a success.",
+    "jobId": "mendicant"
+  }
+}

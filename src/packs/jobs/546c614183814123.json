@@ -1,0 +1,53 @@
+{
+  "_id": "546c614183814123",
+  "name": "Enochian",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Flame Soul",
+    "parentJobId": "wright",
+    "stats": {
+      "hp": 32,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Inner Furnace",
+      "effect": "Once a round, at the start of your turn, you may stoke your soul aether, performing one of the following:\n• Heat reckless. Your next damaging ability increases its area sizes by +1 and its base attack and area damage by +2.\n• Cool 6, then end all negative statuses affecting you."
+    },
+    "basicAttack": {
+      "name": "Magi",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 2-8",
+        "Cross 1"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6\nArea effect: 2 damage\nEffect a difficult (5+) dangerous terrain space in the center space, even if it's occupied."
+    },
+    "limitBreak": {
+      "name": "Gigaflare",
+      "cost": "2 actions, 4 resolve",
+      "tags": [],
+      "effect": "I, who stand at the apex of things,\nCondemn thee to the deepest pits of despair.\nLet thy very bones become ash!\nO Flame, let the air become death!\nIgnite, and be banished to Hell! Gigaflare!\nArea Effect summon the Eldflame, the primeval force of creation, dealing piercing damage equal to 1d6 + the round number to every character, on the battlefield, ignoring line of sight and cover. Characters in range 1-2 of you are exempt from this ability.\nEffect limit break upgrades.\n• If you're bloodied, it becomes Megaloflare, and deals damage twice.\n• If you're in crisis, it becomes Megiddoflare, dealing damage three times instead."
+    },
+    "abilityIds": [
+      "98c10a9b67e551c9",
+      "8f7de213f9a0eddc",
+      "3c9b5050d1fa7d8c",
+      "ea65afa74b93bef1"
+    ],
+    "talentIds": [
+      "7aaa60cdaf4d7ab6",
+      "738c8c64180f982c",
+      "565ac40b71704a8e"
+    ],
+    "keywords": [
+      {
+        "name": "Reckless",
+        "description": "Push yourself to the limit gaining extra effects but inflicting yourself with the Reckless (-) unique status. You take +1 damage from all sources per stack of reckless. You can only clear reckless by effects that clear a negative status."
+      }
+    ],
+    "description": ""
+  }
+}

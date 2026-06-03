@@ -1,0 +1,16 @@
+{
+  "_id": "9e5c162d2e2db6c2",
+  "name": "Valkyrion",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "Soaring through the air like a vengeful spirit, you crash into your enemy.",
+    "effect": "Effect 1.\nAttack: 2 damage. On hit: +1d6.\nDominant you were 1 or more spaces higher than your target, push all characters adjacent to your target 1. If you were 3 or more, deal +2 damage on hit and lower terrain under your target by 1 space.",
+    "jobId": "partizan"
+  }
+}

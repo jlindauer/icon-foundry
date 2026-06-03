@@ -1,0 +1,16 @@
+{
+  "_id": "c6b49ea973af169e",
+  "name": "Waking Dead",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 1-4"
+    ],
+    "flavor": "You infuse necromantic vigor into an ally, scouring their body but infusing them with un-life.",
+    "effect": "Mark and reduce an ally to 1 hp, but:\n• grant them maximum vigor\n• they are unstoppable and gain [+] on attack rolls and saves while marked.\nWhile marked, that ally is defeated at the end of their turn. They can remove this mark by defeating a foe.\nFinishing Blow ally may immediately make a free move when marked. If they are in crisis, they also gain strength.",
+    "jobId": "harvester"
+  }
+}

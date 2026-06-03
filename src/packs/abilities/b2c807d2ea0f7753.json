@@ -1,0 +1,16 @@
+{
+  "_id": "b2c807d2ea0f7753",
+  "name": "Black Strings",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "mark",
+      "range 2-4"
+    ],
+    "flavor": "Detach shadowy strings that hook into the soul aether of your target, dragging them where you will.",
+    "effect": "Mark [X]: Mark a character or summon in range. At their turn start, pull your target 1d3+2 spaces toward you with phasing. This ability does not require line of sight. If your target is a foe, for every ally, object, or allied summon your character passes through during this movement, your target takes 2 damage. A foe can take a save at the end of their turn to remove this mark.",
+    "jobId": "puppeteer"
+  }
+}

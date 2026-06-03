@@ -1,0 +1,17 @@
+{
+  "_id": "98f2fc5c62b98152",
+  "name": "Razor Feather",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Range 1-3",
+      "Cross 1"
+    ],
+    "flavor": "Your sword stroke is so fast you can slash the air multiple times in a blink, sending out cutting shockwaves.",
+    "effect": "Attack: 4 damage. Hit: +1d6.\nArea effect: 2 damage.\nEffect [X]: You may target one, (4+) two, (6) three additional cross 1 in range, extending the area effect. The areas cannot overlap.\nExcel targets are slashed with an aftershock, taking 2 damage again.\nCritical Hit the excel effect.",
+    "jobId": "hawk-knight"
+  }
+}

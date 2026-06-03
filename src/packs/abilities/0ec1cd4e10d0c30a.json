@@ -1,0 +1,9 @@
+{
+  "_id": "0ec1cd4e10d0c30a",
+  "name": "Deftness",
+  "type": "talent",
+  "system": {
+    "effect": "You can push and pull diagonally. You can always choose to push or pull 1 space instead of any other number.",
+    "jobId": "puppeteer"
+  }
+}

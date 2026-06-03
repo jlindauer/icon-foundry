@@ -1,0 +1,15 @@
+{
+  "_id": "a1ad247a016e5b23",
+  "name": "Rocket Punch",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Burst 1 (self)"
+    ],
+    "flavor": "The basic move of workshop martial arts, flashy and effective.",
+    "effect": "Area Effect [X]: Push all adjacent foes 1 or (5+) two spaces, then deal 2 damage to one of those foes. If you are adjacent to 3 or more foes, increase damage and push by +2.\nConserve foe must save or be stunned. Foe is dazed on a successful save.",
+    "jobId": "workshop-knight"
+  }
+}

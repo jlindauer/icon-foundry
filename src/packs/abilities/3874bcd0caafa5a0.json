@@ -1,0 +1,15 @@
+{
+  "_id": "3874bcd0caafa5a0",
+  "name": "Fantasia",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "End Turn"
+    ],
+    "flavor": "No, no, that's not how it happened.",
+    "effect": "Effect the following interrupt:\n\nDeus Ex Machina\nInterrupt, range 2-4\nTrigger ally in range is damaged by a foe's ability, and the damaging ability resolves.\nEffect [X]: Your ally may save. On a failed save, they may fly 1d3. On a successful save, they may fly twice as far. During this flight, they are unstoppable and immune to all damage.\n\nWeave this ability resolves, grant 2 vigor to an adjacent ally. Increase by +1d6 for allies in crisis.",
+    "jobId": "raconteur"
+  }
+}

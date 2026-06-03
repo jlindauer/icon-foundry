@@ -1,0 +1,15 @@
+{
+  "_id": "d76df82668d453f8",
+  "name": "Trick",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "range 1-3"
+    ],
+    "flavor": "The real trick is being one step ahead of trouble.",
+    "effect": "Effect gain evasion and one use of the following interrupt until the start of your next turn:\n\n[Trick — Interrupt]\nTrigger foe targets you with an ability.\nEffect [X]: Swap places with a character in range after the ability resolves.\nGambit [X]: (1-3) The ability deals +3 damage to you (4-5) gain stealth (6): gain stealth, and the ability deals 1/2 damage to you.",
+    "jobId": "rake"
+  }
+}

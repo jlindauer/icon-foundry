@@ -1,0 +1,9 @@
+{
+  "_id": "f08a274a2661abb2",
+  "name": "Presence",
+  "type": "talent",
+  "system": {
+    "effect": "Your abilities with the aura tag gain Overdrive: increase aura size by +1.",
+    "jobId": "bastion"
+  }
+}

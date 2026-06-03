@@ -1,0 +1,54 @@
+{
+  "_id": "e10bed7c223f129a",
+  "name": "Breaker",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Knight Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Shatter on the Ramparts",
+      "effect": "Once a round, when you push or pull a foe into an obstruction, you may deal damage to them equal to the round number +1."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Gatebreaker",
+      "cost": "2 actions, 3 resolve",
+      "tags": [
+        "Close Line 5"
+      ],
+      "effect": "You sprint into a mighty charge, blowing away all opposing forces.\nEffect along the line with unstoppable until you would enter the space of a character, then stop moving.\n• You may enter the spaces of objects during this movement without stopping, and destroy and remove them if you do.\n• If you would enter the space of a character, that character must save. They take 2d6 damage on a failed save, half damage on a successful save, and are pushed the number of spaces you moved before entering their space.\nImpact takes damage equal to twice the spaces you moved and is stunned."
+    },
+    "abilityIds": [
+      "c997dff1dd592ec0",
+      "1c7e52924068d367",
+      "8134caff1aba9787",
+      "4ae903ed3d23c00b"
+    ],
+    "talentIds": [
+      "a7a9245c1ace24ca",
+      "af6306a7efb999fb",
+      "f8d8b4cda32cfc6b"
+    ],
+    "keywords": [
+      {
+        "name": "Impact",
+        "description": "Triggers on any character moved into an obstruction as part of this ability."
+      }
+    ],
+    "description": ""
+  }
+}

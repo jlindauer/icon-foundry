@@ -86,6 +86,7 @@ Hooks.once("init", () => {
     { id: "strength",    name: "ICON.Condition.Strength",    icon: "icons/svg/sword.svg" },
     { id: "sturdy",      name: "ICON.Condition.Sturdy",      icon: "icons/svg/anchor.svg" },
     { id: "unstoppable", name: "ICON.Condition.Unstoppable", icon: "icons/svg/angel.svg" },
+    { id: "keen",        name: "ICON.Condition.Keen",        icon: "icons/svg/upgrade.svg" },
     // Negative
     { id: "afflicted",   name: "ICON.Condition.Afflicted",   icon: "icons/svg/poison.svg" },
     { id: "blind",       name: "ICON.Condition.Blind",       icon: "icons/svg/blind.svg" },
@@ -94,6 +95,7 @@ Hooks.once("init", () => {
     { id: "crisis",      name: "ICON.Condition.Crisis",      icon: "icons/svg/skull.svg" },
     { id: "daze",        name: "ICON.Condition.Daze",        icon: "icons/svg/daze.svg" },
     { id: "immobile",    name: "ICON.Condition.Immobile",    icon: "icons/svg/net.svg" },
+    { id: "slow",        name: "ICON.Condition.Slow",        icon: "icons/svg/downgrade.svg" },
     { id: "stun",        name: "ICON.Condition.Stun",        icon: "icons/svg/stun.svg" },
   ];
 

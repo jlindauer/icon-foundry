@@ -1,0 +1,15 @@
+{
+  "_id": "0a7a5b57c4a0e5d5",
+  "name": "Fume Slice",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Close line 3"
+    ],
+    "flavor": "Spattered venom from your weapon creates a toxic shield.",
+    "effect": "Zone a line 3 zone, which could be created over characters. Each space of the zone is an obscured space and is difficult terrain. When created, characters in the area effect take 2 piercing damage and must save or be blinded.\nAfflicted initially targeting at least one afflicted foe, extend the line by +3. If that foe had 3 or more negative statuses, extend the area by +6.",
+    "jobId": "venomist"
+  }
+}

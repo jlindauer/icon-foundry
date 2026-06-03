@@ -1,0 +1,13 @@
+{
+  "_id": "3786398757315c43",
+  "name": "Winter's Grip",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "You summon a stiff and hungry hob of deep winter, ruthless and gnarled with age.",
+    "effect": "Effect an ice hob in range 1-3.\n\nIce Hob\nSummon (3)\nSummon effect of these hobs links to a foe in range 1-2 when summoned. If that foe ends their turn 2 or more spaces away from the hob, dismiss the hob and they must save. They take 2 piercing damage and have difficult terrain created under them. On a failed save, they additionally become immobile until the end of their next turn, or until they take damage again.",
+    "jobId": "fair-wright"
+  }
+}

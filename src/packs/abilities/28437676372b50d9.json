@@ -1,0 +1,16 @@
+{
+  "_id": "28437676372b50d9",
+  "name": "Six Veils",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "attack",
+      "melee"
+    ],
+    "flavor": "Each veil is a gate to the underworld. Each revelation more terrifying than the last.",
+    "effect": "Effect 1\nAttack: 1 damage, Hit: +1d3 damage\nWeave this ability resolves, deal 2 damage to an adjacent foe, then dash 1 (4+) then deal 2 damage and dash 1, (6+) then deal 2 damage and dash 1, and gain evasion.",
+    "jobId": "dancer"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "068b0e3779ca115f",
+  "name": "Roppo",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "A series of hops from peak to peak, then series of blows that can shatter steel.",
+    "effect": "Effect 1, then you may push an adjacent character 1, then repeat this effect.\nAttack: 3 damage. On hit: +1d3 damage\nOn hit [X]: Push your foe 1 or (6+) 6 spaces.",
+    "jobId": "yaman"
+  }
+}

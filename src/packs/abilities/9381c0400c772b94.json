@@ -1,0 +1,16 @@
+{
+  "_id": "9381c0400c772b94",
+  "name": "Megalo Buster",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Melee"
+    ],
+    "flavor": "You deliver a mighty blow with wild abandon, so strong that you yourself are left reeling.",
+    "effect": "Attack: 4 damage. Hit: +1d6.\nOn hit [X]: Both you and your foe are stunned and pushed 2 or (5+) 4 spaces away from each other.\nSacrifice 3 the stun and push.",
+    "jobId": "colossus"
+  }
+}

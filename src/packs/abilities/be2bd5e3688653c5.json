@@ -1,0 +1,17 @@
+{
+  "_id": "be2bd5e3688653c5",
+  "name": "The Chariot",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 2-5",
+      "Cross 1"
+    ],
+    "flavor": "You speed up time's flow in a a small area, withering plant life, hastening wounds, and causing those crossing it to move in a flash.",
+    "effect": "Zone create a zone of rapidly flowing time in free space in range. Inside the area, spaces always cost a maximum of 1 movement to enter or exit, and all characters take damage [+] from attacks.\nOverdrive to cross 3",
+    "jobId": "chronomancer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "51f725d60792d01c",
+  "name": "Grit",
+  "type": "talent",
+  "system": {
+    "effect": "The first time in a round you sacrifice, gain 2 vigor. Increase this to 4 if you're in crisis.",
+    "jobId": "colossus"
+  }
+}

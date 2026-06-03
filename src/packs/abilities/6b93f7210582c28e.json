@@ -1,0 +1,16 @@
+{
+  "_id": "6b93f7210582c28e",
+  "name": "Toxic Spike",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "mark",
+      "range 2-3"
+    ],
+    "flavor": "You shoot a dart imbued with the hallucinogenic venom of the blight lands, critical for escaping huge monsters.",
+    "effect": "Mark a foe in range with a toxic dart. While marked:\n• your foe has attack [-] against all foes not adjacent to them\n• once a round, when your foe misses an attack, they stumble and you may push them 1d3+1 in any direction\nA foe may save at the end of their turn to end this mark.\nOverdrive a further attack [-] and push +2",
+    "jobId": "blightrunner"
+  }
+}

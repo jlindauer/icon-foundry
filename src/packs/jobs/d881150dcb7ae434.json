@@ -1,0 +1,56 @@
+{
+  "_id": "d881150dcb7ae434",
+  "name": "Hawk Knight",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Warrior Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "One Hit Kill",
+      "effect": "If you don't attack during your turn, you can deliver a killing blow. Your next attack gains attack [+], an additional +1 damage on excel, and an additional +2 damage on critical hit. You may keep this effect even if you miss or are defeated."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Bloody Talons",
+      "cost": "1 action, 4 resolve",
+      "tags": [
+        "Close Line 4",
+        "Attack",
+        "Melee"
+      ],
+      "effect": "The more the blood flows, the stench of carrion fills the air, invigorating you for the final strike.\nEffect attack [+] for each bloodied ally anywhere, and [+] if you are also bloodied.\nEffect if you don't excel or greater.\nAttack: 2 damage. Excel: +3d6.\nArea effect: 2 damage. Excel: 2 damage again.\nCritical hit: 2 damage again.\nCritical hit target gains stunned, dazed, and is pushed 6.\nIf you miss this attack, refund 2 resolve. You can limit break again this combat."
+    },
+    "abilityIds": [
+      "98f2fc5c62b98152",
+      "ad13ba795153821e",
+      "14b5d1b58c1c91ab",
+      "305d827670ab74d1"
+    ],
+    "talentIds": [
+      "32e7eb6f62d9c856",
+      "79859d150bde5bc5",
+      "a2ab0e75d054eb11"
+    ],
+    "keywords": [
+      {
+        "name": "Excel",
+        "description": "Triggers on any attack where the total attack roll was 8 or higher. Reduced by any effect that reduces critical hit threshold."
+      }
+    ],
+    "description": ""
+  }
+}

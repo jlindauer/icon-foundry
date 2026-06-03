@@ -1,0 +1,9 @@
+{
+  "_id": "0258d42f4197006a",
+  "name": "Hunters",
+  "type": "talent",
+  "system": {
+    "effect": "Your summons deal +2 damage to foes in crisis.",
+    "jobId": "warden"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "f96641da55bbdb88",
+  "name": "Earthmeld",
+  "type": "talent",
+  "system": {
+    "effect": "As a quick ability during your turn, you may swap places with any object in range 1-3.",
+    "jobId": "geomancer"
+  }
+}

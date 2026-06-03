@@ -1,0 +1,9 @@
+{
+  "_id": "a5bd0c44a122b9d9",
+  "name": "Supernova",
+  "type": "talent",
+  "system": {
+    "effect": "Count the current round number as 1 higher for the rest of combat after any ally is defeated.",
+    "jobId": "bastion"
+  }
+}

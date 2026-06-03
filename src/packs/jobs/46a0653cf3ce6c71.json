@@ -1,0 +1,52 @@
+{
+  "_id": "46a0653cf3ce6c71",
+  "name": "Venomist",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Shadow Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Shadow Venom",
+      "effect": "Once a round, when you damage a target, you can inflict them with Shadow Venom (-), a unique status. When taking a turn, a character afflicted by Shadow Venom cannot draw line of sight except to adjacent spaces until the end of that turn. They can ignore this effect while they are adjacent to an ally."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Abyssal Ecstasy",
+      "cost": "1 action, 3 resolve",
+      "tags": [],
+      "effect": "You catalyze a toxic mist in your blood so potent that it coats the entire battlefield in a deadly, hallucinogenic haze.\nEffect and all allies gain stealth, and all foes gain blind and shadow venom."
+    },
+    "abilityIds": [
+      "8a04574e5f733d72",
+      "0a7a5b57c4a0e5d5",
+      "5865d727af0449d6",
+      "1498b6c42f8680b8"
+    ],
+    "talentIds": [
+      "7b3f030c63765f08",
+      "73da91303773a5f0",
+      "7a79a228e2ae5a96"
+    ],
+    "keywords": [
+      {
+        "name": "Afflicted",
+        "description": "Suffering from at least one negative status token, with increased effects if suffering from three or more."
+      }
+    ],
+    "description": ""
+  }
+}

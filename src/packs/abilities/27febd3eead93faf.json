@@ -1,0 +1,9 @@
+{
+  "_id": "27febd3eead93faf",
+  "name": "Massive",
+  "type": "talent",
+  "system": {
+    "effect": "Your attacks with a range of melee gain range 1-2.",
+    "jobId": "cleaver"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "3eef1608cf8f4ce0",
+  "name": "Sucker Punch",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "Interrupt 1",
+    "tags": [
+      "Range 1-2"
+    ],
+    "flavor": "There's nothing that can't be solved with the liberal application of fists to faces.",
+    "effect": "Trigger enemy in range rolls a save and you see the result.\nEffect enemy must re-roll the save keeping the second result. If they fail the save, you may gain 2 vigor or clear a negative status.\nAfflicted one more use of this interrupt this round.",
+    "jobId": "knave"
+  }
+}

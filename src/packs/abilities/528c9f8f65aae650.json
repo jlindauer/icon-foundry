@@ -1,0 +1,9 @@
+{
+  "_id": "528c9f8f65aae650",
+  "name": "Surge",
+  "type": "talent",
+  "system": {
+    "effect": "At round 3+, increase all your burst effects by +1, and +1 again at round 5+",
+    "jobId": "sealer"
+  }
+}

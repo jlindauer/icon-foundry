@@ -1,0 +1,16 @@
+{
+  "_id": "9ae328c9e308f659",
+  "name": "Ember",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "2 actions",
+    "tags": [
+      "Zone",
+      "Range 2-6"
+    ],
+    "flavor": "You kindle a fierce ember which explodes into a blossom of energy when agitated.",
+    "effect": "Zone 1d3+1 ember zones in free space in range. You can place any number of these zones without replacing them. Embers prime at the end of your turn. An ember cannot be placed adjacent to another ember.\n\nEmber Zone\nEffect a character voluntarily enters a primed ember's space or starts their turn there, it explodes for a burst 1 area effect, centered on it. Characters inside take piercing damage equal to 2 + the round number.",
+    "jobId": "wright"
+  }
+}

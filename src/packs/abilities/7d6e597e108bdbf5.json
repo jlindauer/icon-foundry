@@ -1,0 +1,16 @@
+{
+  "_id": "7d6e597e108bdbf5",
+  "name": "Smoke Bomb",
+  "type": "ability",
+  "system": {
+    "tier": "apprentice",
+    "cost": "1 action",
+    "tags": [
+      "self",
+      "end turn"
+    ],
+    "flavor": "Prepare for the worst.",
+    "effect": "Effect [X]: End your turn. Create an obscured space under you (4+) and gain stealth.",
+    "jobId": "vagabond"
+  }
+}

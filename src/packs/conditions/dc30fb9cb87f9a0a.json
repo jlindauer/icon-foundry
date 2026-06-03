@@ -1,0 +1,10 @@
+{
+  "_id": "dc30fb9cb87f9a0a",
+  "name": "Immobile",
+  "type": "condition",
+  "system": {
+    "isPositive": false,
+    "keyword": "Immobile",
+    "effect": "Can't voluntarily move."
+  }
+}

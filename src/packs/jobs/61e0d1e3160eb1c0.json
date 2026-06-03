@@ -1,0 +1,54 @@
+{
+  "_id": "61e0d1e3160eb1c0",
+  "name": "Knave",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Mercenary Soul",
+    "parentJobId": "stalwart",
+    "stats": {
+      "hp": 40,
+      "defense": 3,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Hatred",
+      "effect": "Once a round, when you damage a target, you may inflict them with hatred (-). Hatred is a unique negative status. A character suffering from hatred deals 1/2 damage to all characters other than you as long as you are not immune to damage, and in line of sight and range 1-3 from them. A character removes one hatred after using any ability that damages you."
+    },
+    "basicAttack": {
+      "name": "Furor",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Melee"
+      ],
+      "effect": "Attack: 2 damage. Hit: +1d6.\nOn hit 2 vigor. If you or your target is in crisis, deals damage [+] and double vigor gain."
+    },
+    "limitBreak": {
+      "name": "Mock",
+      "cost": "1 action, 3 resolve",
+      "tags": [
+        "Range 1-5"
+      ],
+      "effect": "There are innumerable words in innumerable tongues for what I am about to say to you. Fortunately, I have picked the very best.\nEffect foe takes 1d3 piercing damage, then gains 3 dazed, 3 stun, and becomes immobile and unable to take interrupts until the start of its next turn.\nEffect you defeat a legend or elite foe with this ability, immediately gain 1 personal resolve or grant 1 to an ally."
+    },
+    "abilityIds": [
+      "98ccf3add28369df",
+      "5ebf669b4807a991",
+      "3eef1608cf8f4ce0",
+      "a200640982fc26df"
+    ],
+    "talentIds": [
+      "0a2ab85e6ad216d8",
+      "07ad9093788e6620",
+      "166bea05d700fc77"
+    ],
+    "keywords": [
+      {
+        "name": "Afflicted",
+        "description": "Gains bonuses if your foe is suffering from a status."
+      }
+    ],
+    "description": ""
+  }
+}

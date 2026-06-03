@@ -1,0 +1,16 @@
+{
+  "_id": "87f3e25c7f86cc1c",
+  "name": "Hold the Center",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "Interrupt 1",
+    "tags": [
+      "Ally",
+      "Adjacent"
+    ],
+    "flavor": "You brace with shield or armor, strengthening your formation against incoming blows.",
+    "effect": "Trigger adjacent ally is damaged.\nEffect [X]: Reduce that damage by the number of adjacent allies to you, then push all adjacent foes 1, (4+) two, or (6+) four spaces.\nEffect that ally was in crisis, double damage reduction and push.",
+    "jobId": "tactician"
+  }
+}

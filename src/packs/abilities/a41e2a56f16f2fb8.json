@@ -1,0 +1,17 @@
+{
+  "_id": "a41e2a56f16f2fb8",
+  "name": "Withering Insult",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 2-5",
+      "Mark"
+    ],
+    "flavor": "Your words bite into your foe's resolve, weakening their strikes.",
+    "effect": "Attack: 1 piercing damage. Hit: +1d3 piercing damage\nOn hit your foe. Your marked foe has attack [-] and takes 2d3 piercing damage if they miss an attack. A foe can save at the end of their turn to remove this mark.\nWeave this ability resolves, increase a negative status on a foe in range 2-5 by +1.",
+    "jobId": "raconteur"
+  }
+}

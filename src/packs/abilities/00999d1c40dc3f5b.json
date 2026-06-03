@@ -1,0 +1,9 @@
+{
+  "_id": "00999d1c40dc3f5b",
+  "name": "Kickoff",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, you allow an ally that starts their turn in one of your auras to immediately make an extra free move.",
+    "jobId": "freelancer"
+  }
+}

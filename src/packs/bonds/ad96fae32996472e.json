@@ -1,0 +1,121 @@
+{
+  "_id": "ad96fae32996472e",
+  "name": "The Mender",
+  "type": "bond",
+  "system": {
+    "actionOptions": [
+      "Tinker",
+      "Charm"
+    ],
+    "ideals": [
+      "I addressed challenges with diplomacy, positivity, or empathy",
+      "I expressed my heritage, background, or beliefs through my actions",
+      "I learned how someone or something was broken"
+    ],
+    "effort": 6,
+    "strain": 5,
+    "secondWind": "You only regain effort from bond powers, camping, or interludes.",
+    "specialAbility": {
+      "name": "Special Ability",
+      "effect": "You can allow someone else to regain 1 effort by spending 1 effort."
+    },
+    "powers": [
+      {
+        "id": "5a1ce413ef2443dc",
+        "name": "Push Through",
+        "description": "You can take 1 strain instead of spending effort to take aid actions (cannot be reduced or ignored).",
+        "isGambit": false
+      },
+      {
+        "id": "546deec3a81ad65a",
+        "name": "Divine Luck",
+        "description": "When you take strain as a consequence, roll 1d6. On 6, reduce the strain to 0 (even critical strain).",
+        "isGambit": false
+      },
+      {
+        "id": "1f4ae16896a776e7",
+        "name": "Illuminate",
+        "description": "Your actions have +1 boon or increased effect (choose) with or against characters that trust you.",
+        "isGambit": false
+      },
+      {
+        "id": "c6258ec013fe0c10",
+        "name": "Untangle",
+        "description": "When you help someone else lift burdens, increase their segments healed by +1, and heal 1 segment yourself.",
+        "isGambit": false
+      },
+      {
+        "id": "b5d4134b19aef112",
+        "name": "Pangloss",
+        "description": "When you fail a desperate action, your next action can be pushed without spending effort.",
+        "isGambit": false
+      },
+      {
+        "id": "bc375ff0900ecb61",
+        "name": "A Better Way",
+        "description": "When you study how something is hurt or broken, or tinker to fix something, get +1d or increased effect. Works without effect loss on: I person or small object. II group or large object. III whole town or massive object.",
+        "isGambit": false
+      },
+      {
+        "id": "0a97e8e9901bfa97",
+        "name": "Mender",
+        "description": "2/session - Charm or tinker to heal someone's strain. 0-3 1 effort to heal 1. 4-5 1. 6 2. 6,6 4.",
+        "isGambit": false
+      },
+      {
+        "id": "b27a019bb08b86ef",
+        "name": "Encourage",
+        "description": "2/session - Use aid without spending effort or exposing yourself to consequences.",
+        "isGambit": false
+      },
+      {
+        "id": "eeccd416681697b5",
+        "name": "Iron Cutting",
+        "description": "At end of each interlude, tick 2 segments total on any ambition, project, or ritual clock, even another character's.",
+        "isGambit": false
+      },
+      {
+        "id": "19ee9560e7be2141",
+        "name": "Heart Forge",
+        "description": "1/session - Increase the effect of your next Tinker action to superpowered.",
+        "isGambit": false
+      },
+      {
+        "id": "a959f3ed1013d07a",
+        "name": "Gambit of the Forge Titan",
+        "description": "Take a power from another Bond.",
+        "isGambit": true
+      }
+    ],
+    "gearKits": [
+      {
+        "id": "8e6a6e1d27e6a28a",
+        "name": "Adventurer's Kit",
+        "items": [
+          "Lantern, pack, bedroll, rope, flint and tinder, journal, rations, cooking pot, knife, canvas tent"
+        ]
+      },
+      {
+        "id": "89c730a8cf24e057",
+        "name": "Mending Kit",
+        "items": [
+          "Healing ointment, light reading, snacks, bandages, blanket, splint, salve, blight remedies, apron, clean gloves, holy icon, copious sweets"
+        ]
+      },
+      {
+        "id": "6a458341c96f89ef",
+        "name": "Hearth Kit",
+        "items": [
+          "Great cooking pot, oversized coat, bright lantern, extra ingredients, seasoning, firewood, spacious tent, arkentech hot plate and igniter"
+        ]
+      },
+      {
+        "id": "6d67b9df003dc4ca",
+        "name": "Work Kit",
+        "items": [
+          "Goggles, sandwich, vials, weak acid, metal augur, heavy toolbox, repurposed arkentech doodad (single use)"
+        ]
+      }
+    ]
+  }
+}

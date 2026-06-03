@@ -1,0 +1,17 @@
+{
+  "_id": "c213802323ddb2ca",
+  "name": "Condemn",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Mark",
+      "Range 2-5",
+      "Power Die"
+    ],
+    "flavor": "Brand your foe with a hellish seal, condemning them and crushing them under the weight of their own evil.",
+    "effect": "Mark a foe in range, then set out a power die at 1. When you or an ally attacks your foe, they gain [+] on the attack roll, then tick the die up by 2. At 3 or more ticks, increase this attack to [+][+] and [+][+][+] at 5 or more ticks. At 6 ticks, when your foe is hit by an attack, they explode, with the following effects:\n• Hit (1) target. 2 damage and push 1 to foes, 2 vigor to allies\n• Excel +1\n• Critical hit: +2 damage, vigor, and push.\nThen the mark ends.",
+    "jobId": "sealer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "564e7189d70951fd",
+  "name": "Vex",
+  "type": "talent",
+  "system": {
+    "effect": "After you attack an isolated character, you may teleport 2 after the ability resolves.",
+    "jobId": "spellblade"
+  }
+}

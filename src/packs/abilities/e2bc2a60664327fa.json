@@ -1,0 +1,16 @@
+{
+  "_id": "e2bc2a60664327fa",
+  "name": "Heave-Ho",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "2 actions",
+    "tags": [
+      "Blast 4",
+      "Range 3-5"
+    ],
+    "flavor": "You call a swell of the sea out of thin air, blasting your foes with a wave.",
+    "effect": "Area Effect [X]: Push all characters 1d3+1 in the same direction. You may push in any order.\nImpact takes 1d6+4 damage (save for half) and becomes slow on a failed save. Afflicted characters have difficult terrain created under them.",
+    "jobId": "stormbender"
+  }
+}

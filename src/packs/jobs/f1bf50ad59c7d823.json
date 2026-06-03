@@ -1,0 +1,55 @@
+{
+  "_id": "f1bf50ad59c7d823",
+  "name": "Blightrunner",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Ranger Soul",
+    "parentJobId": "vagabond",
+    "stats": {
+      "hp": 32,
+      "defense": 6,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Adrenaline",
+      "effect": "Evasion stacks up to six times on you.\n• Once a round, after you move 3 or more spaces in a straight line without stopping, gain evasion, or two stacks if you moved 6 or more spaces.\n• Your attacks deal +damage on hit equal to half your stacks of evasion, rounded up, or all your stacks against foes in crisis."
+    },
+    "basicAttack": {
+      "name": "Wind's Kiss",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-2"
+      ],
+      "effect": "Effect 1\nAttack: 2 damage. Hit: +1d6\nOn hit haste.\nEffect 1."
+    },
+    "limitBreak": {
+      "name": "Burning Sands",
+      "cost": "Quick, 2 resolve",
+      "tags": [
+        "Self",
+        "stance"
+      ],
+      "effect": "Your infuse your movements with rapid bursts of aether, moving so fast that spurts of flame seem to spring from your feet.\nStance in this stance, increase all movement you make or grant by half the round number, rounded up. When you move in this stance:\n• you can phase through foes\n• you must move in a straight line\n• you must spend all movement available to you\nSacrifice 3 any or all of the above effects of your choice\nOverdrive are immune to all damage and unstoppable while moving.\n\n(Sacrifice your limits and spend HP as part of the ability to increase its power. This is not damage and additionally cannot take you past 1 hp. You can continue to sacrifice even if it would take you lower than 1 hp.)"
+    },
+    "abilityIds": [
+      "fa46ae6386a84104",
+      "6b93f7210582c28e",
+      "b89b09cad0f25a25",
+      "06b5621ac8e66596"
+    ],
+    "talentIds": [
+      "186247cc13f3e017",
+      "be15db7decd5781c",
+      "d49f57f3c9cfab24"
+    ],
+    "keywords": [
+      {
+        "name": "Overdrive",
+        "description": "Activates automatically at round 3+."
+      }
+    ],
+    "description": ""
+  }
+}

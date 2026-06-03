@@ -1,0 +1,17 @@
+{
+  "_id": "c133c81c28d3ef2c",
+  "name": "Nothung",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "2 actions",
+    "tags": [
+      "Attack",
+      "Mark",
+      "Melee"
+    ],
+    "flavor": "You slash through your target, then cause slashes of damage built up within their body to explode. A difficult technique, not for the faint of heart.",
+    "effect": "Effect 2\nAttack: 2 damage. Hit: +1d3\nOn hit your foe. Then gain the following interrupt at the end of your turns while your foe is marked. You can choose not to trigger it.\n\nTen Thousand Cuts\nTrigger end of your foe's turn\nEffect a number between 1 and 6, then roll the effect die. If you roll equal to or over your number, deal 2 damage a number of times to your target equal to the number chosen. If you roll under your number, deal just 1 piercing damage to them. Then end this mark.\nIsolate each instance of damage to 3 damage. If there are no other characters in range 1-2, destroy all vigor on your foe before dealing damage.",
+    "jobId": "spellblade"
+  }
+}

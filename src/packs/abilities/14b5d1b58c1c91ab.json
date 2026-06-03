@@ -1,0 +1,15 @@
+{
+  "_id": "14b5d1b58c1c91ab",
+  "name": "Wicked Sheath",
+  "type": "ability",
+  "system": {
+    "tier": "II",
+    "cost": "1 action",
+    "tags": [
+      "End turn"
+    ],
+    "flavor": "You sheath your blade, in preparation for a blindingly fast strike.",
+    "effect": "Effect your turn. Your next attack gains:\n• Attack [+]\n• On hit is pushed 1 and push yourself away from your foe 1\n• Excel: +2 damage\n• Critical hit pushes by +2 and foe is stunned",
+    "jobId": "hawk-knight"
+  }
+}

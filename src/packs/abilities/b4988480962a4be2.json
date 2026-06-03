@@ -1,0 +1,15 @@
+{
+  "_id": "b4988480962a4be2",
+  "name": "Palace of a Thousand Doors",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Range 1-5"
+    ],
+    "flavor": "You turn a key and banish a character to a space beyond space. Where you send them is unknown even to you.",
+    "effect": "Effect target from the battlefield. They return in their same space at the start of their next turn, or the closest space of their choice if that space is obstructed.\n• Allies returned may then teleport 3\n• Foes returned gain slow.\n• Foes may pass a save to avoid this effect, but gain slow on success and you may teleport them 1.\nIsolate gains [-] on the save.",
+    "jobId": "wayfarer"
+  }
+}

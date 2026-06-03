@@ -1,0 +1,55 @@
+{
+  "_id": "fff53278d2a1849e",
+  "name": "Sealer",
+  "type": "job",
+  "system": {
+    "jobType": "advanced",
+    "soul": "Monk Soul",
+    "parentJobId": "mendicant",
+    "stats": {
+      "hp": 48,
+      "defense": 4,
+      "freeMove": 4
+    },
+    "trait": {
+      "name": "Mantra of Sealing",
+      "effect": "You increase your total attack roll by half the round number, rounded up. If you roll a total of 10 or over on an attack roll, the target of your attack explodes with divine energy with a burst 1 (target) area effect. All foes in the area take 2 damage, and allies in the area gain 2 vigor.\nCritical Hit burst area by half the round number, rounded up."
+    },
+    "basicAttack": {
+      "name": "Glia",
+      "cost": "1 action",
+      "tags": [
+        "Attack",
+        "Range 1-5",
+        "Pierce"
+      ],
+      "effect": "Attack: 1 piercing damage. Hit: +1 piercing damage.\nOn hit [X]: Gain 1d3 strength, then distribute it in any order to allies in range."
+    },
+    "limitBreak": {
+      "name": "Passage to the Afterlife",
+      "cost": "2 actions, 4 resolve",
+      "tags": [
+        "Attack"
+      ],
+      "effect": "You unleash the supreme Sealer war art, inflicting ten thousand blows and shattering the connections of your foe's vital energy to their body, hurrying on the transmigration of immortal souls.\nEffect cannot unleash this ability before round 4\nEffect 4\nAttack: 4 damage.\nHit: +2d6 damage\nExcel allies in range 1-2 of your foe may teleport into free adjacent space to your foe. Then your foe takes 2d6 damage from each ally that teleported this way.\nCritical hit effect has no maximum range."
+    },
+    "abilityIds": [
+      "84b82b00efc7b2b1",
+      "3b532b2c3985b8eb",
+      "c07c107400f3a0f8",
+      "c213802323ddb2ca"
+    ],
+    "talentIds": [
+      "528c9f8f65aae650",
+      "1928c6364d237779",
+      "7d1257d02400e310"
+    ],
+    "keywords": [
+      {
+        "name": "Excel",
+        "description": "Triggers on a total final attack roll of 8+. This threshold is reduced by anything that reduces critical hit threshold."
+      }
+    ],
+    "description": ""
+  }
+}

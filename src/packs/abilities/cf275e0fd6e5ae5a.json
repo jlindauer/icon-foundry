@@ -1,0 +1,9 @@
+{
+  "_id": "cf275e0fd6e5ae5a",
+  "name": "Spur",
+  "type": "talent",
+  "system": {
+    "effect": "Once a round, when an ally starts their turn in range 1-3, you may push or pull them 2 spaces, or 4 if they're are in crisis.",
+    "jobId": "tactician"
+  }
+}

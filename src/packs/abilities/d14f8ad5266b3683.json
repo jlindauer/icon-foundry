@@ -1,0 +1,16 @@
+{
+  "_id": "d14f8ad5266b3683",
+  "name": "Trigrammaton",
+  "type": "ability",
+  "system": {
+    "tier": "IV",
+    "cost": "1 action",
+    "tags": [
+      "Attack",
+      "Range 3-3"
+    ],
+    "flavor": "You line up the perfect sequence of shots, in devotion to the sacred geometry.",
+    "effect": "Attack: 2 damage. Hit: +1d6 damage\nOn hit different foe at exactly range 3 takes 3 damage.\nExcel choose another foe at exactly range 6 to take 6 damage\nCritical hit choose another foe at exactly range 9 to take 9 damage.",
+    "jobId": "freelancer"
+  }
+}

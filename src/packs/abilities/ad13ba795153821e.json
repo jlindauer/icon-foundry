@@ -1,0 +1,13 @@
+{
+  "_id": "ad13ba795153821e",
+  "name": "Hawk's Disdain",
+  "type": "ability",
+  "system": {
+    "tier": "I",
+    "cost": "1 action",
+    "tags": [],
+    "flavor": "With a clap, you deflect a blow with your bare hand or the flat edge of your blade.",
+    "effect": "Effect shield, and gain the following interrupt until the start of your next turn:\n  [Turn Blades/Cut Bullets — Interrupt 1. Trigger foe's ability would deal damage to an adjacent ally. Effect ally halves incoming damage. You also take half the incoming damage. This damage is calculated before reductions.]\nEffect you scored a critical hit or excelled this turn, this ability becomes quick.",
+    "jobId": "hawk-knight"
+  }
+}

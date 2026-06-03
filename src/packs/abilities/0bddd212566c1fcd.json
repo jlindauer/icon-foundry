@@ -1,0 +1,9 @@
+{
+  "_id": "0bddd212566c1fcd",
+  "name": "Swell",
+  "type": "talent",
+  "system": {
+    "effect": "Once a combat, you may increase the size of a burst you create by +2.",
+    "jobId": "stormbender"
+  }
+}
