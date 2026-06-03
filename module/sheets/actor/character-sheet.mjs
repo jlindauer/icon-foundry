@@ -15,10 +15,6 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       removeAbility:   IconCharacterSheet.#onRemoveAbility,
       removeTalent:    IconCharacterSheet.#onRemoveTalent,
     },
-    dragDrop: [
-      { dropSelector: ".ability-drop-zone" },
-      { dropSelector: ".talent-drop-zone" },
-    ],
   };
 
   static PARTS = {
@@ -43,6 +39,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   };
 
   tabGroups = { primary: "narrative" };
+
+  #dragDrop = new foundry.applications.ux.DragDrop.implementation({
+    permissions: { drop: () => this.isEditable },
+    callbacks:   { drop: (event) => this._onDrop(event) },
+  });
 
   // ── Context preparation ──────────────────────────────────────────────────
 
@@ -149,6 +150,15 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   // ── Render hook ───────────────────────────────────────────────────────────
 
   _onRender(context, options) {
+    // Set initial active tab (changeTab handles subsequent clicks)
+    const activeTab = this.tabGroups.primary ?? "narrative";
+    this.element.querySelectorAll(".tab[data-group='primary']").forEach((el) => {
+      el.classList.toggle("active", el.dataset.tab === activeTab);
+    });
+
+    // Bind drag-drop to the whole sheet; _onDrop uses closest() to identify the zone
+    this.#dragDrop.bind(this.element);
+
     // Inline HP/Vigor editing on click
     this.element.querySelectorAll(".resource-value[data-field]").forEach((el) => {
       el.addEventListener("click", (ev) => {
@@ -173,10 +183,6 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
   // ── Drag & Drop ───────────────────────────────────────────────────────────
 
-  _canDragDrop(_selector) {
-    return this.isEditable;
-  }
-
   async _onDrop(event) {
     let data;
     try {
@@ -185,40 +191,51 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
     if (data.type !== "Item") return;
 
-    // Resolve the source item (may be from a compendium or the world)
     const sourceItem = await fromUuid(data.uuid);
     if (!sourceItem) return;
 
-    const target       = event.currentTarget;
-    const isAbilityZone = target.classList.contains("ability-drop-zone");
-    const isTalentZone  = target.classList.contains("talent-drop-zone");
-
-    if (isAbilityZone && sourceItem.type === "ability") {
-      const current  = this.document.system.combat.activeAbilities ?? [];
-      const maxSlots = this.document.system.abilitySlots;
-      if (current.length >= maxSlots) {
-        ui.notifications.warn(game.i18n.localize("ICON.Warning.AbilitySlotsMax"));
-        return;
-      }
-      // Copy item into the actor's embedded items, then track its local id
-      const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
-      await this.document.update({
-        "system.combat.activeAbilities": [...current, created.id],
-      });
+    switch (sourceItem.type) {
+      case "ability": return this.#dropAbility(sourceItem);
+      case "talent":  return this.#dropTalent(sourceItem);
+      case "bond":    return this.#dropBond(sourceItem);
+      case "job":     return this.#dropJob(sourceItem);
     }
+  }
 
-    if (isTalentZone && sourceItem.type === "talent") {
-      const current  = this.document.system.combat.selectedTalents ?? [];
-      const maxSlots = this.document.system.talentSlots;
-      if (current.length >= maxSlots) {
-        ui.notifications.warn(game.i18n.localize("ICON.Warning.TalentSlotsMax"));
-        return;
-      }
-      const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
-      await this.document.update({
-        "system.combat.selectedTalents": [...current, created.id],
-      });
+  async #dropAbility(sourceItem) {
+    const current  = this.document.system.combat.activeAbilities ?? [];
+    const maxSlots = this.document.system.abilitySlots;
+    if (current.includes(sourceItem.id)) return;
+    if (current.length >= maxSlots) {
+      ui.notifications.warn(game.i18n.localize("ICON.Warning.AbilitySlotsMax"));
+      return;
     }
+    const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
+    await this.document.update({ "system.combat.activeAbilities": [...current, created.id] });
+  }
+
+  async #dropTalent(sourceItem) {
+    const current  = this.document.system.combat.selectedTalents ?? [];
+    const maxSlots = this.document.system.talentSlots;
+    if (current.includes(sourceItem.id)) return;
+    if (current.length >= maxSlots) {
+      ui.notifications.warn(game.i18n.localize("ICON.Warning.TalentSlotsMax"));
+      return;
+    }
+    const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
+    await this.document.update({ "system.combat.selectedTalents": [...current, created.id] });
+  }
+
+  async #dropBond(sourceItem) {
+    await this.document.update({ "system.narrative.bondId": sourceItem.name });
+  }
+
+  async #dropJob(sourceItem) {
+    const current = this.document.system.combat.jobs ?? [];
+    if (current.some((j) => j.id === sourceItem.id)) return;
+    const update = { "system.combat.jobs": [...current, { id: sourceItem.id, level: 1 }] };
+    if (!this.document.system.combat.mainJobId) update["system.combat.mainJobId"] = sourceItem.id;
+    await this.document.update(update);
   }
 
   // ── Static action handlers ───────────────────────────────────────────────

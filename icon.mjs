@@ -109,9 +109,13 @@ Hooks.once("init", () => {
 /* ── Handlebars helpers ─────────────────────────────────────────────────── */
 
 function _registerHandlebarsHelpers() {
-  Handlebars.registerHelper("times", (n, block) => {
+  Handlebars.registerHelper("times", function(n, options) {
     let out = "";
-    for (let i = 0; i < n; i++) out += block.fn({ "@index": i });
+    for (let i = 0; i < n; i++) {
+      const data = Handlebars.createFrame(options.data || {});
+      data.index = i;
+      out += options.fn(this, { data });
+    }
     return out;
   });
 
