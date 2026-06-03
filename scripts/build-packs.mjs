@@ -73,8 +73,10 @@ function clearDir(dir) {
 }
 
 function writeItem(packName, doc) {
+  // _key is required by the fvtt CLI pack command to identify the LevelDB entry
+  const out  = { _key: `!items!${doc._id}`, ...doc };
   const file = resolve(packDir(packName), `${doc._id}.json`);
-  writeFileSync(file, JSON.stringify(doc, null, 2));
+  writeFileSync(file, JSON.stringify(out, null, 2));
 }
 
 // ── Document builders ─────────────────────────────────────────────────────────
