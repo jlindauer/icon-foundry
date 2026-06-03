@@ -110,7 +110,7 @@
     <div class="jobs-list">
       {{#each jobs}}
       <div class="job-entry {{#if this.isMain}}main-job{{/if}}">
-        <span class="job-id">{{this.id}}</span>
+        <span class="job-name">{{this.name}}</span>
         <span class="job-level">Lv {{this.level}}</span>
         {{#if this.isMain}}<span class="main-badge">★</span>{{/if}}
       </div>

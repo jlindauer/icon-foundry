@@ -6,7 +6,14 @@
     <div class="action-ratings-grid">
       {{#each actionRatings}}
       <div class="action-rating">
-        <label class="action-label">{{localize this.label}}</label>
+        <button type="button" class="action-label action-roll-btn"
+          data-action="rollAction"
+          data-action_key="{{this.key}}"
+          data-value="{{this.value}}"
+          data-label="{{this.label}}"
+          title="Roll {{localize this.label}}">
+          {{localize this.label}}
+        </button>
         <div class="pip-row">
           {{#each this.pips}}
           <span class="pip {{#if this}}filled{{/if}}"></span>

@@ -14,6 +14,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       gainXp:          IconCharacterSheet.#onGainXp,
       removeAbility:   IconCharacterSheet.#onRemoveAbility,
       removeTalent:    IconCharacterSheet.#onRemoveTalent,
+      rollAction:      IconCharacterSheet.#onRollAction,
     },
   };
 
@@ -140,11 +141,15 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   }
 
   _prepareJobs(system) {
-    return (system.combat.jobs ?? []).map((j) => ({
-      id:       j.id,
-      level:    j.level,
-      isMain:   j.id === system.combat.mainJobId,
-    }));
+    return (system.combat.jobs ?? []).map((j) => {
+      const item = this.document.items.get(j.id);
+      return {
+        id:     j.id,
+        name:   item?.name ?? j.id,
+        level:  j.level,
+        isMain: j.id === system.combat.mainJobId,
+      };
+    });
   }
 
   // ── Render hook ───────────────────────────────────────────────────────────
@@ -233,8 +238,9 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   async #dropJob(sourceItem) {
     const current = this.document.system.combat.jobs ?? [];
     if (current.some((j) => j.id === sourceItem.id)) return;
-    const update = { "system.combat.jobs": [...current, { id: sourceItem.id, level: 1 }] };
-    if (!this.document.system.combat.mainJobId) update["system.combat.mainJobId"] = sourceItem.id;
+    const [created] = await this.document.createEmbeddedDocuments("Item", [sourceItem.toObject()]);
+    const update = { "system.combat.jobs": [...current, { id: created.id, level: 1 }] };
+    if (!this.document.system.combat.mainJobId) update["system.combat.mainJobId"] = created.id;
     await this.document.update(update);
   }
 
@@ -281,5 +287,23 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     const talents = (this.document.system.combat.selectedTalents ?? []).filter((t) => t !== id);
     await this.document.update({ "system.combat.selectedTalents": talents });
     await this.document.deleteEmbeddedDocuments("Item", [id]);
+  }
+
+  static async #onRollAction(event, target) {
+    const key   = target.dataset.action_key;
+    const value = parseInt(target.dataset.value) || 0;
+    const label = game.i18n.localize(target.dataset.label);
+    const actor = this.document;
+
+    // Pool = value dice, keep highest; on 0 rating roll 2d6 keep lowest
+    let formula;
+    if (value === 0) formula = "2d6kl";
+    else formula = `${value}d6kh`;
+
+    const roll = await new Roll(formula).evaluate();
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      flavor:  `${actor.name} — ${label}`,
+    });
   }
 }

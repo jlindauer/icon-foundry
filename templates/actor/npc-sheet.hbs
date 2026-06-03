@@ -8,36 +8,80 @@
   </header>
 
   <section class="sheet-body">
-    {{!-- Core Stats --}}
-    <div class="stats-row">
-      <div class="stat-block">
+
+    {{!-- HP + Stats --}}
+    <section class="section resources-section">
+      <div class="resource-block">
         <label>{{localize "ICON.Resource.HP"}}</label>
-        <input type="number" name="system.resources.hp.value" value="{{system.resources.hp.value}}" min="0"
-          {{#unless isEditable}}disabled{{/unless}}>
-        <span>/</span>
-        <input type="number" name="system.resources.hp.max" value="{{system.resources.hp.max}}" min="0"
-          {{#unless isEditable}}disabled{{/unless}}>
+        <div class="resource-bar-wrap">
+          <progress class="resource-bar hp-bar"
+            value="{{system.resources.hp.value}}"
+            max="{{system.resources.hp.max}}"></progress>
+          <span class="resource-value" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
+          <span class="resource-sep">/</span>
+          <span class="resource-value" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
+        </div>
       </div>
-      <div class="stat-block">
-        <label>{{localize "ICON.Field.Defense"}}</label>
-        <input type="number" name="system.defense" value="{{system.defense}}" min="0"
-          {{#unless isEditable}}disabled{{/unless}}>
+      <div class="npc-stat-row">
+        <div class="stat-block">
+          <label>{{localize "ICON.Field.Defense"}}</label>
+          <input type="number" name="system.defense" value="{{system.defense}}" min="0"
+            {{#unless isEditable}}disabled{{/unless}}>
+        </div>
+        <div class="stat-block">
+          <label>{{localize "ICON.Field.FreeMove"}}</label>
+          <input type="number" name="system.freeMove" value="{{system.freeMove}}" min="0"
+            {{#unless isEditable}}disabled{{/unless}}>
+        </div>
       </div>
-      <div class="stat-block">
-        <label>{{localize "ICON.Field.FreeMove"}}</label>
-        <input type="number" name="system.freeMove" value="{{system.freeMove}}" min="0"
-          {{#unless isEditable}}disabled{{/unless}}>
+    </section>
+
+    {{!-- Conditions --}}
+    <section class="section conditions-section">
+      <h3 class="section-title">{{localize "ICON.Section.Conditions"}}</h3>
+      <div class="conditions-row">
+        {{#each conditions}}
+        <button type="button"
+          class="condition-pip {{#if this.active}}active{{/if}} {{#if this.isPositive}}positive{{/if}}"
+          data-action="toggleCondition"
+          data-condition-id="{{this.id}}"
+          title="{{localize this.label}}">
+          {{localize this.label}}
+        </button>
+        {{/each}}
       </div>
-    </div>
+    </section>
 
     {{!-- Abilities --}}
     <section class="section">
-      <h3 class="section-title">{{localize "ICON.Section.Abilities"}}</h3>
+      <h3 class="section-title">
+        {{localize "ICON.Section.Abilities"}}
+        {{#if isEditable}}
+        <button type="button" class="btn-add" data-action="addAbility" title="Add Ability">
+          <i class="fas fa-plus"></i>
+        </button>
+        {{/if}}
+      </h3>
       {{#each system.abilities}}
       <div class="npc-ability-entry">
-        <strong>{{this.name}}</strong>
-        {{#if this.cost}}<span class="cost">({{this.cost}})</span>{{/if}}
-        <p>{{this.effect}}</p>
+        <div class="npc-ability-header">
+          {{#if ../isEditable}}
+          <input type="text" name="system.abilities.{{@index}}.name" value="{{this.name}}" class="ability-name-input">
+          <input type="text" name="system.abilities.{{@index}}.cost" value="{{this.cost}}" class="ability-cost-input" placeholder="Cost">
+          <button type="button" class="btn-remove" data-action="removeAbility" data-index="{{@index}}"
+            title="{{localize 'ICON.Action.Remove'}}">
+            <i class="fas fa-times"></i>
+          </button>
+          {{else}}
+          <strong>{{this.name}}</strong>
+          {{#if this.cost}}<span class="cost">({{this.cost}})</span>{{/if}}
+          {{/if}}
+        </div>
+        {{#if ../isEditable}}
+        <textarea name="system.abilities.{{@index}}.effect" class="ability-effect-input">{{this.effect}}</textarea>
+        {{else}}
+        {{#if this.effect}}<p>{{this.effect}}</p>{{/if}}
+        {{/if}}
       </div>
       {{/each}}
     </section>
@@ -47,5 +91,6 @@
       <h3 class="section-title">{{localize "ICON.Section.Notes"}}</h3>
       {{editor system.notes name="system.notes" editable=isEditable button=true}}
     </section>
+
   </section>
 </div>
