@@ -1,0 +1,9 @@
+<div class="tab-content" data-tab="{{tab.id}}" data-group="{{tab.group}}"
+  {{#if tab.active}}data-active="true"{{/if}}>
+
+  <section class="section notes-section">
+    <h3 class="section-title">{{localize "ICON.Section.Notes"}}</h3>
+    {{editor system.state.notes name="system.state.notes" editable=isEditable button=true}}
+  </section>
+
+</div>

@@ -1,0 +1,91 @@
+<div class="tab-content" data-tab="{{tab.id}}" data-group="{{tab.group}}"
+  {{#if tab.active}}data-active="true"{{/if}}>
+
+  {{!-- Action Ratings --}}
+  <section class="section action-ratings-section">
+    <h3 class="section-title">{{localize "ICON.Section.ActionRatings"}}</h3>
+    <div class="action-ratings-grid">
+      {{#each actionRatings}}
+      <div class="action-rating">
+        <label class="action-label">{{localize this.label}}</label>
+        <div class="pip-row">
+          {{#each this.pips}}
+          <span class="pip {{#if this}}filled{{/if}}"></span>
+          {{/each}}
+        </div>
+        {{#if ../isEditable}}
+        <input type="number" class="action-input" name="system.narrative.actionRatings.{{this.key}}"
+          value="{{this.value}}" min="0" max="5">
+        {{else}}
+        <span class="action-value">{{this.value}}</span>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  {{!-- Bond --}}
+  <section class="section bond-section">
+    <h3 class="section-title">{{localize "ICON.Section.Bond"}}</h3>
+    <div class="field-row">
+      <label>{{localize "ICON.Field.Bond"}}</label>
+      <input type="text" name="system.narrative.bondId" value="{{system.narrative.bondId}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+
+    {{#if system.narrative.bondId}}
+    <div class="xp-triggers">
+      <h4>{{localize "ICON.Section.XpTriggers"}}</h4>
+      <div class="trigger-list">
+        {{!-- Narrative XP triggers (3 ideals) --}}
+        {{#times 3}}
+        <label class="trigger-item">
+          <input type="checkbox"
+            data-action="checkXpTrigger"
+            data-index="{{@index}}"
+            data-trigger-type="narrative"
+            {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
+          <span>{{localize "ICON.Label.Ideal"}} {{add @index 1}}</span>
+        </label>
+        {{/times}}
+      </div>
+      <h4>{{localize "ICON.Section.CombatXpTriggers"}}</h4>
+      <div class="trigger-list">
+        {{#times 4}}
+        <label class="trigger-item">
+          <input type="checkbox"
+            data-action="checkXpTrigger"
+            data-index="{{@index}}"
+            data-trigger-type="combat"
+            {{#if (includes ../system.progression.combatXpTriggers @index)}}checked{{/if}}>
+          <span>{{localize "ICON.Label.CombatTrigger"}} {{add @index 1}}</span>
+        </label>
+        {{/times}}
+      </div>
+    </div>
+    {{/if}}
+  </section>
+
+  {{!-- XP / Level --}}
+  <section class="section progression-section">
+    <h3 class="section-title">{{localize "ICON.Section.Progression"}}</h3>
+    <div class="progression-row">
+      <div class="xp-display">
+        <label>{{localize "ICON.Field.XP"}}</label>
+        <input type="number" name="system.progression.currentXp"
+          value="{{system.progression.currentXp}}" min="0"
+          {{#unless isEditable}}disabled{{/unless}}>
+        <span class="xp-sep">/</span>
+        <span class="xp-max">{{xpForNext}}</span>
+      </div>
+      {{#if isEditable}}
+      <button type="button" class="btn-xp" data-action="gainXp">+1 XP</button>
+      {{/if}}
+    </div>
+    <div class="slot-display">
+      <span>{{localize "ICON.Label.AbilitySlots"}}: {{abilitySlots}}</span>
+      <span>{{localize "ICON.Label.TalentSlots"}}: {{talentSlots}}</span>
+    </div>
+  </section>
+
+</div>

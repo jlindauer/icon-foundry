@@ -1,0 +1,84 @@
+{
+  "id": "icon",
+  "title": "ICON",
+  "description": "The official Foundry VTT system for the ICON TTRPG.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "esmodules": ["icon.mjs"],
+  "styles": ["styles/icon.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["system.state.notes"]
+      },
+      "npc": {
+        "htmlFields": ["system.notes"]
+      }
+    },
+    "Item": {
+      "ability": {
+        "htmlFields": ["system.effect"]
+      },
+      "talent": {
+        "htmlFields": ["system.effect"]
+      },
+      "bond": {},
+      "job": {
+        "htmlFields": [
+          "system.trait.effect",
+          "system.basicAttack.effect",
+          "system.limitBreak.effect"
+        ]
+      },
+      "condition": {
+        "htmlFields": ["system.effect"]
+      }
+    }
+  },
+  "packs": [
+    {
+      "name": "abilities",
+      "label": "ICON Abilities",
+      "path": "packs/abilities",
+      "type": "Item",
+      "system": "icon"
+    },
+    {
+      "name": "jobs",
+      "label": "ICON Jobs",
+      "path": "packs/jobs",
+      "type": "Item",
+      "system": "icon"
+    },
+    {
+      "name": "bonds",
+      "label": "ICON Bonds",
+      "path": "packs/bonds",
+      "type": "Item",
+      "system": "icon"
+    },
+    {
+      "name": "conditions",
+      "label": "ICON Conditions",
+      "path": "packs/conditions",
+      "type": "Item",
+      "system": "icon"
+    }
+  ],
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.vigor",
+  "initiative": "1d20",
+  "url": "https://github.com/jlindauer/icon-foundry",
+  "manifest": "https://raw.githubusercontent.com/jlindauer/icon-foundry/main/system.json",
+  "download": "https://github.com/jlindauer/icon-foundry/archive/refs/heads/main.zip"
+}

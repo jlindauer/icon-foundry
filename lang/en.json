@@ -1,0 +1,146 @@
+{
+  "ICON": {
+    "Tab": {
+      "Narrative": "Narrative",
+      "Combat": "Combat",
+      "Notes": "Notes"
+    },
+    "Section": {
+      "ActionRatings": "Action Ratings",
+      "Bond": "Bond",
+      "XpTriggers": "Narrative XP Triggers",
+      "CombatXpTriggers": "Combat XP Triggers",
+      "Progression": "Progression",
+      "Conditions": "Conditions",
+      "ActiveAbilities": "Active Abilities",
+      "Talents": "Talents",
+      "Jobs": "Jobs",
+      "Abilities": "Abilities",
+      "Notes": "Notes"
+    },
+    "Action": {
+      "Sneak": "Sneak",
+      "Traverse": "Traverse",
+      "Sense": "Sense",
+      "Study": "Study",
+      "Charm": "Charm",
+      "Command": "Command",
+      "Tinker": "Tinker",
+      "Excel": "Excel",
+      "Smash": "Smash",
+      "Endure": "Endure",
+      "Remove": "Remove"
+    },
+    "Tier": {
+      "Apprentice": "Apprentice",
+      "I": "Tier I",
+      "II": "Tier II",
+      "IV": "Tier IV"
+    },
+    "JobType": {
+      "Apprentice": "Apprentice",
+      "Advanced": "Advanced"
+    },
+    "Soul": {
+      "Knight": "Knight",
+      "Warrior": "Warrior",
+      "Berserker": "Berserker",
+      "Mercenary": "Mercenary",
+      "Shadow": "Shadow",
+      "Gunner": "Gunner",
+      "Thief": "Thief",
+      "Ranger": "Ranger",
+      "Bard": "Bard",
+      "Witch": "Witch",
+      "Monk": "Monk",
+      "Oracle": "Oracle",
+      "Flame": "Flame",
+      "Earth": "Earth",
+      "Bolt": "Bolt",
+      "Water": "Water"
+    },
+    "Kin": {
+      "Thrynn": "Thrynn",
+      "Trogg": "Trogg",
+      "Beastfolk": "Beastfolk",
+      "Xixo": "Xixo"
+    },
+    "Culture": {
+      "Yeokin": "Yeokin",
+      "Islander": "Islander",
+      "Leggio": "Leggio",
+      "Churner": "Churner",
+      "Chronicler": "Chronicler",
+      "Guilder": "Guilder"
+    },
+    "Condition": {
+      "Armor": "Armor (+)",
+      "Evasion": "Evasion (+)",
+      "Haste": "Haste (+)",
+      "Shield": "Shield (+)",
+      "Stealth": "Stealth (+)",
+      "Strength": "Strength (+)",
+      "Sturdy": "Sturdy (+)",
+      "Unstoppable": "Unstoppable",
+      "Afflicted": "Afflicted",
+      "Blind": "Blind (-)",
+      "Bloodied": "Bloodied",
+      "Brand": "Brand (-)",
+      "Crisis": "Crisis",
+      "Daze": "Daze (-)",
+      "Immobile": "Immobile",
+      "Stun": "Stun (-)"
+    },
+    "Resource": {
+      "HP": "HP",
+      "Vigor": "Vigor",
+      "Resolve": "Resolve"
+    },
+    "Field": {
+      "Kin": "Kin",
+      "Culture": "Culture",
+      "Bond": "Bond",
+      "BondAction": "Bond Action",
+      "Level": "Level",
+      "XP": "XP",
+      "Defense": "Defense",
+      "FreeMove": "Free Move",
+      "HP": "HP",
+      "Tier": "Tier",
+      "Cost": "Cost",
+      "Tags": "Tags",
+      "Flavor": "Flavor",
+      "Effect": "Effect",
+      "ActionOptions": "Action Options",
+      "Ideals": "Ideals",
+      "Effort": "Effort",
+      "Strain": "Strain",
+      "SecondWind": "Second Wind",
+      "TraitName": "Trait Name",
+      "TraitEffect": "Trait Effect",
+      "IsPositive": "Positive Condition",
+      "Keyword": "Keyword",
+      "ActiveAbilities": "Active Abilities",
+      "SelectedTalents": "Selected Talents"
+    },
+    "Label": {
+      "AbilitySlots": "Ability Slots",
+      "TalentSlots": "Talent Slots",
+      "Ideal": "Ideal",
+      "CombatTrigger": "Combat Trigger"
+    },
+    "Hint": {
+      "DropAbility": "Drag an ability from the compendium",
+      "DropTalent": "Drag a talent from the compendium"
+    },
+    "Warning": {
+      "AbilitySlotsMax": "No ability slots remaining. Level up to gain more.",
+      "TalentSlotsMax": "No talent slots remaining. Level up to gain more."
+    },
+    "SheetLabel": {
+      "Character": "ICON Character Sheet",
+      "Npc": "ICON NPC Sheet",
+      "Item": "ICON Item Sheet"
+    }
+  }
+}

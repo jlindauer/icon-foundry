@@ -1,0 +1,51 @@
+<div class="icon-sheet npc-sheet">
+  <header class="icon-sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}">
+    <div class="header-details">
+      <input class="character-name" type="text" name="name" value="{{actor.name}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    {{!-- Core Stats --}}
+    <div class="stats-row">
+      <div class="stat-block">
+        <label>{{localize "ICON.Resource.HP"}}</label>
+        <input type="number" name="system.resources.hp.value" value="{{system.resources.hp.value}}" min="0"
+          {{#unless isEditable}}disabled{{/unless}}>
+        <span>/</span>
+        <input type="number" name="system.resources.hp.max" value="{{system.resources.hp.max}}" min="0"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="stat-block">
+        <label>{{localize "ICON.Field.Defense"}}</label>
+        <input type="number" name="system.defense" value="{{system.defense}}" min="0"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="stat-block">
+        <label>{{localize "ICON.Field.FreeMove"}}</label>
+        <input type="number" name="system.freeMove" value="{{system.freeMove}}" min="0"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+    </div>
+
+    {{!-- Abilities --}}
+    <section class="section">
+      <h3 class="section-title">{{localize "ICON.Section.Abilities"}}</h3>
+      {{#each system.abilities}}
+      <div class="npc-ability-entry">
+        <strong>{{this.name}}</strong>
+        {{#if this.cost}}<span class="cost">({{this.cost}})</span>{{/if}}
+        <p>{{this.effect}}</p>
+      </div>
+      {{/each}}
+    </section>
+
+    {{!-- Notes --}}
+    <section class="section">
+      <h3 class="section-title">{{localize "ICON.Section.Notes"}}</h3>
+      {{editor system.notes name="system.notes" editable=isEditable button=true}}
+    </section>
+  </section>
+</div>

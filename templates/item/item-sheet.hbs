@@ -1,0 +1,135 @@
+<div class="icon-sheet item-sheet item-{{item.type}}">
+  <header class="icon-sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt="{{item.name}}">
+    <div class="header-details">
+      <input class="item-name" type="text" name="name" value="{{item.name}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+      <span class="item-type-badge">{{item.type}}</span>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+
+    {{!-- ── Ability ── --}}
+    {{#if (eq item.type "ability")}}
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Tier"}}</label>
+      <select name="system.tier" {{#unless isEditable}}disabled{{/unless}}>
+        {{#select system.tier}}
+        <option value="apprentice">{{localize "ICON.Tier.Apprentice"}}</option>
+        <option value="I">{{localize "ICON.Tier.I"}}</option>
+        <option value="II">{{localize "ICON.Tier.II"}}</option>
+        <option value="IV">{{localize "ICON.Tier.IV"}}</option>
+        {{/select}}
+      </select>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Cost"}}</label>
+      <input type="text" name="system.cost" value="{{system.cost}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Tags"}}</label>
+      <input type="text" name="system.tags" value="{{joinArr system.tags ', '}}"
+        placeholder="Attack, Melee, Range 1-3..."
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Flavor"}}</label>
+      <input type="text" name="system.flavor" value="{{system.flavor}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Effect"}}</label>
+      {{editor system.effect name="system.effect" editable=isEditable button=true}}
+    </div>
+    {{/if}}
+
+    {{!-- ── Talent ── --}}
+    {{#if (eq item.type "talent")}}
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Effect"}}</label>
+      {{editor system.effect name="system.effect" editable=isEditable button=true}}
+    </div>
+    {{/if}}
+
+    {{!-- ── Bond ── --}}
+    {{#if (eq item.type "bond")}}
+    <div class="form-group">
+      <label>{{localize "ICON.Field.ActionOptions"}}</label>
+      <input type="text" name="system.actionOptions" value="{{joinArr system.actionOptions ', '}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Ideals"}}</label>
+      <textarea name="system.ideals" {{#unless isEditable}}disabled{{/unless}}>{{joinArr system.ideals '\n'}}</textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group half">
+        <label>{{localize "ICON.Field.Effort"}}</label>
+        <input type="number" name="system.effort" value="{{system.effort}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="form-group half">
+        <label>{{localize "ICON.Field.Strain"}}</label>
+        <input type="number" name="system.strain" value="{{system.strain}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.SecondWind"}}</label>
+      <input type="text" name="system.secondWind" value="{{system.secondWind}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    {{/if}}
+
+    {{!-- ── Job ── --}}
+    {{#if (eq item.type "job")}}
+    <div class="form-row">
+      <div class="form-group third">
+        <label>{{localize "ICON.Field.HP"}}</label>
+        <input type="number" name="system.stats.hp" value="{{system.stats.hp}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="form-group third">
+        <label>{{localize "ICON.Field.Defense"}}</label>
+        <input type="number" name="system.stats.defense" value="{{system.stats.defense}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="form-group third">
+        <label>{{localize "ICON.Field.FreeMove"}}</label>
+        <input type="number" name="system.stats.freeMove" value="{{system.stats.freeMove}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.TraitName"}}</label>
+      <input type="text" name="system.trait.name" value="{{system.trait.name}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.TraitEffect"}}</label>
+      {{editor system.trait.effect name="system.trait.effect" editable=isEditable button=true}}
+    </div>
+    {{/if}}
+
+    {{!-- ── Condition ── --}}
+    {{#if (eq item.type "condition")}}
+    <div class="form-group">
+      <label>{{localize "ICON.Field.IsPositive"}}</label>
+      <input type="checkbox" name="system.isPositive" {{#if system.isPositive}}checked{{/if}}
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Keyword"}}</label>
+      <input type="text" name="system.keyword" value="{{system.keyword}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    <div class="form-group">
+      <label>{{localize "ICON.Field.Effect"}}</label>
+      {{editor system.effect name="system.effect" editable=isEditable button=true}}
+    </div>
+    {{/if}}
+
+  </section>
+</div>

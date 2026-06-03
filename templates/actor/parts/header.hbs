@@ -1,0 +1,25 @@
+<header class="icon-sheet-header">
+  <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}">
+  <div class="header-details">
+    <input class="character-name" type="text" name="name" value="{{actor.name}}"
+      {{#unless isEditable}}disabled{{/unless}}>
+    <div class="header-fields">
+      <div class="header-field">
+        <label>{{localize "ICON.Field.Kin"}}</label>
+        <input type="text" name="system.narrative.kin" value="{{system.narrative.kin}}"
+          placeholder="{{localize 'ICON.Field.Kin'}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="header-field">
+        <label>{{localize "ICON.Field.Culture"}}</label>
+        <input type="text" name="system.narrative.culture" value="{{system.narrative.culture}}"
+          placeholder="{{localize 'ICON.Field.Culture'}}"
+          {{#unless isEditable}}disabled{{/unless}}>
+      </div>
+      <div class="header-field">
+        <label>{{localize "ICON.Field.Level"}}</label>
+        <span class="level-value">{{system.progression.level}}</span>
+      </div>
+    </div>
+  </div>
+</header>
