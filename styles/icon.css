@@ -46,18 +46,15 @@
 }
 
 /* ── Character sheet rail layout ───────────────────────────────────────── */
+/* window-content IS the form in DocumentSheetV2 — target it directly      */
 
 .icon.actor.character .window-content {
-  padding: 0;
-  overflow: hidden;
-}
-
-.icon.actor.character .window-content > form {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 220px 1fr;
   grid-template-rows: auto 1fr;
   height: 100%;
   overflow: hidden;
+  padding: 0;
 }
 
 [data-application-part="header"] {
