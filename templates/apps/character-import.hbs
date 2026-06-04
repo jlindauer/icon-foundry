@@ -1,8 +1,16 @@
 <div class="icon-import-form">
+  {{#if isUpdate}}
   <p style="font-size:0.85em;color:var(--icon-text-muted);margin:0 0 12px;">
-    Paste the JSON exported from the ICON web app. Jobs, abilities, and talents
-    are resolved by name from your compendium packs.
+    Paste the JSON exported from the ICON web app. This will overwrite
+    <strong style="color:var(--icon-text);">{{actorName}}</strong>'s stats and
+    replace all embedded jobs, abilities, and talents.
   </p>
+  {{else}}
+  <p style="font-size:0.85em;color:var(--icon-text-muted);margin:0 0 12px;">
+    Paste the JSON exported from the ICON web app. A new character actor will be
+    created with jobs, abilities, and talents resolved from your compendium packs.
+  </p>
+  {{/if}}
   <div style="margin-bottom:12px;">
     <label style="font-size:0.75em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);display:block;margin-bottom:4px;">
       Character Export JSON
@@ -12,13 +20,13 @@
              background:var(--icon-card);color:var(--icon-text);
              border:1px solid var(--icon-border);padding:8px;
              resize:vertical;line-height:1.4;"
-      placeholder='{ "version": "1", "name": "Kael", "jobs": [...], "abilities": [...] }'></textarea>
+      placeholder='{ "_schema": "icon-character/1", "name": "...", "jobs": [...] }'></textarea>
   </div>
   <div style="display:flex;justify-content:flex-end;gap:8px;">
     <button type="button" data-action="import"
       style="background:var(--icon-accent);color:white;border:none;
              padding:6px 20px;cursor:pointer;font-size:0.9em;font-weight:600;">
-      <i class="fas fa-file-import"></i> Import
+      <i class="fas fa-file-import"></i> {{#if isUpdate}}Update{{else}}Import{{/if}}
     </button>
   </div>
 </div>

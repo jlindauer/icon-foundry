@@ -53,6 +53,15 @@
     {{/if}}
   </div>
 
+  {{!-- Import --}}
+  {{#if isEditable}}
+  <div class="rail-import">
+    <button type="button" data-action="openImport" class="rail-import-btn">
+      <i class="fas fa-file-import"></i> Import from Web App
+    </button>
+  </div>
+  {{/if}}
+
   {{!-- Origin --}}
   <div class="rail-origin">
     <div class="rail-origin-label">— Origin —</div>

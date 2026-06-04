@@ -427,6 +427,28 @@ details.expandable summary:hover {
   color: var(--icon-text);
 }
 
+.rail-import {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.rail-import-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text-muted);
+  font-size: 0.75em;
+  padding: 4px 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.rail-import-btn:hover {
+  border-color: var(--icon-accent);
+  color: var(--icon-accent);
+}
+
 .rail-origin {
   padding: 10px 14px;
   border-bottom: 1px solid var(--icon-border);

@@ -16,6 +16,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       removeTalent:     IconCharacterSheet.#onRemoveTalent,
       rollAction:       IconCharacterSheet.#onRollAction,
       setActionRating:  IconCharacterSheet.#onSetActionRating,
+      openImport:       IconCharacterSheet.#onOpenImport,
     },
   };
 
@@ -308,6 +309,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     const talents = (this.document.system.combat.selectedTalents ?? []).filter((t) => t !== id);
     await this.document.update({ "system.combat.selectedTalents": talents });
     await this.document.deleteEmbeddedDocuments("Item", [id]);
+  }
+
+  static async #onOpenImport(event, target) {
+    const { CharacterImportApp } = await import("../../apps/character-import-app.mjs");
+    new CharacterImportApp({ actor: this.document }).render(true);
   }
 
   static async #onSetActionRating(event, target) {
