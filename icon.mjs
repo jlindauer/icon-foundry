@@ -113,23 +113,28 @@ Hooks.once("init", () => {
   _preloadTemplates();
 });
 
-/* ── ready ──────────────────────────────────────────────────────────────── */
+/* ── Actors sidebar: inject Import button ───────────────────────────────── */
+
+function _injectImportButton(html) {
+  const root = html instanceof HTMLElement ? html : html[0];
+  const toolbar = root?.querySelector(".directory-header .action-buttons");
+  if (!toolbar || toolbar.querySelector(".icon-import-btn")) return;
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "icon-import-btn";
+  btn.title = "Import character from ICON web app";
+  btn.innerHTML = '<i class="fas fa-file-import"></i> Import';
+  btn.addEventListener("click", () => new CharacterImportApp().render(true));
+  toolbar.append(btn);
+}
+
+Hooks.on("renderActorDirectory", (_app, html) => _injectImportButton(html));
 
 Hooks.once("ready", () => {
-  // Inject "Import" button into the Actors directory header
-  Hooks.on("renderActorDirectory", (_app, html) => {
-    const root = html instanceof HTMLElement ? html : html[0];
-    const toolbar = root?.querySelector(".directory-header .action-buttons");
-    if (!toolbar || toolbar.querySelector(".icon-import-btn")) return;
-
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "icon-import-btn";
-    btn.title = "Import character from ICON web app";
-    btn.innerHTML = '<i class="fas fa-file-import"></i> Import';
-    btn.addEventListener("click", () => new CharacterImportApp().render(true));
-    toolbar.append(btn);
-  });
+  // Catch the case where ActorDirectory rendered before our hook registered
+  const dir = ui.actors?.element;
+  if (dir) _injectImportButton(dir);
 });
 
 /* ── Handlebars helpers ─────────────────────────────────────────────────── */
