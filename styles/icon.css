@@ -1158,13 +1158,18 @@ details.expandable summary:hover {
 }
 
 .segment {
-  flex: 1;
-  max-width: 22px;
+  display: block;
+  width: 18px;
   height: 14px;
+  min-width: 18px;
+  min-height: 14px;
   border: 1px solid var(--icon-border);
   background: transparent;
   padding: 0;
+  margin: 0;
+  line-height: 1;
   cursor: pointer;
+  flex-shrink: 0;
   transition: background 0.1s, border-color 0.1s;
 }
 
@@ -1182,13 +1187,19 @@ details.expandable summary:hover {
 }
 
 .effort-dot {
+  display: block;
   width: 14px;
   height: 14px;
+  min-width: 14px;
+  min-height: 14px;
   border-radius: 50%;
   border: 1px solid var(--icon-border);
   background: transparent;
   padding: 0;
+  margin: 0;
+  line-height: 1;
   cursor: pointer;
+  flex-shrink: 0;
   transition: background 0.1s, border-color 0.1s;
 }
 
@@ -1568,4 +1579,113 @@ details.expandable summary:hover {
 /* Import button in Actors directory sidebar */
 .icon-import-btn {
   font-size: 0.8em;
+}
+
+/* ── Roll button (post ability to chat) ─────────────────────────────────── */
+
+.btn-roll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 1px solid var(--icon-border);
+  border-radius: 3px;
+  color: var(--icon-text-muted);
+  cursor: pointer;
+  font-size: 0.75em;
+  line-height: 1;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-roll:hover {
+  border-color: var(--icon-accent);
+  color: var(--icon-accent);
+  background: var(--icon-accent-dim);
+}
+
+/* ── Ability tags ───────────────────────────────────────────────────────── */
+
+.ability-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.ability-tag {
+  font-size: 0.72em;
+  background: var(--icon-surface-raised);
+  border: 1px solid var(--icon-border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  color: var(--icon-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Ability chat card ──────────────────────────────────────────────────── */
+
+.icon-ability-card {
+  background: var(--color-bg, #1a1a2e);
+  border: 1px solid var(--color-border-light, #4a3f6e);
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: inherit;
+}
+
+.icon-ability-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--color-border-light, #4a3f6e);
+  padding-bottom: 6px;
+}
+
+.icon-ability-card-name {
+  font-weight: 700;
+  font-size: 1em;
+  flex: 1;
+}
+
+.icon-ability-card-cost {
+  font-size: 0.8em;
+  color: var(--color-text-dark-secondary, #9a90b8);
+  white-space: nowrap;
+}
+
+.icon-ability-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.icon-ability-card-tags .icon-ability-tag {
+  font-size: 0.7em;
+  border: 1px solid var(--color-border-light, #4a3f6e);
+  border-radius: 3px;
+  padding: 1px 5px;
+  color: var(--color-text-dark-secondary, #9a90b8);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.icon-ability-card-flavor {
+  font-style: italic;
+  font-size: 0.88em;
+  color: var(--color-text-dark-secondary, #9a90b8);
+  margin: 0 0 6px;
+}
+
+.icon-ability-card-effect {
+  font-size: 0.9em;
+  line-height: 1.5;
 }

@@ -177,5 +177,6 @@ function _preloadTemplates() {
     "systems/icon/templates/actor/npc-sheet.hbs",
     "systems/icon/templates/item/item-sheet.hbs",
     "systems/icon/templates/apps/character-import.hbs",
+    "systems/icon/templates/chat/ability-card.hbs",
   ]);
 }

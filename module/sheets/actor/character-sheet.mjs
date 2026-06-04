@@ -17,6 +17,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       rollAction:        IconCharacterSheet.#onRollAction,
       setActionRating:   IconCharacterSheet.#onSetActionRating,
       openImport:        IconCharacterSheet.#onOpenImport,
+      rollAbility:       IconCharacterSheet.#onRollAbility,
       setStrain:         IconCharacterSheet.#onSetStrain,
       setEffort:         IconCharacterSheet.#onSetEffort,
       camp:              IconCharacterSheet.#onCamp,
@@ -134,6 +135,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         context.talentSlots      = system.talentSlots;
         context.combatXpTriggers = ICON.COMBAT_XP_TRIGGERS;
         context.totalAbilities   = (system.combat.activeAbilities ?? []).length;
+        context.basicAttacks     = context.jobs.filter((j) => j.basicAttack).map((j) => j.basicAttack);
         break;
 
       case "notes":
@@ -216,19 +218,41 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     };
   }
 
-  /** Group active abilities by tier for the combat tab. */
+  /** Group active abilities by tier for the combat tab, appending limit breaks from jobs. */
   _prepareAbilitiesByTier(actor) {
     const ids    = actor.system.combat.activeAbilities ?? [];
-    const items  = ids.map((id) => actor.items.get(id) ?? { id, name: id, system: { tier: "apprentice" } });
+    const items  = ids.map((id) => actor.items.get(id)).filter(Boolean).map((item) => ({ ...item, _source: "item" }));
     const order  = ["apprentice", "I", "II", "IV"];
     const groups = {};
     for (const item of items) {
       const tier = item.system?.tier ?? "apprentice";
       (groups[tier] ??= []).push(item);
     }
-    return order
+    const result = order
       .filter((t) => groups[t]?.length)
       .map((tier) => ({ tier, label: `ICON.Tier.${tier === "apprentice" ? "Apprentice" : tier}`, abilities: groups[tier] }));
+
+    const limitBreaks = (actor.system.combat.jobs ?? []).flatMap((j) => {
+      const jobItem = actor.items.get(j.id);
+      const lb      = jobItem?.system?.limitBreak;
+      if (!lb?.name && !lb?.effect) return [];
+      return [{
+        id:        `${j.id}-lb`,
+        name:      lb.name   || `${jobItem.name} Limit Break`,
+        _source:   "jobAbility",
+        _jobId:    j.id,
+        _abilType: "limitBreak",
+        system:    {
+          cost:   lb.cost   || "1 action, 2 resolve",
+          tags:   lb.tags   || [],
+          flavor: lb.flavor || "",
+          effect: lb.effect || "",
+        },
+      }];
+    });
+
+    if (limitBreaks.length) result.push({ tier: "limitBreak", label: "ICON.Tier.LimitBreak", abilities: limitBreaks });
+    return result;
   }
 
   async _prepareTalents(actor) {
@@ -248,14 +272,30 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   _prepareJobs(system) {
     return (system.combat.jobs ?? []).map((j) => {
       const item = this.document.items.get(j.id);
+      const ba   = item?.system?.basicAttack;
+      const lb   = item?.system?.limitBreak;
+      const tr   = item?.system?.trait;
       return {
-        id:          j.id,
-        name:        item?.name ?? j.id,
-        level:       j.level,
-        isMain:      j.id === system.combat.mainJobId,
-        trait:       item?.system?.trait?.effect     ?? null,
-        basicAttack: item?.system?.basicAttack?.effect ?? null,
-        limitBreak:  item?.system?.limitBreak?.effect  ?? null,
+        id:     j.id,
+        name:   item?.name ?? j.id,
+        level:  j.level,
+        isMain: j.id === system.combat.mainJobId,
+        trait: (tr?.name || tr?.effect) ? { name: tr.name || "Trait", effect: tr.effect || "" } : null,
+        basicAttack: (ba?.name || ba?.effect) ? {
+          name:   ba.name   || "Basic Attack",
+          cost:   ba.cost   || "1 action",
+          tags:   ba.tags   || [],
+          effect: ba.effect || "",
+          jobId:  j.id,
+        } : null,
+        limitBreak: (lb?.name || lb?.effect) ? {
+          name:   lb.name   || "Limit Break",
+          cost:   lb.cost   || "1 action, 2 resolve",
+          tags:   lb.tags   || [],
+          flavor: lb.flavor || "",
+          effect: lb.effect || "",
+          jobId:  j.id,
+        } : null,
       };
     });
   }
@@ -408,6 +448,42 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   static async #onOpenImport(event, target) {
     const { CharacterImportApp } = await import("../../apps/character-import-app.mjs");
     new CharacterImportApp({ actor: this.document }).render(true);
+  }
+
+  static async #onRollAbility(event, target) {
+    const actor = this.document;
+    let name, cost, tags, flavor, effect;
+
+    if (target.dataset.itemId) {
+      const item = actor.items.get(target.dataset.itemId);
+      if (!item) return;
+      name   = item.name;
+      cost   = item.system.cost;
+      tags   = item.system.tags ?? [];
+      flavor = item.system.flavor;
+      effect = item.system.effect;
+    } else if (target.dataset.jobId) {
+      const jobItem  = actor.items.get(target.dataset.jobId);
+      if (!jobItem) return;
+      const ab = jobItem.system[target.dataset.abilType];
+      if (!ab) return;
+      name   = ab.name;
+      cost   = ab.cost;
+      tags   = ab.tags ?? [];
+      flavor = ab.flavor;
+      effect = ab.effect;
+    } else {
+      return;
+    }
+
+    const content = await renderTemplate(
+      "systems/icon/templates/chat/ability-card.hbs",
+      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name },
+    );
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content,
+    });
   }
 
   static async #onSetActionRating(event, target) {

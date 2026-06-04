@@ -1,0 +1,17 @@
+<div class="icon-ability-card">
+  <div class="icon-ability-card-header">
+    <span class="icon-ability-card-name">{{name}}</span>
+    {{#if cost}}<span class="icon-ability-card-cost">{{cost}}</span>{{/if}}
+  </div>
+  {{#if tags.length}}
+  <div class="icon-ability-card-tags">
+    {{#each tags}}<span class="icon-ability-tag">{{this}}</span>{{/each}}
+  </div>
+  {{/if}}
+  {{#if flavor}}
+  <p class="icon-ability-card-flavor">{{flavor}}</p>
+  {{/if}}
+  {{#if effect}}
+  <div class="icon-ability-card-effect">{{{effect}}}</div>
+  {{/if}}
+</div>

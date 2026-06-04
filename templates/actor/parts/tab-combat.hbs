@@ -66,7 +66,41 @@
     </div>
   </div>
 
-  {{!-- Active Abilities (full width, grouped by tier) --}}
+  {{!-- Basic Attacks (from jobs) --}}
+  {{#if basicAttacks.length}}
+  <div class="framed-section span-2">
+    <div class="framed-section-header">
+      <span class="framed-section-title">{{localize "ICON.Section.BasicAttacks"}}</span>
+    </div>
+    <div class="framed-section-body">
+      {{#each basicAttacks}}
+      <details class="expandable">
+        <summary>
+          <span class="expandable-name">{{this.name}}</span>
+          {{#if this.cost}}<span class="expandable-meta">{{this.cost}}</span>{{/if}}
+          <button type="button" class="btn-roll"
+            data-action="rollAbility"
+            data-job-id="{{this.jobId}}"
+            data-abil-type="basicAttack"
+            title="Post to chat">
+            <i class="fas fa-comment-alt"></i>
+          </button>
+        </summary>
+        <div class="expandable-body">
+          {{#if this.tags.length}}
+          <div class="ability-tags">
+            {{#each this.tags}}<span class="ability-tag">{{this}}</span>{{/each}}
+          </div>
+          {{/if}}
+          {{#if this.effect}}<div>{{{this.effect}}}</div>{{/if}}
+        </div>
+      </details>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- Active Abilities (full width, grouped by tier; limit breaks appended as own group) --}}
   <div class="framed-section span-2">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.ActiveAbilities"}}</span>
@@ -82,16 +116,34 @@
           <summary>
             <span class="expandable-name">{{this.name}}</span>
             {{#if this.system.cost}}<span class="expandable-meta">{{this.system.cost}}</span>{{/if}}
-            {{#if ../../../isEditable}}
+            <button type="button" class="btn-roll"
+              data-action="rollAbility"
+              {{#if (eq this._source "jobAbility")}}
+              data-job-id="{{this._jobId}}"
+              data-abil-type="{{this._abilType}}"
+              {{else}}
+              data-item-id="{{this.id}}"
+              {{/if}}
+              title="Post to chat">
+              <i class="fas fa-comment-alt"></i>
+            </button>
+            {{#if (eq this._source "item")}}
+            {{#if ../../isEditable}}
             <button type="button" class="btn-remove" data-action="removeAbility" data-item-id="{{this.id}}"
               title="{{localize 'ICON.Action.Remove'}}">
               <i class="fas fa-times"></i>
             </button>
             {{/if}}
+            {{/if}}
           </summary>
           <div class="expandable-body">
+            {{#if this.system.tags.length}}
+            <div class="ability-tags">
+              {{#each this.system.tags}}<span class="ability-tag">{{this}}</span>{{/each}}
+            </div>
+            {{/if}}
             {{#if this.system.flavor}}<p class="ability-flavor">{{this.system.flavor}}</p>{{/if}}
-            {{#if this.system.effect}}<div>{{this.system.effect}}</div>
+            {{#if this.system.effect}}<div>{{{this.system.effect}}}</div>
             {{else}}<p style="color:var(--icon-text-muted);font-style:italic;">No effect text.</p>{{/if}}
           </div>
         </details>
@@ -126,7 +178,7 @@
           {{/if}}
         </summary>
         {{#if this.system.effect}}
-        <div class="expandable-body">{{this.system.effect}}</div>
+        <div class="expandable-body">{{{this.system.effect}}}</div>
         {{else}}
         <div class="expandable-body" style="color:var(--icon-text-muted);font-style:italic;">No description.</div>
         {{/if}}
@@ -138,7 +190,7 @@
     </div>
   </div>
 
-  {{!-- Jobs --}}
+  {{!-- Jobs (trait only; basic attacks and limit breaks are shown in their own sections) --}}
   <div class="framed-section">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.Jobs"}}</span>
@@ -154,21 +206,11 @@
         <div class="expandable-body">
           {{#if this.trait}}
           <div class="expandable-field">
-            <div class="expandable-label">Trait</div>
-            <div>{{this.trait}}</div>
+            <div class="expandable-label">{{this.trait.name}}</div>
+            <div>{{{this.trait.effect}}}</div>
           </div>
-          {{/if}}
-          {{#if this.basicAttack}}
-          <div class="expandable-field">
-            <div class="expandable-label">Basic Attack</div>
-            <div>{{this.basicAttack}}</div>
-          </div>
-          {{/if}}
-          {{#if this.limitBreak}}
-          <div class="expandable-field">
-            <div class="expandable-label">Limit Break</div>
-            <div>{{this.limitBreak}}</div>
-          </div>
+          {{else}}
+          <p style="color:var(--icon-text-muted);font-style:italic;">No trait.</p>
           {{/if}}
         </div>
       </details>

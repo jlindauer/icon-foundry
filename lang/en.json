@@ -20,7 +20,8 @@
       "Talents": "Talents",
       "Jobs": "Jobs",
       "Notes": "Notes",
-      "SessionNotes": "Session Notes"
+      "SessionNotes": "Session Notes",
+      "BasicAttacks": "Basic Attacks"
     },
     "Action": {
       "Sneak": "Sneak",
@@ -39,7 +40,8 @@
       "Apprentice": "Apprentice",
       "I": "Tier I",
       "II": "Tier II",
-      "IV": "Master (Tier IV)"
+      "IV": "Master (Tier IV)",
+      "LimitBreak": "Limit Breaks"
     },
     "JobType": {
       "Apprentice": "Apprentice",
