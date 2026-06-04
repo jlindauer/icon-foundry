@@ -18,13 +18,20 @@ import { IconCharacterSheet } from "./module/sheets/actor/character-sheet.mjs";
 import { IconNpcSheet }       from "./module/sheets/actor/npc-sheet.mjs";
 import { IconItemSheet }      from "./module/sheets/item/item-sheet.mjs";
 
+// Apps
+import { CharacterImportApp } from "./module/apps/character-import-app.mjs";
+
 /* ── init ─────────────────────────────────────────────────────────────── */
 
 Hooks.once("init", () => {
   console.log("ICON | Initializing ICON system");
 
-  // Expose config globally
-  game.icon = { config: ICON };
+  // Expose config and import API globally
+  game.icon = {
+    config:            ICON,
+    importCharacter:   (data) => CharacterImportApp.importCharacter(data),
+    openImportDialog:  () => new CharacterImportApp().render(true),
+  };
 
   // ── Documents ────────────────────────────────────────────────────────
   CONFIG.Actor.documentClass = IconActor;
@@ -106,6 +113,25 @@ Hooks.once("init", () => {
   _preloadTemplates();
 });
 
+/* ── ready ──────────────────────────────────────────────────────────────── */
+
+Hooks.once("ready", () => {
+  // Inject "Import" button into the Actors directory header
+  Hooks.on("renderActorDirectory", (_app, html) => {
+    const root = html instanceof HTMLElement ? html : html[0];
+    const toolbar = root?.querySelector(".directory-header .action-buttons");
+    if (!toolbar || toolbar.querySelector(".icon-import-btn")) return;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "icon-import-btn";
+    btn.title = "Import character from ICON web app";
+    btn.innerHTML = '<i class="fas fa-file-import"></i> Import';
+    btn.addEventListener("click", () => new CharacterImportApp().render(true));
+    toolbar.append(btn);
+  });
+});
+
 /* ── Handlebars helpers ─────────────────────────────────────────────────── */
 
 function _registerHandlebarsHelpers() {
@@ -148,5 +174,6 @@ function _preloadTemplates() {
     "systems/icon/templates/actor/parts/tab-notes.hbs",
     "systems/icon/templates/actor/npc-sheet.hbs",
     "systems/icon/templates/item/item-sheet.hbs",
+    "systems/icon/templates/apps/character-import.hbs",
   ]);
 }

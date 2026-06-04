@@ -93,28 +93,25 @@
       </div>
       <div class="framed-section-body">
         {{#each actionRatings}}
-        <div class="action-rating" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <div class="action-rating">
           <button type="button" class="action-roll-btn"
             data-action="rollAction"
             data-action_key="{{this.key}}"
             data-value="{{this.value}}"
             data-label="{{this.label}}"
-            title="Roll {{localize this.label}}"
-            style="width:80px;text-align:left;font-size:0.8em;font-weight:600;color:var(--icon-text);background:none;border:none;padding:0;cursor:pointer;">
+            title="Roll {{localize this.label}}">
             {{localize this.label}}
           </button>
-          <div class="pip-row" style="display:flex;gap:3px;">
+          <div class="pip-row">
             {{#each this.pips}}
-            <span class="pip {{#if this}}filled{{/if}}" style="width:10px;height:10px;border-radius:50%;border:1px solid var(--icon-border);{{#if this}}background:var(--icon-accent);border-color:var(--icon-accent);{{/if}}"></span>
+            <button type="button"
+              class="action-pip {{#if this}}filled{{/if}}"
+              data-action="setActionRating"
+              data-action-key="{{../key}}"
+              data-pip-index="{{@index}}"
+              title="Set {{localize ../label}} to {{add @index 1}}"></button>
             {{/each}}
           </div>
-          {{#if ../isEditable}}
-          <input type="number" class="action-input" name="system.narrative.actionRatings.{{this.key}}"
-            value="{{this.value}}" min="0" max="5"
-            style="width:40px;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:1px 4px;text-align:center;">
-          {{else}}
-          <span style="font-size:0.85em;color:var(--icon-text-sec);">{{this.value}}</span>
-          {{/if}}
         </div>
         {{/each}}
       </div>

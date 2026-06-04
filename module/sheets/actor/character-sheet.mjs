@@ -9,12 +9,13 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
-      toggleCondition: IconCharacterSheet.#onToggleCondition,
-      checkXpTrigger:  IconCharacterSheet.#onCheckXpTrigger,
-      gainXp:          IconCharacterSheet.#onGainXp,
-      removeAbility:   IconCharacterSheet.#onRemoveAbility,
-      removeTalent:    IconCharacterSheet.#onRemoveTalent,
-      rollAction:      IconCharacterSheet.#onRollAction,
+      toggleCondition:  IconCharacterSheet.#onToggleCondition,
+      checkXpTrigger:   IconCharacterSheet.#onCheckXpTrigger,
+      gainXp:           IconCharacterSheet.#onGainXp,
+      removeAbility:    IconCharacterSheet.#onRemoveAbility,
+      removeTalent:     IconCharacterSheet.#onRemoveTalent,
+      rollAction:       IconCharacterSheet.#onRollAction,
+      setActionRating:  IconCharacterSheet.#onSetActionRating,
     },
   };
 
@@ -307,6 +308,15 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     const talents = (this.document.system.combat.selectedTalents ?? []).filter((t) => t !== id);
     await this.document.update({ "system.combat.selectedTalents": talents });
     await this.document.deleteEmbeddedDocuments("Item", [id]);
+  }
+
+  static async #onSetActionRating(event, target) {
+    const key      = target.dataset.actionKey;
+    const pipIndex = parseInt(target.dataset.pipIndex);
+    const current  = this.document.system.narrative.actionRatings[key] ?? 0;
+    // Clicking the last filled pip decrements by 1; otherwise set to pip+1
+    const newValue = current === pipIndex + 1 ? pipIndex : pipIndex + 1;
+    await this.document.update({ [`system.narrative.actionRatings.${key}`]: newValue });
   }
 
   static async #onRollAction(event, target) {

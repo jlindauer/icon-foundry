@@ -493,50 +493,35 @@ details.expandable summary:hover {
 
 .action-rating {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
-}
-
-.action-label {
-  font-size: 0.7em;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--icon-text-muted);
-  text-align: center;
+  gap: 8px;
+  margin-bottom: 6px;
 }
 
 .pip-row {
   display: flex;
-  gap: 3px;
+  gap: 4px;
 }
 
-.pip {
-  width: 10px;
-  height: 10px;
+.action-pip {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px solid var(--icon-border);
   background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, transform 0.1s;
 }
 
-.pip.filled {
+.action-pip.filled {
   background: var(--icon-accent);
   border-color: var(--icon-accent);
 }
 
-.action-input {
-  width: 36px;
-  text-align: center;
-  background: transparent;
-  border: 1px solid var(--icon-border);
-  color: var(--icon-text);
-  border-radius: var(--icon-radius-sm);
-  font-size: 0.85em;
-}
-
-.action-value {
-  font-size: 0.9em;
-  font-weight: bold;
+.action-pip:hover {
+  border-color: var(--icon-accent);
+  transform: scale(1.2);
 }
 
 /* ── Resources ──────────────────────────────────────────────────────────── */
@@ -994,16 +979,17 @@ details.expandable summary:hover {
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: inherit;
+  font-size: 0.82em;
   font-family: inherit;
   color: var(--icon-text);
   text-align: left;
   font-weight: 600;
+  width: 74px;
+  flex-shrink: 0;
 }
 
 .action-roll-btn:hover {
   color: var(--icon-accent);
-  text-decoration: underline;
 }
 
 /* Job name */
@@ -1034,3 +1020,20 @@ details.expandable summary:hover {
 [data-application-part="header"]::-webkit-scrollbar { width: 4px; }
 [data-application-part="header"]::-webkit-scrollbar-track { background: transparent; }
 [data-application-part="header"]::-webkit-scrollbar-thumb { background: var(--icon-border); border-radius: 2px; }
+
+/* ── Character Import Dialog ────────────────────────────────────────────── */
+
+#icon-character-import .window-content {
+  background: var(--icon-surface);
+  color: var(--icon-text);
+  padding: 16px;
+}
+
+.icon-import-form textarea {
+  display: block;
+}
+
+/* Import button in Actors directory sidebar */
+.icon-import-btn {
+  font-size: 0.8em;
+}
