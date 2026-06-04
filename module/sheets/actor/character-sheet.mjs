@@ -221,7 +221,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   /** Group active abilities by tier for the combat tab, appending limit breaks from jobs. */
   _prepareAbilitiesByTier(actor) {
     const ids    = actor.system.combat.activeAbilities ?? [];
-    const items  = ids.map((id) => actor.items.get(id)).filter(Boolean).map((item) => ({ ...item, _source: "item" }));
+    const items  = ids.map((id) => {
+      const item = actor.items.get(id);
+      if (!item) return null;
+      return { _source: "item", id: item.id, name: item.name, system: item.system };
+    }).filter(Boolean);
     const order  = ["apprentice", "I", "II", "IV"];
     const groups = {};
     for (const item of items) {
@@ -487,9 +491,18 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
     const isAttack = (tags ?? []).some((t) => t.toLowerCase() === "attack");
 
+    // For attack abilities, include the actor's action ratings so the card can show to-hit buttons
+    const actionRatings = isAttack
+      ? Object.entries(ICON.ACTION_RATINGS).map(([key, labelKey]) => ({
+          key,
+          label:    game.i18n.localize(labelKey),
+          value:    actor.system.narrative?.actionRatings?.[key] ?? 0,
+        }))
+      : [];
+
     const content = await renderTemplate(
       "systems/icon/templates/chat/ability-card.hbs",
-      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name, actorId: actor.id, isAttack, rollableFormulas },
+      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name, actorId: actor.id, isAttack, rollableFormulas, actionRatings },
     );
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),

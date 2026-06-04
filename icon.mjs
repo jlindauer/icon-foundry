@@ -139,17 +139,39 @@ Hooks.once("ready", () => {
 Hooks.on("renderChatMessage", (message, html, _data) => {
   const el = html instanceof HTMLElement ? html : html[0];
   if (!el) return;
+
+  function getCardContext(btn) {
+    const card    = btn.closest(".icon-ability-card");
+    const actorId = card?.dataset.actorId;
+    const actor   = actorId ? game.actors.get(actorId) : null;
+    const name    = card?.querySelector(".icon-ability-card-name")?.textContent?.trim() ?? "";
+    return { actor, name };
+  }
+
+  // Damage / dice formula rolls
   el.querySelectorAll(".icon-roll-btn[data-formula]").forEach((btn) => {
     btn.addEventListener("click", async () => {
+      const { actor, name } = getCardContext(btn);
       const formula = btn.dataset.formula;
-      const actorId = btn.closest("[data-actor-id]")?.dataset.actorId;
-      const actor   = actorId ? game.actors.get(actorId) : null;
-      const cardName = btn.closest(".icon-ability-card")
-        ?.querySelector(".icon-ability-card-name")?.textContent?.trim() ?? "";
       const roll = await new Roll(formula).evaluate();
       await roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
-        flavor:  cardName ? `${cardName} — ${formula}` : formula,
+        flavor:  name ? `${name} — ${formula}` : formula,
+      });
+    });
+  });
+
+  // To-hit action rating rolls (Nd6kh, 2d6kl at 0)
+  el.querySelectorAll(".icon-action-roll-btn[data-value]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const { actor, name } = getCardContext(btn);
+      const value   = parseInt(btn.dataset.value) || 0;
+      const label   = btn.dataset.label ?? "Attack";
+      const formula = value === 0 ? "2d6kl" : `${value}d6kh`;
+      const roll = await new Roll(formula).evaluate();
+      await roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
+        flavor:  name ? `${name} — ${label}` : label,
       });
     });
   });
