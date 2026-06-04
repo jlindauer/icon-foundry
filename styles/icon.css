@@ -1633,11 +1633,12 @@ details.expandable summary:hover {
 /* ── Ability chat card ──────────────────────────────────────────────────── */
 
 .icon-ability-card {
-  background: var(--color-bg, #1a1a2e);
-  border: 1px solid var(--color-border-light, #4a3f6e);
+  background: var(--icon-card);
+  border: 1px solid var(--icon-border-sel);
   border-radius: 4px;
   padding: 10px 12px;
-  font-family: inherit;
+  color: var(--icon-text);
+  font-family: "Signika", sans-serif;
 }
 
 .icon-ability-card-header {
@@ -1645,19 +1646,20 @@ details.expandable summary:hover {
   align-items: baseline;
   gap: 10px;
   margin-bottom: 6px;
-  border-bottom: 1px solid var(--color-border-light, #4a3f6e);
+  border-bottom: 1px solid var(--icon-border);
   padding-bottom: 6px;
 }
 
 .icon-ability-card-name {
   font-weight: 700;
   font-size: 1em;
+  color: var(--icon-text);
   flex: 1;
 }
 
 .icon-ability-card-cost {
   font-size: 0.8em;
-  color: var(--color-text-dark-secondary, #9a90b8);
+  color: var(--icon-text-sec);
   white-space: nowrap;
 }
 
@@ -1670,10 +1672,10 @@ details.expandable summary:hover {
 
 .icon-ability-card-tags .icon-ability-tag {
   font-size: 0.7em;
-  border: 1px solid var(--color-border-light, #4a3f6e);
+  border: 1px solid var(--icon-border);
   border-radius: 3px;
   padding: 1px 5px;
-  color: var(--color-text-dark-secondary, #9a90b8);
+  color: var(--icon-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -1681,11 +1683,12 @@ details.expandable summary:hover {
 .icon-ability-card-flavor {
   font-style: italic;
   font-size: 0.88em;
-  color: var(--color-text-dark-secondary, #9a90b8);
+  color: var(--icon-text-sec);
   margin: 0 0 6px;
 }
 
 .icon-ability-card-effect {
   font-size: 0.9em;
   line-height: 1.5;
+  color: var(--icon-text);
 }
