@@ -15,10 +15,31 @@
       <span class="rail-sub-sep">·</span>
       <span>{{mainJobName}}</span>
       {{/if}}
-      {{#if jobClassName}}
-      <span class="rail-sub-sep">·</span>
-      <span>{{jobClassName}}</span>
-      {{/if}}
+    </div>
+  </div>
+
+  {{!-- HP & Vigor --}}
+  <div class="rail-resources">
+    <div class="resource-block">
+      <label class="resource-label">{{localize "ICON.Resource.HP"}}
+        {{#if isBloodied}}<span class="bloodied-tag">BLOODIED</span>{{/if}}
+        {{#if isInCrisis}}<span class="crisis-tag">CRISIS</span>{{/if}}
+      </label>
+      <div class="resource-bar-wrap">
+        <progress class="resource-bar hp-bar" value="{{system.resources.hp.value}}" max="{{system.resources.hp.max}}"></progress>
+        <span class="resource-value" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
+        <span class="resource-sep">/</span>
+        <span class="resource-value" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
+      </div>
+    </div>
+    <div class="resource-block">
+      <label class="resource-label">{{localize "ICON.Resource.Vigor"}}</label>
+      <div class="resource-bar-wrap">
+        <progress class="resource-bar vigor-bar" value="{{system.resources.vigor.value}}" max="{{system.resources.vigor.max}}"></progress>
+        <span class="resource-value" data-field="system.resources.vigor.value">{{system.resources.vigor.value}}</span>
+        <span class="resource-sep">/</span>
+        <span class="resource-value" data-field="system.resources.vigor.max">{{system.resources.vigor.max}}</span>
+      </div>
     </div>
   </div>
 
@@ -36,7 +57,8 @@
     <div class="rail-stat-row">
       <span class="rail-stat-label">Resolve</span>
       <input type="number" name="system.resources.resolve"
-        value="{{system.resources.resolve}}" min="0" style="width:48px;text-align:center;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:1px 4px;"
+        value="{{system.resources.resolve}}" min="0"
+        style="width:48px;text-align:center;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:1px 4px;"
         {{#unless isEditable}}disabled{{/unless}}>
     </div>
     {{#if defense}}
@@ -65,6 +87,14 @@
   {{!-- Origin --}}
   <div class="rail-origin">
     <div class="rail-origin-label">— Origin —</div>
+    {{#if isEditable}}
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <input type="text" name="system.narrative.kin" value="{{system.narrative.kin}}"
+        placeholder="Kin" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
+      <input type="text" name="system.narrative.culture" value="{{system.narrative.culture}}"
+        placeholder="Culture" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
+    </div>
+    {{else}}
     {{#if system.narrative.kin}}
     <div class="rail-origin-row">
       <div class="rail-origin-key">Kin</div>
@@ -77,13 +107,6 @@
       <div class="rail-origin-val">{{system.narrative.culture}}</div>
     </div>
     {{/if}}
-    {{#if isEditable}}
-    <div style="margin-top:8px;display:flex;flex-direction:column;gap:4px;">
-      <input type="text" name="system.narrative.kin" value="{{system.narrative.kin}}"
-        placeholder="Kin" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
-      <input type="text" name="system.narrative.culture" value="{{system.narrative.culture}}"
-        placeholder="Culture" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
-    </div>
     {{/if}}
   </div>
 

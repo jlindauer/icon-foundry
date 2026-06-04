@@ -48,6 +48,12 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     callbacks:   { drop: (event) => this._onDrop(event) },
   });
 
+  // ── Title ────────────────────────────────────────────────────────────────
+
+  get title() {
+    return this.document.name;
+  }
+
   // ── Context preparation ──────────────────────────────────────────────────
 
   async _prepareContext(options) {
@@ -80,20 +86,18 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       case "header":
         context.tab = undefined;
         context.mainJobName = mainJobItem?.name ?? null;
-        context.jobClassName = null;
         context.xpForNext = system.xpForNextLevel;
         context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
         context.defense = mainJobItem?.system?.stats?.defense ?? null;
         context.freeMove = mainJobItem?.system?.stats?.freeMove ?? null;
+        context.isBloodied = system.isBloodied;
+        context.isInCrisis = system.isInCrisis;
         break;
 
       case "narrative":
         context.tab = context.tabs.narrative;
         context.actionRatings = this._prepareActionRatings(system);
-        context.xpForNext = system.xpForNextLevel;
-        context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
-        context.abilitySlots = system.abilitySlots;
-        context.talentSlots = system.talentSlots;
+        context.bondIdeals = await this._prepareBondIdeals(actor, system);
         break;
 
       case "combat":
@@ -104,6 +108,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         context.jobs = this._prepareJobs(system);
         context.isBloodied = system.isBloodied;
         context.isInCrisis = system.isInCrisis;
+        context.xpForNext = system.xpForNextLevel;
+        context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
+        context.abilitySlots = system.abilitySlots;
+        context.talentSlots = system.talentSlots;
+        context.combatXpTriggers = ICON.COMBAT_XP_TRIGGERS;
         break;
 
       case "notes":
@@ -172,6 +181,27 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         limitBreak:  item?.system?.limitBreak?.effect ?? null,
       };
     });
+  }
+
+  async _prepareBondIdeals(actor, system) {
+    const bondName = system.narrative.bondId;
+    if (!bondName) return [];
+
+    // Check embedded items first, then search compendiums
+    let bondItem = actor.items.find((i) => i.type === "bond" && i.name === bondName);
+    if (!bondItem) {
+      for (const pack of game.packs) {
+        if (pack.documentName !== "Item") continue;
+        const index = await pack.getIndex();
+        const entry = index.find((e) => e.name === bondName);
+        if (entry) {
+          const doc = await pack.getDocument(entry._id);
+          if (doc.type === "bond") { bondItem = doc; break; }
+        }
+      }
+    }
+
+    return bondItem?.system?.ideals ?? [];
   }
 
   // ── Render hook ───────────────────────────────────────────────────────────

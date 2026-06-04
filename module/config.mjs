@@ -86,6 +86,13 @@ ICON.CONDITIONS_NEGATIVE = [
   "stun",
 ];
 
+ICON.COMBAT_XP_TRIGGERS = [
+  "Bloodied or slew an enemy",
+  "You or an ally used a Limit Break",
+  "You were taken out (reduced to 0 HP)",
+  "Completed the encounter",
+];
+
 // XP needed to advance from a given level: level + 3
 ICON.xpForLevel = (level) => level + 3;
 

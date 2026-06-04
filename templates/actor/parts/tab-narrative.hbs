@@ -1,10 +1,8 @@
 <div class="tab tab-content" data-tab="narrative" data-group="primary">
 <div class="tab-grid-2">
 
-  {{!-- Left column --}}
+  {{!-- Left column: Bond --}}
   <div class="tab-col">
-
-    {{!-- Bond --}}
     <div class="framed-section">
       <div class="framed-section-header">
         <span class="framed-section-title">Bond</span>
@@ -20,69 +18,31 @@
             style="width:100%;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:4px 6px;">
         </div>
         {{/if}}
-        {{!-- XP Triggers (narrative ideals) --}}
+        {{!-- Ideals (XP Triggers) --}}
         {{#if system.narrative.bondId}}
         <div style="margin-top:4px;">
           <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Ideals (XP)</div>
           {{#times 3}}
-          <label style="display:flex;align-items:center;gap:8px;padding:4px 0;font-size:0.88em;cursor:pointer;">
+          <label style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:0.88em;cursor:pointer;">
             <input type="checkbox"
               data-action="checkXpTrigger"
               data-index="{{@index}}"
               data-trigger-type="narrative"
+              style="margin-top:3px;flex-shrink:0;"
               {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
-            <span style="color:var(--icon-text-sec);">{{localize "ICON.Label.Ideal"}} {{add @index 1}}</span>
+            <span style="color:var(--icon-text-sec);">
+              {{#if (lookup ../bondIdeals @index)}}
+                {{lookup ../bondIdeals @index}}
+              {{else}}
+                Ideal {{add @index 1}}
+              {{/if}}
+            </span>
           </label>
           {{/times}}
         </div>
         {{/if}}
       </div>
     </div>
-
-    {{!-- Progression --}}
-    <div class="framed-section">
-      <div class="framed-section-header">
-        <span class="framed-section-title">Progression</span>
-        <span class="framed-section-subtitle">Chapter {{system.progression.level}}</span>
-      </div>
-      <div class="framed-section-body">
-        <div class="rail-stat-row" style="margin-bottom:8px;">
-          <span class="rail-stat-label">XP</span>
-          <div class="xp-bar-wrap">
-            <div class="xp-bar">
-              <div class="xp-bar-fill" style="width:{{xpPercent}}%"></div>
-            </div>
-            <span class="xp-label">{{system.progression.currentXp}}/{{xpForNext}}</span>
-          </div>
-        </div>
-        {{#if isEditable}}
-        <div style="display:flex;gap:8px;align-items:center;">
-          <input type="number" name="system.progression.currentXp"
-            value="{{system.progression.currentXp}}" min="0"
-            style="width:60px;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;text-align:center;">
-          <button type="button" class="btn-xp" data-action="gainXp" style="background:var(--icon-accent);color:white;border:none;padding:3px 10px;cursor:pointer;font-size:0.8em;">+1 XP</button>
-        </div>
-        {{/if}}
-        <div style="margin-top:8px;font-size:0.78em;color:var(--icon-text-muted);">
-          {{localize "ICON.Label.AbilitySlots"}}: {{abilitySlots}} · {{localize "ICON.Label.TalentSlots"}}: {{talentSlots}}
-        </div>
-        {{!-- Combat XP triggers --}}
-        <div style="margin-top:10px;">
-          <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Combat XP</div>
-          {{#times 4}}
-          <label style="display:flex;align-items:center;gap:8px;padding:3px 0;font-size:0.85em;cursor:pointer;">
-            <input type="checkbox"
-              data-action="checkXpTrigger"
-              data-index="{{@index}}"
-              data-trigger-type="combat"
-              {{#if (includes ../system.progression.combatXpTriggers @index)}}checked{{/if}}>
-            <span style="color:var(--icon-text-sec);">{{localize "ICON.Label.CombatTrigger"}} {{add @index 1}}</span>
-          </label>
-          {{/times}}
-        </div>
-      </div>
-    </div>
-
   </div>
 
   {{!-- Right column: Action Ratings --}}

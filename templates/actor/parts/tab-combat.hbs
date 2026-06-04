@@ -1,42 +1,13 @@
 <div class="tab tab-content" data-tab="combat" data-group="primary">
 <div class="tab-grid-2">
 
-  {{!-- Resources --}}
-  <div class="framed-section">
-    <div class="framed-section-header">
-      <span class="framed-section-title">Resources</span>
-      {{#if isBloodied}}<span style="color:var(--icon-bloodied);font-size:0.75em;font-weight:700;">BLOODIED</span>{{/if}}
-      {{#if isInCrisis}}<span style="color:var(--icon-crisis);font-size:0.75em;font-weight:700;">CRISIS</span>{{/if}}
-    </div>
-    <div class="framed-section-body">
-      <div class="resource-block" style="margin-bottom:8px;">
-        <label style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;color:var(--icon-text-muted);">{{localize "ICON.Resource.HP"}}</label>
-        <div class="resource-bar-wrap">
-          <progress class="resource-bar hp-bar" value="{{system.resources.hp.value}}" max="{{system.resources.hp.max}}"></progress>
-          <span class="resource-value" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
-          <span class="resource-sep">/</span>
-          <span class="resource-value" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
-        </div>
-      </div>
-      <div class="resource-block" style="margin-bottom:8px;">
-        <label style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;color:var(--icon-text-muted);">{{localize "ICON.Resource.Vigor"}}</label>
-        <div class="resource-bar-wrap">
-          <progress class="resource-bar vigor-bar" value="{{system.resources.vigor.value}}" max="{{system.resources.vigor.max}}"></progress>
-          <span class="resource-value" data-field="system.resources.vigor.value">{{system.resources.vigor.value}}</span>
-          <span class="resource-sep">/</span>
-          <span class="resource-value" data-field="system.resources.vigor.max">{{system.resources.vigor.max}}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   {{!-- Conditions --}}
   <div class="framed-section">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.Conditions"}}</span>
     </div>
     <div class="framed-section-body">
-      <div class="conditions-row" style="display:flex;flex-wrap:wrap;gap:4px;">
+      <div class="conditions-row">
         {{#each conditions}}
         <button type="button"
           class="condition-pip {{#if this.active}}active{{/if}} {{#if this.isPositive}}positive{{/if}}"
@@ -50,11 +21,55 @@
     </div>
   </div>
 
+  {{!-- Progression --}}
+  <div class="framed-section">
+    <div class="framed-section-header">
+      <span class="framed-section-title">Progression</span>
+      <span class="framed-section-subtitle">Chapter {{system.progression.level}}</span>
+    </div>
+    <div class="framed-section-body">
+      <div class="rail-stat-row" style="margin-bottom:8px;">
+        <span class="rail-stat-label">XP</span>
+        <div class="xp-bar-wrap">
+          <div class="xp-bar">
+            <div class="xp-bar-fill" style="width:{{xpPercent}}%"></div>
+          </div>
+          <span class="xp-label">{{system.progression.currentXp}}/{{xpForNext}}</span>
+        </div>
+      </div>
+      {{#if isEditable}}
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+        <input type="number" name="system.progression.currentXp"
+          value="{{system.progression.currentXp}}" min="0"
+          style="width:60px;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;text-align:center;">
+        <button type="button" class="btn-xp" data-action="gainXp"
+          style="background:var(--icon-accent);color:white;border:none;padding:3px 10px;cursor:pointer;font-size:0.8em;">+1 XP</button>
+      </div>
+      {{/if}}
+      <div style="font-size:0.78em;color:var(--icon-text-muted);margin-bottom:10px;">
+        {{localize "ICON.Label.AbilitySlots"}}: {{abilitySlots}} · {{localize "ICON.Label.TalentSlots"}}: {{talentSlots}}
+      </div>
+      {{!-- Combat XP triggers --}}
+      <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Combat XP</div>
+      {{#each combatXpTriggers}}
+      <label style="display:flex;align-items:flex-start;gap:8px;padding:3px 0;font-size:0.85em;cursor:pointer;">
+        <input type="checkbox"
+          data-action="checkXpTrigger"
+          data-index="{{@index}}"
+          data-trigger-type="combat"
+          style="margin-top:3px;flex-shrink:0;"
+          {{#if (includes ../system.progression.combatXpTriggers @index)}}checked{{/if}}>
+        <span style="color:var(--icon-text-sec);">{{this}}</span>
+      </label>
+      {{/each}}
+    </div>
+  </div>
+
   {{!-- Active Abilities (full width) --}}
   <div class="framed-section span-2">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.ActiveAbilities"}}</span>
-      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{activeAbilities.length}}/{{system.abilitySlots}}</span>
+      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{activeAbilities.length}}/{{abilitySlots}}</span>
     </div>
     <div class="framed-section-body">
       {{#each activeAbilities}}
@@ -78,7 +93,7 @@
       </details>
       {{/each}}
       {{#if isEditable}}
-      <div class="drop-hint" style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">{{localize "ICON.Hint.DropAbility"}}</div>
+      <div class="drop-hint">{{localize "ICON.Hint.DropAbility"}}</div>
       {{/if}}
     </div>
   </div>
@@ -87,7 +102,7 @@
   <div class="framed-section">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.Talents"}}</span>
-      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{selectedTalents.length}}/{{system.talentSlots}}</span>
+      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{selectedTalents.length}}/{{talentSlots}}</span>
     </div>
     <div class="framed-section-body">
       {{#each selectedTalents}}
@@ -109,7 +124,7 @@
       </details>
       {{/each}}
       {{#if isEditable}}
-      <div class="drop-hint" style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">{{localize "ICON.Hint.DropTalent"}}</div>
+      <div class="drop-hint">{{localize "ICON.Hint.DropTalent"}}</div>
       {{/if}}
     </div>
   </div>
@@ -150,7 +165,7 @@
       </details>
       {{/each}}
       {{#if isEditable}}
-      <div style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">Drop a job here</div>
+      <div class="drop-hint">Drop a job here</div>
       {{/if}}
     </div>
   </div>

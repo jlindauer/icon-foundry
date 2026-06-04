@@ -564,6 +564,36 @@ details.expandable summary:hover {
 .resources-section.bloodied { border-color: var(--icon-bloodied); }
 .resources-section.crisis   { border-color: var(--icon-crisis); }
 
+/* Rail sidebar resource bars */
+.rail-resources {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--icon-border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resource-label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: var(--icon-text-muted);
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.bloodied-tag {
+  color: var(--icon-bloodied);
+  font-weight: 700;
+}
+
+.crisis-tag {
+  color: var(--icon-crisis);
+  font-weight: 700;
+}
+
 .resource-block {
   flex: 1;
   display: flex;
