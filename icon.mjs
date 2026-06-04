@@ -115,9 +115,15 @@ Hooks.once("init", () => {
 
 /* ── Actors sidebar: inject Import button ───────────────────────────────── */
 
-function _injectImportButton(html) {
-  const root = html instanceof HTMLElement ? html : html[0];
-  const toolbar = root?.querySelector(".directory-header .action-buttons");
+function _injectImportButton(root) {
+  if (!root) return;
+  if (root instanceof jQuery) root = root[0];
+
+  // v14 sidebar: <header class="directory-header"> > <div class="header-actions action-buttons">
+  const toolbar = root.querySelector(".header-actions")
+    ?? root.querySelector(".directory-header .action-buttons")
+    ?? root.querySelector(".action-buttons");
+
   if (!toolbar || toolbar.querySelector(".icon-import-btn")) return;
 
   const btn = document.createElement("button");
@@ -129,12 +135,13 @@ function _injectImportButton(html) {
   toolbar.append(btn);
 }
 
+// Fires on every render/re-render of the actors tab
 Hooks.on("renderActorDirectory", (_app, html) => _injectImportButton(html));
 
 Hooks.once("ready", () => {
-  // Catch the case where ActorDirectory rendered before our hook registered
-  const dir = ui.actors?.element;
-  if (dir) _injectImportButton(dir);
+  // Direct DOM fallback — the actors tab section is always #actors in v14
+  const section = document.querySelector("#actors") ?? ui.actors?.element;
+  _injectImportButton(section);
 });
 
 /* ── Handlebars helpers ─────────────────────────────────────────────────── */
