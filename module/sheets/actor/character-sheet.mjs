@@ -476,9 +476,20 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       return;
     }
 
+    // Extract dice formulas from plain text of the effect (e.g. "Hit: +1d6", "1d3+1 damage")
+    const plain   = (effect ?? "").replace(/<[^>]+>/g, " ");
+    const seen    = new Set();
+    const rollableFormulas = [];
+    for (const m of plain.matchAll(/\b(\d+d\d+(?:[+-]\d+)?)\b/gi)) {
+      const f = m[1];
+      if (!seen.has(f.toLowerCase())) { seen.add(f.toLowerCase()); rollableFormulas.push(f); }
+    }
+
+    const isAttack = (tags ?? []).some((t) => t.toLowerCase() === "attack");
+
     const content = await renderTemplate(
       "systems/icon/templates/chat/ability-card.hbs",
-      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name },
+      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name, actorId: actor.id, isAttack, rollableFormulas },
     );
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),

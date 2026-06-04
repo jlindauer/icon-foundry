@@ -134,6 +134,27 @@ Hooks.once("ready", () => {
   _injectImportButton(section);
 });
 
+/* ── Ability chat card — wire up inline roll buttons ────────────────────── */
+
+Hooks.on("renderChatMessage", (message, html, _data) => {
+  const el = html instanceof HTMLElement ? html : html[0];
+  if (!el) return;
+  el.querySelectorAll(".icon-roll-btn[data-formula]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const formula = btn.dataset.formula;
+      const actorId = btn.closest("[data-actor-id]")?.dataset.actorId;
+      const actor   = actorId ? game.actors.get(actorId) : null;
+      const cardName = btn.closest(".icon-ability-card")
+        ?.querySelector(".icon-ability-card-name")?.textContent?.trim() ?? "";
+      const roll = await new Roll(formula).evaluate();
+      await roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
+        flavor:  cardName ? `${cardName} — ${formula}` : formula,
+      });
+    });
+  });
+});
+
 /* ── Handlebars helpers ─────────────────────────────────────────────────── */
 
 function _registerHandlebarsHelpers() {

@@ -1692,3 +1692,41 @@ details.expandable summary:hover {
   line-height: 1.5;
   color: var(--icon-text);
 }
+
+.icon-ability-card-rolls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--icon-border);
+}
+
+.icon-roll-group-label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--icon-text-muted);
+  margin-right: 2px;
+}
+
+.icon-ability-card .icon-roll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background: var(--icon-surface-raised, #2a2a3a);
+  border: 1px solid var(--icon-border-sel);
+  border-radius: 3px;
+  color: var(--icon-text);
+  font-size: 0.82em;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.icon-ability-card .icon-roll-btn:hover {
+  background: var(--icon-accent-dim);
+  border-color: var(--icon-accent);
+  color: #fff;
+}

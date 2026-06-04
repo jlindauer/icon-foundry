@@ -1,4 +1,4 @@
-<div class="icon-ability-card">
+<div class="icon-ability-card" data-actor-id="{{actorId}}">
   <div class="icon-ability-card-header">
     <span class="icon-ability-card-name">{{name}}</span>
     {{#if cost}}<span class="icon-ability-card-cost">{{cost}}</span>{{/if}}
@@ -13,5 +13,17 @@
   {{/if}}
   {{#if effect}}
   <div class="icon-ability-card-effect">{{{effect}}}</div>
+  {{/if}}
+  {{#if rollableFormulas.length}}
+  <div class="icon-ability-card-rolls">
+    {{#if isAttack}}
+    <span class="icon-roll-group-label">Damage Rolls</span>
+    {{/if}}
+    {{#each rollableFormulas}}
+    <button type="button" class="icon-roll-btn" data-formula="{{this}}">
+      <i class="fas fa-dice-d6"></i> Roll {{this}}
+    </button>
+    {{/each}}
+  </div>
   {{/if}}
 </div>
