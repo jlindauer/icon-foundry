@@ -68,11 +68,28 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     const actor = this.document;
     const system = actor.system;
 
+    const mainJobItem = (() => {
+      const mainId = system.combat.mainJobId;
+      if (!mainId) return null;
+      return actor.items.get(mainId) ?? null;
+    })();
+
     switch (partId) {
+      case "header":
+        context.tab = undefined;
+        context.mainJobName = mainJobItem?.name ?? null;
+        context.jobClassName = null;
+        context.xpForNext = system.xpForNextLevel;
+        context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
+        context.defense = mainJobItem?.system?.stats?.defense ?? null;
+        context.freeMove = mainJobItem?.system?.stats?.freeMove ?? null;
+        break;
+
       case "narrative":
         context.tab = context.tabs.narrative;
         context.actionRatings = this._prepareActionRatings(system);
         context.xpForNext = system.xpForNextLevel;
+        context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
         context.abilitySlots = system.abilitySlots;
         context.talentSlots = system.talentSlots;
         break;
@@ -144,10 +161,13 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     return (system.combat.jobs ?? []).map((j) => {
       const item = this.document.items.get(j.id);
       return {
-        id:     j.id,
-        name:   item?.name ?? j.id,
-        level:  j.level,
-        isMain: j.id === system.combat.mainJobId,
+        id:          j.id,
+        name:        item?.name ?? j.id,
+        level:       j.level,
+        isMain:      j.id === system.combat.mainJobId,
+        trait:       item?.system?.trait?.effect ?? null,
+        basicAttack: item?.system?.basicAttack?.effect ?? null,
+        limitBreak:  item?.system?.limitBreak?.effect ?? null,
       };
     });
   }

@@ -1,97 +1,125 @@
 <div class="tab tab-content" data-tab="narrative" data-group="primary">
+<div class="tab-grid-2">
 
-  {{!-- Action Ratings --}}
-  <section class="section action-ratings-section">
-    <h3 class="section-title">{{localize "ICON.Section.ActionRatings"}}</h3>
-    <div class="action-ratings-grid">
-      {{#each actionRatings}}
-      <div class="action-rating">
-        <button type="button" class="action-label action-roll-btn"
-          data-action="rollAction"
-          data-action_key="{{this.key}}"
-          data-value="{{this.value}}"
-          data-label="{{this.label}}"
-          title="Roll {{localize this.label}}">
-          {{localize this.label}}
-        </button>
-        <div class="pip-row">
-          {{#each this.pips}}
-          <span class="pip {{#if this}}filled{{/if}}"></span>
-          {{/each}}
-        </div>
-        {{#if ../isEditable}}
-        <input type="number" class="action-input" name="system.narrative.actionRatings.{{this.key}}"
-          value="{{this.value}}" min="0" max="5">
-        {{else}}
-        <span class="action-value">{{this.value}}</span>
+  {{!-- Left column --}}
+  <div class="tab-col">
+
+    {{!-- Bond --}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">Bond</span>
+        {{#if system.narrative.bondId}}
+        <span class="framed-section-subtitle">{{system.narrative.bondId}}</span>
         {{/if}}
       </div>
-      {{/each}}
-    </div>
-  </section>
-
-  {{!-- Bond --}}
-  <section class="section bond-section">
-    <h3 class="section-title">{{localize "ICON.Section.Bond"}}</h3>
-    <div class="field-row">
-      <label>{{localize "ICON.Field.Bond"}}</label>
-      <input type="text" name="system.narrative.bondId" value="{{system.narrative.bondId}}"
-        {{#unless isEditable}}disabled{{/unless}}>
-    </div>
-
-    {{#if system.narrative.bondId}}
-    <div class="xp-triggers">
-      <h4>{{localize "ICON.Section.XpTriggers"}}</h4>
-      <div class="trigger-list">
-        {{!-- Narrative XP triggers (3 ideals) --}}
-        {{#times 3}}
-        <label class="trigger-item">
-          <input type="checkbox"
-            data-action="checkXpTrigger"
-            data-index="{{@index}}"
-            data-trigger-type="narrative"
-            {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
-          <span>{{localize "ICON.Label.Ideal"}} {{add @index 1}}</span>
-        </label>
-        {{/times}}
-      </div>
-      <h4>{{localize "ICON.Section.CombatXpTriggers"}}</h4>
-      <div class="trigger-list">
-        {{#times 4}}
-        <label class="trigger-item">
-          <input type="checkbox"
-            data-action="checkXpTrigger"
-            data-index="{{@index}}"
-            data-trigger-type="combat"
-            {{#if (includes ../system.progression.combatXpTriggers @index)}}checked{{/if}}>
-          <span>{{localize "ICON.Label.CombatTrigger"}} {{add @index 1}}</span>
-        </label>
-        {{/times}}
+      <div class="framed-section-body">
+        {{#if isEditable}}
+        <div style="margin-bottom:8px;">
+          <label style="font-size:0.75em;text-transform:uppercase;color:var(--icon-text-muted);">Bond Name</label>
+          <input type="text" name="system.narrative.bondId" value="{{system.narrative.bondId}}"
+            style="width:100%;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:4px 6px;">
+        </div>
+        {{/if}}
+        {{!-- XP Triggers (narrative ideals) --}}
+        {{#if system.narrative.bondId}}
+        <div style="margin-top:4px;">
+          <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Ideals (XP)</div>
+          {{#times 3}}
+          <label style="display:flex;align-items:center;gap:8px;padding:4px 0;font-size:0.88em;cursor:pointer;">
+            <input type="checkbox"
+              data-action="checkXpTrigger"
+              data-index="{{@index}}"
+              data-trigger-type="narrative"
+              {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
+            <span style="color:var(--icon-text-sec);">{{localize "ICON.Label.Ideal"}} {{add @index 1}}</span>
+          </label>
+          {{/times}}
+        </div>
+        {{/if}}
       </div>
     </div>
-    {{/if}}
-  </section>
 
-  {{!-- XP / Level --}}
-  <section class="section progression-section">
-    <h3 class="section-title">{{localize "ICON.Section.Progression"}}</h3>
-    <div class="progression-row">
-      <div class="xp-display">
-        <label>{{localize "ICON.Field.XP"}}</label>
-        <input type="number" name="system.progression.currentXp"
-          value="{{system.progression.currentXp}}" min="0"
-          {{#unless isEditable}}disabled{{/unless}}>
-        <span class="xp-sep">/</span>
-        <span class="xp-max">{{xpForNext}}</span>
+    {{!-- Progression --}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">Progression</span>
+        <span class="framed-section-subtitle">Chapter {{system.progression.level}}</span>
       </div>
-      {{#if isEditable}}
-      <button type="button" class="btn-xp" data-action="gainXp">+1 XP</button>
-      {{/if}}
+      <div class="framed-section-body">
+        <div class="rail-stat-row" style="margin-bottom:8px;">
+          <span class="rail-stat-label">XP</span>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar">
+              <div class="xp-bar-fill" style="width:{{xpPercent}}%"></div>
+            </div>
+            <span class="xp-label">{{system.progression.currentXp}}/{{xpForNext}}</span>
+          </div>
+        </div>
+        {{#if isEditable}}
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input type="number" name="system.progression.currentXp"
+            value="{{system.progression.currentXp}}" min="0"
+            style="width:60px;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;text-align:center;">
+          <button type="button" class="btn-xp" data-action="gainXp" style="background:var(--icon-accent);color:white;border:none;padding:3px 10px;cursor:pointer;font-size:0.8em;">+1 XP</button>
+        </div>
+        {{/if}}
+        <div style="margin-top:8px;font-size:0.78em;color:var(--icon-text-muted);">
+          {{localize "ICON.Label.AbilitySlots"}}: {{abilitySlots}} · {{localize "ICON.Label.TalentSlots"}}: {{talentSlots}}
+        </div>
+        {{!-- Combat XP triggers --}}
+        <div style="margin-top:10px;">
+          <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Combat XP</div>
+          {{#times 4}}
+          <label style="display:flex;align-items:center;gap:8px;padding:3px 0;font-size:0.85em;cursor:pointer;">
+            <input type="checkbox"
+              data-action="checkXpTrigger"
+              data-index="{{@index}}"
+              data-trigger-type="combat"
+              {{#if (includes ../system.progression.combatXpTriggers @index)}}checked{{/if}}>
+            <span style="color:var(--icon-text-sec);">{{localize "ICON.Label.CombatTrigger"}} {{add @index 1}}</span>
+          </label>
+          {{/times}}
+        </div>
+      </div>
     </div>
-    <div class="slot-display">
-      <span>{{localize "ICON.Label.AbilitySlots"}}: {{abilitySlots}}</span>
-      <span>{{localize "ICON.Label.TalentSlots"}}: {{talentSlots}}</span>
-    </div>
-  </section>
 
+  </div>
+
+  {{!-- Right column: Action Ratings --}}
+  <div class="tab-col">
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.ActionRatings"}}</span>
+      </div>
+      <div class="framed-section-body">
+        {{#each actionRatings}}
+        <div class="action-rating" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <button type="button" class="action-roll-btn"
+            data-action="rollAction"
+            data-action_key="{{this.key}}"
+            data-value="{{this.value}}"
+            data-label="{{this.label}}"
+            title="Roll {{localize this.label}}"
+            style="width:80px;text-align:left;font-size:0.8em;font-weight:600;color:var(--icon-text);background:none;border:none;padding:0;cursor:pointer;">
+            {{localize this.label}}
+          </button>
+          <div class="pip-row" style="display:flex;gap:3px;">
+            {{#each this.pips}}
+            <span class="pip {{#if this}}filled{{/if}}" style="width:10px;height:10px;border-radius:50%;border:1px solid var(--icon-border);{{#if this}}background:var(--icon-accent);border-color:var(--icon-accent);{{/if}}"></span>
+            {{/each}}
+          </div>
+          {{#if ../isEditable}}
+          <input type="number" class="action-input" name="system.narrative.actionRatings.{{this.key}}"
+            value="{{this.value}}" min="0" max="5"
+            style="width:40px;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:1px 4px;text-align:center;">
+          {{else}}
+          <span style="font-size:0.85em;color:var(--icon-text-sec);">{{this.value}}</span>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>

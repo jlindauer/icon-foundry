@@ -1,25 +1,81 @@
-<header class="icon-sheet-header">
-  <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}">
-  <div class="header-details">
-    <input class="character-name" type="text" name="name" value="{{actor.name}}"
+<div class="icon-rail">
+
+  {{!-- Portrait --}}
+  <div class="rail-portrait">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}">
+  </div>
+
+  {{!-- Nameplate --}}
+  <div class="rail-nameplate">
+    <input class="rail-name" type="text" name="name" value="{{actor.name}}"
       {{#unless isEditable}}disabled{{/unless}}>
-    <div class="header-fields">
-      <div class="header-field">
-        <label>{{localize "ICON.Field.Kin"}}</label>
-        <input type="text" name="system.narrative.kin" value="{{system.narrative.kin}}"
-          placeholder="{{localize 'ICON.Field.Kin'}}"
-          {{#unless isEditable}}disabled{{/unless}}>
-      </div>
-      <div class="header-field">
-        <label>{{localize "ICON.Field.Culture"}}</label>
-        <input type="text" name="system.narrative.culture" value="{{system.narrative.culture}}"
-          placeholder="{{localize 'ICON.Field.Culture'}}"
-          {{#unless isEditable}}disabled{{/unless}}>
-      </div>
-      <div class="header-field">
-        <label>{{localize "ICON.Field.Level"}}</label>
-        <span class="level-value">{{system.progression.level}}</span>
-      </div>
+    <div class="rail-sub">
+      <span>Ch. {{system.progression.level}}</span>
+      {{#if mainJobName}}
+      <span class="rail-sub-sep">·</span>
+      <span>{{mainJobName}}</span>
+      {{/if}}
+      {{#if jobClassName}}
+      <span class="rail-sub-sep">·</span>
+      <span>{{jobClassName}}</span>
+      {{/if}}
     </div>
   </div>
-</header>
+
+  {{!-- XP + Stats --}}
+  <div class="rail-stats">
+    <div class="rail-stat-row">
+      <span class="rail-stat-label">XP</span>
+      <div class="xp-bar-wrap">
+        <div class="xp-bar">
+          <div class="xp-bar-fill" style="width: {{xpPercent}}%"></div>
+        </div>
+        <span class="xp-label">{{system.progression.currentXp}}/{{xpForNext}}</span>
+      </div>
+    </div>
+    <div class="rail-stat-row">
+      <span class="rail-stat-label">Resolve</span>
+      <input type="number" name="system.resources.resolve"
+        value="{{system.resources.resolve}}" min="0" style="width:48px;text-align:center;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:1px 4px;"
+        {{#unless isEditable}}disabled{{/unless}}>
+    </div>
+    {{#if defense}}
+    <div class="rail-stat-row">
+      <span class="rail-stat-label">Defense</span>
+      <span class="rail-stat-value">{{defense}}</span>
+    </div>
+    {{/if}}
+    {{#if freeMove}}
+    <div class="rail-stat-row">
+      <span class="rail-stat-label">Move</span>
+      <span class="rail-stat-value">{{freeMove}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Origin --}}
+  <div class="rail-origin">
+    <div class="rail-origin-label">— Origin —</div>
+    {{#if system.narrative.kin}}
+    <div class="rail-origin-row">
+      <div class="rail-origin-key">Kin</div>
+      <div class="rail-origin-val">{{system.narrative.kin}}</div>
+    </div>
+    {{/if}}
+    {{#if system.narrative.culture}}
+    <div class="rail-origin-row">
+      <div class="rail-origin-key">Culture</div>
+      <div class="rail-origin-val">{{system.narrative.culture}}</div>
+    </div>
+    {{/if}}
+    {{#if isEditable}}
+    <div style="margin-top:8px;display:flex;flex-direction:column;gap:4px;">
+      <input type="text" name="system.narrative.kin" value="{{system.narrative.kin}}"
+        placeholder="Kin" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
+      <input type="text" name="system.narrative.culture" value="{{system.narrative.culture}}"
+        placeholder="Culture" style="background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:2px 6px;font-size:0.8em;width:100%;">
+    </div>
+    {{/if}}
+  </div>
+
+</div>

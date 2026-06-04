@@ -1,21 +1,29 @@
 /* ── ICON VTT System Styles ─────────────────────────────────────────────── */
 
 :root {
-  --icon-bg:          #1a1a2e;
-  --icon-surface:     #16213e;
-  --icon-border:      #4a4a6a;
-  --icon-accent:      #e94560;
-  --icon-gold:        #c9a84c;
-  --icon-text:        #e0e0e0;
-  --icon-text-muted:  #888;
-  --icon-positive:    #4caf79;
-  --icon-negative:    #e94560;
-  --icon-crisis:      #ff6b35;
+  --icon-bg:          #0f0f13;
+  --icon-surface:     #1a1a22;
+  --icon-card:        #22222e;
+  --icon-card-hover:  #2a2a3a;
+  --icon-border:      #333345;
+  --icon-border-sel:  #7c5cbf;
+  --icon-accent:      #9b6dff;
+  --icon-accent-dim:  #7c5cbf;
+  --icon-text:        #e8e6f0;
+  --icon-text-muted:  #6b6580;
+  --icon-text-sec:    #9995a8;
+  --icon-positive:    #4caf80;
+  --icon-negative:    #e05555;
+  --icon-crisis:      #e08040;
   --icon-bloodied:    #c94040;
-  --icon-hp:          #4caf79;
+  --icon-hp:          #4caf80;
   --icon-vigor:       #5b8dee;
-  --icon-radius:      6px;
-  --icon-radius-sm:   3px;
+  --icon-radius:      0px;
+  --icon-radius-sm:   0px;
+  --icon-stalwart:    #d44040;
+  --icon-vagabond:    #4488cc;
+  --icon-mendicant:   #44aa66;
+  --icon-wright:      #cc8833;
 }
 
 /* ── Sheet wrapper ──────────────────────────────────────────────────────── */
@@ -35,6 +43,47 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+/* ── Character sheet rail layout ───────────────────────────────────────── */
+
+.icon.actor.character .window-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.icon.actor.character .window-content > form {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+
+[data-application-part="header"] {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  overflow-y: auto;
+  background: var(--icon-surface);
+  border-right: 1px solid var(--icon-border);
+  display: flex;
+  flex-direction: column;
+}
+
+[data-application-part="tabs"] {
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--icon-surface);
+  border-bottom: 1px solid var(--icon-border);
+}
+
+[data-application-part="narrative"],
+[data-application-part="combat"],
+[data-application-part="notes"] {
+  grid-column: 2;
+  grid-row: 2;
+  overflow-y: auto;
+  background: var(--icon-bg);
 }
 
 /* ── Header ─────────────────────────────────────────────────────────────── */
@@ -113,7 +162,7 @@
 .level-value {
   font-size: 1.1em;
   font-weight: bold;
-  color: var(--icon-gold);
+  color: var(--icon-accent);
 }
 
 .item-type-badge {
@@ -173,7 +222,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--icon-gold);
+  color: var(--icon-text-muted);
   margin: 0 0 8px 0;
   display: flex;
   align-items: center;
@@ -184,6 +233,257 @@
   font-size: 0.85em;
   color: var(--icon-text-muted);
   font-weight: normal;
+}
+
+/* ── Framed section card ───────────────────────────────────────────────── */
+
+.framed-section {
+  background: var(--icon-card);
+  border: 1px solid var(--icon-border);
+  margin-bottom: 12px;
+}
+
+.framed-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.framed-section-title {
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--icon-text-muted);
+}
+
+.framed-section-subtitle {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--icon-text);
+  margin-left: 8px;
+}
+
+.framed-section-body {
+  padding: 10px 12px;
+}
+
+/* ── Two-column grid for tab content ───────────────────────────────────── */
+
+.tab-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+}
+
+.tab-grid-2 .span-2 {
+  grid-column: 1 / -1;
+}
+
+.tab-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Expandable details rows ───────────────────────────────────────────── */
+
+details.expandable {
+  border: 1px solid var(--icon-border);
+  background: var(--icon-card);
+  margin-bottom: 6px;
+}
+
+details.expandable summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+details.expandable summary::-webkit-details-marker { display: none; }
+
+details.expandable summary::before {
+  content: "▶";
+  font-size: 0.6em;
+  color: var(--icon-text-muted);
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+
+details.expandable[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.expandable summary:hover {
+  background: var(--icon-card-hover);
+}
+
+.expandable-body {
+  padding: 8px 12px 10px;
+  border-top: 1px solid var(--icon-border);
+  font-size: 0.88em;
+  color: var(--icon-text-sec);
+  line-height: 1.5;
+}
+
+.expandable-field {
+  margin-bottom: 6px;
+}
+
+.expandable-label {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--icon-text-muted);
+  margin-bottom: 2px;
+}
+
+/* ── Rail (left sidebar) ───────────────────────────────────────────────── */
+
+.rail-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--icon-surface);
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.rail-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.rail-portrait-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-text-muted);
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.rail-nameplate {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.rail-name {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--icon-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--icon-border);
+  width: 100%;
+  padding: 2px 0;
+  margin-bottom: 4px;
+}
+
+.rail-name:focus { outline: none; border-color: var(--icon-accent); }
+
+.rail-sub {
+  font-size: 0.75em;
+  color: var(--icon-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.rail-sub-sep { color: var(--icon-border); }
+
+.rail-stats {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.rail-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.rail-stat-label {
+  color: var(--icon-text-muted);
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 0.06em;
+}
+
+.rail-stat-value {
+  font-weight: 600;
+  color: var(--icon-text);
+}
+
+.rail-origin {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.rail-origin-label {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--icon-text-muted);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.rail-origin-row {
+  margin-bottom: 6px;
+}
+
+.rail-origin-key {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: var(--icon-text-muted);
+  letter-spacing: 0.06em;
+}
+
+.rail-origin-val {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--icon-text);
+}
+
+.xp-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.xp-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--icon-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background: var(--icon-accent);
+}
+
+.xp-label {
+  font-size: 0.72em;
+  color: var(--icon-text-muted);
+  white-space: nowrap;
 }
 
 /* ── Action ratings ─────────────────────────────────────────────────────── */
@@ -354,7 +654,7 @@
 .ability-drop-zone.dragover,
 .talent-drop-zone.dragover {
   border-color: var(--icon-accent);
-  background: rgba(233, 69, 96, 0.08);
+  background: rgba(155, 109, 255, 0.08);
 }
 
 .ability-entry,
@@ -402,7 +702,7 @@
 
 .tier-apprentice { border-color: #888; color: #888; }
 .tier-I          { border-color: #5b8dee; color: #5b8dee; }
-.tier-II         { border-color: #c9a84c; color: var(--icon-gold); }
+.tier-II         { border-color: var(--icon-accent-dim); color: var(--icon-accent-dim); }
 .tier-IV         { border-color: var(--icon-accent); color: var(--icon-accent); }
 
 .drop-hint {
@@ -445,11 +745,11 @@
   border-radius: var(--icon-radius-sm);
 }
 
-.job-entry.main-job { border-left: 3px solid var(--icon-gold); }
+.job-entry.main-job { border-left: 3px solid var(--icon-accent); }
 
 .job-id    { flex: 1; font-size: 0.9em; }
 .job-level { font-size: 0.8em; color: var(--icon-text-muted); }
-.main-badge { color: var(--icon-gold); font-size: 0.85em; }
+.main-badge { color: var(--icon-accent); font-size: 0.85em; }
 
 /* ── Progression ────────────────────────────────────────────────────────── */
 
@@ -723,3 +1023,17 @@
 .tab-content::-webkit-scrollbar-track { background: transparent; }
 .sheet-body::-webkit-scrollbar-thumb,
 .tab-content::-webkit-scrollbar-thumb { background: var(--icon-border); border-radius: 3px; }
+
+[data-application-part="narrative"]::-webkit-scrollbar,
+[data-application-part="combat"]::-webkit-scrollbar,
+[data-application-part="notes"]::-webkit-scrollbar { width: 6px; }
+[data-application-part="narrative"]::-webkit-scrollbar-track,
+[data-application-part="combat"]::-webkit-scrollbar-track,
+[data-application-part="notes"]::-webkit-scrollbar-track { background: transparent; }
+[data-application-part="narrative"]::-webkit-scrollbar-thumb,
+[data-application-part="combat"]::-webkit-scrollbar-thumb,
+[data-application-part="notes"]::-webkit-scrollbar-thumb { background: var(--icon-border); border-radius: 3px; }
+
+[data-application-part="header"]::-webkit-scrollbar { width: 4px; }
+[data-application-part="header"]::-webkit-scrollbar-track { background: transparent; }
+[data-application-part="header"]::-webkit-scrollbar-thumb { background: var(--icon-border); border-radius: 2px; }

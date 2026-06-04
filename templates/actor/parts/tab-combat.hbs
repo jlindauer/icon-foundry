@@ -1,121 +1,159 @@
 <div class="tab tab-content" data-tab="combat" data-group="primary">
+<div class="tab-grid-2">
 
   {{!-- Resources --}}
-  <section class="section resources-section {{#if isBloodied}}bloodied{{/if}} {{#if isInCrisis}}crisis{{/if}}">
-    <div class="resource-block">
-      <label>{{localize "ICON.Resource.HP"}}</label>
-      <div class="resource-bar-wrap">
-        <progress class="resource-bar hp-bar"
-          value="{{system.resources.hp.value}}"
-          max="{{system.resources.hp.max}}"></progress>
-        <span class="resource-value" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
-        <span class="resource-sep">/</span>
-        <span class="resource-value" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
+  <div class="framed-section">
+    <div class="framed-section-header">
+      <span class="framed-section-title">Resources</span>
+      {{#if isBloodied}}<span style="color:var(--icon-bloodied);font-size:0.75em;font-weight:700;">BLOODIED</span>{{/if}}
+      {{#if isInCrisis}}<span style="color:var(--icon-crisis);font-size:0.75em;font-weight:700;">CRISIS</span>{{/if}}
+    </div>
+    <div class="framed-section-body">
+      <div class="resource-block" style="margin-bottom:8px;">
+        <label style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;color:var(--icon-text-muted);">{{localize "ICON.Resource.HP"}}</label>
+        <div class="resource-bar-wrap">
+          <progress class="resource-bar hp-bar" value="{{system.resources.hp.value}}" max="{{system.resources.hp.max}}"></progress>
+          <span class="resource-value" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
+          <span class="resource-sep">/</span>
+          <span class="resource-value" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
+        </div>
+      </div>
+      <div class="resource-block" style="margin-bottom:8px;">
+        <label style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;color:var(--icon-text-muted);">{{localize "ICON.Resource.Vigor"}}</label>
+        <div class="resource-bar-wrap">
+          <progress class="resource-bar vigor-bar" value="{{system.resources.vigor.value}}" max="{{system.resources.vigor.max}}"></progress>
+          <span class="resource-value" data-field="system.resources.vigor.value">{{system.resources.vigor.value}}</span>
+          <span class="resource-sep">/</span>
+          <span class="resource-value" data-field="system.resources.vigor.max">{{system.resources.vigor.max}}</span>
+        </div>
       </div>
     </div>
-    <div class="resource-block">
-      <label>{{localize "ICON.Resource.Vigor"}}</label>
-      <div class="resource-bar-wrap">
-        <progress class="resource-bar vigor-bar"
-          value="{{system.resources.vigor.value}}"
-          max="{{system.resources.vigor.max}}"></progress>
-        <span class="resource-value" data-field="system.resources.vigor.value">{{system.resources.vigor.value}}</span>
-        <span class="resource-sep">/</span>
-        <span class="resource-value" data-field="system.resources.vigor.max">{{system.resources.vigor.max}}</span>
-      </div>
-    </div>
-    <div class="resource-block">
-      <label>{{localize "ICON.Resource.Resolve"}}</label>
-      <input type="number" name="system.resources.resolve"
-        value="{{system.resources.resolve}}" min="0"
-        {{#unless isEditable}}disabled{{/unless}}>
-    </div>
-  </section>
+  </div>
 
   {{!-- Conditions --}}
-  <section class="section conditions-section">
-    <h3 class="section-title">{{localize "ICON.Section.Conditions"}}</h3>
-    <div class="conditions-row">
-      {{#each conditions}}
-      <button type="button"
-        class="condition-pip {{#if this.active}}active{{/if}} {{#if this.isPositive}}positive{{/if}}"
-        data-action="toggleCondition"
-        data-condition-id="{{this.id}}"
-        title="{{localize this.label}}">
-        {{localize this.label}}
-      </button>
-      {{/each}}
+  <div class="framed-section">
+    <div class="framed-section-header">
+      <span class="framed-section-title">{{localize "ICON.Section.Conditions"}}</span>
     </div>
-  </section>
-
-  {{!-- Active Abilities --}}
-  <section class="section abilities-section">
-    <h3 class="section-title">
-      {{localize "ICON.Section.ActiveAbilities"}}
-      <span class="slot-count">{{activeAbilities.length}}/{{system.abilitySlots}}</span>
-    </h3>
-    <div class="ability-drop-zone ability-list">
-      {{#each activeAbilities}}
-      <div class="ability-entry" draggable="true">
-        <div class="ability-info">
-          <span class="ability-name">{{this.name}}</span>
-          {{#if this.system.cost}}
-          <span class="ability-cost">{{this.system.cost}}</span>
-          {{/if}}
-          {{#if this.system.tier}}
-          <span class="ability-tier tier-{{this.system.tier}}">{{this.system.tier}}</span>
-          {{/if}}
-        </div>
-        {{#if ../isEditable}}
-        <button type="button" class="btn-remove" data-action="removeAbility" data-item-id="{{this.id}}"
-          title="{{localize 'ICON.Action.Remove'}}">
-          <i class="fas fa-times"></i>
+    <div class="framed-section-body">
+      <div class="conditions-row" style="display:flex;flex-wrap:wrap;gap:4px;">
+        {{#each conditions}}
+        <button type="button"
+          class="condition-pip {{#if this.active}}active{{/if}} {{#if this.isPositive}}positive{{/if}}"
+          data-action="toggleCondition"
+          data-condition-id="{{this.id}}"
+          title="{{localize this.label}}">
+          {{localize this.label}}
         </button>
-        {{/if}}
+        {{/each}}
       </div>
+    </div>
+  </div>
+
+  {{!-- Active Abilities (full width) --}}
+  <div class="framed-section span-2">
+    <div class="framed-section-header">
+      <span class="framed-section-title">{{localize "ICON.Section.ActiveAbilities"}}</span>
+      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{activeAbilities.length}}/{{system.abilitySlots}}</span>
+    </div>
+    <div class="framed-section-body">
+      {{#each activeAbilities}}
+      <details class="expandable">
+        <summary>
+          <span style="font-weight:600;font-size:0.9em;flex:1;">{{this.name}}</span>
+          {{#if this.system.cost}}<span style="font-size:0.78em;color:var(--icon-text-muted);">{{this.system.cost}}</span>{{/if}}
+          {{#if this.system.tier}}<span style="font-size:0.72em;background:var(--icon-border);padding:1px 6px;color:var(--icon-text-sec);">{{this.system.tier}}</span>{{/if}}
+          {{#if ../isEditable}}
+          <button type="button" class="btn-remove" data-action="removeAbility" data-item-id="{{this.id}}"
+            title="{{localize 'ICON.Action.Remove'}}" style="margin-left:auto;background:none;border:none;color:var(--icon-text-muted);cursor:pointer;padding:0 4px;">
+            <i class="fas fa-times"></i>
+          </button>
+          {{/if}}
+        </summary>
+        {{#if this.system.effect}}
+        <div class="expandable-body">{{this.system.effect}}</div>
+        {{else}}
+        <div class="expandable-body" style="color:var(--icon-text-muted);font-style:italic;">No effect text.</div>
+        {{/if}}
+      </details>
       {{/each}}
       {{#if isEditable}}
-      <div class="drop-hint">{{localize "ICON.Hint.DropAbility"}}</div>
+      <div class="drop-hint" style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">{{localize "ICON.Hint.DropAbility"}}</div>
       {{/if}}
     </div>
-  </section>
+  </div>
 
   {{!-- Talents --}}
-  <section class="section talents-section">
-    <h3 class="section-title">
-      {{localize "ICON.Section.Talents"}}
-      <span class="slot-count">{{selectedTalents.length}}/{{system.talentSlots}}</span>
-    </h3>
-    <div class="talent-drop-zone talent-list">
+  <div class="framed-section">
+    <div class="framed-section-header">
+      <span class="framed-section-title">{{localize "ICON.Section.Talents"}}</span>
+      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{selectedTalents.length}}/{{system.talentSlots}}</span>
+    </div>
+    <div class="framed-section-body">
       {{#each selectedTalents}}
-      <div class="talent-entry">
-        <span class="talent-name">{{this.name}}</span>
-        {{#if ../isEditable}}
-        <button type="button" class="btn-remove" data-action="removeTalent" data-item-id="{{this.id}}"
-          title="{{localize 'ICON.Action.Remove'}}">
-          <i class="fas fa-times"></i>
-        </button>
+      <details class="expandable">
+        <summary>
+          <span style="font-weight:600;font-size:0.9em;flex:1;">{{this.name}}</span>
+          {{#if ../isEditable}}
+          <button type="button" class="btn-remove" data-action="removeTalent" data-item-id="{{this.id}}"
+            title="{{localize 'ICON.Action.Remove'}}" style="margin-left:auto;background:none;border:none;color:var(--icon-text-muted);cursor:pointer;padding:0 4px;">
+            <i class="fas fa-times"></i>
+          </button>
+          {{/if}}
+        </summary>
+        {{#if this.system.effect}}
+        <div class="expandable-body">{{this.system.effect}}</div>
+        {{else}}
+        <div class="expandable-body" style="color:var(--icon-text-muted);font-style:italic;">No description.</div>
         {{/if}}
-      </div>
+      </details>
       {{/each}}
       {{#if isEditable}}
-      <div class="drop-hint">{{localize "ICON.Hint.DropTalent"}}</div>
+      <div class="drop-hint" style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">{{localize "ICON.Hint.DropTalent"}}</div>
       {{/if}}
     </div>
-  </section>
+  </div>
 
   {{!-- Jobs --}}
-  <section class="section jobs-section">
-    <h3 class="section-title">{{localize "ICON.Section.Jobs"}}</h3>
-    <div class="jobs-list">
-      {{#each jobs}}
-      <div class="job-entry {{#if this.isMain}}main-job{{/if}}">
-        <span class="job-name">{{this.name}}</span>
-        <span class="job-level">Lv {{this.level}}</span>
-        {{#if this.isMain}}<span class="main-badge">★</span>{{/if}}
-      </div>
-      {{/each}}
+  <div class="framed-section">
+    <div class="framed-section-header">
+      <span class="framed-section-title">{{localize "ICON.Section.Jobs"}}</span>
     </div>
-  </section>
+    <div class="framed-section-body">
+      {{#each jobs}}
+      <details class="expandable">
+        <summary>
+          <span style="font-weight:600;font-size:0.9em;flex:1;">{{this.name}}</span>
+          <span style="font-size:0.78em;color:var(--icon-text-muted);">Lv {{this.level}}</span>
+          {{#if this.isMain}}<span style="font-size:0.7em;background:var(--icon-accent-dim);color:white;padding:1px 6px;margin-left:4px;">Main</span>{{/if}}
+        </summary>
+        <div class="expandable-body">
+          {{#if this.trait}}
+          <div class="expandable-field">
+            <div class="expandable-label">Trait</div>
+            <div>{{this.trait}}</div>
+          </div>
+          {{/if}}
+          {{#if this.basicAttack}}
+          <div class="expandable-field">
+            <div class="expandable-label">Basic Attack</div>
+            <div>{{this.basicAttack}}</div>
+          </div>
+          {{/if}}
+          {{#if this.limitBreak}}
+          <div class="expandable-field">
+            <div class="expandable-label">Limit Break</div>
+            <div>{{this.limitBreak}}</div>
+          </div>
+          {{/if}}
+        </div>
+      </details>
+      {{/each}}
+      {{#if isEditable}}
+      <div style="text-align:center;padding:8px;font-size:0.8em;color:var(--icon-text-muted);border:1px dashed var(--icon-border);margin-top:4px;">Drop a job here</div>
+      {{/if}}
+    </div>
+  </div>
 
+</div>
 </div>
