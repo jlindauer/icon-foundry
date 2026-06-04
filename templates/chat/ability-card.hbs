@@ -15,22 +15,13 @@
   <div class="icon-ability-card-effect">{{{effect}}}</div>
   {{/if}}
 
-  {{!-- To-hit roll: action rating buttons (only for attack abilities) --}}
-  {{#if actionRatings.length}}
+  {{#if (or isAttack rollableFormulas.length)}}
   <div class="icon-ability-card-rolls">
-    <span class="icon-roll-group-label">Roll to Hit</span>
-    {{#each actionRatings}}
-    <button type="button" class="icon-action-roll-btn" data-value="{{this.value}}" data-label="{{this.label}}" title="{{this.label}} ({{this.value}})">
-      {{this.label}} {{this.value}}
+    {{#if isAttack}}
+    <button type="button" class="icon-roll-btn" data-formula="1d10" data-label="Attack">
+      <i class="fas fa-dice-d10"></i> Roll to Hit
     </button>
-    {{/each}}
-  </div>
-  {{/if}}
-
-  {{!-- Damage rolls: inline dice formulas found in the effect text --}}
-  {{#if rollableFormulas.length}}
-  <div class="icon-ability-card-rolls">
-    <span class="icon-roll-group-label">Damage Rolls</span>
+    {{/if}}
     {{#each rollableFormulas}}
     <button type="button" class="icon-roll-btn" data-formula="{{this}}">
       <i class="fas fa-dice-d6"></i> {{this}}

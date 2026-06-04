@@ -1731,21 +1731,3 @@ details.expandable summary:hover {
   color: #fff;
 }
 
-.icon-ability-card .icon-action-roll-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 8px;
-  background: var(--icon-surface-raised, #2a2a3a);
-  border: 1px solid var(--icon-border);
-  border-radius: 3px;
-  color: var(--icon-text-sec);
-  font-size: 0.78em;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
-}
-
-.icon-ability-card .icon-action-roll-btn:hover {
-  background: var(--icon-accent-dim);
-  border-color: var(--icon-accent);
-  color: #fff;
-}

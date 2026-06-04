@@ -491,18 +491,9 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
     const isAttack = (tags ?? []).some((t) => t.toLowerCase() === "attack");
 
-    // For attack abilities, include the actor's action ratings so the card can show to-hit buttons
-    const actionRatings = isAttack
-      ? Object.entries(ICON.ACTION_RATINGS).map(([key, labelKey]) => ({
-          key,
-          label:    game.i18n.localize(labelKey),
-          value:    actor.system.narrative?.actionRatings?.[key] ?? 0,
-        }))
-      : [];
-
     const content = await renderTemplate(
       "systems/icon/templates/chat/ability-card.hbs",
-      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name, actorId: actor.id, isAttack, rollableFormulas, actionRatings },
+      { name, cost, tags: tags ?? [], flavor, effect, actorName: actor.name, actorId: actor.id, isAttack, rollableFormulas },
     );
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
