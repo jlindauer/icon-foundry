@@ -82,28 +82,18 @@ Hooks.once("init", () => {
     label:       "ICON.SheetLabel.Item",
   });
 
-  // ── Status effects ────────────────────────────────────────────────────
+  // ── Status effects (match web app conditions) ─────────────────────────
   CONFIG.statusEffects = [
-    // Positive
-    { id: "armor",       name: "ICON.Condition.Armor",       icon: "icons/svg/shield.svg" },
-    { id: "evasion",     name: "ICON.Condition.Evasion",     icon: "icons/svg/degen.svg" },
-    { id: "haste",       name: "ICON.Condition.Haste",       icon: "icons/svg/lightning.svg" },
-    { id: "shield",      name: "ICON.Condition.Shield",      icon: "icons/svg/shield.svg" },
-    { id: "stealth",     name: "ICON.Condition.Stealth",     icon: "icons/svg/eye.svg" },
-    { id: "strength",    name: "ICON.Condition.Strength",    icon: "icons/svg/sword.svg" },
-    { id: "sturdy",      name: "ICON.Condition.Sturdy",      icon: "icons/svg/anchor.svg" },
-    { id: "unstoppable", name: "ICON.Condition.Unstoppable", icon: "icons/svg/angel.svg" },
-    { id: "keen",        name: "ICON.Condition.Keen",        icon: "icons/svg/upgrade.svg" },
-    // Negative
-    { id: "afflicted",   name: "ICON.Condition.Afflicted",   icon: "icons/svg/poison.svg" },
-    { id: "blind",       name: "ICON.Condition.Blind",       icon: "icons/svg/blind.svg" },
-    { id: "bloodied",    name: "ICON.Condition.Bloodied",    icon: "icons/svg/blood.svg" },
-    { id: "brand",       name: "ICON.Condition.Brand",       icon: "icons/svg/fire.svg" },
-    { id: "crisis",      name: "ICON.Condition.Crisis",      icon: "icons/svg/skull.svg" },
-    { id: "daze",        name: "ICON.Condition.Daze",        icon: "icons/svg/daze.svg" },
-    { id: "immobile",    name: "ICON.Condition.Immobile",    icon: "icons/svg/net.svg" },
-    { id: "slow",        name: "ICON.Condition.Slow",        icon: "icons/svg/downgrade.svg" },
-    { id: "stun",        name: "ICON.Condition.Stun",        icon: "icons/svg/stun.svg" },
+    { id: "prone",       name: "ICON.Condition.Prone",       icon: "icons/svg/falling.svg" },
+    { id: "slowed",      name: "ICON.Condition.Slowed",      icon: "icons/svg/downgrade.svg" },
+    { id: "immobilized", name: "ICON.Condition.Immobilized", icon: "icons/svg/net.svg" },
+    { id: "blinded",     name: "ICON.Condition.Blinded",     icon: "icons/svg/blind.svg" },
+    { id: "dazed",       name: "ICON.Condition.Dazed",       icon: "icons/svg/daze.svg" },
+    { id: "weakened",    name: "ICON.Condition.Weakened",    icon: "icons/svg/downgrade.svg" },
+    { id: "burning",     name: "ICON.Condition.Burning",     icon: "icons/svg/fire.svg" },
+    { id: "bleeding",    name: "ICON.Condition.Bleeding",    icon: "icons/svg/blood.svg" },
+    { id: "stunned",     name: "ICON.Condition.Stunned",     icon: "icons/svg/stun.svg" },
+    { id: "exposed",     name: "ICON.Condition.Exposed",     icon: "icons/svg/degen.svg" },
   ];
 
   // ── Handlebars helpers ────────────────────────────────────────────────

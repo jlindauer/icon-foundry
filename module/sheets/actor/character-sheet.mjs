@@ -9,14 +9,22 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
-      toggleCondition:  IconCharacterSheet.#onToggleCondition,
-      checkXpTrigger:   IconCharacterSheet.#onCheckXpTrigger,
-      gainXp:           IconCharacterSheet.#onGainXp,
-      removeAbility:    IconCharacterSheet.#onRemoveAbility,
-      removeTalent:     IconCharacterSheet.#onRemoveTalent,
-      rollAction:       IconCharacterSheet.#onRollAction,
-      setActionRating:  IconCharacterSheet.#onSetActionRating,
-      openImport:       IconCharacterSheet.#onOpenImport,
+      toggleCondition:   IconCharacterSheet.#onToggleCondition,
+      checkXpTrigger:    IconCharacterSheet.#onCheckXpTrigger,
+      gainXp:            IconCharacterSheet.#onGainXp,
+      removeAbility:     IconCharacterSheet.#onRemoveAbility,
+      removeTalent:      IconCharacterSheet.#onRemoveTalent,
+      rollAction:        IconCharacterSheet.#onRollAction,
+      setActionRating:   IconCharacterSheet.#onSetActionRating,
+      openImport:        IconCharacterSheet.#onOpenImport,
+      setStrain:         IconCharacterSheet.#onSetStrain,
+      setEffort:         IconCharacterSheet.#onSetEffort,
+      camp:              IconCharacterSheet.#onCamp,
+      addBurden:         IconCharacterSheet.#onAddBurden,
+      deleteBurden:      IconCharacterSheet.#onDeleteBurden,
+      tickBurden:        IconCharacterSheet.#onTickBurden,
+      addSessionNote:    IconCharacterSheet.#onAddSessionNote,
+      deleteSessionNote: IconCharacterSheet.#onDeleteSessionNote,
     },
   };
 
@@ -94,25 +102,38 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         context.isInCrisis = system.isInCrisis;
         break;
 
-      case "narrative":
-        context.tab = context.tabs.narrative;
+      case "narrative": {
+        context.tab           = context.tabs.narrative;
         context.actionRatings = this._prepareActionRatings(system);
-        context.bondIdeals = await this._prepareBondIdeals(actor, system);
+        const bondData        = await this._prepareBondData(actor, system);
+        context.bondData      = bondData;
+        // Strain / Effort
+        context.maxStrain  = bondData?.strain  ?? 0;
+        context.maxEffort  = bondData?.effort  ?? 0;
+        context.curStrain  = Math.min(system.strain?.current ?? 0, context.maxStrain);
+        context.curEffort  = Math.min(system.strain?.effort  ?? context.maxEffort, context.maxEffort);
+        context.isBroken   = context.maxStrain > 0 && context.curStrain >= context.maxStrain;
+        context.isExhausted = context.maxEffort > 0 && context.curEffort <= 0;
+        context.strainSegs = Array.from({ length: context.maxStrain }, (_, i) => i < context.curStrain);
+        context.effortDots = Array.from({ length: context.maxEffort }, (_, i) => i < context.curEffort);
+        context.burdens    = system.burdens ?? [];
         break;
+      }
 
       case "combat":
-        context.tab = context.tabs.combat;
-        context.activeAbilities = await this._prepareAbilities(actor);
-        context.selectedTalents = await this._prepareTalents(actor);
-        context.conditions = this._prepareConditions(system);
-        context.jobs = this._prepareJobs(system);
-        context.isBloodied = system.isBloodied;
-        context.isInCrisis = system.isInCrisis;
-        context.xpForNext = system.xpForNextLevel;
-        context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
-        context.abilitySlots = system.abilitySlots;
-        context.talentSlots = system.talentSlots;
+        context.tab              = context.tabs.combat;
+        context.abilityGroups    = this._prepareAbilitiesByTier(actor);
+        context.selectedTalents  = await this._prepareTalents(actor);
+        context.conditions       = this._prepareConditions(system);
+        context.jobs             = this._prepareJobs(system);
+        context.isBloodied       = system.isBloodied;
+        context.isInCrisis       = system.isInCrisis;
+        context.xpForNext        = system.xpForNextLevel;
+        context.xpPercent        = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
+        context.abilitySlots     = system.abilitySlots;
+        context.talentSlots      = system.talentSlots;
         context.combatXpTriggers = ICON.COMBAT_XP_TRIGGERS;
+        context.totalAbilities   = (system.combat.activeAbilities ?? []).length;
         break;
 
       case "notes":
@@ -139,55 +160,20 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   }
 
   _prepareActionRatings(system) {
+    const bondAction = system.narrative.bondActionChoice ?? "";
     return Object.entries(ICON.ACTION_RATINGS).map(([key, label]) => ({
       key,
       label,
       value: system.narrative.actionRatings[key] ?? 0,
-      pips: Array.from({ length: 5 }, (_, i) => i < (system.narrative.actionRatings[key] ?? 0)),
+      pips:  Array.from({ length: 5 }, (_, i) => i < (system.narrative.actionRatings[key] ?? 0)),
+      isBondAction: bondAction.toLowerCase() === key.toLowerCase(),
     }));
   }
 
-  async _prepareAbilities(actor) {
-    const ids = actor.system.combat.activeAbilities ?? [];
-    return ids.map((id) => actor.items.get(id) ?? { id, name: id, system: {} });
-  }
-
-  async _prepareTalents(actor) {
-    const ids = actor.system.combat.selectedTalents ?? [];
-    return ids.map((id) => actor.items.get(id) ?? { id, name: id, system: {} });
-  }
-
-  _prepareConditions(system) {
-    const active = new Set(system.state.conditions ?? []);
-    const all = [...ICON.CONDITIONS_POSITIVE, ...ICON.CONDITIONS_NEGATIVE];
-    return all.map((id) => ({
-      id,
-      label: `ICON.Condition.${id.charAt(0).toUpperCase() + id.slice(1)}`,
-      active: active.has(id),
-      isPositive: ICON.CONDITIONS_POSITIVE.includes(id),
-    }));
-  }
-
-  _prepareJobs(system) {
-    return (system.combat.jobs ?? []).map((j) => {
-      const item = this.document.items.get(j.id);
-      return {
-        id:          j.id,
-        name:        item?.name ?? j.id,
-        level:       j.level,
-        isMain:      j.id === system.combat.mainJobId,
-        trait:       item?.system?.trait?.effect ?? null,
-        basicAttack: item?.system?.basicAttack?.effect ?? null,
-        limitBreak:  item?.system?.limitBreak?.effect ?? null,
-      };
-    });
-  }
-
-  async _prepareBondIdeals(actor, system) {
+  /** Resolve a bond item by name from embedded items or compendiums. */
+  async _resolveBond(actor, system) {
     const bondName = system.narrative.bondId;
-    if (!bondName) return [];
-
-    // Check embedded items first, then search compendiums
+    if (!bondName) return null;
     let bondItem = actor.items.find((i) => i.type === "bond" && i.name === bondName);
     if (!bondItem) {
       for (const pack of game.packs) {
@@ -200,8 +186,78 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         }
       }
     }
+    return bondItem ?? null;
+  }
 
-    return bondItem?.system?.ideals ?? [];
+  async _prepareBondData(actor, system) {
+    const bondItem = await this._resolveBond(actor, system);
+    if (!bondItem) return null;
+
+    const s = bondItem.system;
+    const selectedPowerNames = new Set(system.narrative.selectedPowers ?? []);
+    const selectedGearKit    = system.narrative.selectedGearKit ?? "";
+
+    const activePowers = (s.powers ?? []).filter((p) => selectedPowerNames.has(p.name));
+    const gearKits     = (s.gearKits ?? []).map((k) => ({
+      ...k,
+      isPreferred: k.name === selectedGearKit,
+    }));
+
+    return {
+      name:           bondItem.name,
+      description:    s.description       ?? "",
+      secondWind:     s.secondWind        ?? "",
+      specialAbility: s.specialAbility    ?? "",
+      effort:         s.effort            ?? 0,
+      strain:         s.strain            ?? 0,
+      ideals:         s.ideals            ?? [],
+      powers:         activePowers,
+      gearKits,
+    };
+  }
+
+  /** Group active abilities by tier for the combat tab. */
+  _prepareAbilitiesByTier(actor) {
+    const ids    = actor.system.combat.activeAbilities ?? [];
+    const items  = ids.map((id) => actor.items.get(id) ?? { id, name: id, system: { tier: "apprentice" } });
+    const order  = ["apprentice", "I", "II", "IV"];
+    const groups = {};
+    for (const item of items) {
+      const tier = item.system?.tier ?? "apprentice";
+      (groups[tier] ??= []).push(item);
+    }
+    return order
+      .filter((t) => groups[t]?.length)
+      .map((tier) => ({ tier, label: `ICON.Tier.${tier === "apprentice" ? "Apprentice" : tier}`, abilities: groups[tier] }));
+  }
+
+  async _prepareTalents(actor) {
+    const ids = actor.system.combat.selectedTalents ?? [];
+    return ids.map((id) => actor.items.get(id) ?? { id, name: id, system: {} });
+  }
+
+  _prepareConditions(system) {
+    const active = new Set(system.state.conditions ?? []);
+    return ICON.CONDITIONS.map((id) => ({
+      id,
+      label:  `ICON.Condition.${id.charAt(0).toUpperCase() + id.slice(1)}`,
+      active: active.has(id),
+    }));
+  }
+
+  _prepareJobs(system) {
+    return (system.combat.jobs ?? []).map((j) => {
+      const item = this.document.items.get(j.id);
+      return {
+        id:          j.id,
+        name:        item?.name ?? j.id,
+        level:       j.level,
+        isMain:      j.id === system.combat.mainJobId,
+        trait:       item?.system?.trait?.effect     ?? null,
+        basicAttack: item?.system?.basicAttack?.effect ?? null,
+        limitBreak:  item?.system?.limitBreak?.effect  ?? null,
+      };
+    });
   }
 
   // ── Render hook ───────────────────────────────────────────────────────────
@@ -215,6 +271,14 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
 
     // Bind drag-drop to the whole sheet; _onDrop uses closest() to identify the zone
     this.#dragDrop.bind(this.element);
+
+    // Clock size picker toggle for burden add form
+    this.element.querySelectorAll(".clock-size-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.closest(".clock-picker").querySelectorAll(".clock-size-btn").forEach((b) => b.classList.remove("selected"));
+        btn.classList.add("selected");
+      });
+    });
 
     // Inline HP/Vigor editing on click
     this.element.querySelectorAll(".resource-value[data-field]").forEach((el) => {
@@ -371,5 +435,64 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       speaker: ChatMessage.getSpeaker({ actor }),
       flavor:  `${actor.name} — ${label}`,
     });
+  }
+
+  // Strain: clicking segment i → set to i (if already filled) or i+1
+  static async #onSetStrain(event, target) {
+    const i   = parseInt(target.dataset.index);
+    const cur = this.document.system.strain?.current ?? 0;
+    await this.document.update({ "system.strain.current": i < cur ? i : i + 1 });
+  }
+
+  // Effort: clicking dot i → set to i (if already filled) or i+1
+  static async #onSetEffort(event, target) {
+    const i    = parseInt(target.dataset.index);
+    const cur  = this.document.system.strain?.effort ?? 0;
+    await this.document.update({ "system.strain.effort": i < cur ? i : i + 1 });
+  }
+
+  // Camp: reset strain to 0, restore effort to max from bond
+  static async #onCamp(event, target) {
+    const bondItem  = await this._resolveBond(this.document, this.document.system);
+    const maxEffort = bondItem?.system?.effort ?? 0;
+    await this.document.update({ "system.strain.current": 0, "system.strain.effort": maxEffort });
+  }
+
+  static async #onAddBurden(event, target) {
+    const name      = target.closest("[data-burden-form]")?.querySelector("[data-burden-name]")?.value?.trim();
+    const clockSize = parseInt(target.closest("[data-burden-form]")?.querySelector("[data-burden-clock].selected")?.dataset?.burdenClock ?? 4);
+    if (!name) return ui.notifications.warn("Enter a burden name first.");
+    const burdens = [...(this.document.system.burdens ?? [])];
+    burdens.push({ id: foundry.utils.randomID(), name, clockSize, ticked: 0 });
+    await this.document.update({ "system.burdens": burdens });
+  }
+
+  static async #onDeleteBurden(event, target) {
+    const id      = target.dataset.burdenId;
+    const burdens = (this.document.system.burdens ?? []).filter((b) => b.id !== id);
+    await this.document.update({ "system.burdens": burdens });
+  }
+
+  // Clicking clock segment i → set to i (if already filled) or i+1
+  static async #onTickBurden(event, target) {
+    const burdenId = target.dataset.burdenId;
+    const i        = parseInt(target.dataset.index);
+    const burdens  = (this.document.system.burdens ?? []).map((b) => {
+      if (b.id !== burdenId) return b;
+      return { ...b, ticked: i < b.ticked ? i : i + 1 };
+    });
+    await this.document.update({ "system.burdens": burdens });
+  }
+
+  static async #onAddSessionNote(event, target) {
+    const today = new Date().toISOString().slice(0, 10);
+    const notes = [{ id: foundry.utils.randomID(), date: today, content: "" }, ...(this.document.system.state.sessionNotes ?? [])];
+    await this.document.update({ "system.state.sessionNotes": notes });
+  }
+
+  static async #onDeleteSessionNote(event, target) {
+    const id    = target.dataset.noteId;
+    const notes = (this.document.system.state.sessionNotes ?? []).filter((n) => n.id !== id);
+    await this.document.update({ "system.state.sessionNotes": notes });
   }
 }

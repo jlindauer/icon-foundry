@@ -1,4 +1,4 @@
-const { SchemaField, StringField, NumberField, ArrayField, BooleanField, HTMLField, ObjectField } =
+const { SchemaField, StringField, NumberField, ArrayField, BooleanField, HTMLField } =
   foundry.data.fields;
 
 export class CharacterDataModel extends foundry.abstract.TypeDataModel {
@@ -59,10 +59,23 @@ export class CharacterDataModel extends foundry.abstract.TypeDataModel {
         resolve: new NumberField({ initial: 0, min: 0, integer: true }),
       }),
 
+      // ── Narrative resources ───────────────────────────────────────────────
+      strain: new SchemaField({
+        current: new NumberField({ initial: 0, min: 0, integer: true }),
+        effort:  new NumberField({ initial: 0, min: 0, integer: true }),
+      }),
+
+      burdens: new ArrayField(new SchemaField({
+        id:        new StringField({ required: true }),
+        name:      new StringField({ initial: "" }),
+        clockSize: new NumberField({ initial: 4, choices: [4, 6, 10], integer: true }),
+        ticked:    new NumberField({ initial: 0, min: 0, integer: true }),
+      })),
+
       // ── State ─────────────────────────────────────────────────────────────
       state: new SchemaField({
-        conditions: new ArrayField(new StringField()),
-        notes: new HTMLField({ initial: "" }),
+        conditions:  new ArrayField(new StringField()),
+        description: new StringField({ initial: "" }),
         sessionNotes: new ArrayField(new SchemaField({
           id:      new StringField({ required: true }),
           date:    new StringField({ initial: "" }),

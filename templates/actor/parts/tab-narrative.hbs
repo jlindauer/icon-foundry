@@ -1,52 +1,203 @@
 <div class="tab tab-content" data-tab="narrative" data-group="primary">
 <div class="tab-grid-2">
 
-  {{!-- Left column: Bond --}}
+  {{!-- ══ LEFT COLUMN ══ --}}
   <div class="tab-col">
+
+    {{!-- The Bond --}}
     <div class="framed-section">
       <div class="framed-section-header">
-        <span class="framed-section-title">Bond</span>
-        {{#if system.narrative.bondId}}
-        <span class="framed-section-subtitle">{{system.narrative.bondId}}</span>
-        {{/if}}
+        <span class="framed-section-title">{{localize "ICON.Section.Bond"}}</span>
+        {{#if bondData}}<span class="framed-section-subtitle">{{bondData.name}}</span>{{/if}}
       </div>
       <div class="framed-section-body">
         {{#if isEditable}}
-        <div style="margin-bottom:8px;">
-          <label style="font-size:0.75em;text-transform:uppercase;color:var(--icon-text-muted);">Bond Name</label>
+        <div style="margin-bottom:10px;">
+          <label class="field-label">Bond Name</label>
           <input type="text" name="system.narrative.bondId" value="{{system.narrative.bondId}}"
             style="width:100%;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:4px 6px;">
         </div>
         {{/if}}
-        {{!-- Ideals (XP Triggers) --}}
-        {{#if system.narrative.bondId}}
-        <div style="margin-top:4px;">
-          <div style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);margin-bottom:6px;">Ideals (XP)</div>
-          {{#times 3}}
-          <label style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:0.88em;cursor:pointer;">
-            <input type="checkbox"
-              data-action="checkXpTrigger"
-              data-index="{{@index}}"
-              data-trigger-type="narrative"
-              style="margin-top:3px;flex-shrink:0;"
-              {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
-            <span style="color:var(--icon-text-sec);">
-              {{#if (lookup ../bondIdeals @index)}}
-                {{lookup ../bondIdeals @index}}
-              {{else}}
-                Ideal {{add @index 1}}
-              {{/if}}
-            </span>
-          </label>
-          {{/times}}
+        {{#if bondData}}
+        {{#if bondData.description}}
+        <p class="bond-description">{{bondData.description}}</p>
+        {{/if}}
+        <div class="bond-ability-row">
+          <div class="bond-ability-label">Second Wind</div>
+          <div class="bond-ability-text">{{bondData.secondWind}}</div>
         </div>
+        {{#if bondData.specialAbility}}
+        <div class="bond-ability-row">
+          <div class="bond-ability-label">Special Ability</div>
+          <div class="bond-ability-text">{{bondData.specialAbility}}</div>
+        </div>
+        {{/if}}
+        <div class="bond-mini-stats">
+          <span><span class="mini-stat-label">Effort</span> {{bondData.effort}}</span>
+          <span><span class="mini-stat-label">Strain</span> {{bondData.strain}}</span>
+          {{#if system.narrative.bondActionChoice}}
+          <span><span class="mini-stat-label">Bond Action</span> {{system.narrative.bondActionChoice}}</span>
+          {{/if}}
+        </div>
+        {{else}}
+        <p style="font-size:0.85em;color:var(--icon-text-muted);font-style:italic;">No bond selected.</p>
         {{/if}}
       </div>
     </div>
+
+    {{!-- Strain & Effort --}}
+    {{#if maxStrain}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.StrainEffort"}}</span>
+        <div style="display:flex;gap:6px;align-items:center;">
+          {{#if isBroken}}<span class="status-badge broken">{{localize "ICON.Label.Broken"}}</span>{{/if}}
+          {{#if isExhausted}}<span class="status-badge exhausted">{{localize "ICON.Label.Exhausted"}}</span>{{/if}}
+          {{#if isEditable}}
+          <button type="button" data-action="camp" class="camp-btn" title="Camp: reset strain, restore effort">
+            {{localize "ICON.Label.Camp"}}
+          </button>
+          {{/if}}
+        </div>
+      </div>
+      <div class="framed-section-body">
+        {{!-- Strain segments --}}
+        <div class="strain-row">
+          <span class="strain-label">Strain</span>
+          <div class="segment-bar">
+            {{#each strainSegs}}
+            <button type="button"
+              class="segment {{#if this}}filled{{/if}}"
+              data-action="setStrain"
+              data-index="{{@index}}"
+              {{#unless ../isEditable}}disabled{{/unless}}></button>
+            {{/each}}
+          </div>
+          <span class="segment-count">{{curStrain}}/{{maxStrain}}</span>
+        </div>
+        {{!-- Effort dots --}}
+        <div class="strain-row">
+          <span class="strain-label">Effort</span>
+          <div class="effort-dots">
+            {{#each effortDots}}
+            <button type="button"
+              class="effort-dot {{#if this}}filled{{/if}}"
+              data-action="setEffort"
+              data-index="{{@index}}"
+              {{#unless ../isEditable}}disabled{{/unless}}></button>
+            {{/each}}
+          </div>
+          <span class="segment-count">{{curEffort}}/{{maxEffort}}</span>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Ideals (XP Triggers) --}}
+    {{#if system.narrative.bondId}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.Ideals"}}</span>
+        <span class="framed-section-subtitle">XP Triggers</span>
+      </div>
+      <div class="framed-section-body">
+        {{#times 3}}
+        <label class="trigger-row">
+          <input type="checkbox"
+            data-action="checkXpTrigger"
+            data-index="{{@index}}"
+            data-trigger-type="narrative"
+            {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
+          <span class="trigger-text {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}">
+            {{#if (lookup ../bondData.ideals @index)}}
+              {{lookup ../bondData.ideals @index}}
+            {{else}}
+              Ideal {{add @index 1}}
+            {{/if}}
+          </span>
+        </label>
+        {{/times}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Burdens --}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.Burdens"}}</span>
+        {{#if isEditable}}
+        <button type="button" class="framed-section-action" data-action="addBurden" data-burden-form>+ Add</button>
+        {{/if}}
+      </div>
+      <div class="framed-section-body">
+        {{#if isEditable}}
+        <div class="burden-add-row" data-burden-form>
+          <input type="text" data-burden-name placeholder="e.g. Broken arm, Exhaustion…"
+            style="flex:1;background:transparent;border:1px solid var(--icon-border);color:var(--icon-text);padding:3px 6px;font-size:0.85em;">
+          <div class="clock-picker">
+            <button type="button" class="clock-size-btn selected" data-burden-clock="4">4</button>
+            <button type="button" class="clock-size-btn" data-burden-clock="6">6</button>
+            <button type="button" class="clock-size-btn" data-burden-clock="10">10</button>
+          </div>
+        </div>
+        {{/if}}
+        {{#if burdens.length}}
+        {{#each burdens}}
+        <div class="burden-card">
+          <div class="burden-header">
+            <span class="burden-name">{{this.name}}</span>
+            {{#if (eq this.ticked this.clockSize)}}<span class="status-badge healed">{{localize "ICON.Label.Healed"}}</span>{{/if}}
+            {{#if ../isEditable}}
+            <button type="button" class="burden-delete" data-action="deleteBurden" data-burden-id="{{this.id}}">×</button>
+            {{/if}}
+          </div>
+          <div class="burden-clock-row">
+            <div class="segment-bar">
+              {{#times this.clockSize}}
+              <button type="button"
+                class="segment {{#if (lt @index ../ticked)}}filled{{/if}}"
+                data-action="tickBurden"
+                data-burden-id="{{../id}}"
+                data-index="{{@index}}"
+                {{#unless ../../isEditable}}disabled{{/unless}}></button>
+              {{/times}}
+            </div>
+            <span class="segment-count">{{this.ticked}}/{{this.clockSize}}</span>
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <p class="empty-hint">{{localize "ICON.Hint.NoBurdens"}}</p>
+        {{/if}}
+      </div>
+    </div>
+
+    {{!-- Bond Powers --}}
+    {{#if bondData.powers.length}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.BondPowers"}}</span>
+      </div>
+      <div class="framed-section-body">
+        {{#each bondData.powers}}
+        <div class="power-row">
+          <div class="power-header">
+            <span class="power-name">{{this.name}}</span>
+            {{#if this.usesPerSession}}<span class="framed-badge">{{this.usesPerSession}}/session</span>{{/if}}
+          </div>
+          <div class="power-desc">{{this.description}}</div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
   </div>
 
-  {{!-- Right column: Action Ratings --}}
+  {{!-- ══ RIGHT COLUMN ══ --}}
   <div class="tab-col">
+
+    {{!-- Action Ratings --}}
     <div class="framed-section">
       <div class="framed-section-header">
         <span class="framed-section-title">{{localize "ICON.Section.ActionRatings"}}</span>
@@ -62,6 +213,7 @@
             title="Roll {{localize this.label}}">
             {{localize this.label}}
           </button>
+          {{#if this.isBondAction}}<span class="bond-badge">{{localize "ICON.Label.Bond"}}</span>{{/if}}
           <div class="pip-row">
             {{#each this.pips}}
             <button type="button"
@@ -76,6 +228,40 @@
         {{/each}}
       </div>
     </div>
+
+    {{!-- Gear Kits --}}
+    {{#if bondData.gearKits.length}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.GearKits"}}</span>
+      </div>
+      <div class="framed-section-body">
+        {{#each bondData.gearKits}}
+        <div class="gear-kit {{#if this.isPreferred}}preferred{{/if}}">
+          <div class="gear-kit-header">
+            <span class="gear-kit-name">{{this.name}}</span>
+            {{#if this.isPreferred}}<span class="framed-badge accent">{{localize "ICON.Label.Preferred"}}</span>{{/if}}
+          </div>
+          <div class="gear-kit-items">{{this.items}}</div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Description --}}
+    <div class="framed-section">
+      <div class="framed-section-header">
+        <span class="framed-section-title">{{localize "ICON.Section.Description"}}</span>
+      </div>
+      <div class="framed-section-body">
+        <textarea name="system.state.description"
+          class="description-textarea"
+          placeholder="Appearance, history, personality, culture details…"
+          {{#unless isEditable}}disabled{{/unless}}>{{system.state.description}}</textarea>
+      </div>
+    </div>
+
   </div>
 
 </div>

@@ -60,37 +60,25 @@ ICON.CULTURES = {
   guilder:    "ICON.Culture.Guilder",
 };
 
-// Positive conditions
-ICON.CONDITIONS_POSITIVE = [
-  "armor",
-  "evasion",
-  "haste",
-  "shield",
-  "stealth",
-  "strength",
-  "sturdy",
-  "unstoppable",
-  "keen",
-];
-
-// Negative conditions
-ICON.CONDITIONS_NEGATIVE = [
-  "afflicted",
-  "blind",
-  "bloodied",
-  "brand",
-  "crisis",
-  "daze",
-  "immobile",
-  "slow",
-  "stun",
+// Combat conditions (from web app — stored as lowercase IDs)
+ICON.CONDITIONS = [
+  "prone",
+  "slowed",
+  "immobilized",
+  "blinded",
+  "dazed",
+  "weakened",
+  "burning",
+  "bleeding",
+  "stunned",
+  "exposed",
 ];
 
 ICON.COMBAT_XP_TRIGGERS = [
-  "Bloodied or slew an enemy",
-  "You or an ally used a Limit Break",
-  "You were taken out (reduced to 0 HP)",
-  "Completed the encounter",
+  "Fought in tactical combat",
+  "Defeated a powerful or noteworthy foe",
+  "Were defeated by a powerful or noteworthy foe",
+  "Accomplished a major objective",
 ];
 
 // XP needed to advance from a given level: level + 3

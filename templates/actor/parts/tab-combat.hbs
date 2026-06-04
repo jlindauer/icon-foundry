@@ -7,13 +7,14 @@
       <span class="framed-section-title">{{localize "ICON.Section.Conditions"}}</span>
     </div>
     <div class="framed-section-body">
-      <div class="conditions-row">
+      <div class="conditions-grid">
         {{#each conditions}}
         <button type="button"
-          class="condition-pip {{#if this.active}}active{{/if}} {{#if this.isPositive}}positive{{/if}}"
+          class="condition-pip {{#if this.active}}active{{/if}}"
           data-action="toggleCondition"
           data-condition-id="{{this.id}}"
           title="{{localize this.label}}">
+          <span class="condition-dot"></span>
           {{localize this.label}}
         </button>
         {{/each}}
@@ -65,33 +66,41 @@
     </div>
   </div>
 
-  {{!-- Active Abilities (full width) --}}
+  {{!-- Active Abilities (full width, grouped by tier) --}}
   <div class="framed-section span-2">
     <div class="framed-section-header">
       <span class="framed-section-title">{{localize "ICON.Section.ActiveAbilities"}}</span>
-      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{activeAbilities.length}}/{{abilitySlots}}</span>
+      <span style="font-size:0.8em;color:var(--icon-text-muted);">{{totalAbilities}}/{{abilitySlots}}</span>
     </div>
     <div class="framed-section-body">
-      {{#each activeAbilities}}
-      <details class="expandable">
-        <summary>
-          <span style="font-weight:600;font-size:0.9em;flex:1;">{{this.name}}</span>
-          {{#if this.system.cost}}<span style="font-size:0.78em;color:var(--icon-text-muted);">{{this.system.cost}}</span>{{/if}}
-          {{#if this.system.tier}}<span style="font-size:0.72em;background:var(--icon-border);padding:1px 6px;color:var(--icon-text-sec);">{{this.system.tier}}</span>{{/if}}
-          {{#if ../isEditable}}
-          <button type="button" class="btn-remove" data-action="removeAbility" data-item-id="{{this.id}}"
-            title="{{localize 'ICON.Action.Remove'}}" style="margin-left:auto;background:none;border:none;color:var(--icon-text-muted);cursor:pointer;padding:0 4px;">
-            <i class="fas fa-times"></i>
-          </button>
-          {{/if}}
-        </summary>
-        {{#if this.system.effect}}
-        <div class="expandable-body">{{this.system.effect}}</div>
-        {{else}}
-        <div class="expandable-body" style="color:var(--icon-text-muted);font-style:italic;">No effect text.</div>
-        {{/if}}
-      </details>
+      {{#if abilityGroups.length}}
+      {{#each abilityGroups}}
+      <div class="ability-tier-group">
+        <div class="ability-tier-heading">{{localize this.label}}</div>
+        {{#each this.abilities}}
+        <details class="expandable">
+          <summary>
+            <span class="expandable-name">{{this.name}}</span>
+            {{#if this.system.cost}}<span class="expandable-meta">{{this.system.cost}}</span>{{/if}}
+            {{#if ../../../isEditable}}
+            <button type="button" class="btn-remove" data-action="removeAbility" data-item-id="{{this.id}}"
+              title="{{localize 'ICON.Action.Remove'}}">
+              <i class="fas fa-times"></i>
+            </button>
+            {{/if}}
+          </summary>
+          <div class="expandable-body">
+            {{#if this.system.flavor}}<p class="ability-flavor">{{this.system.flavor}}</p>{{/if}}
+            {{#if this.system.effect}}<div>{{this.system.effect}}</div>
+            {{else}}<p style="color:var(--icon-text-muted);font-style:italic;">No effect text.</p>{{/if}}
+          </div>
+        </details>
+        {{/each}}
+      </div>
       {{/each}}
+      {{else}}
+      <p class="empty-hint">{{localize "ICON.Hint.NoAbilities"}}</p>
+      {{/if}}
       {{#if isEditable}}
       <div class="drop-hint">{{localize "ICON.Hint.DropAbility"}}</div>
       {{/if}}

@@ -1,8 +1,40 @@
 <div class="tab tab-content" data-tab="notes" data-group="primary">
+<div style="padding:12px;">
 
-  <section class="section notes-section">
-    <h3 class="section-title">{{localize "ICON.Section.Notes"}}</h3>
-    {{editor system.state.notes name="system.state.notes" editable=isEditable button=true}}
-  </section>
+  <div class="session-notes-header">
+    <span class="framed-section-title" style="font-size:0.85em;text-transform:uppercase;letter-spacing:0.08em;color:var(--icon-text-muted);">{{localize "ICON.Section.SessionNotes"}}</span>
+    {{#if isEditable}}
+    <button type="button" data-action="addSessionNote" class="btn-add-session">
+      {{localize "ICON.Label.NewSession"}}
+    </button>
+    {{/if}}
+  </div>
 
+  {{#if system.state.sessionNotes.length}}
+  {{#each system.state.sessionNotes}}
+  <div class="session-note">
+    <div class="session-note-header">
+      <input type="date"
+        name="system.state.sessionNotes.{{@index}}.date"
+        value="{{this.date}}"
+        class="session-note-date"
+        {{#unless ../isEditable}}disabled{{/unless}}>
+      {{#if ../isEditable}}
+      <button type="button" class="session-note-delete" data-action="deleteSessionNote" data-note-id="{{this.id}}">
+        Delete
+      </button>
+      {{/if}}
+    </div>
+    <textarea
+      name="system.state.sessionNotes.{{@index}}.content"
+      class="session-note-content"
+      placeholder="What happened this session…"
+      {{#unless ../isEditable}}disabled{{/unless}}>{{this.content}}</textarea>
+  </div>
+  {{/each}}
+  {{else}}
+  <p class="empty-hint" style="margin-top:16px;">{{localize "ICON.Hint.NoSessionNotes"}}{{#if isEditable}} Add one to get started.{{/if}}</p>
+  {{/if}}
+
+</div>
 </div>

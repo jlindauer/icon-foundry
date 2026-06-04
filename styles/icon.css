@@ -1080,6 +1080,479 @@ details.expandable summary:hover {
 [data-application-part="header"]::-webkit-scrollbar-track { background: transparent; }
 [data-application-part="header"]::-webkit-scrollbar-thumb { background: var(--icon-border); border-radius: 2px; }
 
+/* ── Bond section ───────────────────────────────────────────────────────── */
+
+.bond-description {
+  font-size: 0.85em;
+  color: var(--icon-text-sec);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.bond-ability-row {
+  margin-bottom: 6px;
+}
+
+.bond-ability-label {
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--icon-text-muted);
+  margin-bottom: 2px;
+}
+
+.bond-ability-text {
+  font-size: 0.85em;
+  color: var(--icon-text-sec);
+  line-height: 1.45;
+}
+
+.bond-mini-stats {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  font-size: 0.82em;
+  color: var(--icon-text);
+}
+
+.mini-stat-label {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: var(--icon-text-muted);
+  margin-right: 3px;
+}
+
+.bond-badge {
+  font-size: 0.65em;
+  font-weight: 700;
+  color: var(--icon-accent);
+  border: 1px solid var(--icon-accent);
+  padding: 0 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Strain & Effort ────────────────────────────────────────────────────── */
+
+.strain-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.strain-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--icon-text-muted);
+  width: 42px;
+  flex-shrink: 0;
+}
+
+.segment-bar {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.segment {
+  flex: 1;
+  max-width: 22px;
+  height: 14px;
+  border: 1px solid var(--icon-border);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.segment.filled {
+  background: var(--icon-accent);
+  border-color: var(--icon-accent);
+}
+
+.segment:disabled { cursor: default; }
+
+.effort-dots {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.effort-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--icon-border);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.effort-dot.filled {
+  background: var(--icon-accent);
+  border-color: var(--icon-accent);
+}
+
+.effort-dot:disabled { cursor: default; }
+
+.segment-count {
+  font-size: 0.78em;
+  color: var(--icon-text-muted);
+  white-space: nowrap;
+}
+
+.status-badge {
+  font-size: 0.65em;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.status-badge.broken    { color: var(--icon-bloodied); border: 1px solid var(--icon-bloodied); }
+.status-badge.exhausted { color: var(--icon-crisis);   border: 1px solid var(--icon-crisis); }
+.status-badge.healed    { color: var(--icon-positive); border: 1px solid var(--icon-positive); }
+
+.camp-btn {
+  font-size: 0.72em;
+  background: transparent;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text-muted);
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.camp-btn:hover { border-color: var(--icon-accent); color: var(--icon-accent); }
+
+/* ── Ideals / XP triggers ───────────────────────────────────────────────── */
+
+.trigger-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.trigger-row input[type="checkbox"] { margin-top: 3px; flex-shrink: 0; }
+
+.trigger-text {
+  font-size: 0.88em;
+  color: var(--icon-text-sec);
+  line-height: 1.4;
+}
+
+.trigger-text.checked {
+  text-decoration: line-through;
+  color: var(--icon-text-muted);
+}
+
+/* ── Burdens ────────────────────────────────────────────────────────────── */
+
+.burden-add-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.clock-picker {
+  display: flex;
+  gap: 3px;
+}
+
+.clock-size-btn {
+  width: 26px;
+  height: 22px;
+  background: transparent;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text-muted);
+  font-size: 0.75em;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clock-size-btn.selected {
+  background: var(--icon-accent);
+  border-color: var(--icon-accent);
+  color: white;
+}
+
+.burden-card {
+  background: var(--icon-card);
+  border: 1px solid var(--icon-border);
+  padding: 8px 10px;
+  margin-bottom: 6px;
+}
+
+.burden-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.burden-name {
+  flex: 1;
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--icon-text);
+}
+
+.burden-delete {
+  background: none;
+  border: none;
+  color: var(--icon-text-muted);
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.burden-delete:hover { color: var(--icon-negative); }
+
+.burden-clock-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Bond Powers ────────────────────────────────────────────────────────── */
+
+.power-row { margin-bottom: 10px; }
+
+.power-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.power-name {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--icon-text);
+}
+
+.power-desc {
+  font-size: 0.83em;
+  color: var(--icon-text-muted);
+  line-height: 1.45;
+}
+
+.framed-badge {
+  font-size: 0.65em;
+  font-weight: 600;
+  padding: 1px 5px;
+  background: var(--icon-border);
+  color: var(--icon-text-sec);
+}
+
+.framed-badge.accent {
+  background: var(--icon-accent-dim);
+  color: white;
+}
+
+/* ── Gear Kits ──────────────────────────────────────────────────────────── */
+
+.gear-kit {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.gear-kit:last-child { border-bottom: none; }
+
+.gear-kit-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.gear-kit-name {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--icon-text);
+}
+
+.gear-kit-items {
+  font-size: 0.82em;
+  color: var(--icon-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Description textarea ───────────────────────────────────────────────── */
+
+.description-textarea {
+  width: 100%;
+  min-height: 120px;
+  background: transparent;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text);
+  font-family: inherit;
+  font-size: 0.85em;
+  line-height: 1.5;
+  padding: 6px 8px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.description-textarea:focus {
+  outline: none;
+  border-color: var(--icon-accent);
+}
+
+/* ── Conditions grid (2-column) ─────────────────────────────────────────── */
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.condition-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--icon-border);
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.condition-pip.active .condition-dot {
+  background: var(--icon-accent);
+  border-color: var(--icon-accent);
+}
+
+/* ── Ability tier groups ────────────────────────────────────────────────── */
+
+.ability-tier-group { margin-bottom: 10px; }
+
+.ability-tier-heading {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--icon-text-muted);
+  font-weight: 700;
+  margin-bottom: 4px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.expandable-name {
+  font-weight: 600;
+  font-size: 0.9em;
+  flex: 1;
+}
+
+.expandable-meta {
+  font-size: 0.78em;
+  color: var(--icon-text-muted);
+}
+
+.ability-flavor {
+  font-style: italic;
+  color: var(--icon-text-muted);
+  font-size: 0.9em;
+  margin: 0 0 6px;
+}
+
+/* ── Session Notes ──────────────────────────────────────────────────────── */
+
+.session-notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.btn-add-session {
+  background: var(--icon-accent);
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.session-note {
+  border: 1px solid var(--icon-border);
+  margin-bottom: 12px;
+  background: var(--icon-card);
+}
+
+.session-note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.session-note-date {
+  background: transparent;
+  border: none;
+  color: var(--icon-text-muted);
+  font-size: 0.82em;
+}
+
+.session-note-delete {
+  background: none;
+  border: none;
+  color: var(--icon-text-muted);
+  font-size: 0.78em;
+  cursor: pointer;
+}
+
+.session-note-delete:hover { color: var(--icon-negative); }
+
+.session-note-content {
+  width: 100%;
+  min-height: 80px;
+  background: transparent;
+  border: none;
+  color: var(--icon-text);
+  font-family: inherit;
+  font-size: 0.85em;
+  line-height: 1.5;
+  padding: 8px 10px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.session-note-content:focus { outline: none; }
+
+.empty-hint {
+  font-size: 0.85em;
+  color: var(--icon-text-muted);
+  font-style: italic;
+}
+
+/* ── Misc helpers ───────────────────────────────────────────────────────── */
+
+.field-label {
+  display: block;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: var(--icon-text-muted);
+  margin-bottom: 3px;
+}
+
+.framed-section-action {
+  background: none;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text-muted);
+  font-size: 0.72em;
+  padding: 1px 6px;
+  cursor: pointer;
+}
+
+.framed-section-action:hover { border-color: var(--icon-accent); color: var(--icon-accent); }
+
 /* ── Character Import Dialog ────────────────────────────────────────────── */
 
 #icon-character-import .window-content {

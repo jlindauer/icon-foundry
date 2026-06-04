@@ -7,16 +7,20 @@
     },
     "Section": {
       "ActionRatings": "Action Ratings",
-      "Bond": "Bond",
-      "XpTriggers": "Narrative XP Triggers",
-      "CombatXpTriggers": "Combat XP Triggers",
+      "Bond": "The Bond",
+      "StrainEffort": "Strain & Effort",
+      "Burdens": "Burdens",
+      "BondPowers": "Bond Powers",
+      "GearKits": "Gear Kits",
+      "Ideals": "Ideals",
+      "Description": "Description",
       "Progression": "Progression",
       "Conditions": "Conditions",
       "ActiveAbilities": "Active Abilities",
       "Talents": "Talents",
       "Jobs": "Jobs",
-      "Abilities": "Abilities",
-      "Notes": "Notes"
+      "Notes": "Notes",
+      "SessionNotes": "Session Notes"
     },
     "Action": {
       "Sneak": "Sneak",
@@ -35,7 +39,7 @@
       "Apprentice": "Apprentice",
       "I": "Tier I",
       "II": "Tier II",
-      "IV": "Tier IV"
+      "IV": "Master (Tier IV)"
     },
     "JobType": {
       "Apprentice": "Apprentice",
@@ -74,28 +78,20 @@
       "Guilder": "Guilder"
     },
     "Condition": {
-      "Armor": "Armor (+)",
-      "Evasion": "Evasion (+)",
-      "Haste": "Haste (+)",
-      "Shield": "Shield (+)",
-      "Stealth": "Stealth (+)",
-      "Strength": "Strength (+)",
-      "Sturdy": "Sturdy (+)",
-      "Unstoppable": "Unstoppable",
-      "Keen": "Keen (+)",
-      "Afflicted": "Afflicted",
-      "Blind": "Blind (-)",
-      "Bloodied": "Bloodied",
-      "Brand": "Brand (-)",
-      "Crisis": "Crisis",
-      "Daze": "Daze (-)",
-      "Immobile": "Immobile",
-      "Slow": "Slow (-)",
-      "Stun": "Stun (-)"
+      "Prone":       "Prone",
+      "Slowed":      "Slowed",
+      "Immobilized": "Immobilized",
+      "Blinded":     "Blinded",
+      "Dazed":       "Dazed",
+      "Weakened":    "Weakened",
+      "Burning":     "Burning",
+      "Bleeding":    "Bleeding",
+      "Stunned":     "Stunned",
+      "Exposed":     "Exposed"
     },
     "Resource": {
-      "HP": "HP",
-      "Vigor": "Vigor",
+      "Health": "Health",
+      "Vigor":  "Vigor",
       "Resolve": "Resolve"
     },
     "Field": {
@@ -107,7 +103,7 @@
       "XP": "XP",
       "Defense": "Defense",
       "FreeMove": "Free Move",
-      "HP": "HP",
+      "Health": "Health",
       "Tier": "Tier",
       "Cost": "Cost",
       "Tags": "Tags",
@@ -118,6 +114,7 @@
       "Effort": "Effort",
       "Strain": "Strain",
       "SecondWind": "Second Wind",
+      "SpecialAbility": "Special Ability",
       "TraitName": "Trait Name",
       "TraitEffect": "Trait Effect",
       "IsPositive": "Positive Condition",
@@ -129,11 +126,21 @@
       "AbilitySlots": "Ability Slots",
       "TalentSlots": "Talent Slots",
       "Ideal": "Ideal",
-      "CombatTrigger": "Combat Trigger"
+      "CombatTrigger": "Combat Trigger",
+      "Broken": "BROKEN",
+      "Exhausted": "EXHAUSTED",
+      "Healed": "Healed",
+      "Camp": "Camp",
+      "NewSession": "+ New Session",
+      "Bond": "BOND",
+      "Preferred": "Preferred"
     },
     "Hint": {
       "DropAbility": "Drag an ability from the compendium",
-      "DropTalent": "Drag a talent from the compendium"
+      "DropTalent": "Drag a talent from the compendium",
+      "NoBurdens": "No burdens. When strain boxes overflow, you break and take a burden.",
+      "NoSessionNotes": "No session notes yet.",
+      "NoAbilities": "No abilities yet. Drag from the compendium."
     },
     "Warning": {
       "AbilitySlotsMax": "No ability slots remaining. Level up to gain more.",
@@ -143,6 +150,7 @@
       "Character": "ICON Character Sheet",
       "Npc": "ICON NPC Sheet",
       "Item": "ICON Item Sheet"
-    }
+    },
+    "Action.Remove": "Remove"
   }
 }
