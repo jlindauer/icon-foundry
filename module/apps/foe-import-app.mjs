@@ -36,14 +36,6 @@ export class FoeImportApp extends HandlebarsApplicationMixin(ApplicationV2) {
     const foes = data.foes ?? [];
     if (!foes.length) { ui.notifications.warn("No foes found in this export."); return; }
 
-    // Create or find the import folder
-    const dateStr    = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-    const folderName = `ICON 2e Import — ${dateStr}`;
-    let folder = game.folders.find((f) => f.name === folderName && f.type === "Actor");
-    if (!folder) {
-      folder = await Folder.create({ name: folderName, type: "Actor", color: "#5b1fa3" });
-    }
-
     let created = 0;
     let skipped = 0;
 
@@ -56,9 +48,8 @@ export class FoeImportApp extends HandlebarsApplicationMixin(ApplicationV2) {
       const hp       = (isMob || isLegend) ? 0 : (foe.hp ?? 0);
 
       await Actor.create({
-        name:   foe.name,
-        type:   "foe",
-        folder: folder.id,
+        name: foe.name,
+        type: "foe",
         flags:  { icon2e: { sourceId: foe.id } },
         prototypeToken: {
           width:       foe.size ?? 1,
