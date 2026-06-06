@@ -23,7 +23,8 @@
       },
       "npc": {
         "htmlFields": ["system.notes"]
-      }
+      },
+      "foe": {}
     },
     "Item": {
       "ability": {

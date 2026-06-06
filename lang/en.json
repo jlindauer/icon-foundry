@@ -151,6 +151,7 @@
     "SheetLabel": {
       "Character": "ICON Character Sheet",
       "Npc": "ICON NPC Sheet",
+      "Foe": "ICON Foe Sheet",
       "Item": "ICON Item Sheet"
     },
     "Action.Remove": "Remove"

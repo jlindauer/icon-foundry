@@ -1731,3 +1731,264 @@ details.expandable summary:hover {
   color: #fff;
 }
 
+
+/* ── Foe Sheet ──────────────────────────────────────────────────────────── */
+
+.icon.actor.foe .window-content {
+  background: var(--icon-bg);
+  color: var(--icon-text);
+  font-family: "Signika", sans-serif;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.foe-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.foe-body form { display: flex; flex-direction: column; gap: 12px; }
+
+/* Header */
+.foe-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.foe-portrait {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.foe-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--icon-border);
+  cursor: pointer;
+}
+
+.foe-identity { flex: 1; min-width: 0; }
+
+.foe-name {
+  width: 100%;
+  font-size: 1.15em;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--icon-border);
+  color: var(--icon-text);
+  padding: 2px 0;
+  margin-bottom: 6px;
+}
+
+.foe-name:focus { outline: none; border-bottom-color: var(--icon-accent); }
+
+.foe-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 5px; }
+
+.foe-badge {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.foe-badge-chapter { background: var(--icon-surface-raised, #2a2a3a); color: var(--icon-text-muted); }
+
+.foe-class-heavy      { background: #6b2020; color: #f5b8b8; }
+.foe-class-skirmisher { background: #1e4a6b; color: #b8d8f5; }
+.foe-class-leader     { background: #1e5a30; color: #b8f5c8; }
+.foe-class-artillery  { background: #4a3a1e; color: #f5e0b8; }
+
+.foe-badge-special { background: var(--icon-accent-dim); color: #fff; }
+.foe-special-elite  { background: #7a6010; color: #ffd96a; }
+.foe-special-mob    { background: #3a3a3a; color: #c0c0c0; }
+.foe-special-legend { background: #5b1fa3; color: #e0c8ff; }
+
+.foe-badge-size { background: var(--icon-surface-raised, #2a2a3a); color: var(--icon-text-muted); }
+
+.foe-flavor {
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--icon-text-sec);
+  margin: 0;
+}
+
+/* Stats bar */
+.foe-stats-bar {
+  display: flex;
+  gap: 8px;
+  background: var(--icon-card);
+  border: 1px solid var(--icon-border);
+  padding: 8px 12px;
+}
+
+.foe-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.foe-stat-hp { flex: 2; align-items: flex-start; }
+
+.foe-stat-label {
+  font-size: 0.62em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--icon-text-muted);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.foe-stat-value {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--icon-text);
+}
+
+.foe-hp-row {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.foe-hp-val {
+  cursor: pointer;
+  color: var(--icon-text);
+  min-width: 24px;
+  text-align: center;
+}
+
+.foe-hp-val:hover { color: var(--icon-accent); text-decoration: underline dotted; }
+
+.foe-hp-sep { color: var(--icon-text-muted); }
+
+.foe-hp-input {
+  width: 44px;
+  background: transparent;
+  border: 1px solid var(--icon-accent);
+  color: var(--icon-text);
+  text-align: center;
+  font-size: inherit;
+  padding: 1px 2px;
+}
+
+.foe-crisis-line {
+  font-size: 0.68em;
+  color: var(--icon-crisis);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Sections */
+.foe-section {
+  background: var(--icon-card);
+  border: 1px solid var(--icon-border);
+  padding: 8px 12px;
+}
+
+.foe-section-title {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--icon-text-muted);
+  font-weight: 700;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--icon-border);
+  padding-bottom: 4px;
+}
+
+/* Traits */
+.foe-trait {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  padding: 3px 0;
+  font-size: 0.88em;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.foe-trait:last-child { border-bottom: none; }
+
+.foe-trait-name {
+  font-weight: 700;
+  color: var(--icon-text);
+}
+
+.foe-trait-badge {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.foe-trait-badge-class   { background: var(--icon-accent-dim); color: #fff; }
+.foe-trait-badge-special { background: #5b1fa3; color: #e0c8ff; }
+
+.foe-trait-sep { color: var(--icon-text-muted); }
+
+.foe-trait-desc { color: var(--icon-text-sec); flex: 1; }
+
+/* Actions */
+.foe-action {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--icon-border);
+}
+
+.foe-action:last-child { border-bottom: none; }
+
+.foe-action-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.foe-action-name {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--icon-text);
+}
+
+.foe-action-tags {
+  font-size: 0.76em;
+  color: var(--icon-text-muted);
+  font-style: italic;
+  flex: 1;
+}
+
+.foe-action-desc {
+  font-size: 0.85em;
+  color: var(--icon-text-sec);
+  line-height: 1.5;
+}
+
+/* GM Notes */
+.foe-notes {
+  width: 100%;
+  min-height: 80px;
+  background: transparent;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text);
+  padding: 6px 8px;
+  font-size: 0.85em;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+}

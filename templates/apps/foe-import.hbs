@@ -1,0 +1,18 @@
+<div style="padding:16px;">
+  <p style="font-size:0.85em;color:var(--icon-text-muted);margin:0 0 10px;">
+    Paste your ICON 2e foe export JSON below (envelope with <code>version</code>, <code>system</code>, and <code>foes</code> array).
+    Foes that already exist (matched by source ID) will be skipped.
+  </p>
+  <textarea class="foe-json-input"
+    placeholder='{ "version": "1.0", "system": "icon-2e", "foes": [ ... ] }'
+    style="width:100%;height:220px;font-size:0.76em;font-family:monospace;
+           background:var(--icon-card);border:1px solid var(--icon-border);
+           color:var(--icon-text);padding:8px;resize:vertical;box-sizing:border-box;"></textarea>
+  <div style="display:flex;justify-content:flex-end;margin-top:10px;">
+    <button type="button" data-action="doImport"
+      style="background:var(--icon-accent);color:#fff;border:none;
+             padding:6px 20px;cursor:pointer;font-size:0.9em;">
+      Import Foes
+    </button>
+  </div>
+</div>

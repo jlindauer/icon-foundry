@@ -1,0 +1,144 @@
+<div class="foe-body">
+<form autocomplete="off">
+
+  {{!-- ── Header ─────────────────────────────────────────────────────────── --}}
+  <div class="foe-header">
+    <div class="foe-portrait">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}">
+    </div>
+    <div class="foe-identity">
+      <input class="foe-name" type="text" name="name" value="{{actor.name}}"
+        {{#unless isEditable}}disabled{{/unless}}>
+      <div class="foe-badges">
+        <span class="foe-badge foe-badge-chapter">Ch.{{system.chapter}}</span>
+        <span class="foe-badge foe-badge-class foe-class-{{system.foeClass}}">{{system.foeClass}}</span>
+        {{#unless (eq system.specialClass "normal")}}
+        <span class="foe-badge foe-badge-special foe-special-{{system.specialClass}}">{{system.specialClass}}</span>
+        {{/unless}}
+        <span class="foe-badge foe-badge-size">{{sizeLabel}}</span>
+      </div>
+      {{#if system.flavor}}
+      <p class="foe-flavor">{{system.flavor}}</p>
+      {{/if}}
+    </div>
+  </div>
+
+  {{!-- ── Stats bar ────────────────────────────────────────────────────────── --}}
+  <div class="foe-stats-bar">
+
+    {{#if isMob}}
+    <div class="foe-stat">
+      <div class="foe-stat-label">Members/Player</div>
+      <div class="foe-stat-value">{{system.membersPerPlayer}}</div>
+    </div>
+    <div class="foe-stat">
+      <div class="foe-stat-label">Hits/Member</div>
+      <div class="foe-stat-value">{{system.hitsPerMember}}</div>
+    </div>
+
+    {{else if isLegend}}
+    <div class="foe-stat">
+      <div class="foe-stat-label">HP/Player</div>
+      <div class="foe-stat-value">{{system.hpPerPlayer}}</div>
+    </div>
+    <div class="foe-stat">
+      <div class="foe-stat-label">Min HP</div>
+      <div class="foe-stat-value">{{system.minHp}}</div>
+    </div>
+
+    {{else}}
+    <div class="foe-stat foe-stat-hp">
+      <div class="foe-stat-label">
+        HP
+        {{#if isBloodied}}<span class="bloodied-tag">BLOODIED</span>{{/if}}
+        {{#if isInCrisis}}<span class="crisis-tag">CRISIS</span>{{/if}}
+      </div>
+      <div class="foe-hp-row">
+        <span class="foe-hp-val" data-field="system.resources.hp.value">{{system.resources.hp.value}}</span>
+        <span class="foe-hp-sep">/</span>
+        <span class="foe-hp-val" data-field="system.resources.hp.max">{{system.resources.hp.max}}</span>
+      </div>
+      {{#if system.crisis}}
+      <div class="foe-crisis-line">crisis ≤ {{system.crisis}}</div>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    <div class="foe-stat">
+      <div class="foe-stat-label">Defense</div>
+      <div class="foe-stat-value">{{system.defense}}</div>
+    </div>
+    <div class="foe-stat">
+      <div class="foe-stat-label">Move</div>
+      <div class="foe-stat-value">{{system.freeMove}}</div>
+    </div>
+    <div class="foe-stat">
+      <div class="foe-stat-label">Size</div>
+      <div class="foe-stat-value">{{system.size}}</div>
+    </div>
+  </div>
+
+  {{!-- ── Conditions ───────────────────────────────────────────────────────── --}}
+  <div class="foe-section">
+    <div class="foe-section-title">Conditions</div>
+    <div class="conditions-grid">
+      {{#each conditions}}
+      <button type="button"
+        class="condition-pip {{#if this.active}}active{{/if}}"
+        data-action="toggleCondition"
+        data-condition-id="{{this.id}}"
+        title="{{localize this.label}}">
+        <span class="condition-dot"></span>
+        {{localize this.label}}
+      </button>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- ── Traits ────────────────────────────────────────────────────────────── --}}
+  {{#if allTraits.length}}
+  <div class="foe-section">
+    <div class="foe-section-title">Traits</div>
+    {{#each allTraits}}
+    <div class="foe-trait">
+      <span class="foe-trait-name">{{this.name}}</span>
+      {{#if this.badge}}<span class="foe-trait-badge foe-trait-badge-{{this.badge}}">{{this.badge}}</span>{{/if}}
+      <span class="foe-trait-sep">—</span>
+      <span class="foe-trait-desc">{{this.description}}</span>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{!-- ── Actions ───────────────────────────────────────────────────────────── --}}
+  {{#if system.actions.length}}
+  <div class="foe-section">
+    <div class="foe-section-title">Actions</div>
+    {{#each system.actions}}
+    <div class="foe-action">
+      <div class="foe-action-header">
+        <span class="foe-action-name">{{this.name}}</span>
+        {{#if this.tags}}<span class="foe-action-tags">({{this.tags}})</span>{{/if}}
+        <button type="button" class="btn-roll" data-action="rollFoeAction"
+          data-action-index="{{@index}}" title="Post to chat">
+          <i class="fas fa-comment-alt"></i>
+        </button>
+      </div>
+      {{#if this.description}}
+      <div class="foe-action-desc">{{this.description}}</div>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{!-- ── GM Notes ─────────────────────────────────────────────────────────── --}}
+  <div class="foe-section">
+    <div class="foe-section-title">GM Notes</div>
+    <textarea name="system.notes" class="foe-notes"
+      placeholder="Notes visible to GM…"
+      {{#unless isEditable}}disabled{{/unless}}>{{system.notes}}</textarea>
+  </div>
+
+</form>
+</div>

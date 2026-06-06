@@ -3,6 +3,7 @@ import { ICON } from "./module/config.mjs";
 // Data models
 import { CharacterDataModel } from "./module/data/actor/character.mjs";
 import { NpcDataModel }       from "./module/data/actor/npc.mjs";
+import { FoeDataModel }       from "./module/data/actor/foe.mjs";
 import { AbilityDataModel }   from "./module/data/item/ability.mjs";
 import { TalentDataModel }    from "./module/data/item/talent.mjs";
 import { BondDataModel }      from "./module/data/item/bond.mjs";
@@ -16,10 +17,12 @@ import { IconItem }  from "./module/documents/item.mjs";
 // Sheets
 import { IconCharacterSheet } from "./module/sheets/actor/character-sheet.mjs";
 import { IconNpcSheet }       from "./module/sheets/actor/npc-sheet.mjs";
+import { IconFoeSheet }       from "./module/sheets/actor/foe-sheet.mjs";
 import { IconItemSheet }      from "./module/sheets/item/item-sheet.mjs";
 
 // Apps
 import { CharacterImportApp } from "./module/apps/character-import-app.mjs";
+import { FoeImportApp }       from "./module/apps/foe-import-app.mjs";
 
 /* ── init ─────────────────────────────────────────────────────────────── */
 
@@ -31,6 +34,7 @@ Hooks.once("init", () => {
     config:            ICON,
     importCharacter:   (data) => CharacterImportApp.importCharacter(data),
     openImportDialog:  () => new CharacterImportApp().render(true),
+    openFoeImport:     () => new FoeImportApp().render(true),
   };
 
   // ── Documents ────────────────────────────────────────────────────────
@@ -41,6 +45,7 @@ Hooks.once("init", () => {
   CONFIG.Actor.dataModels = {
     character: CharacterDataModel,
     npc:       NpcDataModel,
+    foe:       FoeDataModel,
   };
 
   CONFIG.Item.dataModels = {
@@ -61,6 +66,10 @@ Hooks.once("init", () => {
       bar:   ["resources.hp"],
       value: [],
     },
+    foe: {
+      bar:   ["resources.hp"],
+      value: ["defense", "freeMove"],
+    },
   };
 
   // ── Sheets ───────────────────────────────────────────────────────────
@@ -74,6 +83,12 @@ Hooks.once("init", () => {
     types:       ["npc"],
     makeDefault: true,
     label:       "ICON.SheetLabel.Npc",
+  });
+
+  DocumentSheetConfig.registerSheet(Actor, "icon", IconFoeSheet, {
+    types:       ["foe"],
+    makeDefault: true,
+    label:       "ICON.SheetLabel.Foe",
   });
 
   DocumentSheetConfig.registerSheet(Item, "icon", IconItemSheet, {
@@ -109,20 +124,30 @@ function _injectImportButton(root) {
   if (!root) return;
   if (root instanceof jQuery) root = root[0];
 
-  // v14 sidebar: <header class="directory-header"> > <div class="header-actions action-buttons">
   const toolbar = root.querySelector(".header-actions")
     ?? root.querySelector(".directory-header .action-buttons")
     ?? root.querySelector(".action-buttons");
+  if (!toolbar) return;
 
-  if (!toolbar || toolbar.querySelector(".icon-import-btn")) return;
+  if (!toolbar.querySelector(".icon-import-char-btn")) {
+    const btn = document.createElement("button");
+    btn.type      = "button";
+    btn.className = "icon-import-btn icon-import-char-btn";
+    btn.title     = "Import character from ICON web app";
+    btn.innerHTML = '<i class="fas fa-user-plus"></i> Character';
+    btn.addEventListener("click", () => new CharacterImportApp().render(true));
+    toolbar.append(btn);
+  }
 
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "icon-import-btn";
-  btn.title = "Import character from ICON web app";
-  btn.innerHTML = '<i class="fas fa-file-import"></i> Import';
-  btn.addEventListener("click", () => new CharacterImportApp().render(true));
-  toolbar.append(btn);
+  if (!toolbar.querySelector(".icon-import-foe-btn")) {
+    const btn = document.createElement("button");
+    btn.type      = "button";
+    btn.className = "icon-import-btn icon-import-foe-btn";
+    btn.title     = "Import foes from ICON 2e web app";
+    btn.innerHTML = '<i class="fas fa-skull"></i> Foes';
+    btn.addEventListener("click", () => new FoeImportApp().render(true));
+    toolbar.append(btn);
+  }
 }
 
 // Fires on every render/re-render of the actors tab
@@ -211,5 +236,7 @@ function _preloadTemplates() {
     "systems/icon/templates/item/item-sheet.hbs",
     "systems/icon/templates/apps/character-import.hbs",
     "systems/icon/templates/chat/ability-card.hbs",
+    "systems/icon/templates/actor/foe-sheet.hbs",
+    "systems/icon/templates/apps/foe-import.hbs",
   ]);
 }
