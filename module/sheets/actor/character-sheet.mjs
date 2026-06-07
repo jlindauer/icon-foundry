@@ -333,6 +333,16 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       });
     });
 
+    // Portrait image → open FilePicker to change actor image
+    this.element.querySelector("[data-edit='img']")?.addEventListener("click", () => {
+      if (!this.isEditable) return;
+      new FilePicker({
+        type: "image",
+        current: this.document.img,
+        callback: (path) => this.document.update({ img: path }),
+      }).browse();
+    });
+
     // Inline HP/Vigor editing on click
     this.element.querySelectorAll(".resource-value[data-field]").forEach((el) => {
       el.addEventListener("click", (ev) => {
