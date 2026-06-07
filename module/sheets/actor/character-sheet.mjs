@@ -617,6 +617,8 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   }
 
   static #onConfigureToken(event, target) {
-    new TokenConfig(this.document.prototypeToken, { actor: this.document }).render(true);
+    new foundry.applications.sheets.PrototypeTokenConfig({
+      prototype: this.document.prototypeToken,
+    }).render({ force: true });
   }
 }
