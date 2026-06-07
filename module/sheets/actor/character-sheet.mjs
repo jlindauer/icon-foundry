@@ -28,6 +28,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       deleteSessionNote: IconCharacterSheet.#onDeleteSessionNote,
       postBondCard:      IconCharacterSheet.#onPostBondCard,
       selectGearKit:     IconCharacterSheet.#onSelectGearKit,
+      configureToken:    IconCharacterSheet.#onConfigureToken,
     },
   };
 
@@ -613,5 +614,9 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     await this.document.update({
       "system.narrative.selectedGearKit": current === kitName ? "" : kitName,
     });
+  }
+
+  static #onConfigureToken(event, target) {
+    this.document.prototypeToken.sheet.render(true);
   }
 }

@@ -430,6 +430,9 @@ details.expandable summary:hover {
 .rail-import {
   padding: 8px 14px;
   border-bottom: 1px solid var(--icon-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .rail-import-btn {

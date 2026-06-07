@@ -75,9 +75,12 @@
     {{/if}}
   </div>
 
-  {{!-- Import --}}
+  {{!-- Import & Token --}}
   {{#if isEditable}}
   <div class="rail-import">
+    <button type="button" data-action="configureToken" class="rail-import-btn">
+      <i class="fas fa-user-circle"></i> Configure Token
+    </button>
     <button type="button" data-action="openImport" class="rail-import-btn">
       <i class="fas fa-file-import"></i> Import from Web App
     </button>
