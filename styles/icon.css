@@ -898,14 +898,16 @@ details.expandable summary:hover {
 
 /* ── Item sheet form ─────────────────────────────────────────────────────── */
 
-.form-group {
+.icon .form-group,
+.icon-import-form .form-group {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-bottom: 10px;
 }
 
-.form-group label {
+.icon .form-group label,
+.icon-import-form .form-group label {
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -913,10 +915,14 @@ details.expandable summary:hover {
   font-weight: bold;
 }
 
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group textarea,
-.form-group select {
+.icon .form-group input[type="text"],
+.icon .form-group input[type="number"],
+.icon .form-group textarea,
+.icon .form-group select,
+.icon-import-form .form-group input[type="text"],
+.icon-import-form .form-group input[type="number"],
+.icon-import-form .form-group textarea,
+.icon-import-form .form-group select {
   background: rgba(255,255,255,0.05);
   border: 1px solid var(--icon-border);
   color: var(--icon-text);
@@ -925,15 +931,18 @@ details.expandable summary:hover {
   font-family: inherit;
 }
 
-.form-group textarea { min-height: 60px; resize: vertical; }
+.icon .form-group textarea,
+.icon-import-form .form-group textarea { min-height: 60px; resize: vertical; }
 
 .form-row {
   display: flex;
   gap: 12px;
 }
 
-.form-group.half  { flex: 1; }
-.form-group.third { flex: 1; }
+.icon .form-group.half,
+.icon-import-form .form-group.half  { flex: 1; }
+.icon .form-group.third,
+.icon-import-form .form-group.third { flex: 1; }
 
 /* ── NPC sheet ──────────────────────────────────────────────────────────── */
 
@@ -1107,6 +1116,26 @@ details.expandable summary:hover {
   color: var(--icon-text-sec);
   line-height: 1.45;
 }
+
+.bond-ability-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bond-chat-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0 2px;
+  font-size: 0.72em;
+  color: var(--icon-text-muted);
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.15s, color 0.15s;
+  line-height: 1;
+}
+.bond-chat-btn:hover { opacity: 1; color: var(--icon-accent); }
 
 .bond-mini-stats {
   display: flex;
@@ -1394,6 +1423,29 @@ details.expandable summary:hover {
   color: var(--icon-text-muted);
   line-height: 1.4;
 }
+
+.gear-kit.preferred {
+  border-left: 2px solid var(--icon-accent);
+  padding-left: 4px;
+}
+
+.gear-kit-equip-btn {
+  margin-left: auto;
+  padding: 1px 8px;
+  font-size: 0.7em;
+  background: none;
+  border: 1px solid var(--icon-border);
+  color: var(--icon-text-muted);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.gear-kit-equip-btn.active {
+  background: var(--icon-accent-dim);
+  border-color: var(--icon-accent);
+  color: white;
+}
+.gear-kit-equip-btn:hover { border-color: var(--icon-accent); }
 
 /* ── Description textarea ───────────────────────────────────────────────── */
 

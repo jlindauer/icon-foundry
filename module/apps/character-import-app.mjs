@@ -73,6 +73,9 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
           bond:             data.bond            ?? "",
           bondActionChoice: data.bondActionChoice ?? "",
           actionRatings:    data.actionRatings   ?? {},
+          selectedPowers:   data.selectedPowerNames ?? data.selectedPowers ?? [],
+          selectedGearKit:  data.selectedGearKit ?? "",
+          ideals:           data.bondIdeals       ?? [],
         },
         progression: {
           level:              data.level              ?? 0,
@@ -103,6 +106,9 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
         bond:             data.narrative?.bond             ?? "",
         bondActionChoice: data.narrative?.bondActionChoice ?? "",
         actionRatings:    data.narrative?.actionRatings    ?? {},
+        selectedPowers:   data.narrative?.selectedPowers   ?? [],
+        selectedGearKit:  data.narrative?.selectedGearKit  ?? "",
+        ideals:           data.narrative?.ideals           ?? [],
       },
       progression: {
         level:             data.progression?.level             ?? 0,
@@ -192,6 +198,9 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
           bondId:           norm.narrative.bond,
           bondActionChoice: norm.narrative.bondActionChoice,
           actionRatings:    norm.narrative.actionRatings,
+          selectedPowers:   norm.narrative.selectedPowers,
+          selectedGearKit:  norm.narrative.selectedGearKit,
+          ideals:           norm.narrative.ideals,
         },
         progression: {
           level:             norm.progression.level,
@@ -205,8 +214,8 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
           resolve: norm.resources.resolve,
         },
         state: {
-          conditions: norm.conditions,
-          notes:      norm.notes,
+          conditions:  norm.conditions,
+          description: norm.notes,
         },
       },
     };
@@ -241,6 +250,9 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
       "system.narrative.bondId":           norm.narrative.bond,
       "system.narrative.bondActionChoice": norm.narrative.bondActionChoice,
       "system.narrative.actionRatings":    norm.narrative.actionRatings,
+      "system.narrative.selectedPowers":   norm.narrative.selectedPowers,
+      "system.narrative.selectedGearKit":  norm.narrative.selectedGearKit,
+      "system.narrative.ideals":           norm.narrative.ideals,
       "system.progression.level":             norm.progression.level,
       "system.progression.currentXp":         norm.progression.currentXp,
       "system.progression.checkedXpTriggers": norm.progression.checkedXpTriggers,
@@ -249,7 +261,7 @@ export class CharacterImportApp extends HandlebarsApplicationMixin(ApplicationV2
       "system.resources.vigor":   norm.resources.vigor,
       "system.resources.resolve": norm.resources.resolve,
       "system.state.conditions":  norm.conditions,
-      "system.state.notes":       norm.notes,
+      "system.state.description": norm.notes,
       // Clear combat arrays — will be rebuilt below
       "system.combat.jobs":            [],
       "system.combat.mainJobId":       "",

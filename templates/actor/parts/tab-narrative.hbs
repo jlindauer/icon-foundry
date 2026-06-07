@@ -23,13 +23,24 @@
         <p class="bond-description">{{bondData.description}}</p>
         {{/if}}
         <div class="bond-ability-row">
-          <div class="bond-ability-label">Second Wind</div>
+          <div class="bond-ability-header">
+            <div class="bond-ability-label">Second Wind</div>
+            <button type="button" class="bond-chat-btn" data-action="postBondCard"
+              data-name="Second Wind" data-effect="{{bondData.secondWind}}"
+              title="Send to chat"><i class="fas fa-comment-alt"></i></button>
+          </div>
           <div class="bond-ability-text">{{bondData.secondWind}}</div>
         </div>
-        {{#if bondData.specialAbility}}
+        {{#if bondData.specialAbility.name}}
         <div class="bond-ability-row">
-          <div class="bond-ability-label">Special Ability</div>
-          <div class="bond-ability-text">{{bondData.specialAbility}}</div>
+          <div class="bond-ability-header">
+            <div class="bond-ability-label">{{bondData.specialAbility.name}}</div>
+            <button type="button" class="bond-chat-btn" data-action="postBondCard"
+              data-name="{{bondData.specialAbility.name}}"
+              data-effect="{{bondData.specialAbility.effect}}"
+              title="Send to chat"><i class="fas fa-comment-alt"></i></button>
+          </div>
+          <div class="bond-ability-text">{{bondData.specialAbility.effect}}</div>
         </div>
         {{/if}}
         <div class="bond-mini-stats">
@@ -101,22 +112,18 @@
         <span class="framed-section-subtitle">XP Triggers</span>
       </div>
       <div class="framed-section-body">
-        {{#times 3}}
+        {{#each idealRows}}
         <label class="trigger-row">
           <input type="checkbox"
             data-action="checkXpTrigger"
-            data-index="{{@index}}"
+            data-index="{{this.index}}"
             data-trigger-type="narrative"
-            {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}>
-          <span class="trigger-text {{#if (includes ../system.progression.checkedXpTriggers @index)}}checked{{/if}}">
-            {{#if (lookup ../bondData.ideals @index)}}
-              {{lookup ../bondData.ideals @index}}
-            {{else}}
-              Ideal {{add @index 1}}
-            {{/if}}
+            {{#if (includes ../system.progression.checkedXpTriggers this.index)}}checked{{/if}}>
+          <span class="trigger-text {{#if (includes ../system.progression.checkedXpTriggers this.index)}}checked{{/if}}">
+            {{#if this.text}}{{this.text}}{{else}}{{this.fallback}}{{/if}}
           </span>
         </label>
-        {{/times}}
+        {{/each}}
       </div>
     </div>
     {{/if}}
@@ -184,6 +191,12 @@
           <div class="power-header">
             <span class="power-name">{{this.name}}</span>
             {{#if this.usesPerSession}}<span class="framed-badge">{{this.usesPerSession}}/session</span>{{/if}}
+            {{#if this.isGambit}}<span class="framed-badge">Gambit</span>{{/if}}
+            <button type="button" class="bond-chat-btn" data-action="postBondCard"
+              data-name="{{this.name}}"
+              data-effect="{{this.description}}"
+              {{#if this.isGambit}}data-gambit="true"{{/if}}
+              title="Send to chat"><i class="fas fa-comment-alt"></i></button>
           </div>
           <div class="power-desc">{{this.description}}</div>
         </div>
@@ -240,7 +253,12 @@
         <div class="gear-kit {{#if this.isPreferred}}preferred{{/if}}">
           <div class="gear-kit-header">
             <span class="gear-kit-name">{{this.name}}</span>
-            {{#if this.isPreferred}}<span class="framed-badge accent">{{localize "ICON.Label.Preferred"}}</span>{{/if}}
+            <button type="button"
+              class="gear-kit-equip-btn {{#if this.isPreferred}}active{{/if}}"
+              data-action="selectGearKit"
+              data-kit-name="{{this.name}}">
+              {{#if this.isPreferred}}<i class="fas fa-check"></i> Active{{else}}Equip{{/if}}
+            </button>
           </div>
           <div class="gear-kit-items">{{this.items}}</div>
         </div>

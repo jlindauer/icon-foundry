@@ -26,6 +26,8 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       tickBurden:        IconCharacterSheet.#onTickBurden,
       addSessionNote:    IconCharacterSheet.#onAddSessionNote,
       deleteSessionNote: IconCharacterSheet.#onDeleteSessionNote,
+      postBondCard:      IconCharacterSheet.#onPostBondCard,
+      selectGearKit:     IconCharacterSheet.#onSelectGearKit,
     },
   };
 
@@ -108,6 +110,11 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         context.actionRatings = this._prepareActionRatings(system);
         const bondData        = await this._prepareBondData(actor, system);
         context.bondData      = bondData;
+        context.idealRows     = Array.from({ length: 3 }, (_, i) => ({
+          index:    i,
+          text:     bondData?.ideals?.[i] || null,
+          fallback: `Ideal ${i + 1}`,
+        }));
         // Strain / Effort
         context.maxStrain  = bondData?.strain  ?? 0;
         context.maxEffort  = bondData?.effort  ?? 0;
@@ -205,14 +212,15 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       isPreferred: k.name === selectedGearKit,
     }));
 
+    const characterIdeals = system.narrative.ideals ?? [];
     return {
       name:           bondItem.name,
-      description:    s.description       ?? "",
-      secondWind:     s.secondWind        ?? "",
-      specialAbility: s.specialAbility    ?? "",
-      effort:         s.effort            ?? 0,
-      strain:         s.strain            ?? 0,
-      ideals:         s.ideals            ?? [],
+      description:    s.description    ?? "",
+      secondWind:     s.secondWind     ?? "",
+      specialAbility: s.specialAbility,
+      effort:         s.effort         ?? 0,
+      strain:         s.strain         ?? 0,
+      ideals:         characterIdeals.length ? characterIdeals : (s.ideals ?? []),
       powers:         activePowers,
       gearKits,
     };
@@ -585,5 +593,25 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     const id    = target.dataset.noteId;
     const notes = (this.document.system.state.sessionNotes ?? []).filter((n) => n.id !== id);
     await this.document.update({ "system.state.sessionNotes": notes });
+  }
+
+  static async #onPostBondCard(event, target) {
+    const actor  = this.document;
+    const name   = target.dataset.name   ?? "";
+    const effect = target.dataset.effect ?? "";
+    const tags   = target.dataset.gambit === "true" ? ["Gambit"] : [];
+    const content = await renderTemplate(
+      "systems/icon/templates/chat/ability-card.hbs",
+      { name, cost: null, tags, flavor: null, effect, actorName: actor.name, actorId: actor.id, isAttack: false, rollableFormulas: [] },
+    );
+    await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content });
+  }
+
+  static async #onSelectGearKit(event, target) {
+    const kitName = target.dataset.kitName ?? "";
+    const current = this.document.system.narrative.selectedGearKit ?? "";
+    await this.document.update({
+      "system.narrative.selectedGearKit": current === kitName ? "" : kitName,
+    });
   }
 }

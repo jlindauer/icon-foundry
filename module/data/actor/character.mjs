@@ -12,6 +12,7 @@ export class CharacterDataModel extends foundry.abstract.TypeDataModel {
         bondActionChoice: new StringField({ initial: "", label: "ICON.Field.BondAction" }),
         selectedPowers: new ArrayField(new StringField()),
         selectedGearKit: new StringField({ initial: "" }),
+        ideals: new ArrayField(new StringField()),
         actionRatings: new SchemaField({
           sneak:    new NumberField({ initial: 0, min: 0, max: 5, integer: true }),
           traverse: new NumberField({ initial: 0, min: 0, max: 5, integer: true }),
