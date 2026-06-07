@@ -617,6 +617,6 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
   }
 
   static #onConfigureToken(event, target) {
-    this.document.prototypeToken.sheet.render(true);
+    new TokenConfig(this.document.prototypeToken, { actor: this.document }).render(true);
   }
 }
