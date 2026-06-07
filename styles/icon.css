@@ -452,6 +452,43 @@ details.expandable summary:hover {
   color: var(--icon-accent);
 }
 
+.rail-theatre-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rail-theatre-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border: 1px solid var(--icon-border);
+  border-radius: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s, opacity 0.15s;
+}
+.rail-theatre-thumb.fallback { opacity: 0.35; }
+.rail-theatre-thumb:hover { border-color: var(--icon-accent); opacity: 1; }
+
+.rail-theatre-label {
+  flex: 1;
+  font-size: 0.72em;
+  color: var(--icon-text-muted);
+  line-height: 1.2;
+}
+
+.rail-theatre-clear {
+  background: none;
+  border: none;
+  color: var(--icon-text-muted);
+  cursor: pointer;
+  font-size: 0.85em;
+  padding: 0 2px;
+  line-height: 1;
+}
+.rail-theatre-clear:hover { color: var(--icon-accent); }
+
 .rail-origin {
   padding: 10px 14px;
   border-bottom: 1px solid var(--icon-border);

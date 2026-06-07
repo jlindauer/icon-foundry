@@ -81,6 +81,18 @@
     <button type="button" data-action="configureToken" class="rail-import-btn">
       <i class="fas fa-user-circle"></i> Configure Token
     </button>
+    <div class="rail-theatre-row">
+      <img class="rail-theatre-thumb {{#unless theatreImage}}fallback{{/unless}}"
+           src="{{#if theatreImage}}{{theatreImage}}{{else}}{{actor.img}}{{/if}}"
+           data-theatre-edit
+           title="{{#if theatreImage}}Click to change Theatre insert image{{else}}Click to set Theatre insert image (currently using portrait){{/if}}">
+      <span class="rail-theatre-label">
+        {{#if theatreImage}}Theatre image set{{else}}Theatre image (portrait){{/if}}
+      </span>
+      {{#if theatreImage}}
+      <button type="button" data-action="clearTheatreImage" class="rail-theatre-clear" title="Clear Theatre image">×</button>
+      {{/if}}
+    </div>
     <button type="button" data-action="openImport" class="rail-import-btn">
       <i class="fas fa-file-import"></i> Import from Web App
     </button>

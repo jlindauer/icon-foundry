@@ -24,11 +24,12 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
       addBurden:         IconCharacterSheet.#onAddBurden,
       deleteBurden:      IconCharacterSheet.#onDeleteBurden,
       tickBurden:        IconCharacterSheet.#onTickBurden,
-      addSessionNote:    IconCharacterSheet.#onAddSessionNote,
-      deleteSessionNote: IconCharacterSheet.#onDeleteSessionNote,
-      postBondCard:      IconCharacterSheet.#onPostBondCard,
-      selectGearKit:     IconCharacterSheet.#onSelectGearKit,
-      configureToken:    IconCharacterSheet.#onConfigureToken,
+      addSessionNote:      IconCharacterSheet.#onAddSessionNote,
+      deleteSessionNote:   IconCharacterSheet.#onDeleteSessionNote,
+      postBondCard:        IconCharacterSheet.#onPostBondCard,
+      selectGearKit:       IconCharacterSheet.#onSelectGearKit,
+      configureToken:      IconCharacterSheet.#onConfigureToken,
+      clearTheatreImage:   IconCharacterSheet.#onClearTheatreImage,
     },
   };
 
@@ -97,6 +98,7 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     switch (partId) {
       case "header":
         context.tab = undefined;
+        context.theatreImage = actor.getFlag("theatre", "baseinsert") || null;
         context.mainJobName = mainJobItem?.name ?? null;
         context.xpForNext = system.xpForNextLevel;
         context.xpPercent = Math.round(Math.min(system.progression.currentXp / system.xpForNextLevel, 1) * 100);
@@ -340,6 +342,17 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
         type: "image",
         current: this.document.img,
         callback: (path) => this.document.update({ img: path }),
+      }).browse();
+    });
+
+    // Theatre insert thumbnail → open FilePicker to set/change Theatre Inserts portrait
+    this.element.querySelector("[data-theatre-edit]")?.addEventListener("click", () => {
+      if (!this.isEditable) return;
+      const current = this.document.getFlag("theatre", "baseinsert") || this.document.img;
+      new FilePicker({
+        type: "image",
+        current,
+        callback: (path) => this.document.setFlag("theatre", "baseinsert", path),
       }).browse();
     });
 
@@ -630,5 +643,9 @@ export class IconCharacterSheet extends HandlebarsApplicationMixin(DocumentSheet
     new foundry.applications.sheets.PrototypeTokenConfig({
       prototype: this.document.prototypeToken,
     }).render({ force: true });
+  }
+
+  static async #onClearTheatreImage(event, target) {
+    await this.document.unsetFlag("theatre", "baseinsert");
   }
 }
